@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --white: 255, 255, 255;
@@ -46,7 +50,8 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+
 }
 
 body {
@@ -60,6 +65,7 @@ body {
 main {
   width: 100%;
   max-width: 1440px;
+  overflow: hidden;
 }
 
 h1 {
@@ -69,10 +75,12 @@ h1 {
 }
 h2 {
   font-size: 24px;
+  font-weight: 700;
 }
 
 h3{
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 p {
@@ -82,6 +90,9 @@ p {
 }
 button {
   font-size: 14px;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #000;
 }
 
 a {
@@ -91,11 +102,34 @@ a {
 
 section{
   max-width: 1996px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.animated-state-one {
+  /* Animação específica para o primeiro título */
+  transform: translateX(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-one 1s ease-in-out forwards; /* Adiciona animação */
+}
+
+.animated-state-two {
+  /* Animação específica para o segundo título */
+  transform: translateX(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-two 1s ease-in-out forwards; /* Adiciona animação */
+}
+
+.animated-state-three {
+  /* Animação específica para o terceiro título */
+  transform: translateX(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-three 1s ease-in-out forwards; /* Adiciona animação */
 }
 
 @keyframes animate-one {

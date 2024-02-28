@@ -1,8 +1,8 @@
 .CarroselVertical {
   height: 100%;
   background-color: #fefefe;
-  padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
+
 
   .Container {
     display: flex;
@@ -69,14 +69,20 @@
           transition: 0.2s;
           border-radius: 8px;
           animation: animate-three;
+          cursor: pointer;
         }
 
         .itemMenu:hover {
-          background-color: #fff;
+          background-color: #ffffff;
           opacity: 50;
           border-radius: 8px;
           color: #000;
         }
+
+        .itemMenu:hover >h3{
+          color: #000;
+        }
+
         .itemMenu:hover > .barra {
           background-color: #000;
         }
