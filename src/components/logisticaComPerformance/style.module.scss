@@ -1,0 +1,52 @@
+.CarrouselProducts {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
+
+  .Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .BoxCarrouselProducts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+      width: 90%;
+      border-radius: 16px;
+
+      .ContainerContent{
+        display: flex;
+        align-items: center;
+        width: 90%;
+
+        .ContainerTitle{
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+            width: 100%;
+            flex-direction: column;
+            
+            div{
+                width: 80%;
+                font-size: 36px;
+                padding-bottom: 8px;
+            }
+
+            h1{
+                width: 80%;
+                padding-bottom: 0;
+            }
+            p{
+                width: 45%;
+            }
+        }
+      }
+    }
+  }
+}

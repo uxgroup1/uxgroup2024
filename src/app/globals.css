@@ -1,0 +1,143 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --white: 255, 255, 255;
+  --background-start-rgb: #000;
+  --background-end-rgb: 255, 255, 255;
+  --color-primary-ux: #000;
+  --color-secundary-ux: #4a4a4a;
+  --color-vendas-primary-ux: #450071;
+  --color-vendas-secondary-ux: #a900d9;
+  --color-gestao-primary-ux: #29265b;
+  --color-gestao-secundary-ux: #009580;
+  --color-ondetah-primary-ux: #009580;
+  --color-trux-primary-ux: #009580;
+  --color-logistics-primary-ux: #fbc709;
+  --color-logistics-secundary-ux: #ff7f13;
+  --color-esg-primary-ux: #7dad58;
+  --color-esg-secundary-ux: #014c34;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: #000;
+    --background-end-rgb: 255, 255, 255;
+    --color-primary-ux: #000;
+    --color-secundary-ux: #4a4a4a;
+    --color-vendas-primary-ux: #450071;
+    --color-vendas-secondary-ux: #a900d9;
+    --color-gestao-primary-ux: #29265b;
+    --color-gestao-secundary-ux: #009580;
+    --color-ondetah-primary-ux: #009580;
+    --color-trux-primary-ux: #009580;
+    --color-logistics-primary-ux: #fbc709;
+    --color-logistics-secundary-ux: #ff7f13;
+    --color-esg-primary-ux: #7dad58;
+    --color-esg-secundary-ux: #014c34;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(#000);
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+}
+
+h1 {
+  font-size: 36px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+}
+
+h3{
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+button {
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section{
+  max-width: 1996px;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@keyframes animate-one {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-two {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Adicione uma transição suave se desejar */
+}
+
+@keyframes animate-three {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
