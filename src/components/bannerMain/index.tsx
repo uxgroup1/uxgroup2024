@@ -5,11 +5,7 @@ export default function BannerMain() {
   const [contentIndex, setContentIndex] = useState(0);
 
   const contentBanners = [
-    {
-      title: "Institucional",
-      text: "Conteúdo do Institucional",
-      background: image.src,
-    },
+   
     {
       title: "Gestão",
       text: "Conteúdo do Gestão",
@@ -17,8 +13,19 @@ export default function BannerMain() {
         "https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png",
     },
     {
+      title: "Institucional",
+      text: "Conteúdo do Institucional",
+      background: image.src,
+    },
+    {
       title: "Logística",
       text: "Conteúdo do Logística",
+      background:
+        "https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png",
+    },
+    {
+      title: "Sustentabilidade",
+      text: "Conteúdo do Sustentabilidade",
       background:
         "https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png",
     },
@@ -35,8 +42,8 @@ export default function BannerMain() {
           className={`w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
             backgroundImage: `url(${contentBanners[contentIndex].background})`,
-            transition: "background-image animate-back ", 
-            transform: "animate-back", 
+            transition: "background-image animate-back ",
+            transform: "animate-back",
           }}
         >
           <div className="flex flex-col p-[17%] bg justify-center text-white md:text-4xl text-xl items-center w-full h-2/4">
@@ -62,12 +69,14 @@ export default function BannerMain() {
               <div className="absolute inset-0 flex items-end justify-center">
                 <svg
                   className={`w-24 h-24 mb-[-5px] text-gray-800 dark:text-white delay-100  transition-transform ${
-                    contentIndex === 1 ? "-rotate-[-50deg]" : ""
+                    contentIndex === 1 ? "-rotate-[-35deg]" : ""
                   } transition-transform ${
-                    contentIndex === 0 ? "-rotate-0" : ""
+                    contentIndex === 2 ? "-rotate-[-60deg]" : ""
                   } transition-transform ${
-                    contentIndex === 2 ? "-rotate-[50deg]" : ""
-                  }`}
+                    contentIndex === 0 ? "-rotate-[30deg]" : ""
+                  } transition-transform ${
+                    contentIndex === 3 ? "-rotate-[60deg]" : ""
+                  }   `}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -82,28 +91,34 @@ export default function BannerMain() {
                   />
                 </svg>
               </div>
-              <div className="absolute top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-full">
+              <div className="absolute flex w-full justify-between gap-16 top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-full">
                 <button
                   className="bg-yellow-500 text-white px-4 py-2 rounded-full transition-all"
                   onClick={() => handleButtonClick(0)}
                 >
-                  Botão 3
+                  Gestão
+                </button>
+                <button
+                  className="bg-violet-300 text-white px-4 py-2 rounded-full transition-all"
+                  onClick={() => handleButtonClick(1)}
+                >
+                  Institucional
                 </button>
               </div>
               <div className="absolute right-[-40px] md:bottom-2/4 md:right-[-60px] transform translate-x-1/2 translate-y-1/2">
                 <button
                   className="bg-red-500 text-white px-4 py-2 rounded-full"
-                  onClick={() => handleButtonClick(1)}
-                >
-                  Botão 2
-                </button>
-              </div>
-              <div className="absolute left-[-40px] md:bottom-2/4 md:left-[-60px] transform -translate-x-1/2 translate-y-1/2">
-                <button
-                  className="bg-green-500 text-white px-4 py-2 rounded-full"
                   onClick={() => handleButtonClick(2)}
                 >
-                  Botão 1
+                  Logística
+                </button>
+              </div>
+              <div className="absolute left-[-40px] md:bottom-2/4 md:left-[-85px] transform -translate-x-1/2 translate-y-1/2">
+                <button
+                  className="bg-green-500 text-white px-4 py-2 rounded-full"
+                  onClick={() => handleButtonClick(3)}
+                >
+                  Sustentabilidade
                 </button>
               </div>
             </div>
