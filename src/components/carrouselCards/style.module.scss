@@ -4,8 +4,10 @@
   height: 100%;
   padding-top: 0px;
   padding-bottom: 0px;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   scroll-behavior: smooth;
+  background-color: #fff;
 
   .Container {
     display: flex;

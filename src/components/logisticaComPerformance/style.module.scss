@@ -1,6 +1,7 @@
 .CarrouselProducts {
   height: 100%;
   width: 100%;
+  background-color: #FFF;
 
   .Container {
     display: flex;
@@ -30,6 +31,7 @@
             justify-content: center;
             width: 100%;
             flex-direction: column;
+            color: #000;
             
             div{
                 width: 80%;

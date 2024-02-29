@@ -6,6 +6,9 @@ import image from "../assets/ctaBanner.png"
 import Cta from "@/components/cta";
 import LogisticaComPerformance from "@/components/logisticaComPerformance";
 import BannerMain from "@/components/bannerMain";
+import UxPartners from "@/components/uxPartners";
+import LogisticaSustentavel from "@/components/logisticaSustentavel";
+import UxMidia from "@/components/uxMidia";
 
 export default function Home() {
   return (
@@ -14,6 +17,10 @@ export default function Home() {
       <CarroselVertical/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
       <LogisticaComPerformance/>
+      <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
+      <LogisticaSustentavel/>
+      <UxPartners/>
+      <UxMidia/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
     </main>
   );
