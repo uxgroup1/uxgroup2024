@@ -31,7 +31,7 @@ function LogisticaSustentavel() {
             </div>
             <div className={style.ContentImage}>
                 <div className={style.BoxImage}>
-                kkkkk
+                .
                 </div>
             </div>
           </div>
