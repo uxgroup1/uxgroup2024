@@ -21,6 +21,8 @@
   --color-esg-secundary-ux: #014c34;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
@@ -129,6 +131,7 @@ a {
 }
 
 section{
+  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
