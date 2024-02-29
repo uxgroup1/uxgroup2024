@@ -1,4 +1,8 @@
 .UxMidia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   background-color: #fff;
@@ -9,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    max-width: 1996px;
     height: 100%;
 
     .BoxUxMidia {
@@ -21,7 +26,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        color: #000 ;
+        color: #000;
       }
     }
   }
