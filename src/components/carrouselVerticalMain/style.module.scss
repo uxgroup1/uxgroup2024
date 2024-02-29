@@ -3,7 +3,6 @@
   background-color: #ffffff;
   padding-bottom: 70px;
 
-
   .Container {
     display: flex;
     align-items: center;
@@ -80,7 +79,7 @@
           color: #000;
         }
 
-        .itemMenu:hover >h3{
+        .itemMenu:hover > h3 {
           color: #000;
         }
 
@@ -121,12 +120,20 @@
     from {
       transform: translateY(-15%);
       opacity: 0;
-
     }
     to {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+}
 
+@media (width: 1920px) {
+  .CarroselVertical {
+    .Container {
+      .BoxCarrosel {
+        width: 95%;
+      }
     }
   }
 }
