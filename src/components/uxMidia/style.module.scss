@@ -31,3 +31,16 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .UxMidia{
+    .Container{
+      .BoxUxMidia{
+        .Content{
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
