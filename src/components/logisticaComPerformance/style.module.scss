@@ -58,3 +58,22 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .CarrouselProducts{
+    .Container{
+      .BoxCarrouselProducts{
+        .Controller{
+          .ControllerContent{
+            div{
+              width: 100%;
+            }
+            p{
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

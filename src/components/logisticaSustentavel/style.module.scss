@@ -84,3 +84,30 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .LogisticaSustentavel{
+    .Container{
+      .BoxLogisticaSustentavel{
+        display: flex;
+        flex-direction: column;
+
+        .ContentImage{
+          display: none;
+        }
+
+        .Controller{
+          .ContentText{
+            p{
+              width: 100%;
+            }
+
+            div{
+              width: 85%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

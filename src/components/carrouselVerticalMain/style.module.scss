@@ -137,3 +137,32 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .CarroselVertical {
+    height: 100%;
+    width: 90%;
+    .Container {
+      height: 100%;
+      .BoxCarrosel {
+        width: 95%;
+        height: 100%;
+
+        .containerTitulo{
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          height: 50%;
+          
+          p{
+            text-align: left;
+            width: 100%;
+          }
+        }
+        .containerCarrouselVertical{
+          display: none;
+        }
+      }
+    }
+  }
+}

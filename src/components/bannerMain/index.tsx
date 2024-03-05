@@ -37,7 +37,7 @@ export default function BannerMain() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-0 flex w-full h-2/5">
+      <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-2/5">
         <div
           className={`w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
@@ -65,10 +65,10 @@ export default function BannerMain() {
             </div>
           </div>
           <div className="w-full h-2/4 flex items-end justify-center relative">
-            <div className="w-[180px] h-[100px] md:w-[350px] md:h-[210px] rounded-ss-[200px] rounded-se-[200px] bg-white relative">
+            <div className="w-[130px] h-[60px]  md:w-[350px] md:h-[210px] rounded-ss-[200px] rounded-se-[200px] bg-white relative">
               <div className="absolute inset-0 flex items-end justify-center">
                 <svg
-                  className={`w-24 h-24 mb-[-5px] text-gray-800 dark:text-white delay-100  transition-transform ${
+                  className={`w-10 md:w-24 md:h-24 mb-[-5px] text-gray-800 dark:text-white delay-100  transition-transform ${
                     contentIndex === 1 ? "-rotate-[-35deg]" : ""
                   } transition-transform ${
                     contentIndex === 2 ? "-rotate-[-60deg]" : ""
