@@ -1,17 +1,18 @@
 .Button {
-    border: 1px solid #fff;
-    border-radius: 8px;
-    width: 60%;
-    padding: 10px;
-  }
+  border: 1px solid #fff;
+  border-radius: 8px;
+  width: 60%;
+  padding: 10px;
+}
 
-  .Section{
-    display: none;
-  }
-
+.Section {
+  display: none;
+}
 
 @media (max-width: 675px) {
-    .Section{
-        display: flex;
-    }
+  .Section {
+    display: flex;
+    padding-top: 20%;
+  }
+  
 }

@@ -39,10 +39,10 @@ function CarroselVerticalMobile() {
       setContentIndex((prevIndex) => (prevIndex + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [content.length]);
 
-  const handleStepClick = (index : number) => {
+  const handleStepClick = (index: number) => {
     setContentIndex(index);
   };
 
@@ -51,18 +51,32 @@ function CarroselVerticalMobile() {
       <div className="container mx-auto px-4">
         <div className="bg-white ">
           <div className="mb-8">
-            <h1 className="text-3xl text-black font-bold mb-2">Inove, Controle e Venda Mais</h1>
-            <p className="text-black">Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!</p>
+            <h1 className="text-3xl text-black font-bold mb-2">
+              Inove, Controle e Venda Mais
+            </h1>
+            <p className="text-black-600">
+              Adapte-se às mudanças do mercado com facilidade. Nossas soluções
+              de tecnologia modulares oferecem flexibilidade, informação e
+              eficiência para a gestão de fretes, gestão de transportes e
+              comunicação das suas vendas digitais. Conheça nossas soluções!
+            </p>
           </div>
 
-          <div className="flex items-center mb-8">
-            <ol className="flex w-full">
+          <div className="flex  justify-center items-center mb-8">
+            <ol className="flex justify-center w-full">
               {content.map((item, index) => (
                 <li
+                
                   key={index}
                   className={`flex w-full items-center h-1 ${
-                    index <= contentIndex ? "text-blue-600 bg-black h-1" : "bg-gray-400"
-                  }`}
+                    index <= contentIndex
+                      ? "text-blue-600 bg-black h-1"
+                      : "bg-gray-200"
+                  } ${
+                    index == 3 
+                      ? " bg-white w-11 h-0"
+                      : "bg-gray-400"
+                  } `}
                   onClick={() => handleStepClick(index)}
                 >
                   <span
@@ -94,14 +108,16 @@ function CarroselVerticalMobile() {
             </ol>
           </div>
 
-          <div style={{ borderRadius: "0px 0px 16px 16px" }} className="flex bg-[#5F5F5F] h-[400px] flex-col md:flex-row">
+          <div
+            style={{ borderRadius: "0px 0px 16px 16px" }}
+            className="flex bg-[#5F5F5F] h-[400px] flex-col md:flex-row"
+          >
             <div className="w-full md:w-2/3 flex flex-col justify-center h-full px-4">
-              
-              <h1 className="text-2xl text-white font-bold mb-4">{content[contentIndex].contentTitle}</h1>
+              <h1 className="text-2xl text-white font-bold mb-4">
+                {content[contentIndex].contentTitle}
+              </h1>
               <p className="text-white">{content[contentIndex].contentText}</p>
-              <button className={style.Button}>
-                Saiba mais
-              </button>
+              <button className={style.Button}>Saiba mais</button>
             </div>
           </div>
         </div>
