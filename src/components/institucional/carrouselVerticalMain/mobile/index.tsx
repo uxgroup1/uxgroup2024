@@ -51,8 +51,8 @@ function CarroselVerticalMobile() {
       <div className="container mx-auto px-4">
         <div className="bg-white ">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-2">Inove, Controle e Venda Mais</h1>
-            <p className="text-gray-600">Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!</p>
+            <h1 className="text-3xl text-black font-bold mb-2">Inove, Controle e Venda Mais</h1>
+            <p className="text-black">Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!</p>
           </div>
 
           <div className="flex items-center mb-8">
