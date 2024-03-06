@@ -1,7 +1,7 @@
 import style from './style.module.scss';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import { Post, WPResponse } from '@/components/blog/types';
+import { Post, WPResponse } from '@/components/institucional/blog/types';
 import Image from 'next/image';
 
 export function Blog() {

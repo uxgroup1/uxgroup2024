@@ -1,5 +1,7 @@
 import { text } from "stream/consumers";
 import style from "./style.module.scss";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface ConteudoCTA {
   title: String;
@@ -7,6 +9,8 @@ interface ConteudoCTA {
 }
 
 function Cta({ title, banner }: ConteudoCTA) {
+
+
   return (
     <>
       <section className={style.Cta}>
@@ -15,7 +19,7 @@ function Cta({ title, banner }: ConteudoCTA) {
             <div className={style.ContainerContent}>
               <div className={style.Controller}>
                 <h1>{title}</h1>
-                <button>fale com um consultor</button>
+                <button> <Link href="/logistica">fale com um consultor</Link></button>
               </div>
             </div>
           </div>

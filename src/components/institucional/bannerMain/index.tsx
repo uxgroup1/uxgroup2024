@@ -1,5 +1,5 @@
 import { useState } from "react";
-import image from "../../assets/ctaBanner.png";
+import image from "../../../assets/cta/ctaBanner.png";
 
 export default function BannerMain() {
   const [contentIndex, setContentIndex] = useState(0);

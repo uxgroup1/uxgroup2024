@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./page.module.css";
+import styles from "../app/page.module.css";
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
 import image from "../assets/cta/ctaBanner.png"
 import Cta from "@/components/cta";
@@ -10,15 +10,11 @@ import UxPartners from "@/components/institucional/uxPartners";
 import LogisticaSustentavel from "@/components/institucional/logisticaSustentavel";
 import UxMidia from "@/components/institucional/uxMidia";
 import { Blog } from "@/components/institucional/blog";
-import Link from "next/link";
-import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
 
-export default function Home() {
+export default function Logistica() {
   return (
     <main className={styles.main}>
-      <BannerMain/>
       <CarroselVertical/>
-      <CarroselVerticalMobile/>
       <Cta title={"Eficiência, Sustentabilidade e Informação: Descubra o futuro da logística com a UX"} banner={image.src}/>
       <LogisticaComPerformance/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
@@ -27,7 +23,6 @@ export default function Home() {
       <Blog/>
       <UxMidia/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
-      <Link href="/logistica">mjkasnkjnjknsa</Link>
     </main>
   );
 }
