@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./page.module.css";
+
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
 import image from "../assets/cta/ctaBanner.png"
 import Cta from "@/components/cta";
@@ -15,7 +15,7 @@ import CarroselVerticalMobile from "@/components/institucional/carrouselVertical
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <BannerMain/>
       <CarroselVertical/>
       <CarroselVerticalMobile/>

@@ -54,7 +54,7 @@ function CarroselVerticalMobile() {
             <h1 className="text-3xl text-black font-bold mb-2">
               Inove, Controle e Venda Mais
             </h1>
-            <p className="text-black-600">
+            <p className="text-black">
               Adapte-se às mudanças do mercado com facilidade. Nossas soluções
               de tecnologia modulares oferecem flexibilidade, informação e
               eficiência para a gestão de fretes, gestão de transportes e
@@ -62,7 +62,10 @@ function CarroselVerticalMobile() {
             </p>
           </div>
 
-          <div className="flex  justify-center items-center mb-8">
+          <div className="flex justify-center flex-col items-center mb-8">
+            <div className="w-full flex mb-8 bg-black">
+
+            
             <ol className="flex justify-center w-full">
               {content.map((item, index) => (
                 <li
@@ -71,10 +74,10 @@ function CarroselVerticalMobile() {
                   className={`flex w-full items-center h-1 ${
                     index <= contentIndex
                       ? "text-blue-600 bg-black h-1"
-                      : "bg-gray-200"
+                      : "bg-gray"
                   } ${
                     index == 3 
-                      ? " bg-white w-11 h-0"
+                      ? " bg-white w-12 h-0"
                       : "bg-gray-400"
                   } `}
                   onClick={() => handleStepClick(index)}
@@ -119,6 +122,7 @@ function CarroselVerticalMobile() {
               <p className="text-white">{content[contentIndex].contentText}</p>
               <button className={style.Button}>Saiba mais</button>
             </div>
+          </div>
           </div>
         </div>
       </div>
