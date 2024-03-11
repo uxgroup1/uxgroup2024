@@ -113,9 +113,9 @@ function CarroselVerticalMobile() {
 
           <div
             style={{ borderRadius: "0px 0px 16px 16px" }}
-            className="flex bg-[#5F5F5F] h-[300px] flex-col md:flex-row"
+            className="flex bg-[#5F5F5F] h-[400px] flex-col md:flex-row"
           >
-            <div className="w-full md:w-2/3 flex flex-col justify-center h-full px-4">
+            <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[50px] pt-[50px]">
               <h1 className="text-2xl text-white font-bold mb-4">
                 {content[contentIndex].contentTitle}
               </h1>
