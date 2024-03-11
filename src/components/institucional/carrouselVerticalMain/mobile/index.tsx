@@ -73,8 +73,8 @@ function CarroselVerticalMobile() {
                   key={index}
                   className={`flex w-full justify-center items-center h-1 ${
                     index <= contentIndex
-                      ? "text-blue-600 bg-black h-1"
-                      : "bg-[#fbc709]"
+                      ? "text-blue-600 bg-[#bfbfbf] h-1"
+                      : "bg-[#fff]"
                   } ${
                     index == 3 
                       ? "bg-[#bfbfbf]"
