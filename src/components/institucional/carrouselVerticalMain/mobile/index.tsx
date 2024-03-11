@@ -48,7 +48,7 @@ function CarroselVerticalMobile() {
 
   return (
     <section className={style.Section}>
-      <div className="container mx-auto px-4">
+      <div className="container bg mx-auto px-4">
         <div className="bg-white ">
           <div className="mb-8">
             <h1 className="text-3xl text-black font-bold mb-2">
@@ -63,7 +63,7 @@ function CarroselVerticalMobile() {
           </div>
 
           <div className="flex justify-center flex-col items-center mb-8">
-            <div className="w-full flex mb-8 bg-black">
+            <div className="z-20 w-full flex items-center rounded-t-[16px] bg-black justify-center h-20">
 
             
             <ol className="flex justify-center w-full">
@@ -71,25 +71,25 @@ function CarroselVerticalMobile() {
                 <li
                 
                   key={index}
-                  className={`flex w-full items-center h-1 ${
+                  className={`flex w-full justify-center items-center h-1 ${
                     index <= contentIndex
                       ? "text-blue-600 bg-black h-1"
-                      : "bg-gray"
+                      : "bg-white"
                   } ${
                     index == 3 
-                      ? " bg-white w-0 h-0"
-                      : "bg-gray-400"
+                      ? "bg-white"
+                      : "bg-white w-0 h-0"
                   } `}
                   onClick={() => handleStepClick(index)}
                 >
                   <span
                     className={`flex items-center justify-center w-10 h-10 rounded-full ${
-                      index <= contentIndex ? "bg-[#bdbdbd]" : "bg-gray-200 "
+                      index <= contentIndex ? "bg-[#fff]" : "bg-white "
                     }`}
                   >
                     <svg
                       className={`w-5 h-5 ${
-                        index <= contentIndex ? "text-white" : "text-gray-500"
+                        index <= contentIndex ? "text-black" : "text-[#bfbfbf]"
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -113,7 +113,7 @@ function CarroselVerticalMobile() {
 
           <div
             style={{ borderRadius: "0px 0px 16px 16px" }}
-            className="flex bg-[#5F5F5F] h-[400px] flex-col md:flex-row"
+            className="flex bg-[#5F5F5F] h-[300px] flex-col md:flex-row"
           >
             <div className="w-full md:w-2/3 flex flex-col justify-center h-full px-4">
               <h1 className="text-2xl text-white font-bold mb-4">
