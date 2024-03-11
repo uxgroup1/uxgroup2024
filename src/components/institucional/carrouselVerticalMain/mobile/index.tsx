@@ -77,7 +77,7 @@ function CarroselVerticalMobile() {
                       : "bg-gray"
                   } ${
                     index == 3 
-                      ? " bg-white w-12 h-0"
+                      ? " bg-white w-0 h-0"
                       : "bg-gray-400"
                   } `}
                   onClick={() => handleStepClick(index)}
