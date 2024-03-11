@@ -37,7 +37,7 @@ function CarroselVerticalMobile() {
   useEffect(() => {
     const interval = setInterval(() => {
       setContentIndex((prevIndex) => (prevIndex + 1) % content.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [content.length]);
@@ -74,11 +74,11 @@ function CarroselVerticalMobile() {
                   className={`flex w-full justify-center items-center h-1 ${
                     index <= contentIndex
                       ? "text-blue-600 bg-black h-1"
-                      : "bg-white"
+                      : "bg-[#fbc709]"
                   } ${
                     index == 3 
-                      ? "bg-white"
-                      : "bg-white w-0 h-0"
+                      ? "bg-[#bfbfbf]"
+                      : "bg-[#bfbfbf]"
                   } `}
                   onClick={() => handleStepClick(index)}
                 >
