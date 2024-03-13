@@ -47,7 +47,7 @@ export default function BannerMain() {
           }}
         >
           <div className="flex flex-col p-[17%] bg justify-center text-white md:text-4xl text-xl items-center w-full  h-2/4">
-            <div className="absolute top-[-35vh] p-5 md:p-0 h-full flex items-end justify-end">
+            <div className="absolute top-[-35vh] md:top-[-50vh] p-5 md:p-0 h-full flex items-end justify-end">
               <h1
                 className={`font-bold flex flex-col items-center justify-center text-white transition-transform ${
                   contentIndex === 0

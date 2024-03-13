@@ -13,6 +13,7 @@ import Link from "next/link";
 import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
 import Header from "@/components/header";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/institucional/ContactForm";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Blog/>
       <UxMidia/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
+      <ContactForm/>
       <Footer/>
     </main>
   );
