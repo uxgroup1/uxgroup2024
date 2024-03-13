@@ -60,7 +60,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-black text-white p-4 md:p-0 md:pt-10 w-full">
+      <footer className="bg-black text-white p-4 md:pt-10 w-full">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">

@@ -37,7 +37,7 @@ export default function BannerMain() {
 
   return (
     <>
-      <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-2/5">
+      <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-2/6">
         <div
           className={`w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
@@ -47,7 +47,7 @@ export default function BannerMain() {
           }}
         >
           <div className="flex flex-col p-[17%] bg justify-center text-white md:text-4xl text-xl items-center w-full h-2/4">
-            <div className="p-5 md:p-0 h-full flex items-end justify-end">
+            <div className="p-5  md:p-0 h-full flex items-end justify-end">
               <h1
                 className={`font-bold flex flex-col items-center justify-center text-white transition-transform ${
                   contentIndex === 0
@@ -58,7 +58,7 @@ export default function BannerMain() {
                 }`}
               >
                 {contentBanners[contentIndex].title}
-                <p className="text-sm font-normal">
+                <p className="pt-3 text-sm font-normal">
                   {contentBanners[contentIndex].text}
                 </p>
               </h1>
@@ -91,34 +91,34 @@ export default function BannerMain() {
                   />
                 </svg>
               </div>
-              <div className="absolute flex w-full justify-between gap-16 top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-full">
+              <div className="absolute flex w-full justify-between gap-0 top-[-10px] left-1/2 transform -translate-x-1/2 -translate-y-full">
                 <button
-                  className="bg-yellow-500 text-white px-4 py-2 rounded-full transition-all"
+                  className="bg-white text-white w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full transition-all"
                   onClick={() => handleButtonClick(0)}
                 >
-                  Gestão
+                  
                 </button>
                 <button
-                  className="bg-violet-300 text-white px-4 py-2 rounded-full transition-all"
+                  className="bg-white text-white w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full transition-all"
                   onClick={() => handleButtonClick(1)}
                 >
-                  Institucional
+                  
                 </button>
               </div>
-              <div className="absolute right-[-40px] md:bottom-2/4 md:right-[-60px] transform translate-x-1/2 translate-y-1/2">
+              <div className="absolute top-[-40px] right-[-40px] md:bottom-2/4 md:right-[-60px] transform translate-x-1/2 translate-y-1/2">
                 <button
-                  className="bg-red-500 text-white px-4 py-2 rounded-full"
+                  className="bg-white text-white w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full transition-all"
                   onClick={() => handleButtonClick(2)}
                 >
-                  Logística
+                 
                 </button>
               </div>
-              <div className="absolute left-[-40px] md:bottom-2/4 md:left-[-85px] transform -translate-x-1/2 translate-y-1/2">
+              <div className="absolute left-[-40px] top-[-40px] md:bottom-2/4 md:left-[-85px] transform -translate-x-1/2 translate-y-1/2">
                 <button
-                  className="bg-green-500 text-white px-4 py-2 rounded-full"
+                  className="bg-white text-white w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full transition-all"
                   onClick={() => handleButtonClick(3)}
                 >
-                  Sustentabilidade
+                
                 </button>
               </div>
             </div>
