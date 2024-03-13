@@ -71,14 +71,10 @@ function CarroselVerticalMobile() {
                 <li
                 
                   key={index}
-                  className={`flex w-full justify-center items-center h-1 ${
+                  className={`flex w-full justify-center transition-all transition-duration[4s] items-center h-1 ${
                     index <= contentIndex
-                      ? "text-blue-600 bg-[#bfbfbf] h-1"
-                      : "bg-[#fff]"
-                  } ${
-                    index == 3 
-                      ? "bg-[#bfbfbf]"
-                      : "bg-[#bfbfbf]"
+                      ? "text-blue-600 bg-[#bfbfbf]  h-1"
+                      : "bg-[#fff] "
                   } `}
                   onClick={() => handleStepClick(index)}
                 >

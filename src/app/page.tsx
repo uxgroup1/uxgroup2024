@@ -1,6 +1,5 @@
 "use client"
 
-
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
 import image from "../assets/cta/ctaBanner.png"
 import Cta from "@/components/cta";
@@ -12,10 +11,13 @@ import UxMidia from "@/components/institucional/uxMidia";
 import { Blog } from "@/components/institucional/blog";
 import Link from "next/link";
 import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main>
+      <Header/>
       <BannerMain/>
       <CarroselVertical/>
       <CarroselVerticalMobile/>
@@ -27,7 +29,7 @@ export default function Home() {
       <Blog/>
       <UxMidia/>
       <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"} banner={image.src}/>
-      <Link href="/logistica">mjkasnkjnjknsa</Link>
+      <Footer/>
     </main>
   );
 }
