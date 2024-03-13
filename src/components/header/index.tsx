@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logoUx from "../../assets/ux-branco.svg"
- 
+import logoUx from "../../assets/ux-branco.svg";
+
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -16,11 +16,7 @@ export default function Header() {
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src={logoUx.src}
-              className="h-8"
-              alt="Flowbite Logo"
-            />
+            <img src={logoUx.src} className="h-8" alt="Flowbite Logo" />
           </a>
           <button
             onClick={handleOpenClick}
@@ -68,17 +64,9 @@ export default function Header() {
                   onClick={handleOpenClick}
                   id="mega-menu-full-cta-image-button"
                   data-collapse-toggle="mega-menu-full-image-dropdown"
-                  className="flex items-center justify-between w-full bg-transparent font-normal py-2 px-3  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                  className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
                 >
                   Gestão
-                  <svg
-                    className="w-2.5 h-2.5 ms-3"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                  </svg>
                 </a>
               </li>
             </ul>
@@ -87,41 +75,27 @@ export default function Header() {
         {openMenu && (
           <div
             id="mega-menu-full-image-dropdown"
-            className="mt-1 bg-black  border-t-white border-t"
+            className="mt-1 bg-black  md:border-t-white md:border-t"
           >
-            <div
-              className="grid max-w-screen-xl  py-5 mx-auto text-sm text-white  md:grid-cols-2 md:px-0"
-            >
+            <div className="grid max-w-screen-xl  py-5 mx-auto text-sm text-white  md:grid-cols-2 md:px-0">
               <ul className="mb-4 space-y-4 md:mb-0">
                 <li>
-                  <a
-                    href="#"
-                    className="font-normal hover:font-medium"
-                  >
+                  <a href="#" className="font-normal hover:font-medium">
                     Our Blog
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="font-normal hover:font-medium"
-                  >
+                  <a href="#" className="font-normal hover:font-medium">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="font-normal hover:font-medium"
-                  >
+                  <a href="#" className="font-normal hover:font-medium">
                     License
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="font-normal hover:font-medium"
-                  >
+                  <a href="#" className="font-normal hover:font-medium">
                     Resources
                   </a>
                 </li>
