@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <>
       <nav className="bg-black fixed z-50 top-0 w-full px-3 border-gray-200">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-5">
           <a
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -90,7 +90,7 @@ export default function Header() {
             className="mt-1 bg-black  border-t-white border-t"
           >
             <div
-              className="grid max-w-screen-xl px-0 py-5 mx-auto text-sm text-white  md:grid-cols-2 md:px-6"
+              className="grid max-w-screen-xl px-0 py-5 mx-auto text-sm text-white  md:grid-cols-2 md:px-0"
             >
               <ul className="mb-4 space-y-4 md:mb-0">
                 <li>
