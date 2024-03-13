@@ -82,37 +82,31 @@ export default function ContactForm() {
               id="underline_select"
               className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none  focus:outline-none focus:ring-0 focus:border-gray-200 peer"
             >
-              <option value={"0"} className="text-white" selected>
+              <option value={"0"} className="text-white">
                 De qual solução você gostaria de saber mais?
               </option>
               <option
                 className="text-white"
-                value=" Logística - Armazenagem e gestão de estoque"
+                value="Logística - Armazenagem e gestão de estoque"
               >
                 Logística - Armazenagem e gestão de estoque
               </option>
               <option value="Logística - Rede credenciada">
                 Logística - Rede credenciada
               </option>
-              <option defaultValue={"UX"} value="Logística - Green Mile">
+              <option value="Logística - Green Mile">
                 Logística - Green Mile
               </option>
-              <option
-                defaultValue={"UX"}
-                value="Logística - Gestão de Transportes"
-              >
+              <option value="Logística - Gestão de Transportes">
                 Logística - Gestão de Transportes
               </option>
-              <option defaultValue={"UX"} value="Tecnologia - TMS Embarcador">
+              <option value="Tecnologia - TMS Embarcador">
                 Tecnologia - TMS Embarcador
               </option>
-              <option
-                defaultValue={"UX"}
-                value=" Tecnologia - TMS Transportador"
-              >
+              <option value="Tecnologia - TMS Transportador">
                 Tecnologia - TMS Transportador
               </option>
-              <option defaultValue={"UX"} value="Tecnologia - Live Tracking">
+              <option value="Tecnologia - Live Tracking">
                 Tecnologia - Live Tracking
               </option>
             </select>
@@ -140,7 +134,7 @@ export default function ContactForm() {
             type="submit"
             className="text-white md:w-full w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center"
           >
-            enviar
+            enviar contato
           </button>
         </form>
       </section>
