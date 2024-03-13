@@ -37,7 +37,7 @@ export default function BannerMain() {
 
   return (
     <>
-      <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-2/6">
+      <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[85vh] md:h-2/6">
         <div
           className={`w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
