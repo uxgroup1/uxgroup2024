@@ -99,6 +99,7 @@
       margin-bottom: 30px;
       white-space: nowrap;
       transition: ease 500ms;
+      border-radius: 16px;
       max-width: 733px;
       color: #ffffff;
       cursor: pointer;
@@ -112,6 +113,7 @@
         height: 609px;
         white-space: normal;
         width: 80%;
+        border-radius: 16px;
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -128,6 +130,7 @@
           top: 0;
           left: 0;
           z-index: -1;
+          border-radius: 16px;
         }
 
         .content {

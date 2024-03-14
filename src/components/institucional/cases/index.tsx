@@ -1,215 +1,134 @@
-import style from './style.module.scss';
-import { useState } from 'react';
-// import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { useWindowSize } from '../../../hooks/use-window-size';
+import { useState } from "react";
 
-// import ConnectImage from '@/assets/Verticais-Mobile/ux-connect.png';
-// import FulfillmentImage from '@/assets/Verticais-Mobile/ux-fulfillment.png';
-// import SolutionsImage from '@/assets/Verticais-Mobile/ux-solutions.png';
-// import UXSolutionsLogo from '@/assets/Verticais-Mobile/ux-solutions-logo.svg';
-// import UXConnectLogo from '@/assets/Verticais-Mobile/ux-connect-logo.svg';
+export function Cases() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-const IMAGES = [
-  {
-    img: "",
-    href: 'https://uxgroup.com.br/logistica.html',
-    title: 'Excelência na gestão de operações.',
-    description:
-      'Através de inteligência logística e estruturas próprias localizadas em regiões estratégicas, oferecemos armazenagem e movimentação de pedidos de forma ágil, permitindo não só o controle, como também um melhor prazo para entregas.',
-    buttons: [
-      'Fale agora com um especialista em fulfillment ',
-    ],
-    color: 'Yellow',
-  },
-  {
-    img: "",
-    logoImg: "",
-    alt: 'UX Solutions',
-    href: 'https://uxgroup.com.br/tecnologia',
-    title: 'Tecnologia para gestão logística.',
-    description:
-      'Toda a tecnologia necessária para gerenciar a logística de uma operação de e-commerce. A UX, como diferencial, possui as soluções de TMS embarcador, TMS transportador, WMS e aplicativos desenvolvidos dentro de casa, com o objetivo de oferecer uma experiência única de gestão ao parceiro.',
-    buttons: [
-      'Fale agora com um especialista em tecnologia',
-    ],
-    color: 'Blue',
-  },
-  {
-    img: "",
-    logoImg: "",
-    alt: 'UX Connect',
-    href: 'https://ondetah.com.br/',
-    title: 'Experiência integrada na gestão do cliente.',
-    description:
-      'A experiência do usuário ao longo da compra e da entrega são dois fatores essenciais para a retenção e atração de clientes, por isso a UX desenvolveu ferramentas que permitem o consumidor a ter informação em tempo real sobre seus pedidos com a possibilidade de interagir com os agentes responsáveis por sua entrega.',
-    buttons: [
-      'Fale agora com um especialista em customer experience',
-    ],
-    color: 'Purple',
-  }
-];
+  const slides = [
+    {
+      title: "Lorem Ipsum",
+      text: "lorem Ips laborum et sapien et dolor sit amet",
+      imageSrc: "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      author: "Ema Watson",
+      position: "Marketing Manager at Stech"
+    },
+    {
+      title: "UX Group",
+      text: "lorem Ips laborum et sapien et dolor sit amet",
+      imageSrc: "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      author: "John Doe",
+      position: "Product Designer at XYZ"
+    },
+    {
+      title: "UX Log",
+      text: "lorem Ips laborum et sapien et dolor sit amet",
+      imageSrc: "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      author: "Jane Smith",
+      position: "UI/UX Designer at ABC"
+    },
+  ];
 
-export function Verticals() {
-  const size = useWindowSize();
-  const isDesktopMedia = size.width === undefined || size.width > 1024;
-  const [index, setIndex] = useState(0);
-  const [touchPosition, setTouchPosition] = useState<number | null>(null);
-  const slides = [0, 1, 2 ];
-  const length = slides.length;
-
-  const next = () => {
-    if (index < length - 1) {
-      setIndex(index + 1);
+  const nextSlide = () => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) =>
+          prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+        );
+        setIsTransitioning(false);
+      }, 300); // Tempo da animação
     }
   };
 
-  const prev = () => {
-    if (index > 0) {
-      setIndex(index - 1);
+  const prevSlide = () => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) =>
+          prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+        );
+        setIsTransitioning(false);
+      }, 300); // Tempo da animação
     }
-  };
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    const touchDown = e.touches[0].clientX;
-    setTouchPosition(touchDown);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    const touchDown = touchPosition;
-
-    if (touchDown === null) {
-      return;
-    }
-
-    const currentTouch = e.touches[0].clientX;
-    const diff = touchDown - currentTouch;
-
-    if (diff > 5) {
-      if (index < length - 1) {
-        next();
-      }
-    }
-
-    if (diff < -5) {
-      if (index > 0) {
-        prev();
-      }
-    }
-
-    setTouchPosition(null);
   };
 
   return (
-    <section id="verticals" className={style.container}>
-      <div className={style.titleBlock}>
-        <h2 className={style.title}>Nossos Cases</h2>
-        <p className={style.subtitle}>
-          Para cada etapa do processo de venda digital, a UX possui uma solução
-          própria, com especialistas em e-commerce.
-        </p>
-      </div>
-      <div className={style.carousel}>
-        <div className={style.control}>
-          <button className={style.left} onClick={prev}>
-            {/* <FaArrowLeft /> */}
-          </button>
-          <div
-            className={style.controlSlider}
-            style={{
-              transform: isDesktopMedia
-                ? 'initial'
-                : `translateX(-${index * 100}%)`,
-            }}
-          >
-            <div className={style.controlSlide}>
-              <button
-                onClick={() => setIndex(0)}
-                className={`${
-                  index === 0 ? style.active : ''
-                }`}
-              >
-                Carrefour
-              </button>
-            </div>
-            <div className={style.controlSlide}>
-              <button
-                onClick={() => setIndex(1)}
-                className={` ${
-                  index === 1 ? style.active : ''
-                }`}
-              >
-                Petlove
-              </button>
-            </div>
-            <div className={style.controlSlide}>
-              <button
-                onClick={() => setIndex(2)}
-                className={` ${
-                  index === 2 ? style.active : ''
-                }`}
-              >
-                Lemon Basics
-              </button>
+    <section className="bg-white flex justify-center items-center w-full">
+      <div className="w-full flex justify-center items-center flex-col px-6 py-10 mx-auto">
+        <h1 className="mt-2 font-semibold text-black">
+          Nossos cases de sucesso
+        </h1>
+
+        <main className="relative flex justify-center items-center z-20 w-[92%] mt-8 md:flex md:items-center xl:mt-12">
+          <div className="absolute flex justify-center items-center  w-full bg-[#bfbfbf] -z-10 md:h-96 rounded-2xl"></div>
+
+          <div className="w-full p-6 bg-black md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
+            <img
+              className={`h-40 w-40 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[50%] md:rounded-2xl transition-opacity ${
+                isTransitioning ? "opacity-0" : "opacity-100"
+              }`}
+              src={slides[currentSlide].imageSrc}
+              alt="client photo"
+            />
+
+            <div className="mt-2 md:mx-6">
+              <div>
+                <p className="text-2xl font-medium tracking-tight text-white lg:text-black">
+                  {slides[currentSlide].author}
+                </p>
+                <p className="text-white lg:text-black">{slides[currentSlide].position}</p>
+              </div>
+
+              <p className="mt-4 text-lg leading-relaxed text-white lg:text-black md:text-xl transition-opacity">
+                "{slides[currentSlide].text}"
+              </p>
+
+              <div className="flex items-center justify-between mt-6 md:justify-start">
+                <button
+                  title="left arrow"
+                  className="p-2 text-black transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:text-white hover:bg-black"
+                  onClick={prevSlide}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  title="right arrow"
+                  className="p-2 text-black transition-colors duration-300 border rounded-full rtl:-scale-x-100 md:mx-6 hover:text-white hover:bg-black"
+                  onClick={nextSlide}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          <button className={style.right} onClick={next}>
-            {/* <FaArrowRight /> */}
-          </button>
-        </div>
-        <div
-          className={style.slider}
-          style={{
-            transform: isDesktopMedia
-              ? index == 3
-                ? 'translateX(-474%)'
-                : index < 1
-                ? `translateX(-${index * 75}%)`
-                : `translateX(-${180 + (index - 2) * 110}%)`
-              : `translateX(${10 - index * 80}%)`,
-          }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-        >
-          {slides.map((_, idx) => (
-            <div
-              key={idx}
-              className={`${style.slide} ${index === idx ? style.active : ''}`}
-              onClick={() => setIndex(idx)}
-              style={{
-                backgroundImage: `url("${IMAGES[idx].img}")`,
-                transform: `${
-                  idx !== index
-                    ? `scale(${1 - Math.abs(index - idx) * 0.15})`
-                    : ''
-                } translateX(${(index - idx) * 56}%)`,
-                zIndex: index === idx ? 0 : -Math.abs(index - idx),
-              }}
-            >
-              <div className={style.content}>
-                <h3>{IMAGES[idx].title}</h3>
-                <p className={style.description}>{IMAGES[idx].description}</p>
-              </div>
-              <div className={style.buttons}>
-                <a href={IMAGES[idx].href} target="_blank" className={style[`color${IMAGES[idx].color}`]}>
-                  construir um case de sucesso
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className={style.indicators}>
-          <ul>
-            {slides.map((_, idx) => (
-              <li key={idx}>
-                <button
-                  onClick={() => setIndex(idx)}
-                  className={idx === index ? style.active : ''}
-                ></button>
-              </li>
-            ))}
-          </ul>
-        </div>
+        </main>
       </div>
     </section>
   );

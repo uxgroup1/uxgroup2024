@@ -14,7 +14,7 @@ import Header from "@/components/header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/institucional/ContactForm";
 import EcoSistemaUx from "@/components/ecosistemaUx";
-import { Verticals } from "@/components/institucional/cases";
+import { Cases } from "@/components/institucional/cases";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <Header />
       <BannerMain />
       <EcoSistemaUx />
-      <Verticals />
+      <Cases />
       <CarroselVertical />
       <CarroselVerticalMobile />
       <Cta

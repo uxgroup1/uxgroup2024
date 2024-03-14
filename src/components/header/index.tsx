@@ -10,8 +10,8 @@ export default function Header() {
 
   return (
     <>
-      <nav className="bg-black fixed flex items-center justify-center z-50 top-0 w-full px-5 border-gray-200">
-        <div className="flex items-center justify-center h-full w-[92%]">
+      <nav className="bg-black fixed flex items-center justify-center z-50  top-0 w-full px-5 border-gray-200">
+        <div className="flex items-center justify-center h-full w-[92%] max-w-[1996px]">
           <div className="flex w-full flex-wrap justify-between items-center mx-auto  py-5">
             <a
               href="#"
