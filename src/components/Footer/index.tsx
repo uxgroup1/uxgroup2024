@@ -99,7 +99,7 @@ export default function Footer() {
               })}
             </div>
           </div>
-          <hr className="my-6 border-white sm:mx-auto lg:my-8" />
+          <hr className="my-6 border-transparent relative w-full lg:border-white sm:mx-auto lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-white sm:text-center">
               © 2024{" "}
