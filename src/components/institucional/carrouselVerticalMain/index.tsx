@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 
 function CarroselVertical() {
   const [contentIndex, setContentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const content = [
     {
       index: 0,
@@ -43,7 +44,11 @@ function CarroselVertical() {
       <section className={style.CarroselVertical}>
         <div className={style.Container}>
           <div className={style.BoxCarrosel}>
-            <div className={style.containerTitulo}>
+            <div
+              className={` transition-opacity ${
+                isTransitioning ? "opacity-0" : "opacity-100"
+              } ${style.containerTitulo}`}
+            >
               <h1>Inove, Controle e Venda Mais</h1>
               <p>
                 Adapte-se às mudanças do mercado com facilidade. Nossas soluções
@@ -57,7 +62,9 @@ function CarroselVertical() {
                 {content.map((item, index) => (
                   <div
                     key={index}
-                    className={style.itemMenu}
+                    className={` transition-opacity ${
+                      isTransitioning ? "opacity-0" : "opacity-100"
+                    } ${style.itemMenu}`}
                     onClick={() => handleButtonClick(index)}
                   >
                     <div className={style.barra}></div>

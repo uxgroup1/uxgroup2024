@@ -76,9 +76,9 @@ export default function Header() {
           {openMenu && (
             <div
               id="mega-menu-full-image-dropdown"
-              className="mt-1 bg-black  md:border-t-white md:border-t"
+              className="mt-1 bg-black w-full absolute top-40 md:top-16 left-0 md:border-t-white md:border-t"
             >
-              <div className="grid max-w-screen-xl  py-5 mx-auto text-sm text-white  md:grid-cols-2 md:px-0">
+              <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm text-red-400  md:grid-cols-2 md:px-0">
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
                     <a href="#" className="font-normal hover:font-medium">

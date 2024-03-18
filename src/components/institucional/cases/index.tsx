@@ -73,18 +73,21 @@ export function Cases() {
               alt="client photo"
             />
             <div className="mt-2 md:mx-6 p-5">
-              <div>
+              <div className="flex flex-col">
+                <img
+                  src={slides[currentSlide].imageSrc}
+                  alt="client photo"
+                  className={`md:w-[70px] md:h-[70px] w-20 h-20 mb-3 rounded-[8px]  transition-opacity ${
+                    isTransitioning ? "opacity-0" : "opacity-100"
+                  }`}
+                />
                 <p className="text-2xl font-medium tracking-tight text-white lg:text-black">
                   {slides[currentSlide].author}
                 </p>
-                <p className="text-white lg:text-black">
-                  {slides[currentSlide].position}
+                <p className=" text-lg leading-relaxed text-white lg:text-black md:text-xl transition-opacity">
+                  "{slides[currentSlide].text}"
                 </p>
               </div>
-
-              <p className="mt-4 text-lg leading-relaxed text-white lg:text-black md:text-xl transition-opacity">
-                "{slides[currentSlide].text}"
-              </p>
 
               <div className="flex items-center justify-between mt-6 md:justify-start">
                 <button
