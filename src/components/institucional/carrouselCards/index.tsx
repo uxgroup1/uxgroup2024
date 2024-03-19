@@ -18,9 +18,12 @@ function CarrouselCards({ content }: carrouselCards) {
         <div className={style.Container}>
           {content.map((data) => {
             return (
-              <div key={data.index} className={style.Card}>
+              <div
+                key={data.index}
+                className={`hover:bg-slate-600 ${style.Card}`}
+              >
                 <div className={style.content}>
-                  <h2 className="leading-[30px]" >{data.title}</h2>
+                  <h2 className="leading-[30px]">{data.title}</h2>
                   <p>{data.text}</p>
                   <button>
                     <a href=""> saiba mais</a>
