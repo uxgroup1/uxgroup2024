@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
           </div>
           <hr className="my-6 border-transparent relative w-full lg:border-white sm:mx-auto lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="sm:flex md:flex-row flex flex-col-reverse gap-5 sm:items-center sm:justify-between">
             <span className="text-sm text-white sm:text-center">
               © 2024{" "}
               <a href="#" className="hover:underline">
@@ -108,13 +108,13 @@ export default function Footer() {
               </a>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <div className="flex mt-4 gap-5 sm:justify-center sm:mt-0">
               {redeSocial.map((data) => {
                 return (
                   <a 
                     key={data.index}
                     href="#"
-                    className="text-white  hover:text-black hover:rounded-xl p-2 transition-all hover:text-2xl "
+                    className="text-white  hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
                   >
                     <Image
                       src={data.image.src}
