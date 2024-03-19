@@ -20,6 +20,7 @@
       background-color: #fff;
       padding-top: 3%;
       gap: 15px;
+      
 
       .containerTitulo {
         display: flex;
@@ -42,6 +43,8 @@
       background-color: var(--color-secundary-ux);
       border-radius: 16px;
       gap: 165px;
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 12px 0px;
+
 
       .verticalMenu {
         display: flex;

@@ -12,6 +12,7 @@
     justify-content: center;
     width: 1996px;
     height: 100%;
+    
 
     .BoxCta {
       display: flex;
@@ -26,6 +27,7 @@
       border-radius: 16px;
       padding-top: 5%;
       padding-bottom: 5%;
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 12px 0px;
 
       .ContainerContent {
         display: flex;

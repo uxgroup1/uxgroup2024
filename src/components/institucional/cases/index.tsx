@@ -63,9 +63,10 @@ export function Cases() {
         </h1>
 
         <main className="relative flex justify-center items-center z-20 lg:w-[92%] mt-8 md:flex md:items-center xl:mt-12">
-          <div className="absolute flex justify-center items-center  w-full bg-[#bfbfbf] -z-10 md:h-96 rounded-2xl"></div>
+          <div style={{boxShadow: 'rgba(0, 0, 0, 0.3) 2px 4px 12px 0px'}} className="absolute flex justify-center items-center box-shadow  w-full bg-[#bfbfbf] -z-10 md:h-96 rounded-2xl"></div>
           <div className="w-full bg-black md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
             <img
+              style={{boxShadow: 'rgba(0, 0, 0, 0.3) 2px 4px 12px 0px'}}
               className={`h-40 w-full md:mx-6 rounded-t-[16px] object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[50%] md:rounded-2xl transition-opacity ${
                 isTransitioning ? "opacity-0" : "opacity-100"
               }`}

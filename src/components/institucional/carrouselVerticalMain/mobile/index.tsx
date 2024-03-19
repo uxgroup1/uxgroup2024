@@ -62,8 +62,8 @@ function CarroselVerticalMobile() {
             </p>
           </div>
 
-          <div className="flex justify-center flex-col items-center mb-8">
-            <div className="z-20 w-full flex items-center rounded-t-[16px] bg-black justify-center h-20">
+          <div   className="flex justify-center flex-col items-center mb-8">
+            <div  style={{boxShadow: 'rgba(0, 0, 0, 0.3) 2px 4px 12px 0px'}} className="z-20 w-full flex items-center rounded-t-[16px] bg-black justify-center h-20">
 
             
             <ol className="flex justify-center w-full">
