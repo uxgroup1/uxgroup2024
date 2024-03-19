@@ -50,6 +50,7 @@ export default function Home() {
         }
         banner={image.src}
       />
+      <section style={{paddingTop:'20px'}}></section>
       <ContactForm />
       <Footer />
     </main>
