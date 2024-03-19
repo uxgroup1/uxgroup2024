@@ -48,7 +48,7 @@ function CarroselVerticalMobile() {
 
   return (
     <section className={style.Section}>
-      <div className="container bg mx-auto px-4">
+      <div className="container bg mx-auto px-5">
         <div className="bg-white ">
           <div className="mb-8">
             <h1 className="text-3xl text-black font-bold mb-2">
