@@ -73,7 +73,7 @@ export default function Footer() {
                 />
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
+            <div className="flex md:flex-row flex-col pt-5 md:pt-0 md:grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
               {pages.map((data) => {
                 return (
                   <div key={data.index} className="w-full">

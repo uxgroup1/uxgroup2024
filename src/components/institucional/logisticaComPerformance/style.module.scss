@@ -6,6 +6,7 @@
   height: 100%;
   width: 100%;
   background-color: #fff;
+  padding-top: 10px;
 
   .Container {
     display: flex;
@@ -61,12 +62,16 @@
 
 @media (max-width: 675px) {
   .CarrouselProducts{
+    padding-top: 50px;
     .Container{
       .BoxCarrouselProducts{
         .Controller{
           .ControllerContent{
             div{
               width: 100%;
+            }
+            h1{
+              line-height: 130%;
             }
             p{
               width: 95%;

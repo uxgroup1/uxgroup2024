@@ -58,7 +58,7 @@ export function Cases() {
   return (
     <section className="bg-white flex justify-center items-center w-full">
       <div className="w-full flex justify-center items-center flex-col px-4 mx-auto">
-        <h1 className="mt-2 font-semibold text-black">
+        <h1 className="mt-2 font-bold leading-snug text-black">
           Nossos cases de sucesso
         </h1>
 
@@ -73,7 +73,7 @@ export function Cases() {
               alt="client photo"
             />
             <div className="mt-2 md:mx-6 p-5">
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-3">
                 <img
                   src={slides[currentSlide].imageSrc}
                   alt="client photo"
@@ -81,10 +81,10 @@ export function Cases() {
                     isTransitioning ? "opacity-0" : "opacity-100"
                   }`}
                 />
-                <p className="text-2xl font-medium tracking-tight text-white lg:text-black">
+                <h2 className="text-2xl font-bold tracking-tight text-white lg:text-black">
                   {slides[currentSlide].author}
-                </p>
-                <p className=" text-lg leading-relaxed text-white lg:text-black md:text-xl transition-opacity">
+                </h2>
+                <p className="leading-relaxed text-white lg:text-black transition-opacity">
                   "{slides[currentSlide].text}"
                 </p>
               </div>

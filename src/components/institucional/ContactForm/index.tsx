@@ -6,7 +6,7 @@ export default function ContactForm() {
           <h1 className="w-full text-center">
             Saiba mais sobre nossas soluções.
           </h1>
-          <p>Nos informe qual tipo de contato gostaria de fazer.</p>
+          <p className="w-4/5 md:w-full">Nos informe qual tipo de contato gostaria de fazer.</p>
         </div>
         <form className="max-w-md w-[85%] mx-auto">
           <div className="relative z-0 w-full mb-5 group">

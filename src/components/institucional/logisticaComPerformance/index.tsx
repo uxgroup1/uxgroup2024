@@ -55,7 +55,7 @@ function LogisticaComPerformance() {
           <div className={style.BoxCarrouselProducts}>
             <div className={style.Controller}>
               <div className={style.ControllerContent}>
-                <div>
+                <div className="flex gap-0 flex-col leading-[120%]">
                   <h1> Logística com Performance </h1> e indicadores de sucesso
                 </div>
                 <p>

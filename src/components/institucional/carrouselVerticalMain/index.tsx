@@ -62,13 +62,13 @@ function CarroselVertical() {
                 {content.map((item, index) => (
                   <div
                     key={index}
-                    className={` transition-opacity ${
+                    className={`transition-opacity ${
                       isTransitioning ? "opacity-0" : "opacity-100"
                     } ${style.itemMenu}`}
                     onClick={() => handleButtonClick(index)}
                   >
                     <div className={style.barra}></div>
-                    <h3 className=" text-base text-white">{item.title}</h3>
+                    <h3 className="text-[24px] font-bold text-white">{item.title}</h3>
                   </div>
                 ))}
               </div>

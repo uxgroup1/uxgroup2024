@@ -20,7 +20,7 @@ function CarrouselCards({ content }: carrouselCards) {
             return (
               <div key={data.index} className={style.Card}>
                 <div className={style.content}>
-                  <h2>{data.title}</h2>
+                  <h2 className="leading-[30px]" >{data.title}</h2>
                   <p>{data.text}</p>
                   <button>
                     <a href=""> saiba mais</a>

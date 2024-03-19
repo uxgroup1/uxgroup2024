@@ -32,10 +32,10 @@ export function Blog() {
   return (
     <section className={style.container}>
       <div className={style.margin}>
-        <div className={style.titleBlock}>
-          <h2 className={style.title}>
+          <div className={`w-full m-0  ${style.titleBlock}`}>
+          <h1 className='md:w-4/5 w-full text-left md:text-center ' >
             Conteúdos exclusivos sobre o nosso setor.
-          </h2>
+          </h1>
         </div>
         <div className={style.box}>
           <div className={style.featured}>
