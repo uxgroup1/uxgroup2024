@@ -25,7 +25,7 @@ export default function BannerMain() {
 
     {
       title: "Logística",
-      text: "Conteúdo do Logística",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       background:
         "https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png",
     },
