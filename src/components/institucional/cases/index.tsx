@@ -1,42 +1,29 @@
 import { useState } from "react";
 
-export function Cases() {
+
+interface Content {
+  title: string;
+  text: string;
+  imageSrc: string;
+  author: string;
+}
+
+interface ContentSlide {
+  content: Content[];
+}
+
+export function Cases({content}: ContentSlide) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const slides = [
-    {
-      title: "Lorem Ipsum",
-      text: "lorem Ips laborum et sapien et dolor sit amet",
-      imageSrc:
-        "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      author: "Ema Watson",
-      position: "Marketing Manager at Stech",
-    },
-    {
-      title: "UX Group",
-      text: "lorem Ips laborum et sapien et dolor sit amet",
-      imageSrc:
-        "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      author: "John Doe",
-      position: "Product Designer at XYZ",
-    },
-    {
-      title: "UX Log",
-      text: "lorem Ips laborum et sapien et dolor sit amet",
-      imageSrc:
-        "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      author: "Jane Smith",
-      position: "UI/UX Designer at ABC",
-    },
-  ];
+  
 
   const nextSlide = () => {
     if (!isTransitioning) {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentSlide((prevSlide) =>
-          prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+          prevSlide === content.length - 1 ? 0 : prevSlide + 1
         );
         setIsTransitioning(false);
       }, 300); // Tempo da animação
@@ -48,7 +35,7 @@ export function Cases() {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentSlide((prevSlide) =>
-          prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+          prevSlide === 0 ? content.length - 1 : prevSlide - 1
         );
         setIsTransitioning(false);
       }, 300); // Tempo da animação
@@ -70,23 +57,23 @@ export function Cases() {
               className={`h-40 w-full md:mx-6 rounded-t-[16px] object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[50%] md:rounded-2xl transition-opacity ${
                 isTransitioning ? "opacity-0" : "opacity-100"
               }`}
-              src={slides[currentSlide].imageSrc}
+              src={content[currentSlide].imageSrc}
               alt="client photo"
             />
             <div className="mt-2 md:mx-6 p-5">
               <div className="flex flex-col gap-3">
                 <img
-                  src={slides[currentSlide].imageSrc}
+                  src={content[currentSlide].imageSrc}
                   alt="client photo"
                   className={`md:w-[70px] md:h-[70px] w-20 h-20 mb-3 rounded-[8px]  transition-opacity ${
                     isTransitioning ? "opacity-0" : "opacity-100"
                   }`}
                 />
                 <h2 className="text-2xl font-bold tracking-tight text-white lg:text-black">
-                  {slides[currentSlide].author}
+                  {content[currentSlide].author}
                 </h2>
                 <p className="leading-relaxed text-white lg:text-black transition-opacity">
-                  "{slides[currentSlide].text}"
+                  "{content[currentSlide].text}"
                 </p>
               </div>
 

@@ -1,0 +1,134 @@
+.LogisticaSustentavel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  .Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1996px;
+    height: 100%;
+
+    .BoxLogisticaSustentavel {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      height: 100%;
+      max-width: 1996px;
+      width: 90%;
+      border-radius: 16px;
+      color: #000;
+
+      .Controller {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .ContentText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          height: 100%;
+
+          h1 {
+            text-align: left;
+            padding-bottom: 0px;
+            height: normal;
+          }
+
+          p {
+            width: 75%;
+          }
+
+          div {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            gap: 0px;
+            width: 70%;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 140%;
+            padding-bottom: 8px;
+          }
+
+          button {
+            background-color: #000;
+            width: 170px;
+            height: 40px;
+            border-radius: 8px;
+            color: #fff;
+          }
+
+          .containerTeste{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            overflow: auto;
+            gap: 20px;
+            
+            
+            .controllerTest{
+              display: flex;
+              gap: 20px;
+              flex-direction: row;
+              overflow: auto;
+            }
+          }
+        }
+      }
+
+      .ContentImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        .BoxImage {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--color-secundary-ux);
+          width: 100%;
+          height: 400px;
+          border-radius: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .LogisticaSustentavel {
+    .Container {
+      .BoxLogisticaSustentavel {
+        display: flex;
+        flex-direction: column;
+
+        .ContentImage {
+          display: none;
+        }
+
+        .Controller {
+          .ContentText {
+            p {
+              width: 100%;
+            }
+
+            div {
+              width: 85%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,19 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 
-function CarroselVertical() {
+interface content {
+  title: string;
+  contentText: string;
+}
+
+export interface ContentSection {
+  titleSection: string;
+  subTitleSection: string;
+  content: content[]
+
+}
+
+function CarroselVertical(objetc : ContentSection) {
   const [contentIndex, setContentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const content = [

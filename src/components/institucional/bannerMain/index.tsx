@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import image from "../../../assets/cta/ctaBanner.png";
 import Image from "next/image";
 import ImageTEste from "../../../assets/teste.png";
@@ -37,6 +37,14 @@ export default function BannerMain() {
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setContentIndex((prevIndex) => (prevIndex + 1) % contentBanners.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [contentBanners.length]);
+
   const handleButtonClick = (index: number) => {
     setContentIndex(index);
   };
@@ -66,7 +74,7 @@ export default function BannerMain() {
                 }`}
               >
                 {contentBanners[contentIndex].title}
-                <p className="pt-3 md:w-3/4 text-sm text-center md:text-left w-4/5 font-normal">
+                <p className="pt-5 md:w-3/4 text-sm text-center md:text-left w-4/5 font-normal">
                   {contentBanners[contentIndex].text}
                 </p>
                 <button className="md:w-[50%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
@@ -100,7 +108,7 @@ export default function BannerMain() {
             <button
               className={`${
                 contentIndex === 0 ? "bg-black" : "bg-white"
-              }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-black rounded-[8px] transition-all`}
+              }  hover:w-7 hover:h-7 block w-6 h-6 transition-all hover:border-white border hover:bg-black rounded-[8px] `}
               onClick={() => handleButtonClick(0)}
             ></button>
             <button

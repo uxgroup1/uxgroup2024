@@ -1,5 +1,11 @@
 import style from "./style.module.scss";
 
+interface Content {
+  title: string;
+  text: string;
+  textTwo: string;
+}
+
 function EcoSistemaUx() {
   return (
     <>

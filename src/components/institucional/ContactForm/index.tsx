@@ -6,7 +6,9 @@ export default function ContactForm() {
           <h1 className="w-full text-center">
             Saiba mais sobre nossas soluções.
           </h1>
-          <p className="w-4/5 md:w-full">Nos informe qual tipo de contato gostaria de fazer.</p>
+          <p className="w-4/5 md:w-full">
+            Nos informe qual tipo de contato gostaria de fazer.
+          </p>
         </div>
         <form className="max-w-md w-[85%] mx-auto">
           <div className="relative z-0 w-full mb-5 group">
@@ -127,6 +129,20 @@ export default function ContactForm() {
                 className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Mensagem
+              </label>
+            </div>
+            <div className="flex items-center pb-10">
+              <input
+                id="disabled-checked-checkbox"
+                type="checkbox"
+                value=""
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "
+              />
+              <label
+                htmlFor="disabled-checked-checkbox"
+                className="ms-2 text-sm font-medium text-[#bfbfbf] focus:text-white"
+              >
+                Eu concordo em receber comunicações.
               </label>
             </div>
           </div>
