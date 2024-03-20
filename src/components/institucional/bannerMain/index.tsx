@@ -66,7 +66,7 @@ export default function BannerMain() {
                 }`}
               >
                 {contentBanners[contentIndex].title}
-                <p className="pt-3 md:w-3/4 text-sm text-center md:text-left font-normal">
+                <p className="pt-3 md:w-3/4 text-sm text-center md:text-left w-4/5 font-normal">
                   {contentBanners[contentIndex].text}
                 </p>
                 <button className="md:w-[50%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
@@ -96,11 +96,11 @@ export default function BannerMain() {
               </div>
             </div>
           </div>
-          <div className="w-full h-2/6 md:h-[200px] md:pt-12 pb-10 md:pb-10  flex gap-5 items-center justify-center ">
+          <div className="w-full h-1/6  md:h-[200px] md:pt-12 pb-10 md:pb-10  flex gap-5 items-center justify-center ">
             <button
               className={`${
                 contentIndex === 0 ? "bg-black" : "bg-white"
-              }  hover:w-7 hover:h-7  w-6 h-6 hover:border-white border hover:bg-black rounded-[8px] transition-all`}
+              }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-black rounded-[8px] transition-all`}
               onClick={() => handleButtonClick(0)}
             ></button>
             <button
@@ -108,7 +108,7 @@ export default function BannerMain() {
                 contentIndex === 1
                   ? "bg-gradient-to-r from-[#29265B] to-[#009580]"
                   : "bg-white"
-              }  hover:w-7 hover:h-7  w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#29265B] to-[#009580] rounded-[8px] transition-all`}
+              }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#29265B] to-[#009580] rounded-[8px] transition-all`}
               onClick={() => handleButtonClick(1)}
             ></button>
 
@@ -117,7 +117,7 @@ export default function BannerMain() {
                 contentIndex === 2
                   ? "bg-gradient-to-r from-[#FBC709] to-[#FF7F13]"
                   : "bg-white"
-              }  hover:w-7 hover:h-7  w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#FBC709] to-[#FF7F13] rounded-[8px] transition-all`}
+              }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#FBC709] to-[#FF7F13] rounded-[8px] transition-all`}
               onClick={() => handleButtonClick(2)}
             ></button>
             <button
@@ -125,7 +125,7 @@ export default function BannerMain() {
                 contentIndex === 3
                   ? "bg-gradient-to-r from-[#7DAD58] to-[#014C34]"
                   : "bg-white"
-              } hover:w-7 hover:h-7  w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
+              } hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
               onClick={() => handleButtonClick(3)}
             ></button>
           </div>
