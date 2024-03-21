@@ -69,7 +69,7 @@ export default function Logistica() {
   return (
     <main>
       <Header />
-      <JumboTron />
+      <JumboTron title="We invest in the world’s potential"  text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." banner=""/>
       <SecondSection
         title="Fulfillment Personalizado"
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
@@ -77,7 +77,7 @@ export default function Logistica() {
       />
       <Cases content={slides} />
       <SecondSection
-        image=""
+        image="."
         title="Implementação de WMS"
         text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
       />
@@ -94,6 +94,7 @@ export default function Logistica() {
         }
       />
       <FeaturesComponent
+      titleSection="Benefícios de escolher a UX"
         content={contentFeatures}
         banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"
       />

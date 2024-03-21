@@ -53,11 +53,9 @@ export default function BannerMain() {
     <>
       <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-[90vh]">
         <div
-          className={`flex flex-col w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
+          className={`flex transition-all duration-500 flex-col w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
             backgroundImage: `url(${contentBanners[contentIndex].background})`,
-            transition: "background-image animate-back ",
-            transform: "animate-back",
           }}
         >
           <div className="flex flex-col-reverse md:flex-row-reverse text-white md:text-4xl text-xl items-center w-full md:h-4/5 h-full">

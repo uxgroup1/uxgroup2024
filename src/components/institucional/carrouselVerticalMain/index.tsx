@@ -1,39 +1,24 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 
-function CarroselVertical() {
+
+interface Content {
+  title: string;
+  contentTitle: string;
+  contentText: string;
+}
+
+interface ContentSlide{
+  content: Content[];
+  title: string;
+  text: string;
+}
+
+
+function CarroselVertical({title, text,content} : ContentSlide) {
   const [contentIndex, setContentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const content = [
-    {
-      index: 0,
-      title: "TMS embarcador",
-      contentTitle: "TMS embarcador",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    },
-    {
-      index: 1,
-      title: "TMS Transportador",
-      contentTitle: "TMS Transportador",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    },
-    {
-      index: 2,
-      title: "Plataforma de comunicação",
-      contentTitle: "Plataforma de comunicação",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    },
-    {
-      index: 3,
-      title: "Loja digital",
-      contentTitle: "Loja digital",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    },
-  ];
+  
 
   const handleButtonClick = (index: number) => {
     setContentIndex(index);
@@ -49,12 +34,9 @@ function CarroselVertical() {
                 isTransitioning ? "opacity-0" : "opacity-100"
               } ${style.containerTitulo}`}
             >
-              <h1>Inove, Controle e Venda Mais</h1>
+              <h1>{title}</h1>
               <p>
-                Adapte-se às mudanças do mercado com facilidade. Nossas soluções
-                de tecnologia modulares oferecem flexibilidade, informação e
-                eficiência para a gestão de fretes, gestão de transportes e
-                comunicação das suas vendas digitais. Conheça nossas soluções!
+                {text}
               </p>
             </div>
             <div className={style.containerCarrouselVertical}>
@@ -72,8 +54,8 @@ function CarroselVertical() {
                   </div>
                 ))}
               </div>
-              <div className={style.content}>
-                <h1>{content[contentIndex].contentTitle}</h1>
+              <div className={`${style.content}`}>
+                <h1 className="w-4/5">{content[contentIndex].contentTitle}</h1>
                 <p>{content[contentIndex].contentText}</p>
                 <button>saiba mais</button>
               </div>

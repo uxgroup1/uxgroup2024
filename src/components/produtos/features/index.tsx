@@ -9,18 +9,21 @@ interface Content {
 interface ContentArray {
   content: Content[];
   banner: string;
+  titleSection: string;
 }
 
-export default function FeaturesComponent({ content, banner }: ContentArray) {
+export default function FeaturesComponent({
+  content,
+  banner,
+  titleSection,
+}: ContentArray) {
   return (
     <>
       <section className="bg-white pt-[50px] pb-[80px] flex items-center  w-full md:px-0 px-5 ">
         <div className="max-w-[1996px] w-full flex items-center md:justify-center">
           <div className="lg:flex w-[90%]  lg:items-center">
-            <div className="w-full md:w-1/2 ">
-              <h1 className="font-bold pb-7 text-black">
-                Benefícios de escolher a UX
-              </h1>
+            <div className="w-full md:w-[65%] ">
+              <h1 className="font-bold pb-7 text-black">{titleSection}</h1>
               <div className="md:flex w-full flex-col gap-2 md:items-start">
                 {content?.map((item, index) => {
                   return (
@@ -45,11 +48,11 @@ export default function FeaturesComponent({ content, banner }: ContentArray) {
                 })}
               </div>
             </div>
-            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+            <div className="hidden rounded-2xl lg:flex lg:items-center lg:w-1/2 lg:justify-center">
               <Image
                 width={100}
                 height={100}
-                className="w-full object-cover xl:w-[34rem] xl:h-[34rem]"
+                className="w-full  object-cover xl:w-[34rem] xl:h-[34rem]"
                 src={svg}
                 alt=""
               />

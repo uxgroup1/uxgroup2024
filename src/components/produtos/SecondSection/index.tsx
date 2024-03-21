@@ -33,7 +33,7 @@ function SecondSection({ title, text, image }: Content) {
             </div>
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
-                <Image src={image} alt="Imagem" width={400} height={400} />
+                <Image className="w-full h-full" src={image} alt="Imagem" width={100} height={100} />
               </div>
             </div>
           </div>

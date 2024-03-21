@@ -40,6 +40,37 @@ const slides = [
   },
 ];
 
+const content = [
+  {
+    index: 0,
+    title: "TMS embarcador",
+    contentTitle: "TMS embarcador",
+    contentText:
+      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+  },
+  {
+    index: 1,
+    title: "TMS Transportador",
+    contentTitle: "TMS Transportador",
+    contentText:
+      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+  },
+  {
+    index: 2,
+    title: "Plataforma de comunicação",
+    contentTitle: "Plataforma de comunicação",
+    contentText:
+      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+  },
+  {
+    index: 3,
+    title: "Loja digital",
+    contentTitle: "Loja digital",
+    contentText:
+      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -47,7 +78,7 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <Cases content={slides} />
-      <CarroselVertical />
+      <CarroselVertical content={content}/>
       <CarroselVerticalMobile />
       <Cta
         button={true}
