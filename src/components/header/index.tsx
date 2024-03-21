@@ -53,11 +53,20 @@ export default function Header() {
               <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
                     aria-current="page"
                   >
                     Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/logistica"
+                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    aria-current="page"
+                  >
+                    Logística
                   </a>
                 </li>
                 <li>
