@@ -50,7 +50,7 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <Cases content={slides} />
-      <CarroselVertical />
+      <CarroselVertical  />
       <CarroselVerticalMobile />
       <Cta
         title={
