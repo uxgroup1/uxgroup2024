@@ -5,21 +5,33 @@ import { useRouter } from "next/router";
 
 interface ConteudoCTA {
   title: String;
+  text?: String;
   banner: String;
+  button: boolean;
 }
 
-function Cta({ title, banner }: ConteudoCTA) {
-
-
+function Cta({ title, banner, text, button }: ConteudoCTA) {
   return (
     <>
       <section className={style.Cta}>
         <div className={style.Container}>
-          <div className={style.BoxCta} style={{backgroundImage:`url(${banner})`}}>
+          <div
+            className={style.BoxCta}
+            style={{ backgroundImage: `url(${banner})` }}
+          >
             <div className={style.ContainerContent}>
               <div className={style.Controller}>
-                <h1>{title}</h1>
-                <button> <Link href="/logistica">fale com um consultor</Link></button>
+                <div className="flex flex-col">
+                  <h1>{title}</h1>
+                  <p className="w-2/3">{text}</p>
+                </div>
+
+                {button && (
+                  <button>
+                    {" "}
+                    <Link href="/logistica">fale com um consultor</Link>
+                  </button>
+                )}
               </div>
             </div>
           </div>

@@ -10,11 +10,11 @@ export default function JumboTron() {
             Here at Flowbite we focus on markets where technology, innovation,
             and capital can unlock long-term value and drive economic growth.
           </p>
-          <div className="flex flex-col gap-5 space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+          <div className="flex flex-col gap-0 md:gap-5 space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button className="w-[200px] h-10 rounded-lg hover:bg-black hover:text-white transition-all">
               fale com um consultor
             </button>
-            <button className="w-[170px] h-10 rounded-lg bg-black text-white  hover:bg-white hover:text-black transition-all">
+            <button className="md:w-[170px] h-10 rounded-lg bg-black text-white  hover:bg-white hover:text-black transition-all">
               saiba mais
             </button>
           </div>

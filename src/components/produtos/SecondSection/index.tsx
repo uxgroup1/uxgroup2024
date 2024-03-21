@@ -24,9 +24,8 @@ function SecondSection({ title, text, image }: Content) {
                   <h1>{title}</h1>
                 </div>
                 <p>{text}</p>
-                <div
-                  className={` ${style.containerTeste}`}
-                ></div>
+                
+                <div className={` ${style.containerTeste}`}></div>
                 <div className={style.ButtonContainer}>
                   <button>saiba mais</button>
                 </div>

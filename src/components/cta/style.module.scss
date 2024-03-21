@@ -38,10 +38,11 @@
         color: #fff;
 
         .Controller {
-          display: flex;
+          display: grid;
+          grid-template-columns: 80% 20%;
           align-items: center;
           justify-content: space-between;
-          width: 80%;
+          width: 90%;
 
           button {
             border: 1px solid #fff;
@@ -52,7 +53,7 @@
           }
 
           h1 {
-            width: 55%;
+            width: 85%;
           }
         }
       }

@@ -43,7 +43,7 @@ export function Cases({content}: ContentSlide) {
   };
 
   return (
-    <section className="bg-white flex justify-center items-center w-full">
+    <section className="bg-white flex  justify-center items-center w-full">
       <div className="w-full flex justify-center items-center flex-col px-4 mx-auto">
         <h1 className="mt-2 font-bold leading-snug text-black">
           Nossos cases de sucesso

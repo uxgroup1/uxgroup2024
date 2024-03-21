@@ -1,0 +1,63 @@
+import Image from "next/image";
+import svg from "../../../assets/faviconBanner/ux-log.svg";
+
+interface Content {
+  title: string;
+  icons: string;
+}
+
+interface ContentArray {
+  content: Content[];
+  banner: string;
+}
+
+export default function FeaturesComponent({ content, banner }: ContentArray) {
+  return (
+    <>
+      <section className="bg-white pt-[50px] pb-[80px] flex items-center  w-full md:px-0 px-5 ">
+        <div className="max-w-[1996px] w-full flex items-center md:justify-center">
+          <div className="lg:flex w-[90%]  lg:items-center">
+            <div className="w-full md:w-1/2 ">
+              <h1 className="font-bold pb-7 text-black">
+                Benefícios de escolher a UX
+              </h1>
+              <div className="md:flex w-full flex-col gap-2 md:items-start">
+                {content?.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="flex w-full p-1 items-center gap-5 justify-start"
+                    >
+                      <Image
+                        className="flex hover:border-[2px] w-[40px] hover:border-transparent object-cover h-[40px]"
+                        src={svg}
+                        alt=""
+                        width={100}
+                        height={100}
+                      />
+                      <div className="mt-4  h-full md:mt-0">
+                        <h3 className="font-semibold pb-3 md:pb-0 text-sm md:text-lg cursor-default w-full text-black md:w-4/5 ">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+              <Image
+                width={100}
+                height={100}
+                className="w-full object-cover xl:w-[34rem] xl:h-[34rem]"
+                src={svg}
+                alt=""
+              />
+            </div>
+          </div>
+          <hr className="my-12 border-gray-200" />
+        </div>
+      </section>
+    </>
+  );
+}

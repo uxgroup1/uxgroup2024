@@ -4,8 +4,8 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 70px;
+  padding-top: 90px;
+  padding-bottom: 50px;
 
   .Container {
     display: flex;
@@ -47,16 +47,19 @@
             width: 75%;
           }
 
-          div {
+          .Carrousel{
             display: flex;
-            text-align: center;
-            flex-direction: column;
-            gap: 0px;
-            width: 70%;
-            font-size: 36px;
-            font-weight: 400;
-            line-height: 140%;
-            padding-bottom: 8px;
+            flex-direction: row;
+            overflow: scroll;
+            width: 80%;
+            padding-bottom: 20px;
+
+            div{
+              display: flex;
+              overflow: scroll;
+              gap: 20px;
+              width: 100%;
+            }
           }
 
           button {

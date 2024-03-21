@@ -23,7 +23,6 @@ const slides = [
     imageSrc:
       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     author: "Ema Watson",
-
   },
   {
     title: "UX Group",
@@ -31,7 +30,6 @@ const slides = [
     imageSrc:
       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     author: "John Doe",
-
   },
   {
     title: "UX Log",
@@ -39,7 +37,6 @@ const slides = [
     imageSrc:
       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     author: "Jane Smith",
-
   },
 ];
 
@@ -50,9 +47,10 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <Cases content={slides} />
-      <CarroselVertical  />
+      <CarroselVertical />
       <CarroselVerticalMobile />
       <Cta
+        button={true}
         title={
           "Eficiência, Sustentabilidade e Informação: Descubra o futuro da logística com a UX"
         }
@@ -61,6 +59,7 @@ export default function Home() {
       <LogisticaComPerformance />
 
       <Cta
+        button={true}
         title={
           "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
         }
@@ -72,12 +71,13 @@ export default function Home() {
       <Blog />
       <UxMidia />
       <Cta
+        button={true}
         title={
           "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
         }
         banner={image.src}
       />
-      <section style={{paddingTop:'0px'}}></section>
+      <section style={{ paddingTop: "0px" }}></section>
       <ContactForm />
       <Footer />
     </main>
