@@ -78,7 +78,7 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <Cases content={slides} />
-      <CarroselVertical content={content}/>
+      <CarroselVertical title="Inove, Controle e Venda Mais" text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!" content={content}/>
       <CarroselVerticalMobile />
       <Cta
         button={true}
