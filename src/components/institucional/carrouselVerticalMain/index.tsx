@@ -34,7 +34,7 @@ function CarroselVertical({title, text,content} : ContentSlide) {
                 isTransitioning ? "opacity-0" : "opacity-100"
               } ${style.containerTitulo}`}
             >
-              <h1>{title}</h1>
+              <h1 className="w-[80%] text-center">{title}</h1>
               <p>
                 {text}
               </p>
@@ -50,7 +50,7 @@ function CarroselVertical({title, text,content} : ContentSlide) {
                     onClick={() => handleButtonClick(index)}
                   >
                     <div className={style.barra}></div>
-                    <h3 className="text-[24px] font-bold text-white">{item.title}</h3>
+                    <h3 className={` ${content.length === 4 ? "text-[20px]" : ""} text-[24px] font-bold text-white`}>{item.title}</h3>
                   </div>
                 ))}
               </div>

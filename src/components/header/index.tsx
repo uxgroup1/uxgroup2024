@@ -89,6 +89,15 @@ export default function Header() {
                 </li>
                 <li>
                   <a
+                    href="/ondetah"
+                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    aria-current="page"
+                  >
+                    Ondetah
+                  </a>
+                </li>
+                <li>
+                  <a
                     onClick={handleOpenClick}
                     id="mega-menu-full-cta-image-button"
                     data-collapse-toggle="mega-menu-full-image-dropdown"

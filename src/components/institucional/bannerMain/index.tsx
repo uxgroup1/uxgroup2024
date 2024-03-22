@@ -75,7 +75,7 @@ export default function BannerMain() {
                 <p className="pt-5 md:w-3/4 text-sm text-center md:text-left w-4/5 font-normal">
                   {contentBanners[contentIndex].text}
                 </p>
-                <button className="md:w-[50%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
+                <button className="md:w-[20%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
                   saiba mais
                 </button>
               </h1>
@@ -106,7 +106,7 @@ export default function BannerMain() {
             <button
               className={`${
                 contentIndex === 0 ? "bg-black" : "bg-white"
-              }  hover:w-7 hover:h-7 block w-6 h-6 transition-all hover:border-white border hover:bg-black rounded-[8px] `}
+              }  hover:p-3  block w-6 h-6 transition-all hover:border-white border hover:bg-black rounded-[8px] `}
               onClick={() => handleButtonClick(0)}
             ></button>
             <button
@@ -131,7 +131,7 @@ export default function BannerMain() {
                 contentIndex === 3
                   ? "bg-gradient-to-r from-[#7DAD58] to-[#014C34]"
                   : "bg-white"
-              } hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
+              } hover:w-7 hover:h-7 block w-6 h-6  hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
               onClick={() => handleButtonClick(3)}
             ></button>
           </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.scss";
+import imageteste from "../../../assets/faviconBanner/ux-log.svg";
 
 interface IconsTexts {
   text: string;
@@ -20,11 +21,11 @@ function SecondSection({ title, text, image }: Content) {
           <div className={style.BoxLogisticaSustentavel}>
             <div className={style.Controller}>
               <div className={style.ContentText}>
-                <div>
+                <div className="flex flex-col gap-3">
                   <h1>{title}</h1>
+                  <p>{text}</p>
                 </div>
-                <p>{text}</p>
-                
+
                 <div className={` ${style.containerTeste}`}></div>
                 <div className={style.ButtonContainer}>
                   <button>saiba mais</button>
@@ -33,7 +34,13 @@ function SecondSection({ title, text, image }: Content) {
             </div>
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
-                <Image className="w-[90%] object-cover h-full" src={image} alt="Imagem" width={100} height={100} />
+                <Image
+                  className="w-[87%] object-cover h-full"
+                  src={imageteste}
+                  alt="Imagem"
+                  width={100}
+                  height={100}
+                />
               </div>
             </div>
           </div>

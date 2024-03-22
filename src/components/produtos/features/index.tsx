@@ -24,7 +24,7 @@ export default function FeaturesComponent({
 }: ContentArray) {
   return (
     <>
-      <section className="bg-white pt-[100px] pb-[80px] flex items-center  w-full md:px-0 px-5 ">
+      <section className="bg-white pt-[80px] pb-[80px] flex items-center  w-full md:px-0 px-5 ">
         <div className="max-w-[1996px] w-full flex items-center md:justify-center">
           <div className={`lg:flex w-[90%] ${rowReverse === true ? "lg:flex-row-reverse gap-28" : "lg:flex"}  lg:items-center`}>
             <div className={`w-full md:w-[65%] ${rowReverse === true ? "md:w-[50%]" : "" }  `}>
