@@ -94,6 +94,7 @@ export default function Logistica() {
         }
       />
       <FeaturesComponent
+      rowReverse
       titleSection="Benefícios de escolher a UX"
         content={contentFeatures}
         banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"

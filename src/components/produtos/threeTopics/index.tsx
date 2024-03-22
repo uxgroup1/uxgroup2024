@@ -46,7 +46,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       />
                     </svg>
 
-                    <h3 className="mt-4 text-center font-semibold">
+                    <h3 className="mt-4 w-[95%] text-center font-semibold">
                       {item.title}
                     </h3>
 

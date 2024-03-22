@@ -99,6 +99,7 @@ export default function Pudos() {
           text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
         />
         <FeaturesComponent
+          rowReverse={true}
           titleSection="Benefícios de escolher o PUDO da UX"
           content={contentFeatures}
           banner={svg}

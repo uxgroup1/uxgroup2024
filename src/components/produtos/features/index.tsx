@@ -1,5 +1,6 @@
 import Image from "next/image";
 import svg from "../../../assets/faviconBanner/ux-log.svg";
+import { text } from "stream/consumers";
 
 interface Content {
   title: string;
@@ -10,20 +11,26 @@ interface ContentArray {
   content: Content[];
   banner: string;
   titleSection: string;
+  text?: string;
+  rowReverse: boolean
 }
 
 export default function FeaturesComponent({
   content,
   banner,
+  text,
+  rowReverse,
   titleSection,
 }: ContentArray) {
   return (
     <>
       <section className="bg-white pt-[50px] pb-[80px] flex items-center  w-full md:px-0 px-5 ">
         <div className="max-w-[1996px] w-full flex items-center md:justify-center">
-          <div className="lg:flex w-[90%]  lg:items-center">
-            <div className="w-full md:w-[65%] ">
-              <h1 className="font-bold pb-7 text-black">{titleSection}</h1>
+          <div className={`lg:flex w-[90%] ${rowReverse === true ? "lg:flex-row-reverse gap-28" : "lg:flex"}  lg:items-center`}>
+            <div className={`w-full md:w-[65%] ${rowReverse === true ? "md:w-[50%]" : "" }  `}>
+              <h1 className=" font-bold pb-4 text-black">{titleSection}</h1>
+              {text && <p className="pb-7 md:w-4/5">{text}</p>}
+
               <div className="md:flex w-full flex-col gap-2 md:items-start">
                 {content?.map((item, index) => {
                   return (
@@ -39,7 +46,7 @@ export default function FeaturesComponent({
                         height={100}
                       />
                       <div className="mt-4  h-full md:mt-0">
-                        <h3 className="font-semibold pb-3 md:pb-0 text-sm md:text-lg cursor-default w-full text-black md:w-4/5 ">
+                        <h3 className="font-semibold pb-3 md:pb-0 cursor-default  text-black w-full pr-[10px]">
                           {item.title}
                         </h3>
                       </div>
@@ -48,11 +55,11 @@ export default function FeaturesComponent({
                 })}
               </div>
             </div>
-            <div className="hidden rounded-2xl lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+            <div className={`hidden ${rowReverse === true ? "justify-start" : ""} rounded-2xl lg:flex lg:items-center lg:w-1/2 lg:justify-center`}>
               <Image
                 width={100}
                 height={100}
-                className="w-full  object-cover xl:w-[34rem] xl:h-[34rem]"
+                className="w-full  object-cover h-full"
                 src={svg}
                 alt=""
               />
