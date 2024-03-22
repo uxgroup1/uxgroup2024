@@ -27,16 +27,16 @@ const contentFeaturesOne = [
 ];
 const contentFeaturesTwo = [
   {
-    title: "Redução de custos operacionais.",
+    title: "Redução da pegada de carbono.",
     icons: "",
   },
   {
     title:
-      "Aumento da eficiência e produtividade.",
+      "Entregas mais rápidas e eficientes.",
     icons: "",
   },
   {
-    title: "Maior visibilidade e controle dos processos.",
+    title: "Geração de valor para sua marca.",
     icons: "",
   },
 ];
