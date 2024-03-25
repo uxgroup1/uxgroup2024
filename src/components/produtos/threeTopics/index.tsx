@@ -19,8 +19,8 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
           className="md:w-[90%] gap-10 bg-[#d6d6d653] md:rounded-2xl px-5 md:p-20 flex items-center flex-col justify-center py-12 mx-auto"
         >
           <div className="w-full flex flex-col items-center justify-center">
-            <h1 className="text-center ">{title}</h1>
-            <p className="text-center md:w-[70%]">{text}</p>
+            <h1 className="text-center text-black ">{title}</h1>
+            <p className="text-center text-black md:w-[70%]">{text}</p>
           </div>
 
           <div className="flex items-center justify-center gap-8 ">
@@ -46,11 +46,11 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       />
                     </svg>
 
-                    <h3 className="mt-4 w-[80%] text-center font-semibold">
+                    <h3 className="mt-4 w-[80%] text-black text-center font-semibold">
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-center w-4/5 text-gray-500">
+                    <p className="mt-2 text-center w-4/5 text-black">
                       {item.text}
                     </p>
                   </div>
