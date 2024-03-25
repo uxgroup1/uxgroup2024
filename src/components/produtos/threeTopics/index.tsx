@@ -13,7 +13,7 @@ interface ContentSection {
 export default function ThreeTopics({ title, text, content }: ContentSection) {
   return (
     <>
-      <section className="bg-white w-full dark:bg-gray-900">
+      <section className="bg-white w-full">
         <div
           style={{ boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px" }}
           className="md:w-[90%] gap-10 bg-[#d6d6d653] md:rounded-2xl px-5 md:p-20 flex items-center flex-col justify-center py-12 mx-auto"
@@ -50,7 +50,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-center w-4/5 text-gray-500 dark:text-gray-400">
+                    <p className="mt-2 text-center w-4/5 text-gray-500">
                       {item.text}
                     </p>
                   </div>
