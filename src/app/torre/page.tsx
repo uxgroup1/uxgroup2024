@@ -36,7 +36,7 @@ const contentFeaturesTwo = [
     icons: "",
   },
   {
-    title: "Geração de valor para sua marca.",
+    title: "Maior visibilidade e controle dos processos.",
     icons: "",
   },
 ];

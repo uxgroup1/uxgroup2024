@@ -32,7 +32,7 @@ const content = [
     },
     {
       index: 3,
-      title: "Pesquisas de Satisfação Personalizadas",
+      title: "Pesquisas de Satisfação",
       contentTitle: "Pesquisas de Satisfação Personalizadas",
       contentText:
         "Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.",

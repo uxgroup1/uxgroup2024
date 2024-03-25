@@ -75,7 +75,7 @@ export default function BannerMain() {
                 <p className="pt-5 md:w-3/4 text-sm text-center md:text-left w-4/5 font-normal">
                   {contentBanners[contentIndex].text}
                 </p>
-                <button className="md:w-[20%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
+                <button className="md:w-[25%] w-[70%] flex items-center justify-center h-[40px] font-normal rounded-[8px]">
                   saiba mais
                 </button>
               </h1>

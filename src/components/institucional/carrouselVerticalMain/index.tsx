@@ -50,14 +50,14 @@ function CarroselVertical({title, text,content} : ContentSlide) {
                     onClick={() => handleButtonClick(index)}
                   >
                     <div className={style.barra}></div>
-                    <h3 className={` ${content.length === 4 ? "text-[20px]" : ""} text-[24px] font-bold text-white`}>{item.title}</h3>
+                    <h3 className={` ${content.length === 4 ? "text-[19px]" : ""} text-[24px] font-bold text-white`}>{item.title}</h3>
                   </div>
                 ))}
               </div>
               <div className={`${style.content}`}>
                 <h1 className="w-4/5">{content[contentIndex].contentTitle}</h1>
                 <p>{content[contentIndex].contentText}</p>
-                <button>saiba mais</button>
+                <button className="">saiba mais</button>
               </div>
             </div>
           </div>
