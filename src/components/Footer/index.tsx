@@ -77,10 +77,10 @@ export default function Footer() {
                 {pages.map((data) => {
                   return (
                     <div key={data.index} className="w-full">
-                      <h2 className="mb-4 text-sm font-semibold text-white uppercase dark:text-white">
+                      <h2 className="mb-4 text-sm font-semibold text-white uppercase ">
                         {data.name}
                       </h2>
-                      <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium">
+                      <ul className="flex flex-col text-gray-500  font-medium">
                         {data.products.map((product) => {
                           return (
                             <li key={data.index} className="mb-4">

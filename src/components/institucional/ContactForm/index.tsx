@@ -16,7 +16,7 @@ export default function ContactForm() {
               type="text"
               name="floating_first_name"
               id="floating_first_name"
-              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
+              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
               placeholder=" "
               required
             />
@@ -32,7 +32,7 @@ export default function ContactForm() {
               type="email"
               name="floating_email"
               id="floating_email"
-              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
+              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
               placeholder=" "
               required
             />
@@ -48,7 +48,7 @@ export default function ContactForm() {
               type="text"
               name="floating_company"
               id="floating_company"
-              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
+              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
               placeholder=" "
               required
             />
@@ -64,7 +64,7 @@ export default function ContactForm() {
               type="text"
               name="repeat_password"
               id="floating_repeat_password"
-              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
+              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-nonefocus:outline-none focus:ring-0 focus:border-white peer"
               placeholder=" "
               required
             />
@@ -120,7 +120,7 @@ export default function ContactForm() {
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 name="floating_phone"
                 id="floating_phone"
-                className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
+                className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
                 placeholder=" "
                 required
               />
