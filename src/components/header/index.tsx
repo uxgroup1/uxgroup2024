@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
+import Link from "next/link";
 
 
 export default function Header() {
@@ -26,12 +27,12 @@ export default function Header() {
       <nav className="bg-black fixed flex items-center justify-center z-50  top-0 w-full px-1 md:px-4 border-gray-200">
         <div className="flex items-center justify-center h-full w-[92%] max-w-[1996px]">
           <div className="flex w-full flex-wrap justify-between items-center mx-auto  py-5">
-            <a
+            <Link
               href="#"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={logoUx.src} className="h-8" alt="Flowbite Logo" />
-            </a>
+            </Link>
             <button
               onClick={handleOpenClick}
               data-collapse-toggle="mega-menu-full-image"
@@ -65,32 +66,34 @@ export default function Header() {
             >
               <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                  <a
+                  <Link
                     href="/"
                     className="flex items-center border-b hover:border-b hover:border-b-white hover:transition-all cursor-pointer justify-between w-full bg-transparent font-normal py-2 md:border-transparent  md:w-auto md:hover:bg-transparent md:border-0 text-white  md:p-0 "
                     aria-current="page"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
+                    href={"#"}
                     onClick={handleOpenClickGestao}
                     id="mega-menu-full-cta-image-button"
                     data-collapse-toggle="mega-menu-full-image-dropdown"
                     className="flex hover:border-b border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
                     Gestão
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
+                    href={""}
                     onClick={handleOpenClickLog}
                     className="flex items-center hover:border-b border-b hover:transition-all hover:border-b-white cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-transparent text-white  md:p-0 "
                     aria-current="page"
                   >
                     Logística
-                  </a>
+                  </Link>
                 </li>
                 
               </ul>
@@ -108,31 +111,31 @@ export default function Header() {
 
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
-                    <a
+                    <Link
                       href="/torre"
                       className="font-normal text-lg hover:font-medium"
                     >
                       Torre
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/pudos"
                       className="font-normal text-lg hover:font-medium"
                     >
                       Pudos
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/logistica"
                       className="font-normal text-lg hover:font-medium"
                     >
                       Logística
-                    </a>
+                    </Link>
                   </li>
                 </ul>
-                <a
+                <Link
                   href="#"
                   className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
                 >
@@ -160,7 +163,7 @@ export default function Header() {
                       />
                     </svg>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -175,23 +178,23 @@ export default function Header() {
                 </div>
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
-                    <a
+                    <Link
                       href="/fusion"
                       className="font-normal text-lg hover:font-medium"
                     >
                       fusion
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/ondetah"
                       className="font-normal text-lg hover:font-medium"
                     >
                       ondetah
-                    </a>
+                    </Link>
                   </li>
                 </ul>
-                <a
+                <Link
                   href="#"
                   className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
                 >
@@ -219,7 +222,7 @@ export default function Header() {
                       />
                     </svg>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           )}

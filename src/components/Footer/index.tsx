@@ -4,6 +4,7 @@ import logoInstagram from "../../assets/Footer/logo-instagram.svg";
 import logoYoutube from "../../assets/Footer/logo-youtube.svg";
 import logoLinkedIn from "../../assets/Footer/logo-linkedin.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const redeSocial = [
@@ -65,13 +66,13 @@ export default function Footer() {
           <div className="mx-auto w-full  md:p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
-                <a href="#" className="flex items-center">
+                <Link href="#" className="flex items-center">
                   <img
                     src={logoUX.src}
                     className="h-11 me-3"
                     alt="Gestão e tecnologia"
                   />
-                </a>
+                </Link>
               </div>
               <div className="flex md:flex-row flex-col pt-5 md:pt-0 md:grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
                 {pages.map((data) => {
@@ -84,12 +85,12 @@ export default function Footer() {
                         {data.products.map((product) => {
                           return (
                             <li key={data.index} className="mb-4">
-                              <a
+                              <Link
                                 href={product.url}
                                 className="text-white text-sm"
                               >
                                 {product.namePage}
-                              </a>
+                              </Link>
                             </li>
                           );
                         })}
@@ -104,13 +105,13 @@ export default function Footer() {
               <span className="text-sm text-white sm:text-center">
                 © 2024 | UX Group | Todos os direitos reservados. 
               </span>
-              <a className="md:ml[-20px] hover:underline" href="">
+              <Link className="md:ml[-20px] hover:underline" href="">
                 Política de Privacidade
-              </a>
+              </Link>
               <div className="flex mt-4 gap-5 sm:justify-center sm:mt-0">
                 {redeSocial.map((data) => {
                   return (
-                    <a
+                    <Link
                       key={data.index}
                       href="#"
                       className="text-white  hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
@@ -122,7 +123,7 @@ export default function Footer() {
                         width={30}
                         height={100}
                       />
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

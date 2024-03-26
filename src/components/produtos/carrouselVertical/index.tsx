@@ -40,7 +40,7 @@ function CarroselImages({ content }: ContentSection) {
               style={{
                 backgroundImage: `url(${content[contentIndex].image})`,
               }}
-              className={`bg-no-repeat bg-center bg-cover transition-all ${style.containerCarrouselVertical}`}
+              className={`bg-no-repeat bg-center bg-cover ${style.containerCarrouselVertical}`}
             >
               <div className="bg-[#000000a0] h-full w-full rounded-2xl">
               <div className={style.verticalMenu}>

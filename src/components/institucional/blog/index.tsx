@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { Post, WPResponse } from '@/components/institucional/blog/types';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Blog() {
   const [post, setPost] = useState<Post>({
@@ -39,7 +40,7 @@ export function Blog() {
         </div>
         <div className={style.box}>
           <div className={style.featured}>
-            <a
+            <Link
               target="_blank"
               href={post.link}
               style={{
@@ -58,38 +59,38 @@ export function Blog() {
                 alt={post.title.rendered}
                 style={{ zIndex: 1, width: '100%', height: '100%' }}
               />
-            </a>
-            <a
+            </Link>
+            <Link
               target="_blank"
               href={post._embedded['wp:term'][0][0].link}
               className={style.tag}
             >
               {post._embedded['wp:term'][0][0].name}
-            </a>
+            </Link>
             <div className={style.content}>
-              <a href={post.link}>
+              <Link href={post.link}>
                 <h3 className={style.title}>{post.title.rendered}</h3>
-              </a>
+              </Link>
               <div
                 className={style.text}
                 dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
               ></div>
-              <a href={post.link}>Ler Completo &gt;</a>
+              <Link href={post.link}>Ler Completo &gt;</Link>
             </div>
           </div>
 
           <div className={style.cards}>
             {posts.map((p) => (
               <div className={style.card} key={p.id}>
-                <a
+                <Link
                   target="_blank"
                   className={style.category}
                   href={p._embedded['wp:term'][0][0].link}
                   style={{ zIndex: 1 }}
                 >
                   {p._embedded['wp:term'][0][0].name}
-                </a>
-                <a
+                </Link>
+                <Link
                   target="_blank"
                   href={p.link}
                   style={{
@@ -109,26 +110,26 @@ export function Blog() {
                     height={203}
                     style={{ position: 'absolute' }}
                   />
-                </a>
+                </Link>
                 <div className={style.release}>
                   <span>
-                    <a target="_blank" href={p._embedded.author[0].link}>
+                    <Link target="_blank" href={p._embedded.author[0].link}>
                       {p._embedded.author[0].name}
-                    </a>
+                    </Link>
                   </span>
                   <span>{dayjs(p.date).format('DD/MM/YYYY')}</span>
                 </div>
                 <div className={style.content}>
-                  <a href={p.link}>
+                  <Link href={p.link}>
                     <h3 className={style.title}>{p.title.rendered}</h3>
-                  </a>
+                  </Link>
                   <div
                     className={style.text}
                     dangerouslySetInnerHTML={{
                       __html: p.excerpt.rendered,
                     }}
                   ></div>
-                  <a href={p.link}>Ler Completo &gt;</a>
+                  <Link href={p.link}>Ler Completo &gt;</Link>
                 </div>
               </div>
             ))}
@@ -136,13 +137,13 @@ export function Blog() {
         </div>
 
         <footer>
-          <a
+          <Link
             href="https://blog.uxgroup.com.br/"
             target="_blank"
             className={style.gotoBlog}
           >
             acessar blog completo
-          </a>
+          </Link>
         </footer>
       </div>
     </section>

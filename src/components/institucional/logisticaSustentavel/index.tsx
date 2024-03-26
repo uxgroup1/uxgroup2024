@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./style.module.scss";
 
 function LogisticaSustentavel() {
@@ -22,9 +23,9 @@ function LogisticaSustentavel() {
                 <p>
                   Faça parte da mudança: Conheça nossas soluções para uma
                   logística sustentável.  <br/>
-                  <a style={{ fontWeight: "bold", }}>
+                  <Link href={""} style={{ fontWeight: "bold", }}>
                      Juntos, Podemos Criar um Futuro Mais Verde.
-                  </a>
+                  </Link>
                 </p>
                 <button>saiba mais</button>
               </div>

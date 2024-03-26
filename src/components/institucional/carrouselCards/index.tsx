@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./style.module.scss";
 
 interface contentCards {
@@ -26,7 +27,7 @@ function CarrouselCards({ content }: carrouselCards) {
                   <h2 className="leading-[30px]">{data.title}</h2>
                   <p>{data.text}</p>
                   <button>
-                    <a href=""> saiba mais</a>
+                    <Link href=""> saiba mais</Link>
                   </button>
                 </div>
               </div>
