@@ -2,23 +2,20 @@ import Image from "next/image";
 import style from "./style.module.scss";
 import imageteste from "../../../assets/faviconBanner/ux-log.svg";
 
-interface IconsTexts {
-  text: string;
-  icons: string;
-}
 
 interface Content {
   title: string;
   text: string;
   image: string;
+  flowReverse: boolean;
 }
 
-function SecondSection({ title, text, image }: Content) {
+function SecondSection({ title, text, image, flowReverse }: Content) {
   return (
     <>
       <section className={style.LogisticaSustentavel}>
         <div className={style.Container}>
-          <div className={style.BoxLogisticaSustentavel}>
+          <div className={` ${flowReverse === true ? "flex-row-reverse" : ""}  ${style.BoxLogisticaSustentavel}`}>
             <div className={style.Controller}>
               <div className={style.ContentText}>
                 <div className="flex flex-col gap-3">
@@ -33,7 +30,7 @@ function SecondSection({ title, text, image }: Content) {
               </div>
             </div>
             <div className={style.ContentImage}>
-              <div className={style.BoxImage}>
+              <div className={` ${flowReverse === true ? "justify-start" : " justify-end"} ${style.BoxImage} `}>
                 <Image
                   className="w-[87%] object-cover h-full"
                   src={imageteste}

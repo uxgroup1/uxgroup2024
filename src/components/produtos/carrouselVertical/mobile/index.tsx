@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./style.module.scss";
+import Image from "next/image";
+import packegeImage from "@/assets/logistica/cdsImages/package.svg"
 
 interface Content {
   title: string;
@@ -51,36 +53,17 @@ function CarroselImageMobile({ content }: ContentSection) {
                     key={index}
                     className={`flex w-full justify-center transition-all transition-duration[4s] items-center h-1 ${
                       index <= contentIndex
-                        ? "text-blue-600 bg-[#bfbfbf]  h-1"
+                        ? "bg-[#FBC709]  h-1"
                         : "bg-[#fff] "
                     } `}
                     onClick={() => handleStepClick(index)}
                   >
                     <span
-                      className={`flex items-center justify-center w-10 h-10 rounded-full ${
-                        index <= contentIndex ? "bg-[#fff]" : "bg-white "
+                      className={`flex items-center justify-center w-14 h-14 rounded-full ${
+                        index <= contentIndex ? "bg-[#FBC709]" : "bg-white "
                       }`}
                     >
-                      <svg
-                        className={`w-5 h-5 ${
-                          index <= contentIndex
-                            ? "text-black"
-                            : "text-[#bfbfbf]"
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        {index === 0 ? (
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-9a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1V9zM10 5a1 1 0 100 2 1 1 0 000-2z"
-                            clipRule="evenodd"
-                          />
-                        ) : (
-                          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        )}
-                      </svg>
+                      <Image alt="" width={30} height={30} src={packegeImage} />
                     </span>
                   </li>
                 ))}
@@ -94,7 +77,21 @@ function CarroselImageMobile({ content }: ContentSection) {
               }}
               className="flex items-center justify-center bg-[#5F5F5F] h-[400px] transition-all w-full  bg-cover bg-no-repeat flex-col md:flex-row"
             >
-              <h1 className={`text-white transition-transform ${contentIndex === 0 ? "animated-state-Banner" : "animated-state-BannerTwo"} ${contentIndex === 1 ? "animated-state-BannerTwo" : "animated-state-Banner"}  `}>{content[contentIndex].title}</h1>
+              <div className="flex items-center justify-center w-full rounded-2xl h-full bg-[#0000007a]">
+                <h1
+                  className={`text-white transition-transform ${
+                    contentIndex === 0
+                      ? "animated-state-Banner"
+                      : "animated-state-BannerTwo"
+                  } ${
+                    contentIndex === 1
+                      ? "animated-state-BannerTwo"
+                      : "animated-state-Banner"
+                  }  `}
+                >
+                  {content[contentIndex].title}
+                </h1>
+              </div>
             </div>
           </div>
         </div>

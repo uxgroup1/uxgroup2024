@@ -6,11 +6,14 @@ import Footer from "@/components/Footer";
 import JumboTron from "@/components/produtos/jumbotron";
 import SecondSection from "@/components/produtos/SecondSection";
 import { Cases } from "@/components/institucional/cases";
-import { title } from "process";
 import CarroselImages from "@/components/produtos/carrouselVertical";
 import CarroselImageMobile from "@/components/produtos/carrouselVertical/mobile";
 import Cta from "@/components/cta";
 import FeaturesComponent from "@/components/produtos/features";
+import arrowImage from "@/assets/logistica/arrow/arrowListComponentes.svg"
+import itapeviImage from "@/assets/logistica/cdsImages/itapevi.jpg"
+import barueriImage from "@/assets/logistica/cdsImages/barueri.jpg"
+import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg"
 
 const slides = [
   {
@@ -26,42 +29,42 @@ const CarroselImagesContent = [
   {
     title: "CD Itapevi",
     image:
-      "https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png",
+      itapeviImage.src,
   },
   {
     title: "CD Barueri",
     image:
-      "https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-VENDAS.e8046c01.png",
+    barueriImage.src,
   },
   {
     title: "CD Itajaí",
     image:
-      "https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-ENTREGAS.d9fc375e.png",
+      itajaiImage.src,
   },
 ];
 
 const contentFeatures = [
   {
     title: "Experiência comprovada em fulfillment e logística integrada.",
-    icons: "",
+    icons: arrowImage,
   },
   {
     title:
       "Personalização de serviços para atender às necessidades exclusivas do seu negócio.",
-    icons: "",
+    icons: arrowImage,
   },
   {
     title: "Implementação de WMS para uma gestão eficiente do estoque.",
-    icons: "",
+    icons: arrowImage,
   },
   {
     title: "Rede de distribuição abrangente com três CDs próprios.",
-    icons: "",
+    icons: arrowImage,
   },
   {
     title:
       "Equipe dedicada e suporte personalizado para garantir a satisfação do cliente.",
-    icons: "",
+    icons: arrowImage,
   },
 ];
 
@@ -72,12 +75,14 @@ export default function Logistica() {
       <JumboTron title="We invest in the world’s potential"  text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." banner=""/>
       <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
       <SecondSection
+      flowReverse={false}
         title="Fulfillment Personalizado"
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
         image="."
       />
       <Cases content={slides} />
       <SecondSection
+        flowReverse={true}
         image="."
         title="Implementação de WMS"
         text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."

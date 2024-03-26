@@ -9,25 +9,29 @@ import svg from "../../assets/faviconBanner/ux-gestao.svg";
 import FeaturesComponent from "@/components/produtos/features";
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
 import ThreeTopics from "@/components/produtos/threeTopics";
+import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
+import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
+import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg"
+
 
 const contentFeatures = [
   {
     title: "Tecnologia integrada à operação.",
-    icons: "",
+    icons: arrowList,
   },
   {
     title:
       "Ao agrupar várias entregas em um único ponto de retirada, você reduz as despesas de transporte e logística.",
-    icons: "",
+    icons: arrowList,
   },
   {
     title: "Operação mais limpa com menos etapas no processo de entrega.",
-    icons: "",
+    icons: arrowList,
   },
   {
     title:
       "Melhoria da experiência do cliente com mais controle e agilidade no processo de entrega.",
-    icons: "",
+    icons: arrowList,
   },
 ];
 
@@ -57,12 +61,12 @@ const content = [
 
 const contentTopics = [
   {
-    icon: "",
+    icon: imageMonetizationTopics,
     title: "Aumente o Tráfego na Loja",
     text: "Ao se tornar um PUDO, você pode aumentar o número de visitantes e atrair novos clientes que podem acabar comprando em sua loja.",
   },
   {
-    icon: "",
+    icon: imageStoreFrontTopics,
     title: "Tenha uma Nova Fonte de Renda",
     text: "Se você possui espaços ociosos na sua loja, você pode rentabilizar em até 5 mil reais, tornando um PUDO.",
   },
@@ -85,6 +89,7 @@ export default function Pudos() {
         />
         <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
         <SecondSection
+        flowReverse={false}
           title="Lorem"
           text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."
           image={svg}

@@ -3,57 +3,58 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import ContactForm from "@/components/institucional/ContactForm";
-import SecondSection from "@/components/produtos/SecondSection";
 import FeaturesComponent from "@/components/produtos/features";
 import JumboTron from "@/components/produtos/jumbotron";
-
-import image from "../../assets/faviconBanner/ux-log.svg"
 import ThreeTopics from "@/components/produtos/threeTopics";
+import movingImage from "@/assets/torre/icons/moving.svg"
+import natureImage from "@/assets/torre/icons/nature.svg"
+import packgeImage from "@/assets/torre/icons/package.svg"
+import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg"
 
 const contentFeaturesOne = [
   {
     title: "Redução de custos operacionais.",
-    icons: "",
+    icons: imageArrow,
   },
   {
     title:
       "Aumento da eficiência e produtividade.",
-    icons: "",
+    icons: imageArrow,
   },
   {
     title: "Maior visibilidade e controle dos processos.",
-    icons: "",
+    icons: imageArrow,
   },
 ];
 const contentFeaturesTwo = [
   {
     title: "Redução da pegada de carbono.",
-    icons: "",
+    icons: imageArrow,
   },
   {
     title:
       "Entregas mais rápidas e eficientes.",
-    icons: "",
+    icons: imageArrow,
   },
   {
     title: "Maior visibilidade e controle dos processos.",
-    icons: "",
+    icons: imageArrow,
   },
 ];
 
 const contentTopics = [
     {
-      icon: "",
+      icon: natureImage,
       title: "Redução da pegada de carbono",
       text: "lorem Ipsum et al.",
     },
     {
-      icon: "",
+      icon: movingImage,
       title: "Entregas mais rápidas e eficientes",
       text: "lorem Ipsum et al.",
     },
     {
-      icon: "",
+      icon: packgeImage,
       title: "Geração de valor para sua marca",
       text: "lorem Ipsum et al.",
     },

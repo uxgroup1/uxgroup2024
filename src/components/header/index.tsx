@@ -1,7 +1,6 @@
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
-import Image from "next/image";
-import logoUXLog from "../../assets/faviconBanner/ux-log.svg";
+
 
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
@@ -68,7 +67,7 @@ export default function Header() {
                 <li>
                   <a
                     href="/"
-                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    className="flex items-center border-b hover:border-b hover:border-b-white hover:transition-all cursor-pointer justify-between w-full bg-transparent font-normal py-2 md:border-transparent  md:w-auto md:hover:bg-transparent md:border-0 text-white  md:p-0 "
                     aria-current="page"
                   >
                     Home
@@ -79,7 +78,7 @@ export default function Header() {
                     onClick={handleOpenClickGestao}
                     id="mega-menu-full-cta-image-button"
                     data-collapse-toggle="mega-menu-full-image-dropdown"
-                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    className="flex hover:border-b border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
                     Gestão
                   </a>
@@ -87,7 +86,7 @@ export default function Header() {
                 <li>
                   <a
                     onClick={handleOpenClickLog}
-                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    className="flex items-center hover:border-b border-b hover:transition-all hover:border-b-white cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-transparent text-white  md:p-0 "
                     aria-current="page"
                   >
                     Logística

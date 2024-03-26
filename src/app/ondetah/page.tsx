@@ -4,9 +4,14 @@ import Cta from "@/components/cta";
 import Header from "@/components/header";
 import ContactForm from "@/components/institucional/ContactForm";
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
+import SecondSection from "@/components/produtos/SecondSection";
+import FeaturesComponent from "@/components/produtos/features";
 import JumboTron from "@/components/produtos/jumbotron";
 import ThreeTopics from "@/components/produtos/threeTopics";
-
+import headsetImage from "@/assets/ondetah/headset.svg"
+import counterImage from "@/assets/ondetah/counter.svg"
+import smartphoneImage from "@/assets/ondetah/smartphone.svg"
+ 
 
 const content = [
     {
@@ -41,17 +46,17 @@ const content = [
 
   const contentTopics = [
     {
-      icon: "",
+      icon: headsetImage,
       title: `50% de Redução de Contato com SAC`,
       text: "",
     },
     {
-      icon: "",
+      icon: smartphoneImage,
       title: "100% dos Pedidos com Tracking Centralizado",
       text: "",
     },
     {
-      icon: "",
+      icon: counterImage,
       title: "+5 Pontos Percentuais na Performance de Entrega",
       text: "",
     },
@@ -70,6 +75,10 @@ export default function Ondetah() {
       <CarroselVertical content={content} title="Transforme a experiência do seu cliente com funcionalidades exclusivas."  text="" />
       <ThreeTopics content={contentTopics} title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio" text=""  /> 
       <Cta banner={"https://ondetah.com.br/wp-content/uploads/2023/08/ondetah-banner03.png"} button  title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "/>
+      <SecondSection title="We invest in the world’s potential" text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP" image="" flowReverse={false}/>
+      <SecondSection title="We invest in the world’s potential" text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP" image="" flowReverse={true}/>
+      <SecondSection title="We invest in the world’s potential" text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP" image="" flowReverse={false}/>
+      <SecondSection title="We invest in the world’s potential" text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP" image="" flowReverse={true}/>
       <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
       <ContactForm />
       <Footer />

@@ -8,7 +8,7 @@ export default function JumboTron({ title, text, banner }: Content) {
   return (
     <>
       <section style={{backgroundImage: `url(${banner})`}} className={`bg-center bg-cover h-screen w-full bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}>
-        <div className="px-4  flex flex-col items-center justify-center w-full text-center py-24 lg:py-56">
+        <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
           <h1 className="mb-4 w-4/5 text-5xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
             {title}
           </h1>

@@ -44,14 +44,14 @@
             width: 75%;
           }
 
-          .Carrousel{
+          .Carrousel {
             display: flex;
             flex-direction: row;
             overflow: scroll;
             width: 80%;
             padding-bottom: 20px;
 
-            div{
+            div {
               display: flex;
               overflow: scroll;
               gap: 20px;
@@ -67,15 +67,14 @@
             color: #fff;
           }
 
-          .containerTeste{
+          .containerTeste {
             display: flex;
             flex-direction: row;
             width: 100%;
             overflow: auto;
             gap: 20px;
-            
-            
-            .controllerTest{
+
+            .controllerTest {
               display: flex;
               gap: 20px;
               flex-direction: row;
@@ -95,7 +94,6 @@
         .BoxImage {
           display: flex;
           align-items: center;
-          justify-content: center;
           object-fit: cover;
           width: 100%;
           border-radius: 16px;
