@@ -83,6 +83,7 @@ export default function Pudos() {
           text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
           banner=""
         />
+        <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
         <SecondSection
           title="Lorem"
           text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."
@@ -104,6 +105,7 @@ export default function Pudos() {
           content={contentFeatures}
           banner={svg}
         />
+        <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
         <ContactForm />
         <Footer />
       </main>

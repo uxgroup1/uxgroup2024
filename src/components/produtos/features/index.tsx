@@ -29,7 +29,7 @@ export default function FeaturesComponent({
           <div className={`lg:flex w-[90%] ${rowReverse === true ? "lg:flex-row-reverse gap-28" : "lg:flex"}  lg:items-center`}>
             <div className={`w-full md:w-[65%] ${rowReverse === true ? "md:w-[50%]" : "" }  `}>
               <h1 className=" font-bold pb-4 text-black">{titleSection}</h1>
-              {text && <p className="pb-7 md:w-4/5">{text}</p>}
+              {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
 
               <div className="md:flex w-full flex-col gap-2 md:items-start">
                 {content?.map((item, index) => {

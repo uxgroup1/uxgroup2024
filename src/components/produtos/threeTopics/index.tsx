@@ -46,11 +46,11 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       />
                     </svg>
 
-                    <h3 className="mt-4 w-[80%] text-black text-center font-semibold">
+                    <h3 className="mt-4 md:w-4/5 w-full text-black text- text-center font-semibold">
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-center w-4/5 text-black">
+                    <p className="mt-2 text-center w-full md:w-4/5 text-black">
                       {item.text}
                     </p>
                   </div>

@@ -66,9 +66,11 @@ export default function Ondetah() {
         banner="https://ondetah.com.br/wp-content/uploads/2021/02/background-ondetah-2.gif"
         text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP, TMS Embarcador, TMS Transportador e uma estrutura única de SAC que facilitam a gestão do pedido. É mais do que apenas informação: é conexão, satisfação e tecnologia avançada."
       />
+       <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
       <CarroselVertical content={content} title="Transforme a experiência do seu cliente com funcionalidades exclusivas."  text="" />
       <ThreeTopics content={contentTopics} title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio" text=""  /> 
       <Cta banner={"https://ondetah.com.br/wp-content/uploads/2023/08/ondetah-banner03.png"} button  title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "/>
+      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
       <ContactForm />
       <Footer />
     </main>

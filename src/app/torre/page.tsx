@@ -68,9 +68,11 @@ export default function Torre() {
         title="We invest in the world’s potential"
         text="Oferecemos soluções integradas e inovadoras para otimizar toda a cadeia logística da sua empresa. Combinamos tecnologia de ponta com expertise em logística para garantir que suas operações de transporte sejam eficientes, econômicas e ecologicamente sustentáveis."
       />
+      <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
       <FeaturesComponent banner="" rowReverse={false} content={contentFeaturesOne} titleSection="Gestão de Transportes" text="Nossa solução de gestão de transportes é projetada para simplificar e otimizar todas as etapas do processo logístico. Desde o planejamento até o monitoramento em tempo real, tudo 100% integrado à tecnologia da UX, garantindo mais visibilidade e controle para suas entregas."/>
       <ThreeTopics content={contentTopics} title="Green Mile" text="Nossa abordagem inovadora para entregas urbanas inclui o uso de motos elétricas, contribuindo para a redução das emissões de carbono e para a sustentabilidade ambiental. Integrando tecnologia de rastreamento e um planejamento de entrega, garantimos que suas entregas sejam rápidas, seguras e eficientes."/>
       <FeaturesComponent rowReverse={true} banner="" content={contentFeaturesTwo} titleSection="SAC (Serviço de Atendimento ao Cliente) Integrado" text="Nosso compromisso com a excelência no atendimento ao cliente é evidenciado pelo nosso serviço de atendimento integrado. Com uma equipe dedicada, estamos sempre prontos para atender às suas necessidades, resolver problemas e garantir uma experiência positiva para seus clientes. Utilizando tecnologia de ponta, oferecemos suporte personalizado e eficiente."/>
+      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
       <ContactForm />
       <Footer />
     </main>

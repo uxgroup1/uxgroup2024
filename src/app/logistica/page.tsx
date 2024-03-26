@@ -70,6 +70,7 @@ export default function Logistica() {
     <main>
       <Header />
       <JumboTron title="We invest in the world’s potential"  text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." banner=""/>
+      <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
       <SecondSection
         title="Fulfillment Personalizado"
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
@@ -99,6 +100,7 @@ export default function Logistica() {
         content={contentFeatures}
         banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"
       />
+      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
       <ContactForm />
       <Footer />
     </main>

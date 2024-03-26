@@ -108,6 +108,7 @@ export default function Home() {
         }
         banner={image.src}
       />
+      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
       <ContactForm />
       <Footer />
     </main>

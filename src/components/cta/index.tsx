@@ -23,7 +23,7 @@ function Cta({ title, banner, text, button }: ConteudoCTA) {
               <div className={style.Controller}>
                 <div className="flex flex-col">
                   <h1>{title}</h1>
-                  <p className="w-2/3">{text}</p>
+                  <p className="w-full">{text}</p>
                 </div>
 
                 {button && (
