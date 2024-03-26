@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 
 const Footer = dynamic(() => import("@/components/Footer")) ;
-const Header = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const Header = dynamic(() => import("@/components/header/index")) ;
 const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
 const SecondSection = dynamic(() => import("@/components/produtos/SecondSection")) ;
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
@@ -83,7 +83,7 @@ export default function Pudos() {
   return (
     <>
       <main>
-        <Header />
+        <Header /> 
         <JumboTron
           title="We invest in the world’s potential"
           text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
