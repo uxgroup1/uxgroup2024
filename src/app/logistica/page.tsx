@@ -1,19 +1,21 @@
 "use client";
 
-import Header from "@/components/header";
-import ContactForm from "@/components/institucional/ContactForm";
-import Footer from "@/components/Footer";
-import JumboTron from "@/components/produtos/jumbotron";
-import SecondSection from "@/components/produtos/SecondSection";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("@/components/header/index"))
+const ContactForm = dynamic(() => import("@/components/institucional/ContactForm"))
+const Footer = dynamic(() => import("@/components/Footer"))
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+const SecondSection = dynamic(() => import("@/components/produtos/SecondSection")) ;
 import { Cases } from "@/components/institucional/cases";
-import CarroselImages from "@/components/produtos/carrouselVertical";
-import CarroselImageMobile from "@/components/produtos/carrouselVertical/mobile";
-import Cta from "@/components/cta";
+const CarroselImages = dynamic(() => import("@/components/produtos/carrouselVertical"));
+const CarroselImageMobile = dynamic(() => import("@/components/produtos/carrouselVertical/mobile")) ;
+const Cta = dynamic(() => import("@/components/cta")) ;
 import FeaturesComponent from "@/components/produtos/features";
 import arrowImage from "@/assets/logistica/arrow/arrowListComponentes.svg"
 import itapeviImage from "@/assets/logistica/cdsImages/itapevi.jpg"
 import barueriImage from "@/assets/logistica/cdsImages/barueri.jpg"
 import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg"
+
 
 const slides = [
   {
