@@ -1,7 +1,7 @@
 export default function ContactForm() {
   return (
     <>
-      <section className="bg-black pt-[60px] w-full ">
+      <section className="bg-black pt-[100px] w-full ">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col pb-10">
           <h1 className="w-full text-center">
             Saiba mais sobre nossas soluções.

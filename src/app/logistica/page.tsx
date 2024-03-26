@@ -100,7 +100,7 @@ export default function Logistica() {
         content={contentFeatures}
         banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"
       />
-      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
+      <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
       <ContactForm />
       <Footer />
     </main>

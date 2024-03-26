@@ -1,0 +1,99 @@
+"use client";
+
+import Footer from "@/components/Footer";
+import Header from "@/components/header";
+import ContactForm from "@/components/institucional/ContactForm";
+import FeaturesComponent from "@/components/produtos/features";
+import JumboTron from "@/components/produtos/jumbotron";
+
+const contentFeatures = [
+    {
+      title: "Envio de ocorrências simultâneo para vários sistemas.",
+      icons: "",
+    },
+    {
+      title:
+        "Integração via API com os transportadores.",
+      icons: "",
+    },
+    {
+      title: "Ajuste de/para de ocorrências.",
+      icons: "",
+    },
+    {
+      title: "Reprocessamento massivo de ocorrências.",
+      icons: "",
+    },
+    {
+      title: "Garante acurácia entre Rastreamento + TMS + ERP.",
+      icons: "",
+    },
+    {
+      title: "Cobrança para o transportador em caso de evidência de falha de comunicação.",
+      icons: "",
+    },
+  ];
+const contentFeaturesTwo = [
+    {
+      title: "Integração com marketplaces ilimitadas.",
+      icons: "",
+    },
+    {
+      title:
+        "Autonomia na manutenção de tabelas.",
+      icons: "",
+    },
+    {
+      title: "Cotação de multi CDs.",
+      icons: "",
+    },
+    {
+      title: "Contingência dos Correios.",
+      icons: "",
+    },
+    {
+      title: "Atende operações: ship from store, click and collect e dropshipping.",
+      icons: "",
+    },
+    {
+      title: "Algoritmo de redução de frete para embalagem única.",
+      icons: "",
+    },
+  ];
+
+
+
+export default function Fusion() {
+  return (
+    <>
+      <main>
+        <Header />
+        <JumboTron
+          title="We invest in the world’s potential"
+          banner=""
+          text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais. Nossa solução de gestão de fretes oferece módulos eficazes que garantem a melhora de performance, redução de custos e aumento das vendas, resolvendo os desafios de cada uma das etapas da cadeia de entrega."
+        />
+        <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
+        <FeaturesComponent
+          titleSection="Ofereça as melhores opções de frete"
+          text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
+          banner=""
+          content={contentFeaturesTwo}
+          rowReverse
+
+        />
+        <FeaturesComponent
+          titleSection="Reduza os contatos no SAC com Rastreamento"
+          text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
+          banner=""
+          content={contentFeatures}
+          rowReverse={false}
+
+        />
+        <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
+        <ContactForm />
+        <Footer />
+      </main>
+    </>
+  );
+}

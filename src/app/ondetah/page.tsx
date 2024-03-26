@@ -70,7 +70,7 @@ export default function Ondetah() {
       <CarroselVertical content={content} title="Transforme a experiência do seu cliente com funcionalidades exclusivas."  text="" />
       <ThreeTopics content={contentTopics} title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio" text=""  /> 
       <Cta banner={"https://ondetah.com.br/wp-content/uploads/2023/08/ondetah-banner03.png"} button  title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "/>
-      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
+      <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
       <ContactForm />
       <Footer />
     </main>

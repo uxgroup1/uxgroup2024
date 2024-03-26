@@ -26,7 +26,7 @@ export default function FeaturesComponent({
     <>
       <section className="bg-white flex items-center  w-full md:px-0 px-5 ">
         <div className="max-w-[1996px] w-full flex items-center md:justify-center">
-          <div className={`lg:flex w-[90%] ${rowReverse === true ? "lg:flex-row-reverse gap-28" : "lg:flex"}  lg:items-center`}>
+          <div className={`lg:flex w-full md:w-[90%] ${rowReverse === true ? "lg:flex-row-reverse gap-28" : "lg:flex"}  lg:items-center`}>
             <div className={`w-full md:w-[65%] ${rowReverse === true ? "md:w-[50%]" : "" }  `}>
               <h1 className=" font-bold pb-4 text-black">{titleSection}</h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
@@ -45,8 +45,8 @@ export default function FeaturesComponent({
                         width={100}
                         height={100}
                       />
-                      <div className="mt-4  h-full md:mt-0">
-                        <h3 className="font-semibold pb-3 md:pb-0 cursor-default  text-black w-full pr-[10px]">
+                      <div className="mt-4 w-full  h-full md:mt-0">
+                        <h3 className="font-semibold pb-3 md:pb-0 md:w-[90%] cursor-default  text-black w-full ">
                           {item.title}
                         </h3>
                       </div>

@@ -105,7 +105,7 @@ export default function Pudos() {
           content={contentFeatures}
           banner={svg}
         />
-        <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
+        <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
         <ContactForm />
         <Footer />
       </main>
