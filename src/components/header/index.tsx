@@ -1,11 +1,25 @@
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
+import Image from "next/image";
+import logoUXLog from "../../assets/faviconBanner/ux-log.svg";
 
 export default function Header() {
+  const [openMenuGestao, setOpenMenuGestao] = useState(false);
+  const [openMenuLog, setOpenMenuLog] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenClick = () => {
     setOpenMenu(!openMenu);
+    setOpenMenuLog(false);
+    setOpenMenuGestao(false);
+  };
+  const handleOpenClickGestao = () => {
+    setOpenMenuGestao(!openMenuGestao);
+    setOpenMenuLog(false); // Fechar o menu de Logística quando Gestão é clicado
+  };
+  const handleOpenClickLog = () => {
+    setOpenMenuLog(!openMenuLog);
+    setOpenMenuGestao(false); // Fechar o menu de Gestão quando Logística é clicado
   };
 
   return (
@@ -54,7 +68,7 @@ export default function Header() {
                 <li>
                   <a
                     href="/"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
                     aria-current="page"
                   >
                     Home
@@ -62,78 +76,119 @@ export default function Header() {
                 </li>
                 <li>
                   <a
-                    href="/logistica"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                    onClick={handleOpenClickGestao}
+                    id="mega-menu-full-cta-image-button"
+                    data-collapse-toggle="mega-menu-full-image-dropdown"
+                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
+                  >
+                    Gestão
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={handleOpenClickLog}
+                    className="flex items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
                     aria-current="page"
                   >
                     Logística
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/pudos"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
-                    aria-current="page"
-                  >
-                    Pudos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/torre"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
-                    aria-current="page"
-                  >
-                    Torre
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/ondetah"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
-                    aria-current="page"
-                  >
-                    Ondetah
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={handleOpenClick}
-                    id="mega-menu-full-cta-image-button"
-                    data-collapse-toggle="mega-menu-full-image-dropdown"
-                    className="flex items-center justify-between w-full bg-transparent font-normal py-2  border-b md:w-auto md:hover:bg-transparent md:border-0 text-white md:hover:font-medium md:p-0 "
-                  >
-                    Gestão
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>
-          {openMenu && (
+          {openMenuLog && (
             <div
               id="mega-menu-full-image-dropdown"
-              className="mt-1 bg-black w-full absolute top-40 md:top-16 left-0 md:border-t-white md:border-t"
+              className="mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white "
             >
-              <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm text-red-400  md:grid-cols-2 md:px-0">
+              <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
+                <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                  <h1>Logística</h1>
+                </div>
+
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
-                    <a href="#" className="font-normal hover:font-medium">
-                      Our Blog
+                    <a
+                      href="/torre"
+                      className="font-normal text-lg hover:font-medium"
+                    >
+                      Torre
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="font-normal hover:font-medium">
-                      Terms & Conditions
+                    <a
+                      href="/pudos"
+                      className="font-normal text-lg hover:font-medium"
+                    >
+                      Pudos
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="font-normal hover:font-medium">
-                      License
+                    <a
+                      href="/logistica"
+                      className="font-normal text-lg hover:font-medium"
+                    >
+                      Logística
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                >
+                  <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
+                    Preview the new Flowbite dashboard navigation.
+                  </p>
+                  <button
+                    type="button"
+                    className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                  >
+                    Get started
+                    <svg
+                      className="w-3 h-3 ms-2 rtl:rotate-180"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+          )}
+          {openMenuGestao && (
+            <div
+              id="mega-menu-full-image-dropdown"
+              className="mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white "
+            >
+              <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
+                <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                  <h1>Gestão</h1>
+                </div>
+                <ul className="mb-4 space-y-4 md:mb-0">
+                  <li>
+                    <a
+                      href="/fusion"
+                      className="font-normal text-lg hover:font-medium"
+                    >
+                      fusion
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="font-normal hover:font-medium">
-                      Resources
+                    <a
+                      href="/ondetah"
+                      className="font-normal text-lg hover:font-medium"
+                    >
+                      ondetah
                     </a>
                   </li>
                 </ul>
