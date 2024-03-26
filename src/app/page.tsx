@@ -1,20 +1,21 @@
 "use client";
 
-import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
+const CarroselVertical = dynamic(() => import("@/components/institucional/carrouselVerticalMain")) ;
 import image from "../assets/cta/ctaBanner.png";
-import Cta from "@/components/cta";
-import LogisticaComPerformance from "@/components/institucional/logisticaComPerformance";
-import BannerMain from "@/components/institucional/bannerMain";
-import UxPartners from "@/components/institucional/uxPartners";
-import LogisticaSustentavel from "@/components/institucional/logisticaSustentavel";
-import UxMidia from "@/components/institucional/uxMidia";
+const Cta = dynamic(() => import("@/components/cta")) ;
+const LogisticaComPerformance = dynamic(() => import("@/components/institucional/logisticaComPerformance")) ;
+const BannerMain = dynamic(() => import("@/components/institucional/bannerMain")) ;
+const UxPartners = dynamic(() => import("@/components/institucional/uxPartners")) ;
+const LogisticaSustentavel = dynamic(() => import("@/components/institucional/logisticaSustentavel")) ;
+const UxMidia = dynamic(() => import("@/components/institucional/uxMidia")) ;
 import { Blog } from "@/components/institucional/blog";
-import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
-import Header from "@/components/header";
-import Footer from "@/components/Footer";
-import ContactForm from "@/components/institucional/ContactForm";
-import EcoSistemaUx from "@/components/ecosistemaUx";
+const CarroselVerticalMobile = dynamic(() => import("@/components/institucional/carrouselVerticalMain/mobile")) ;
+const Header = dynamic(() => import("@/components/header")) ;
+const Footer = dynamic(() => import("@/components/Footer")) ;
+const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx")) ;
 import { Cases } from "@/components/institucional/cases";
+import dynamic from "next/dynamic";
 
 const slides = [
   {
