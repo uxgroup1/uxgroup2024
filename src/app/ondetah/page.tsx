@@ -1,16 +1,16 @@
 "use client";
-import Footer from "@/components/Footer";
-import Cta from "@/components/cta";
-import Header from "@/components/header";
-import ContactForm from "@/components/institucional/ContactForm";
-import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
-import SecondSection from "@/components/produtos/SecondSection";
-import FeaturesComponent from "@/components/produtos/features";
-import JumboTron from "@/components/produtos/jumbotron";
-import ThreeTopics from "@/components/produtos/threeTopics";
+const Footer = dynamic(() => import( "@/components/Footer"));
+const Cta = dynamic(() => import("@/components/cta")) ;
+const Header = dynamic(() => import("@/components/header")) ;
+const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const CarroselVertical = dynamic(() => import("@/components/institucional/carrouselVerticalMain")) ;
+const SecondSection = dynamic(() => import("@/components/produtos/SecondSection")) ;
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics")) ;
 import headsetImage from "@/assets/ondetah/headset.svg"
 import counterImage from "@/assets/ondetah/counter.svg"
 import smartphoneImage from "@/assets/ondetah/smartphone.svg"
+import dynamic from "next/dynamic";
  
 
 const content = [

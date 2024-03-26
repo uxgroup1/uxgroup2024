@@ -1,14 +1,16 @@
 "use client";
+import dynamic from "next/dynamic";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/header";
-import ContactForm from "@/components/institucional/ContactForm";
-import SecondSection from "@/components/produtos/SecondSection";
-import JumboTron from "@/components/produtos/jumbotron";
-import svg from "../../assets/faviconBanner/ux-gestao.svg";
-import FeaturesComponent from "@/components/produtos/features";
-import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
-import ThreeTopics from "@/components/produtos/threeTopics";
+
+const Footer = dynamic(() => import("@/components/Footer")) ;
+const Header = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const SecondSection = dynamic(() => import("@/components/produtos/SecondSection")) ;
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+import svg from "@/assets/faviconBanner/ux-gestao.svg";
+const FeaturesComponent = dynamic(() => import("@/components/produtos/features")) ;
+const CarroselVertical = dynamic(() => import("@/components/institucional/carrouselVerticalMain")) ;
+const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics")) ;
 import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg"

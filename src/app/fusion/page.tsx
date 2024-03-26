@@ -1,10 +1,12 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/header";
-import ContactForm from "@/components/institucional/ContactForm";
-import FeaturesComponent from "@/components/produtos/features";
-import JumboTron from "@/components/produtos/jumbotron";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("@/components/Footer")) ;
+const Header = dynamic(() => import("@/components/header")) ;
+const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
+const FeaturesComponent = dynamic(() => import("@/components/produtos/features")) ;
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
 
 const contentFeatures = [
     {
