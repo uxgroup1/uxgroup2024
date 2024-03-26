@@ -11,6 +11,7 @@ import movingImage from "@/assets/torre/icons/moving.svg"
 import natureImage from "@/assets/torre/icons/nature.svg"
 import packgeImage from "@/assets/torre/icons/package.svg"
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg"
+import torreLogo from "@/assets/logos/torre.svg"
 
 
 const contentFeaturesOne = [
@@ -67,6 +68,7 @@ export default function Torre() {
     <main>
       <Header />
       <JumboTron
+        logo={torreLogo}
         banner=""
         title="We invest in the world’s potential"
         text="Oferecemos soluções integradas e inovadoras para otimizar toda a cadeia logística da sua empresa. Combinamos tecnologia de ponta com expertise em logística para garantir que suas operações de transporte sejam eficientes, econômicas e ecologicamente sustentáveis."

@@ -14,6 +14,7 @@ const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics")) ;
 import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg"
+import pudoLogo from "@/assets/logos/pudos.svg"
 
 
 const contentFeatures = [
@@ -85,6 +86,7 @@ export default function Pudos() {
       <main>
         <Header /> 
         <JumboTron
+          logo={pudoLogo}
           title="We invest in the world’s potential"
           text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
           banner=""

@@ -7,6 +7,7 @@ const Header = dynamic(() => import("@/components/header")) ;
 const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
 const FeaturesComponent = dynamic(() => import("@/components/produtos/features")) ;
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+import fusionLogo from "@/assets/logos/fusion.svg"
 
 const contentFeatures = [
     {
@@ -71,6 +72,7 @@ export default function Fusion() {
       <main>
         <Header />
         <JumboTron
+          logo={fusionLogo}
           title="We invest in the world’s potential"
           banner=""
           text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais. Nossa solução de gestão de fretes oferece módulos eficazes que garantem a melhora de performance, redução de custos e aumento das vendas, resolvendo os desafios de cada uma das etapas da cadeia de entrega."

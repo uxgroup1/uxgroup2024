@@ -10,6 +10,8 @@ const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics")) ;
 import headsetImage from "@/assets/ondetah/headset.svg"
 import counterImage from "@/assets/ondetah/counter.svg"
 import smartphoneImage from "@/assets/ondetah/smartphone.svg"
+import imageOndetah from "@/assets/ondetah/ondetah.jpeg"
+import ondetahLogo from "@/assets/logos/ondetah.svg"
 import dynamic from "next/dynamic";
  
 
@@ -67,8 +69,9 @@ export default function Ondetah() {
     <main>
       <Header />
       <JumboTron
+      logo={ondetahLogo}
         title="We invest in the world’s potential"
-        banner="https://ondetah.com.br/wp-content/uploads/2021/02/background-ondetah-2.gif"
+        banner={imageOndetah.src}
         text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP, TMS Embarcador, TMS Transportador e uma estrutura única de SAC que facilitam a gestão do pedido. É mais do que apenas informação: é conexão, satisfação e tecnologia avançada."
       />
        <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>

@@ -24,6 +24,7 @@ import itapeviImage from "@/assets/logistica/cdsImages/itapevi.jpg";
 import barueriImage from "@/assets/logistica/cdsImages/barueri.jpg";
 import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg";
 import anvisaImage from "@/assets/logistica/anvisa.png";
+import fulfillmet from "@/assets/logos/fulfillment.svg"
 
 const slides = [
   {
@@ -80,6 +81,7 @@ export default function Logistica() {
     <main>
       <Header />
       <JumboTron
+      logo={fulfillmet}
         title="We invest in the world’s potential"
         text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
         banner=""
