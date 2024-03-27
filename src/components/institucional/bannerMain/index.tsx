@@ -106,7 +106,7 @@ export default function BannerMain() {
               <button
                 className={`${
                   contentIndex === 0 ? "bg-black" : "bg-white"
-                }  hover:p-3  block w-6 h-6 transition-all hover:border-white border hover:bg-black rounded-[8px] `}
+                }  hover:p-2  block w-6 h-6 transition-all hover:border-white border hover:bg-black rounded-[8px] `}
                 onClick={() => handleButtonClick(0)}
               ></button>
               <button
@@ -114,7 +114,7 @@ export default function BannerMain() {
                   contentIndex === 1
                     ? "bg-gradient-to-r from-[#29265B] to-[#009580]"
                     : "bg-white"
-                }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#29265B] to-[#009580] rounded-[8px] transition-all`}
+                }  block w-6 h-6 hover:p-2 hover:border-white border hover:bg-gradient-to-r from-[#29265B] to-[#009580] rounded-[8px] transition-all`}
                 onClick={() => handleButtonClick(1)}
               ></button>
 
@@ -123,7 +123,7 @@ export default function BannerMain() {
                   contentIndex === 2
                     ? "bg-gradient-to-r from-[#FBC709] to-[#FF7F13]"
                     : "bg-white"
-                }  hover:w-7 hover:h-7 block w-6 h-6 hover:border-white border hover:bg-gradient-to-r from-[#FBC709] to-[#FF7F13] rounded-[8px] transition-all`}
+                }  block w-6 h-6 hover:p-2 hover:border-white border hover:bg-gradient-to-r from-[#FBC709] to-[#FF7F13] rounded-[8px] transition-all`}
                 onClick={() => handleButtonClick(2)}
               ></button>
               <button
@@ -131,7 +131,7 @@ export default function BannerMain() {
                   contentIndex === 3
                     ? "bg-gradient-to-r from-[#7DAD58] to-[#014C34]"
                     : "bg-white"
-                } hover:w-7 hover:h-7 block w-6 h-6  hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
+                }  block w-6 h-6 hover:p-2 hover:border-white border hover:bg-gradient-to-r from-[#7DAD58] to-[#014C34] rounded-[8px] transition-all`}
                 onClick={() => handleButtonClick(3)}
               ></button>
             </div>

@@ -74,6 +74,10 @@ export default function Ondetah() {
     <main>
       <Header />
       <JumboTron
+        textButtonOne="fale com um especialista"
+        textButtonTwo="saiba mais"
+        linkButtonOne=""
+        linkButtonTwo=""
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         logo={ondetahLogo}
@@ -82,15 +86,32 @@ export default function Ondetah() {
         text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP, TMS Embarcador, TMS Transportador e uma estrutura única de SAC que facilitam a gestão do pedido. É mais do que apenas informação: é conexão, satisfação e tecnologia avançada."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-      <CarroselVertical
-        content={content}
-        title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
-        text=""
-      />
       <ThreeTopics
         content={contentTopics}
         title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio"
         text=""
+      />
+      {/* <CarroselVertical
+        content={content}
+        title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
+        text=""
+      /> */}
+
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Acompanhe em tempo real todas as etapas do pedido."
+        text="A cada etapa realizada, o cliente é informado sobre o status da sua compra. Desde a confirmação de pagamento até a entrega, com pushes ao longo do processo até mesmo em caso de ocorrência. Tecnologias integradas que possibilitam assertividade e agilidade da informação para o cliente."
+        image=""
+        flowReverse={false}
+      />
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Reduza o contato no SAC com atendimento facilitado com chatbot disponível 24h."
+        text="Através de aplicativos de mensagens, conseguimos auxiliar o cliente de forma mais ágil, tornando a relação da marca com o cliente mais positiva. Essa comunicação facilitada com contato 100% digital para atendimento, acompanhamento e solicitação de serviços reflete em uma redução de contato no SAC."
+        image=""
+        flowReverse={true}
       />
       <Cta
         banner={
@@ -102,32 +123,16 @@ export default function Ondetah() {
       <SecondSection
         corButtonOne="#29265B"
         corButtonTwo="#009580"
-        title="We invest in the world’s potential"
-        text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP"
+        title="Gere valor a sua marca através da compensação de carbono com baixo investimento."
+        text="Entregas verdes usando tecnologia na operação. A Ondetah possibilita a neutralização através do cálculo do carbono emitido pelo pedido pré ou pós venda. Dessa forma, você cria uma conexão direta com o cliente, entregando ao final da compra um certificado nominal com as informações sobre a compensação de carbono do pedido."
         image=""
         flowReverse={false}
       />
       <SecondSection
         corButtonOne="#29265B"
         corButtonTwo="#009580"
-        title="We invest in the world’s potential"
-        text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP"
-        image=""
-        flowReverse={true}
-      />
-      <SecondSection
-        corButtonOne="#29265B"
-        corButtonTwo="#009580"
-        title="We invest in the world’s potential"
-        text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP"
-        image=""
-        flowReverse={false}
-      />
-      <SecondSection
-        corButtonOne="#29265B"
-        corButtonTwo="#009580"
-        title="We invest in the world’s potential"
-        text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP"
+        title="Fidelize clientes através das informações obtidas no seu pós-venda."
+        text="Com intuito de tornar o atendimento cada vez mais próximo e facilitar a interação com o cliente, a pesquisa de satisfação é personalizada de acordo com o que deseja medir sobre o seu processo de entrega. Além de demonstrar a sua preocupação com o cliente, permite que você reverta possíveis insatisfações e garanta uma experiência mais positiva."
         image=""
         flowReverse={true}
       />

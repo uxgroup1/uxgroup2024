@@ -2,7 +2,6 @@ import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import Link from "next/link";
 
-
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
   const [openMenuLog, setOpenMenuLog] = useState(false);
@@ -15,7 +14,7 @@ export default function Header() {
   };
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
-    setOpenMenuLog(false); 
+    setOpenMenuLog(false);
   };
   const handleOpenClickLog = () => {
     setOpenMenuLog(!openMenuLog);
@@ -82,7 +81,7 @@ export default function Header() {
                     data-collapse-toggle="mega-menu-full-image-dropdown"
                     className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
-                    Tecnologia
+                    Gestão
                   </Link>
                 </li>
                 <li>
@@ -95,7 +94,6 @@ export default function Header() {
                     Logística
                   </Link>
                 </li>
-                
               </ul>
             </div>
           </div>
@@ -110,28 +108,28 @@ export default function Header() {
                 </div>
 
                 <ul className="mb-4 space-y-4 md:mb-0">
-                  <li>
-                    <Link
-                      href="/torre"
-                      className="font-normal text-white text-lg hover:font-medium"
-                    >
-                      Torre
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/pudos"
-                      className="font-normal text-white text-lg hover:font-medium"
-                    >
-                      Pudos
-                    </Link>
-                  </li>
-                  <li>
+                  <li className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white">
                     <Link
                       href="/logistica"
-                      className="font-normal text-white text-lg hover:font-medium"
+                      className="font-normal text-white text-lg "
                     >
                       Fulfillment
+                    </Link>
+                  </li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                    <Link
+                      href="/torre"
+                      className="font-normal text-white text-lg "
+                    >
+                      Torre de controle
+                    </Link>
+                  </li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                    <Link
+                      href="/pudos"
+                      className="font-normal text-white text-lg "
+                    >
+                      Pudos
                     </Link>
                   </li>
                 </ul>
@@ -170,27 +168,43 @@ export default function Header() {
           {openMenuGestao && (
             <div
               id="mega-menu-full-image-dropdown"
-              className="mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white "
+              className="mt-1 bg-black w-full absolute pt-5 pb-10 top-[90%] md:top-16 left-0 border-t-white "
             >
               <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
                 <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
                   <h1 className="text-white">Gestão</h1>
                 </div>
                 <ul className="mb-4 space-y-4 md:mb-0">
-                  <li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
                     <Link
                       href="/fusion"
-                      className="font-normal text-white text-lg hover:font-medium"
+                      className="font-normal text-white text-lg"
                     >
-                      fusion
+                      TMS embarcador
                     </Link>
                   </li>
-                  <li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                    <Link
+                      href="/trux"
+                      className="font-normal text-white text-lg"
+                    >
+                      TMS Transportador
+                    </Link>
+                  </li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
                     <Link
                       href="/ondetah"
-                      className="font-normal text-white text-lg hover:font-medium"
+                      className="font-normal text-white text-lg"
                     >
-                      ondetah
+                      Plataforma de comunicação
+                    </Link>
+                  </li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                    <Link
+                      href="/ondetah"
+                      className="font-normal text-white text-lg"
+                    >
+                      Consultoria
                     </Link>
                   </li>
                 </ul>

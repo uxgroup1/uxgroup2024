@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 interface Content {
@@ -9,6 +10,10 @@ interface Content {
   corButtonOne: string;
   corButtonTwo?: string;
   corButtonThree?: string;
+  textButtonOne: string;
+  linkButtonOne: string;
+  textButtonTwo: string;
+  linkButtonTwo: string;
 }
 
 export default function JumboTron({
@@ -19,6 +24,10 @@ export default function JumboTron({
   corButtonOne,
   corButtonTwo,
   corButtonThree,
+  textButtonOne,
+  textButtonTwo,
+  linkButtonOne,
+  linkButtonTwo,
 }: Content) {
   const [hovered, setHovered] = useState(false);
 
@@ -68,7 +77,7 @@ export default function JumboTron({
             <button
               className={`w-[200px] h-10 rounded-lg transition-all hover:font-semibold`}
             >
-              fale com um consultor
+              <Link href={linkButtonOne}>{textButtonOne}</Link>
             </button>
             <button
               className={`md:w-[170px] h-10 rounded-lg text-white hover:font-semibold transition-all`}
@@ -76,7 +85,7 @@ export default function JumboTron({
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
-              saiba mais
+              <Link href={linkButtonTwo}>{textButtonTwo}</Link>
             </button>
           </div>
         </div>

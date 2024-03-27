@@ -92,6 +92,10 @@ export default function Pudos() {
       <main>
         <Header />
         <JumboTron
+          textButtonOne="fale com um especialista"
+          textButtonTwo="saiba mais"
+          linkButtonOne=""
+          linkButtonTwo=""
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           logo={pudoLogo}

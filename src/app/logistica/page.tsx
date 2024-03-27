@@ -81,6 +81,10 @@ export default function Logistica() {
     <main>
       <Header />
       <JumboTron
+      textButtonOne="fale com um especialista"
+      textButtonTwo="saiba mais"
+      linkButtonOne=""
+      linkButtonTwo=""
       corButtonOne="#fbc705"
       corButtonThree="#D3A707"
       logo={fulfillmet}
