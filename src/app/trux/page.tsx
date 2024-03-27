@@ -11,7 +11,7 @@ const FeaturesComponent = dynamic(
   () => import("@/components/produtos/features")
 );
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
-import arrowImage from "@/assets/fusion/arrow/arrowListComponentesPudo.svg";
+import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import Cta from "@/components/cta";
 
