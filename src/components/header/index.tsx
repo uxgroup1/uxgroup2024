@@ -15,11 +15,11 @@ export default function Header() {
   };
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
-    setOpenMenuLog(false); // Fechar o menu de Logística quando Gestão é clicado
+    setOpenMenuLog(false); 
   };
   const handleOpenClickLog = () => {
     setOpenMenuLog(!openMenuLog);
-    setOpenMenuGestao(false); // Fechar o menu de Gestão quando Logística é clicado
+    setOpenMenuGestao(false);
   };
 
   return (
@@ -68,7 +68,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/"
-                    className="flex items-center border-b hover:border-b hover:border-b-white hover:transition-all cursor-pointer justify-between w-full bg-transparent font-normal py-2 md:border-transparent  md:w-auto md:hover:bg-transparent md:border-0 text-white  md:p-0 "
+                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
                     Home
@@ -80,7 +80,7 @@ export default function Header() {
                     onClick={handleOpenClickGestao}
                     id="mega-menu-full-cta-image-button"
                     data-collapse-toggle="mega-menu-full-image-dropdown"
-                    className="flex hover:border-b border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
                     Gestão
                   </Link>
@@ -89,7 +89,7 @@ export default function Header() {
                   <Link
                     href={""}
                     onClick={handleOpenClickLog}
-                    className="flex items-center hover:border-b border-b hover:transition-all hover:border-b-white cursor-pointer justify-between w-full bg-transparent font-normal py-2   md:w-auto md:hover:bg-transparent md:border-transparent text-white  md:p-0 "
+                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
                     Logística
@@ -106,14 +106,14 @@ export default function Header() {
             >
               <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
                 <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
-                  <h1>Logística</h1>
+                  <h1 className="text-white">Logística</h1>
                 </div>
 
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
                     <Link
                       href="/torre"
-                      className="font-normal text-lg hover:font-medium"
+                      className="font-normal text-white text-lg hover:font-medium"
                     >
                       Torre
                     </Link>
@@ -121,7 +121,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/pudos"
-                      className="font-normal text-lg hover:font-medium"
+                      className="font-normal text-white text-lg hover:font-medium"
                     >
                       Pudos
                     </Link>
@@ -129,7 +129,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/logistica"
-                      className="font-normal text-lg hover:font-medium"
+                      className="font-normal text-white text-lg hover:font-medium"
                     >
                       Logística
                     </Link>
@@ -174,13 +174,13 @@ export default function Header() {
             >
               <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
                 <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
-                  <h1>Gestão</h1>
+                  <h1 className="text-white">Gestão</h1>
                 </div>
                 <ul className="mb-4 space-y-4 md:mb-0">
                   <li>
                     <Link
                       href="/fusion"
-                      className="font-normal text-lg hover:font-medium"
+                      className="font-normal text-white text-lg hover:font-medium"
                     >
                       fusion
                     </Link>
@@ -188,7 +188,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/ondetah"
-                      className="font-normal text-lg hover:font-medium"
+                      className="font-normal text-white text-lg hover:font-medium"
                     >
                       ondetah
                     </Link>
