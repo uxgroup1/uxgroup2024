@@ -1,48 +1,55 @@
 import { title } from "process";
 import CarrouselCards from "../carrouselCards";
 import style from "./style.module.scss";
+import armazenagemImage from "@/assets/home/carrouselCardsLog/armazenagem.png"
+import gestaoEstoqueImage from "@/assets/home/carrouselCardsLog/gestaoEstoque.png"
+import reversaImage from "@/assets/home/carrouselCardsLog/Reversa.png"
+import gestaoTransporte from "@/assets/home/carrouselCardsLog/gestaoTransporte.png"
+import pudoImage from "@/assets/home/carrouselCardsLog/PUDO.png"
+import wmsImage from "@/assets/home/carrouselCardsLog/WMS.png"
+import seop from "@/assets/home/carrouselCardsLog/seop.png"
 
 const content = [
   {
     title: "Armazenagem e expedição de pedidos ",
     text: "Todos os produtos armazenados e expedidos com 99,6% do cumprimento de SLA para uma operação eficiente com foco na experiência do cliente.",
-    banner: "",
+    banner: armazenagemImage.src,
     index: 0,
   },
   {
     title: "Gestão de estoque",
     text: "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    banner: "",
+    banner: gestaoEstoqueImage.src,
     index: 1,
   },
   {
     title: "Logística Reversa",
     text: "Transforme a devolução de produtos em oportunidades de satisfação. Simplifique as etapas com a garantia do mesmo cuidado com a expedição.",
-    banner: "",
+    banner: reversaImage.src,
     index: 2,
   },
   {
     title: "Gestão de transportes",
     text: "Otimize o seu transporte, com uma gestão de entregas 100% integradas a tecnologia permitindo tomada de decisão rápida e assertiva, garantindo o cuidado com a jornada do pedido.",
-    banner: "",
+    banner: gestaoTransporte.src,
     index: 3,
   },
   {
     title: "PUDO's",
     text: "Aumente a satisfação do cliente com nossos pontos de coleta e entrega estrategicamente localizados. A conveniência e a agilidade ao alcance do seu cliente.",
-    banner: "",
+    banner: pudoImage.src,
     index: 4,
   },
   {
     title: "WMS",
     text: "Automação total para uma operação de e-commerce de alta performance. Digitalização e visibilidade em tempo real para gestão de estoque e coleta do pedido.",
-    banner: "",
+    banner: wmsImage.src,
     index: 5,
   },
   {
     title: "S&OP",
     text: "Evite atrasos e reclamações, com Planejamento de Vendas e Operação é possível alinhar e integrar as áreas para melhor gerenciamento de produtos e demandas garantindo a eficiência do processo logístico.",
-    banner: "",
+    banner: seop.src,
     index: 6,
   },
 ];
