@@ -7,60 +7,61 @@ const Header = dynamic(() => import("@/components/header")) ;
 const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
 const FeaturesComponent = dynamic(() => import("@/components/produtos/features")) ;
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+import arrowImage from "@/assets/fusion/arrow/arrowListComponentesPudo.svg"
 import fusionLogo from "@/assets/logos/fusion.svg"
 
 const contentFeatures = [
     {
       title: "Envio de ocorrências simultâneo para vários sistemas.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title:
         "Integração via API com os transportadores.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Ajuste de/para de ocorrências.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Reprocessamento massivo de ocorrências.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Garante acurácia entre Rastreamento + TMS + ERP.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Cobrança para o transportador em caso de evidência de falha de comunicação.",
-      icons: "",
+      icons: arrowImage,
     },
   ];
 const contentFeaturesTwo = [
     {
       title: "Integração com marketplaces ilimitadas.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title:
         "Autonomia na manutenção de tabelas.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Cotação de multi CDs.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Contingência dos Correios.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Atende operações: ship from store, click and collect e dropshipping.",
-      icons: "",
+      icons: arrowImage,
     },
     {
       title: "Algoritmo de redução de frete para embalagem única.",
-      icons: "",
+      icons: arrowImage,
     },
   ];
 

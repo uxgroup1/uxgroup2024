@@ -32,8 +32,12 @@ export default function Footer() {
       name: "Gestão",
       products: [
         {
-          namePage: "",
-          url: "",
+          namePage: "ondetah",
+          url: "/ondetah",
+        },
+        {
+          namePage: "fusion",
+          url: "/fusion",
         },
       ],
     },
@@ -42,8 +46,16 @@ export default function Footer() {
       name: "Logística",
       products: [
         {
-          namePage: "",
-          url: "",
+          namePage: "Torre",
+          url: "/torre",
+        },
+        {
+          namePage: "Pudos",
+          url: "/pudos",
+        },
+        {
+          namePage: "Fulfillment",
+          url: "/logistica",
         },
       ],
     },
@@ -61,7 +73,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-black flex items-center justify-center text-white p-4 md:pt-10 w-full">
+      <footer className="bg-black flex items-center justify-center text-white p-2 md:pt-10 w-full">
         <div className="flex items-center justify-between h-full w-[92%]">
           <div className="mx-auto w-full  md:p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
@@ -78,16 +90,16 @@ export default function Footer() {
                 {pages.map((data) => {
                   return (
                     <div key={data.index} className="w-full">
-                      <h2 className="mb-4 text-sm font-semibold text-white uppercase ">
+                      <h2 className="mb-4 text-[16px] font-semibold text-white uppercase ">
                         {data.name}
                       </h2>
                       <ul className="flex flex-col text-gray-500  font-medium">
                         {data.products.map((product) => {
                           return (
-                            <li key={data.index} className="mb-4">
+                            <li key={data.index} className="mb-4 ">
                               <Link
                                 href={product.url}
-                                className="text-white text-sm"
+                                className="text-white font-medium pt-5 hover:border-b pb-1 transition-all border-b-white border-transparent"
                               >
                                 {product.namePage}
                               </Link>
@@ -113,7 +125,7 @@ export default function Footer() {
                   return (
                     <Link
                       key={data.index}
-                      href="#"
+                      href="/"
                       className="text-white  hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
                     >
                       <Image

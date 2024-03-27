@@ -10,9 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
     width: 1996px;
     height: 100%;
-    
 
     .BoxCta {
       display: flex;
@@ -75,8 +75,9 @@
       .BoxCta {
         width: 100%;
         height: 100%;
+        padding-top: 80px;
+        padding-bottom: 80px;
         border-radius: 0;
-        background-color: aqua;
 
         .ContainerContent {
           .Controller {
@@ -86,13 +87,11 @@
             flex-direction: column;
             width: 90%;
             gap: 10px;
-            background-color: aqua;
 
             h1 {
               font-size: 24px;
               width: 100%;
               line-height: 31px;
-              background-color: aqua;
             }
           }
         }
