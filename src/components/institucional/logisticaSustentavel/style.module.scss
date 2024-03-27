@@ -15,7 +15,7 @@
 
     .BoxLogisticaSustentavel {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 50% 50%;
       height: 100%;
       width: 90%;
       border-radius: 16px;
@@ -39,7 +39,7 @@
             height: normal;
           }
 
-          p{
+          p {
             width: 75%;
           }
 
@@ -55,11 +55,9 @@
           }
 
           button {
-            background-color: #000;
             width: 170px;
             height: 40px;
             border-radius: 8px;
-            color: #fff;
           }
         }
       }
@@ -86,25 +84,26 @@
 }
 
 @media (max-width: 675px) {
-  .LogisticaSustentavel{
+  .LogisticaSustentavel {
     padding-bottom: 80px;
     padding-top: 80px;
-    .Container{
-      .BoxLogisticaSustentavel{
+    .Container {
+      .BoxLogisticaSustentavel {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 50px;
 
-        .ContentImage{
-          display: none;
+        .ContentImage {
+          display: flex;
         }
 
-        .Controller{
-          .ContentText{
-            p{
+        .Controller {
+          .ContentText {
+            p {
               width: 100%;
             }
 
-            div{
+            div {
               width: 85%;
             }
           }

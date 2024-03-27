@@ -1,4 +1,6 @@
+import Image from "next/image";
 import style from "./style.module.scss";
+import ecoImage from "../../assets/home/ecossistema-ux.svg"
 
 interface Content {
   title: string;
@@ -28,11 +30,13 @@ function EcoSistemaUx() {
                   seu negócio com foco em impulsionar os resultados e reduzir os
                   custos.
                 </p>
-                <button>saiba mais</button>
+                <button className="hover:border hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md" >saiba mais</button>
               </div>
             </div>
             <div className={style.ContentImage}>
-              <div className={style.BoxImage}>.</div>
+              <div className={style.BoxImage}>
+                <Image className="w-full  h-full " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
+              </div>
             </div>
           </div>
         </div>

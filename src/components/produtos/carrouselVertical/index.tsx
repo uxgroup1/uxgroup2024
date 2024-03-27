@@ -9,6 +9,7 @@ interface Content {
 
 interface ContentSection {
   content: Content[];
+
 }
 
 function CarroselImages({ content }: ContentSection) {

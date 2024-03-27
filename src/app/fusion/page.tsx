@@ -74,6 +74,7 @@ export default function Fusion() {
         <Header />
         <JumboTron
           corButtonOne="#28265b"
+          corButtonThree="#1F1D47"
           logo={fusionLogo}
           title="We invest in the world’s potential"
           banner=""

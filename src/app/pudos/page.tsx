@@ -93,6 +93,7 @@ export default function Pudos() {
         <Header />
         <JumboTron
           corButtonOne="#ff7f12"
+          corButtonThree="#CA620A"
           logo={pudoLogo}
           title="We invest in the world’s potential"
           text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
@@ -100,6 +101,8 @@ export default function Pudos() {
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <SecondSection
+          corButtonOne="#ff7f12"
+          corButtonThree="#CA620A"
           flowReverse={false}
           title="Lorem"
           text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."

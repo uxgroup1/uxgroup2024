@@ -7,6 +7,9 @@ import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";
 
 export default function BannerMain() {
+
+  
+
   const [contentIndex, setContentIndex] = useState(0);
 
   const contentBanners = [

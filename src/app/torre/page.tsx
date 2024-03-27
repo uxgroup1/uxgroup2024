@@ -52,12 +52,12 @@ const contentTopics = [
       text: "lorem Ipsum et al.",
     },
     {
-      icon: movingImage,
+      icon: packgeImage,
       title: "Entregas mais rápidas e eficientes",
       text: "lorem Ipsum et al.",
     },
     {
-      icon: packgeImage,
+      icon: movingImage,
       title: "Geração de valor para sua marca",
       text: "lorem Ipsum et al.",
     },

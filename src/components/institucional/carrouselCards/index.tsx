@@ -3,9 +3,7 @@ import style from "./style.module.scss";
 
 interface contentCards {
   title: string;
-  text: string;
   banner: string;
-  index: number;
 }
 
 interface carrouselCards {
@@ -17,15 +15,14 @@ function CarrouselCards({ content }: carrouselCards) {
     <>
       <div className={style.CarrouselCards}>
         <div className={style.Container}>
-          {content.map((data) => {
+          {content?.map((data,index) => {
             return (
               <div
-                key={data.index}
+                key={index}
                 className={`hover:bg-slate-600 ${style.Card}`}
               >
                 <div className={style.content}>
                   <h2 className="leading-[30px]">{data.title}</h2>
-                  <p>{data.text}</p>
                   <button>
                     <Link href=""> saiba mais</Link>
                   </button>

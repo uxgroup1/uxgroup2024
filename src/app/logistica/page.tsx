@@ -82,6 +82,7 @@ export default function Logistica() {
       <Header />
       <JumboTron
       corButtonOne="#fbc705"
+      corButtonThree="#D3A707"
       logo={fulfillmet}
         title="We invest in the world’s potential"
         text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
@@ -89,6 +90,8 @@ export default function Logistica() {
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <SecondSection
+        corButtonOne="#fbc705"
+        corButtonThree="#D3A707"
         flowReverse={false}
         title="Fulfillment Personalizado"
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
@@ -96,6 +99,8 @@ export default function Logistica() {
       />
       <Cases content={slides} />
       <SecondSection
+        corButtonOne="#fbc705"
+        corButtonThree="#D3A707"
         flowReverse={true}
         image="."
         title="Implementação de WMS"

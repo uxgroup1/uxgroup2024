@@ -108,10 +108,11 @@
     .Container {
       .BoxLogisticaSustentavel {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 50px;
 
         .ContentImage {
-          display: none;
+          display: flex;
         }
 
         .Controller {

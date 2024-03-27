@@ -8,9 +8,18 @@ interface ConteudoCTA {
   text?: String;
   banner: String;
   button: boolean;
+  corButtonOne?: string;
+  corButtonTwo?: string;
 }
 
-function Cta({ title, banner, text, button }: ConteudoCTA) {
+function Cta({
+  title,
+  banner,
+  text,
+  button,
+  corButtonOne,
+  corButtonTwo,
+}: ConteudoCTA) {
   return (
     <>
       <section className={style.Cta}>
@@ -27,8 +36,14 @@ function Cta({ title, banner, text, button }: ConteudoCTA) {
                 </div>
 
                 {button && (
-                  <button>
-                    {" "}
+                  <button
+                    className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"
+                    style={{
+                      background: `linear-gradient(to right, ${corButtonOne}, ${
+                        corButtonOne ? corButtonTwo : corButtonOne
+                      })`,
+                    }}
+                  >
                     <Link href="/logistica">fale com um consultor</Link>
                   </button>
                 )}

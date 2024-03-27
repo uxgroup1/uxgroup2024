@@ -29,7 +29,7 @@ export default function Footer() {
   const pages = [
     {
       index: 0,
-      name: "Gestão",
+      name: "Tecnologia",
       products: [
         {
           namePage: "ondetah",
@@ -43,7 +43,7 @@ export default function Footer() {
     },
     {
       index: 1,
-      name: "Fulfillment",
+      name: "Logística",
       products: [
         {
           namePage: "Torre",

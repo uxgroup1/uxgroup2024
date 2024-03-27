@@ -82,7 +82,7 @@ export default function Header() {
                     data-collapse-toggle="mega-menu-full-image-dropdown"
                     className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
-                    Gestão
+                    Tecnologia
                   </Link>
                 </li>
                 <li>
@@ -92,7 +92,7 @@ export default function Header() {
                     className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
-                    Fulfillment
+                    Logística
                   </Link>
                 </li>
                 
