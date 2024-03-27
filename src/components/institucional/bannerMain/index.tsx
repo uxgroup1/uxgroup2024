@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import imageTest from "@/assets/teste.png";
-// import institucionalImage from "@/assets/home/bannerMain/institucional.jpeg";
+import institucionalImage from "@/assets/home/bannerMain/institucional.jpeg";
 import gestaoImage from "@/assets/home/bannerMain/gestao.jpeg";
 import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";
@@ -16,23 +16,23 @@ export default function BannerMain() {
     {
       title: "Institucional",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      background: "",
+      background: institucionalImage.src,
     },
     {
       title: "Gestão",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      background: "",
+      background: gestaoImage.src,
     },
 
     {
       title: "Logística",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      background: "",
+      background: logImage.src,
     },
     {
       title: "Sustentabilidade",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      background: "",
+      background: esgImage.src,
     },
   ];
 
