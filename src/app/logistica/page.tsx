@@ -81,6 +81,7 @@ export default function Logistica() {
     <main>
       <Header />
       <JumboTron
+      corButtonOne="#fbc705"
       logo={fulfillmet}
         title="We invest in the world’s potential"
         text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."

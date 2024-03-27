@@ -1,21 +1,27 @@
 "use client";
 import dynamic from "next/dynamic";
 
-
-const Footer = dynamic(() => import("@/components/Footer")) ;
-const Header = dynamic(() => import("@/components/header/index")) ;
-const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
-const SecondSection = dynamic(() => import("@/components/produtos/SecondSection")) ;
-const JumboTron = dynamic(() => import("@/components/produtos/jumbotron")) ;
+const Footer = dynamic(() => import("@/components/Footer"));
+const Header = dynamic(() => import("@/components/header/index"));
+const ContactForm = dynamic(
+  () => import("@/components/institucional/ContactForm")
+);
+const SecondSection = dynamic(
+  () => import("@/components/produtos/SecondSection")
+);
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import svg from "@/assets/faviconBanner/ux-gestao.svg";
-const FeaturesComponent = dynamic(() => import("@/components/produtos/features")) ;
-const CarroselVertical = dynamic(() => import("@/components/institucional/carrouselVerticalMain")) ;
-const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics")) ;
+const FeaturesComponent = dynamic(
+  () => import("@/components/produtos/features")
+);
+const CarroselVertical = dynamic(
+  () => import("@/components/institucional/carrouselVerticalMain")
+);
+const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
 import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
-import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg"
-import pudoLogo from "@/assets/logos/pudos.svg"
-
+import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
+import pudoLogo from "@/assets/logos/pudos.svg";
 
 const contentFeatures = [
   {
@@ -84,16 +90,17 @@ export default function Pudos() {
   return (
     <>
       <main>
-        <Header /> 
+        <Header />
         <JumboTron
+          corButtonOne="#ff7f12"
           logo={pudoLogo}
           title="We invest in the world’s potential"
           text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
           banner=""
         />
-        <section style={{paddingTop:'50px', paddingBottom:"0px"}}></section>
+        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <SecondSection
-        flowReverse={false}
+          flowReverse={false}
           title="Lorem"
           text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."
           image={svg}
@@ -114,7 +121,7 @@ export default function Pudos() {
           content={contentFeatures}
           banner={svg}
         />
-        <section style={{paddingTop:'0px', paddingBottom:"50px"}}></section>
+        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm />
         <Footer />
       </main>

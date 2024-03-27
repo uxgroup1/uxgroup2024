@@ -92,7 +92,7 @@ export default function Header() {
                     className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
-                    Logística
+                    Fulfillment
                   </Link>
                 </li>
                 
@@ -131,7 +131,7 @@ export default function Header() {
                       href="/logistica"
                       className="font-normal text-white text-lg hover:font-medium"
                     >
-                      Logística
+                      Fulfillment
                     </Link>
                   </li>
                 </ul>

@@ -39,7 +39,7 @@ export default function FeaturesComponent({
                       className="flex w-full p-1 items-center gap-5 justify-start"
                     >
                       <Image
-                        className="flex hover:border-[2px]  w-[40px] hover:border-transparent object-cover h-[40px]"
+                        className="flex hover:border-[2px] hover:animate-pulse  w-[40px] hover:border-transparent object-cover h-[40px]"
                         src={item.icons}
                         alt=""
                         width={100}

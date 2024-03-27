@@ -43,7 +43,7 @@ export default function Footer() {
     },
     {
       index: 1,
-      name: "Logística",
+      name: "Fulfillment",
       products: [
         {
           namePage: "Torre",
@@ -81,7 +81,7 @@ export default function Footer() {
                 <Link href="#" className="flex items-center">
                   <img
                     src={logoUX.src}
-                    className="h-11 me-3"
+                    className="h-11 me-3 hover:border border-transparent "
                     alt="Gestão e tecnologia"
                   />
                 </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
                     <Link
                       key={data.index}
                       href="/"
-                      className="text-white  hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
+                      className="text-white hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
                     >
                       <Image
                         src={data.image.src}

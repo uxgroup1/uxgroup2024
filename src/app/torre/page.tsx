@@ -68,6 +68,8 @@ export default function Torre() {
     <main>
       <Header />
       <JumboTron
+        corButtonOne="#fac30c"
+        corButtonOneTwo="#fe8012"
         logo={torreLogo}
         banner=""
         title="We invest in the world’s potential"

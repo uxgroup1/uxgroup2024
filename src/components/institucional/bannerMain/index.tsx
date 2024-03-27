@@ -49,7 +49,7 @@ export default function BannerMain() {
     <>
       <section className="relative overflow-hidden pb-0 pt-0 flex w-full h-[100vh] md:h-[90vh]">
         <div
-          className={`flex  flex-col w-full md:p-0 h-full bg-blend-darken bg-no-repeat bg-cover bg-gray-400 relative`}
+          className={`flex  flex-col w-full md:p-0 h-full bg-blend-darken bg-[50%] md:bg-center bg-no-repeat bg-cover bg-gray-400 relative`}
           style={{
             backgroundImage: `url(${contentBanners[contentIndex].background})`,
           }}

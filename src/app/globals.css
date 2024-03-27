@@ -148,6 +148,41 @@ section{
   animation: animate-BannerTwo 1s ease-in-out forwards; /* Adiciona animação */
 }
 
+.animated-state-Jumbotron {
+  /* Animação específica para o terceiro título */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-Jumbotron 1s ease-in-out forwards; /* Adiciona animação */
+}
+
+@keyframes animate-Jumbotron {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animated-state-Jumbotron-two {
+  /* Animação específica para o terceiro título */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-Jumbotron-two 1s ease-in-out forwards; /* Adiciona animação */
+}
+
+@keyframes animate-Jumbotron-two {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes animate-one {
   from {
     transform: translateX(200%);

@@ -30,7 +30,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
               {content?.map((item, index) => {
                 return (
                   <div
-                    className="flex hover:shadow-2xl p-5 md:p-0 rounded-lg cursor-default  transition-all md:w-[400px] md:h-[200px] flex-col items-center justify-center"
+                    className="flex hover:shadow-2xl  p-5 md:p-0 rounded-lg cursor-default  transition-all md:w-[400px] md:h-[200px] flex-col items-center justify-center"
                     key={index}
                   >
                     <Image
@@ -38,6 +38,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       alt="Logística Sustentavel"
                       width={80}
                       height={80}
+                      className="hover:animate-pulse"
                     />
 
                     <h3 className="mt-4 md:w-4/5 w-full text-black text- text-center font-semibold">

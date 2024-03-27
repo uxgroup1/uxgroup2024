@@ -69,6 +69,8 @@ export default function Ondetah() {
     <main>
       <Header />
       <JumboTron
+      corButtonOne="#29265B"
+      corButtonOneTwo="#009580"
       logo={ondetahLogo}
         title="We invest in the world’s potential"
         banner={imageOndetah.src}
