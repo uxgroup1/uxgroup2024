@@ -3,11 +3,11 @@ import logo from "@/assets/faviconBanner/ux-gestao.svg";
 
 export default function ClientsCases() {
   return (
-    <section className="bg-white flex items-center justify-center max-w-[1996px] w-full">
+    <section className="bg-white  flex items-center justify-center max-w-[1996px] w-full">
       <div className="w-[90%] lg:px-0  py-10 ">
-        <div className="lg:flex lg:items-center">
-          <div className="w-full space-y-12 lg:w-1/2 ">
-            <div>
+        <div className="lg:flex gap-5 lg:flex-row-reverse lg:items-center">
+          <div className="w-full space-y-12  ">
+            <div className="lg:w-[65%]">
               <h1 className="text-black text-[31px] lg:w-[85%]">UX {"(user experience)"} para nós, também siginifica unique experience.</h1>
               <p className="text-black w-full lg:w-4/5">
                 Ou seja, uma expêriencia única, pensada no cliente final, com soluções integradas entre tecnologia e operções que geram valor ao negócio.
@@ -16,8 +16,8 @@ export default function ClientsCases() {
             </div>
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-end">
-            <Image className="w-[30%]" alt="" width={100} height={100} src={logo}/>
+          <div className="hidden lg:flex lg:items-center  lg:justify-start">
+            <Image className="w-[100%]" alt="" width={100} height={100} src={logo}/>
           </div>
         </div>
 
