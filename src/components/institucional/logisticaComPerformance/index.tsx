@@ -1,5 +1,4 @@
-import { title } from "process";
-import CarrouselCards from "../carrouselCards";
+const CarrouselCards = dynamic(() => (import("../carrouselCards"))) ;
 import style from "./style.module.scss";
 import armazenagemImage from "@/assets/home/carrouselCardsLog/armazenagem.png"
 import gestaoEstoqueImage from "@/assets/home/carrouselCardsLog/gestaoEstoque.png"
@@ -8,6 +7,7 @@ import gestaoTransporte from "@/assets/home/carrouselCardsLog/gestaoTransporte.p
 import pudoImage from "@/assets/home/carrouselCardsLog/PUDO.png"
 import wmsImage from "@/assets/home/carrouselCardsLog/WMS.png"
 import seop from "@/assets/home/carrouselCardsLog/seop.png"
+import dynamic from "next/dynamic";
 
 const content = [
   {
