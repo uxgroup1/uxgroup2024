@@ -1,11 +1,11 @@
 import Image from "next/image";
-import logo from "@/assets/faviconBanner/ux-gestao.svg";
+import logo from "@/assets/faviconBanner/ux.svg";
 
 export default function ClientsCases() {
   return (
     <section className="bg-white  flex items-center justify-center max-w-[1996px] w-full">
       <div className="w-[90%] lg:px-0  py-10 ">
-        <div className="lg:flex gap-5 lg:flex-row-reverse lg:items-center">
+        <div className="lg:flex gap-10 lg:flex-row-reverse lg:items-center">
           <div className="w-full space-y-12  ">
             <div className="lg:w-[65%]">
               <h1 className="text-black text-[31px] lg:w-[85%]">UX {"(user experience)"} para nós, também siginifica unique experience.</h1>
