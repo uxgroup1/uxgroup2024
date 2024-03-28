@@ -5,13 +5,16 @@ interface Content {
   title: string;
   banner: string;
   text: string;
+  link:string;
+  
 }
 
 interface ContentCard{
   content: Content[];
+  colorText: string;
 }
 
-function UxMidia({content}: ContentCard) {
+function UxMidia({content, colorText}: ContentCard) {
 
 
   return (
@@ -24,7 +27,7 @@ function UxMidia({content}: ContentCard) {
             </div>
           </div>
         </div>
-        <CarrouselCards content={content} />
+        <CarrouselCards colorText={colorText} content={content} />
       </section>
     </>
   );

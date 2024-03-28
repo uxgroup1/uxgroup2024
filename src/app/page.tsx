@@ -1,21 +1,44 @@
 "use client";
 
-const CarroselVertical = dynamic(() => import("@/components/institucional/carrouselVerticalMain")) ;
+const CarroselVertical = dynamic(
+  () => import("@/components/institucional/carrouselVerticalMain/index")
+);
 import image from "../assets/cta/ctaBanner.png";
-const Cta = dynamic(() => import("@/components/cta")) ;
-const LogisticaComPerformance = dynamic(() => import("@/components/institucional/logisticaComPerformance")) ;
-const BannerMain = dynamic(() => import("@/components/institucional/bannerMain")) ;
-const UxPartners = dynamic(() => import("@/components/institucional/uxPartners")) ;
-const LogisticaSustentavel = dynamic(() => import("@/components/institucional/logisticaSustentavel")) ;
-const UxMidia = dynamic(() => import("@/components/institucional/uxMidia")) ;
-import { Blog } from "@/components/institucional/blog";
-const CarroselVerticalMobile = dynamic(() => import("@/components/institucional/carrouselVerticalMain/mobile")) ;
-const Header = dynamic(() => import("@/components/header")) ;
-const Footer = dynamic(() => import("@/components/Footer")) ;
-const ContactForm = dynamic(() => import("@/components/institucional/ContactForm")) ;
-const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx")) ;
-import { Cases } from "@/components/institucional/cases";
+const Cta = dynamic(() => import("@/components/cta/index"));
+const LogisticaComPerformance = dynamic(
+  () => import("@/components/institucional/logisticaComPerformance/index")
+);
+const BannerMain = dynamic(
+  () => import("@/components/institucional/bannerMain/index")
+);
+const UxPartners = dynamic(
+  () => import("@/components/institucional/uxPartners/index")
+);
+const LogisticaSustentavel = dynamic(
+  () => import("@/components/institucional/logisticaSustentavel/index")
+);
+const UxMidia = dynamic(() => import("@/components/institucional/uxMidia/index"));
+import { Blog } from "@/components/institucional/blog/index";
+const CarroselVerticalMobile = dynamic(
+  () => import("@/components/institucional/carrouselVerticalMain/mobile/index")
+);
+const Header = dynamic(() => import("@/components/header/index"));
+const Footer = dynamic(() => import("@/components/Footer/index"));
+const ContactForm = dynamic(
+  () => import("@/components/institucional/ContactForm/index")
+);
+const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx/index"));
+import { Cases } from "@/components/institucional/cases/index";
 import dynamic from "next/dynamic";
+import InteligenciaOperacional from '@/assets/home/UX-na-midia/inteligencia-operacional-e-seus-impactos-na-performance-logistica-e-commerce-brasil.png';
+import PetLoveEleva from '@/assets/home/UX-na-midia/petlove-eleva-performance-logistica-em-90-no-sul-do-pais-sbvc.png';
+import Chatbots from '@/assets/home/UX-na-midia/como-os-chatbots-podem-apoiar-a-logistica-mundo-logistica.png';
+import Fulfillment from '@/assets/home/UX-na-midia/fulfillment-por-que-interessa-aos-pequenos-e-grandes.png';
+import Estrategias from '@/assets/home/UX-na-midia/estrategias-para-ser-diferente-aos-olhos-da-geracao-z-clientesa.png';
+import Amazon from '@/assets/home/UX-na-midia/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn - mundo-do-marketing.png';
+import Gestao from '@/assets/home/UX-na-midia/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas.png';
+import ImageCaio from '@/assets/home/UX-na-midia/ImageCaio.jpg';
+import ImageOndetah from '@/assets/home/UX-na-midia/imageOndetah.png';
 
 const slides = [
   {
@@ -74,46 +97,63 @@ const content = [
 
 const contentUxMidia = [
   {
-    title: "Armazenagem e expedição de pedidos ",
-    text: "Todos os produtos armazenados e expedidos com 99,6% do cumprimento de SLA para uma operação eficiente com foco na experiência do cliente.",
-    banner: "",
-    index : 0
+    title: "Os influencers como nicho promissor para o fulfillment",
+    text: "Para vencer no ambiente de e-commerce, é preciso oferecer uma experiência de compra positiva por todo o processo de venda digital...",
+    banner: ImageCaio.src,
+    link:"https://portal.clientesa.com.br/cliente-sa/os-influencers-como-nicho-promissor-para-o-fulfillment/"
   },
   {
-    title: "Gestão de estoque",
-    text: "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    banner: "",
-    index : 1
+    title:
+      "Dafiti firma parceria com UX Group para automatizar operações logísticas",
+    text: "A UX Group anunciou contrato com a Dafiti para a adoção de soluções tecnológicas voltadas para a automatização de suas operações logísticas...",
+    banner: ImageOndetah.src,
+    link:"https://mundologistica.com.br/noticias/dafiti-firma-parceria-com-ux-group-para-automatizar-operacoes-logisticas"
   },
   {
-    title: "Logística Reversa",
-    text: "Transforme a devolução de produtos em oportunidades de satisfação. Simplifique as etapas com a garantia do mesmo cuidado com a expedição.",
-    banner: "",
-    index : 2
+    title:
+      "Inteligência operacional e seus impactos na performance logística E-commerce Brasil",
+    text: "Em logística, o ato de entregar não está atrelado somente ao transporte. Ele envolve um conjunto de atividades e estratégias...",
+    banner: InteligenciaOperacional.src,
+    link:"https://www.ecommercebrasil.com.br/artigos/inteligencia-operacional-e-seus-impactos-na-performance-logistica"
   },
   {
-    title: "Gestão de transportes",
-    text: "Otimize o seu transporte, com uma gestão de entregas 100% integradas a tecnologia permitindo tomada de decisão rápida e assertiva, garantindo o cuidado com a jornada do pedido.",
-    banner: "",
-    index : 3
+    title: "Como os chatbots podem apoiar a logística? - Mundo Logística",
+    text: "Um robô com nível de inteligência notável interage com clientes, soluciona dúvidas e encaminha questões críticas para as devidas tratativas...",
+    banner: Chatbots.src,
+    link:"https://mundologistica.com.br/revista-extra/como-os-chatbots-podem-apoiar-a-logistica"
   },
   {
-    title: "PUDO's",
-    text: "Aumente a satisfação do cliente com nossos pontos de coleta e entrega estrategicamente localizados. A conveniência e a agilidade ao alcance do seu cliente.",
-    banner: "",
-    index : 4
+    title: "Petlove eleva performance logística em 90% no Sul do país-SBVC",
+    text: "A Petlove anuncia elevação de sua performance em 90% graças ao modelo de fulfillment adotado junto à UX Group, empresa especializada em gestão inteligente de logística e transportes...",
+    banner: PetLoveEleva.src,
+    link:"https://sbvc.com.br/petlove-eleva-performance-logistica-em-90-no-sul-do-pais/"
   },
   {
-    title: "WMS",
-    text: "Automação total para uma operação de e-commerce de alta performance. Digitalização e visibilidade em tempo real para gestão de estoque e coleta do pedido.",
-    banner: "",
-    index : 5
+    title:
+      "Fulfillment: por que interessa aos pequenos e grandes? E-commerce Brasil",
+    text: "Para os pequenos, certos investimentos passam a não fazer sentido quando são colocados na ponta do papel e comparados a um modelo de terceirização...",
+    banner: Fulfillment.src,
+    link:"https://www.ecommercebrasil.com.br/artigos/fulfillment-por-que-interessa-aos-pequenos-e-grandes"
   },
   {
-    title: "S&OP",
-    text: "Evite atrasos e reclamações, com Planejamento de Vendas e Operação é possível alinhar e integrar as áreas para melhor gerenciamento de produtos e demandas garantindo a eficiência do processo logístico.",
-    banner: "",
-    index : 6
+    title: "Estratégias para ser diferente aos olhos da geração Z-ClienteSA",
+    text: "Mais tecnologia para atender à demanda do escoamento, descentralização do estoque, redução de despesas, implementação de recursos mais inovadores...",
+    banner: Estrategias.src,
+    link:"https://portal.clientesa.com.br/cliente-sa/estrategias-para-ser-diferente-aos-olhos-da-geracao-z/"
+  },
+  {
+    title:
+      "UX Group sela acordo com Amazon para integrar o grupo de parceiros SPN- Mundo do Marketing",
+    text: "Diferenciar-se diante de um público cada vez mais conectado, ávido por novidades e movido a propósitos...",
+    banner: Amazon.src,
+    link:"https://www.mundodomarketing.com.br/noticias-corporativas/conteudo/285412/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn/"
+  },
+  {
+    title:
+      "UX Group desenvolve sistema de gestão de parceiros e aprimora operacionalização das entregas",
+    text: "A UX Group, hub de soluções de tecnologia, operação e serviços logísticos, acaba de assinar contrato com a Amazon para que sua vertical de Fulfillment...",
+    banner: Gestao.src,
+    link:"https://www.tecnologistica.com.br/noticias/lancamento-de-produtos/16917/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas/#:~:text=UX%20Group%20desenvolve%20sistema%20de%20gest%C3%A3o%20de%20parceiros%20e%20aprimora%20operacionaliza%C3%A7%C3%A3o%20das%20entregas,-Empresa%20espera%20atender&text=A%20UX%20Group%20anuncia%20o,das%20entregas%2C%20denominado%20Rede%20Credenciada."
   },
 ];
 
@@ -124,7 +164,11 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <Cases content={slides} />
-      <CarroselVertical title="Inove, Controle e Venda Mais" text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!" content={content}/>
+      <CarroselVertical
+        title="Inove, Controle e Venda Mais"
+        text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
+        content={content}
+      />
       <CarroselVerticalMobile />
       <Cta
         button={true}
@@ -146,7 +190,7 @@ export default function Home() {
       <LogisticaSustentavel />
       <UxPartners />
       <Blog />
-      <UxMidia content={contentUxMidia} />
+      <UxMidia colorText="#fff" content={contentUxMidia} />
       <Cta
         button={true}
         title={
@@ -154,7 +198,7 @@ export default function Home() {
         }
         banner={image.src}
       />
-      <section style={{paddingTop:'0px', paddingBottom:"30px"}}></section>
+      <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
       <ContactForm />
       <Footer />
     </main>
