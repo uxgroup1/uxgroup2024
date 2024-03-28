@@ -17,7 +17,7 @@ export default function ClientsCases() {
           </div>
 
           <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-end">
-            <Image className="w-[70%]" alt="" width={100} height={100} src={logo}/>
+            <Image className="w-[30%]" alt="" width={100} height={100} src={logo}/>
           </div>
         </div>
 
