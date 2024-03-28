@@ -190,7 +190,7 @@ export default function Fusion() {
           logo={fusionLogo}
           title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
           banner=""
-          text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais. Nossa solução de gestão de fretes oferece módulos eficazes que garantem a melhora de performance, redução de custos e aumento das vendas."
+          text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <FeaturesComponent

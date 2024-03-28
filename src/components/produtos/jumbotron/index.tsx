@@ -50,9 +50,9 @@ export default function JumboTron({
   return (
     <section
       style={{ backgroundImage: `url(${banner})` }}
-      className={`md:bg-center bg-[70%] bg-cover h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
+      className={`md:bg-center bg-[70%] bg-cover   md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
     >
-      <div className="w-full h-full bg-[#000000a0]">
+      <div className="w-full py-20 h-full bg-[#000000a0]">
         <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
           <Image
             className={`md:w-[500px] transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
@@ -62,7 +62,7 @@ export default function JumboTron({
             alt="Logo do produto UX"
           />
           <h1
-            className={`mb-4 w-4/5 leading-snug text-3xl transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl`}
+            className={`mb-4 w-4/5 leading-snug text-[2rem] md:text-3xl transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl`}
           >
             {title}
           </h1>
