@@ -8,8 +8,8 @@ export default function ClientsCases() {
         <div className="lg:flex lg:items-center">
           <div className="w-full space-y-12 lg:w-1/2 ">
             <div>
-              <h1 className="text-[31px] lg:w-[85%]">UX {"(user experience)"} para nós, também siginifica unique experience.</h1>
-              <p className="w-full lg:w-4/5">
+              <h1 className="text-black text-[31px] lg:w-[85%]">UX {"(user experience)"} para nós, também siginifica unique experience.</h1>
+              <p className="text-black w-full lg:w-4/5">
                 Ou seja, uma expêriencia única, pensada no cliente final, com soluções integradas entre tecnologia e operções que geram valor ao negócio.
               </p>
 
