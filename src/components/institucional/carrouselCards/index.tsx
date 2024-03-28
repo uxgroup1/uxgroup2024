@@ -28,8 +28,8 @@ function CarrouselCards({ content,colorText }: carrouselCards) {
                 className={` bg-cover ${style.Card}`}
               >
                 <div className={style.content}>
-                  <h2 className={`text-[${colorText}] leading-[30px]`}>{data.title}</h2>
-                  <p className={`text-[${colorText}] `}>{data.text}</p>
+                  <h2 className={`text-black leading-[30px]`}>{data.title}</h2>
+                  <p className={`text-black `}>{data.text}</p>
                   <button className={`text-black `}>
                     <Link target="_blank" className="flex hover:border-b transition border-transparent hover:border-black items-center gap-2" href={data.link}>
                       saiba mais <FaArrowRightLong className="text-lg" />
