@@ -39,30 +39,31 @@ import Amazon from '@/assets/home/UX-na-midia/ux-group-sela-acordo-com-amazon-pa
 import Gestao from '@/assets/home/UX-na-midia/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas.png';
 import ImageCaio from '@/assets/home/UX-na-midia/ImageCaio.jpg';
 import ImageOndetah from '@/assets/home/UX-na-midia/imageOndetah.png';
+import ClientsCases from "@/components/institucional/clients";
 
-const slides = [
-  {
-    title: "Lorem Ipsum",
-    text: "lorem Ips laborum et sapien et dolor sit amet",
-    imageSrc:
-      "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: "Ema Watson",
-  },
-  {
-    title: "UX Group",
-    text: "lorem Ips laborum et sapien et dolor sit amet",
-    imageSrc:
-      "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: "John Doe",
-  },
-  {
-    title: "UX Log",
-    text: "lorem Ips laborum et sapien et dolor sit amet",
-    imageSrc:
-      "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: "Jane Smith",
-  },
-];
+// const slides = [
+//   {
+//     title: "Lorem Ipsum",
+//     text: "lorem Ips laborum et sapien et dolor sit amet",
+//     imageSrc:
+//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+//     author: "Ema Watson",
+//   },
+//   {
+//     title: "UX Group",
+//     text: "lorem Ips laborum et sapien et dolor sit amet",
+//     imageSrc:
+//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+//     author: "John Doe",
+//   },
+//   {
+//     title: "UX Log",
+//     text: "lorem Ips laborum et sapien et dolor sit amet",
+//     imageSrc:
+//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+//     author: "Jane Smith",
+//   },
+// ];
 
 const content = [
   {
@@ -163,7 +164,8 @@ export default function Home() {
       <Header />
       <BannerMain />
       <EcoSistemaUx />
-      <Cases content={slides} />
+      <ClientsCases/>
+      {/* <Cases content={slides} /> */}
       <CarroselVertical
         title="Inove, Controle e Venda Mais"
         text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
