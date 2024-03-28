@@ -4,7 +4,7 @@ import logo from "@/assets/faviconBanner/ux.svg";
 export default function ClientsCases() {
   return (
     <section className="bg-white  flex items-center justify-center max-w-[1996px] w-full">
-      <div className="w-[90%] lg:px-0  py-10 ">
+      <div className="w-[90%] lg:px-0  lg:py-0 py-10 ">
         <div className="lg:flex gap-10 lg:flex-row-reverse lg:items-center">
           <div className="w-full space-y-12  ">
             <div className="lg:w-[65%]">
