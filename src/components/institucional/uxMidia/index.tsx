@@ -4,6 +4,7 @@ import style from "./style.module.scss";
 interface Content {
   title: string;
   banner: string;
+  text: string;
 }
 
 interface ContentCard{
