@@ -5,7 +5,7 @@ export default function ProductInstitutional() {
         <div className="h-full lg:w-1/3"></div>
         <div className="hidden w-3/4 rounded-2xl  bg-gray-100 h-full lg:block"></div>
 
-        <div className="w-[90%] flex flex-col justify-center h-full lg:px-0 px-6 lg:py-10 mx-auto lg:absolute lg:inset-x-0">
+        <div className="w-[90%] flex flex-col justify-center h-full lg:px-0  lg:py-10 mx-auto lg:absolute lg:inset-x-0">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
             What our <span className="text-blue-500">customers</span> <br /> are
             saying
