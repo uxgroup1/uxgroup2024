@@ -14,6 +14,7 @@ const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import arrowImage from "@/assets/fusion/arrow/arrowListComponentesPudo.svg";
 import fusionLogo from "@/assets/logos/fusion.svg";
 import Cta from "@/components/cta";
+import ProductInstitutional from "@/components/produtos/institucional";
 
 const contentFeatures = [
   {
@@ -184,8 +185,8 @@ export default function Fusion() {
         <JumboTron
           linkButtonOne="#"
           linkButtonTwo="#"
-          textButtonOne="Para E-commerce"
-          textButtonTwo="Para Marketplaces"
+          textButtonOne="saiba mais"
+          textButtonTwo="entrar em contato"
           corButtonOne="#28265b"
           corButtonThree="#1F1D47"
           logo={fusionLogo}
@@ -194,33 +195,34 @@ export default function Fusion() {
           text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+        <ProductInstitutional/>
         <FeaturesComponent
           titleSection="Ofereça as melhores opções de frete"
           text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
           banner=""
           content={contentFeaturesTwo}
-          rowReverse
+          rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Reduza os contatos no SAC com Rastreamento"
           text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
           banner=""
           content={contentFeatures}
-          rowReverse={false}
+          rowReverse={true}
         />
         <FeaturesComponent
           titleSection="Agilize a entrega com automatização na Expedição"
           text="Comunicação 100% integrada via API com o transportador para aviso de coleta de pedidos."
           banner=""
           content={contentFeaturesThree}
-          rowReverse={true}
+          rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Pague somente o acordado com os transportadores"
           text="Tenha a certeza de que está pagando o correto pelos fretes do seu negócio,, utilize uma solução de conciliação de frete."
           banner=""
           content={contentFeaturesFour}
-          rowReverse={false}
+          rowReverse={true}
         />
         <Cta
           button
@@ -234,14 +236,14 @@ export default function Fusion() {
           text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
           banner=""
           content={contentFeaturesFive}
-          rowReverse={true}
+          rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Expanda suas opções de frete          "
           text="Cálculo de frete do seu marketplace totalmente integrado aos sellers. Através do gateway de fretes ofereça a mesma possibilidade de um cálculo preciso, resposta rápida e redução de custos através de tabelas parametrizáveis."
           banner=""
           content={contentFeaturesSix}
-          rowReverse={false}
+          rowReverse={true}
         />
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm />
