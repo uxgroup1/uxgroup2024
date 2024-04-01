@@ -122,7 +122,8 @@ const contentFeaturesFive = [
     icons: arrowImage,
   },
   {
-    title: "Controle absoluto da performance de seus transportadores e sellers.",
+    title:
+      "Controle absoluto da performance de seus transportadores e sellers.",
     icons: arrowImage,
   },
   {
@@ -134,8 +135,7 @@ const contentFeaturesFive = [
     icons: arrowImage,
   },
   {
-    title:
-      "Integração com multi transportadores.",
+    title: "Integração com multi transportadores.",
     icons: arrowImage,
   },
   {
@@ -149,7 +149,8 @@ const contentFeaturesFive = [
 ];
 const contentFeaturesSix = [
   {
-    title: "Configuração de tabelas de frete de acordo com o hub de fretes de cada vendedor.",
+    title:
+      "Configuração de tabelas de frete de acordo com o hub de fretes de cada vendedor.",
     icons: arrowImage,
   },
   {

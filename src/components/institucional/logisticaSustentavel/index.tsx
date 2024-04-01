@@ -1,5 +1,7 @@
 import Link from "next/link";
 import style from "./style.module.scss";
+import motoEletrica from "@/assets/home/moto-eletrica.png";
+import Image from "next/image";
 
 function LogisticaSustentavel() {
   return (
@@ -22,18 +24,26 @@ function LogisticaSustentavel() {
                 </p>
                 <p>
                   Faça parte da mudança: Conheça nossas soluções para uma
-                  logística sustentável.  <br/>
-                  <Link href={""} style={{ fontWeight: "bold", }}>
-                     Juntos, Podemos Criar um Futuro Mais Verde.
+                  logística sustentável. <br />
+                  <Link href={""} style={{ fontWeight: "bold" }}>
+                    Juntos, Podemos Criar um Futuro Mais Verde.
                   </Link>
                 </p>
-                <button className="hover:border hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">saiba mais</button>
+                <button className="hover:border hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                  saiba mais
+                </button>
               </div>
             </div>
             <div className={style.ContentImage}>
-                <div className={style.BoxImage}>
-                
-                </div>
+              <div className={style.BoxImage}>
+                <Image
+                  className="w-full"
+                  src={motoEletrica.src}
+                  width={100}
+                  height={100}
+                  alt="Entrega Sustentavel"
+                />
+              </div>
             </div>
           </div>
         </div>
