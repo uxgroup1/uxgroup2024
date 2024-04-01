@@ -66,6 +66,7 @@ export default function JumboTron({
           >
             {title}
           </h1>
+          
           <p
             className={`mb-8 text-sm text-white w-4/5 transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
           >

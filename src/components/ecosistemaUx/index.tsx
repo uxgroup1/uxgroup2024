@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.scss";
-import ecoImage from "../../assets/home/ecossistema-ux.svg"
+import ecoImage from "../../assets/home/ecossistema.png"
 
 interface Content {
   title: string;
@@ -35,7 +35,7 @@ function EcoSistemaUx() {
             </div>
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
-                <Image className="w-full  h-full " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
+                <Image className="w-[100%]  h-[80%] " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
               </div>
             </div>
           </div>
