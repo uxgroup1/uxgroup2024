@@ -62,7 +62,7 @@ export default function JumboTron({
             alt="Logo do produto UX"
           />
           <h1
-            className={`mb-4 w-4/5 leading-snug text-[2rem] md:text-3xl transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl`}
+            className={`mb-4 w-4/5 leading-snug text-[2rem] md:text-3xl transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl`}
           >
             {title}
           </h1>

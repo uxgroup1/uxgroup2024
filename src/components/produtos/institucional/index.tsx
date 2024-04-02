@@ -1,4 +1,50 @@
-export default function ProductInstitutional() {
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+interface Content {
+  title: string;
+  text: string;
+  banner: string;
+  corButtonOne: string;
+  corButtonTwo?: string;
+  corButtonThree?: string;
+  textButtonOne: string;
+  linkButtonOne: string;
+  textButtonTwo: string;
+  linkButtonTwo: string;
+}
+
+export default function ProductInstitutional({
+  title,
+  text,
+  banner,
+  corButtonOne,
+  corButtonTwo,
+  corButtonThree,
+  textButtonOne,
+  textButtonTwo,
+  linkButtonOne,
+  linkButtonTwo,
+}: Content) {
+  const [hovered, setHovered] = useState(false);
+
+  const buttonStyle = {
+    background: `linear-gradient(to right, ${corButtonOne} 0%, ${
+      corButtonTwo ? corButtonTwo : corButtonOne
+    } 100%)`,
+    backgroundSize: "200% 100%",
+    transition: " 0.1s ease",
+    cursor: "pointer",
+    backgroundPosition: hovered ? "70% 100%" : "0% 100%", // Definido inicialmente para a cor 3 caso o hover seja ativado
+  };
+
+  if (!corButtonTwo && corButtonThree && hovered) {
+    buttonStyle.background = `linear-gradient(to right, ${corButtonOne} 0%, ${
+      corButtonThree ? corButtonThree : corButtonOne
+    } 100%)`;
+  }
+
   return (
     <section className="bg-white max-w-[1996px] w-full lg:h-[80vh]">
       <div className="relative h-full flex">
@@ -6,36 +52,43 @@ export default function ProductInstitutional() {
         <div className="hidden w-3/4 rounded-2xl  bg-gray-100 h-full lg:block"></div>
 
         <div className="w-[90%] flex flex-col justify-center h-full lg:px-0  lg:py-10 mx-auto lg:absolute lg:inset-x-0">
-          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
-            What our <span className="text-blue-500">customers</span> <br /> are
-            saying
-          </h1>
-
           <div className="mt-10 lg:mt-20 lg:flex lg:items-center">
-            <img
+            <Image
               className="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96"
-              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+              src={banner}
+              width={100}
+              height={100}
               alt=""
             />
 
-            <div className="mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-2xl font-semibold text-gray-800 lg:w-72">
+            <div className="flex flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
+              <h1 className="text-black ">
                 Help us improve our productivity
+                {title}
               </h1>
 
-              <p className="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
-                “ Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempore quibusdam ducimus libero ad tempora doloribus expedita
-                laborum saepe voluptas perferendis delectus assumenda rerum,
-                culpa aperiam dolorum, obcaecati corrupti aspernatur a. ”
+              <p className="max-w-lg text-black">
+                {text}“ Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Tempore quibusdam ducimus libero ad tempora doloribus
+                expedita laborum saepe voluptas perferendis delectus assumenda
+                rerum, culpa aperiam dolorum, obcaecati corrupti aspernatur a. ”
               </p>
-
-              <h3 className="mt-6 text-lg font-medium text-blue-500">
-                Ronik Ederson
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Marketing Manager at Stech
-              </p>
+              <div className="flex lg:flex-row flex-col items-center gap-5">
+                <button
+                  className={`lg:w-[170px] w-full  h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                  style={buttonStyle}
+                  onMouseEnter={() => setHovered(true)}
+                  onMouseLeave={() => setHovered(false)}
+                >
+                  <Link href={linkButtonTwo}>
+                    {textButtonOne}
+                    E-commerce
+                  </Link>
+                </button>
+                <button className="lg:w-[170px] border w-full  h-10 rounded-lg text-black hover:font-semibold transition-all">
+                  <Link href={linkButtonOne}> Marketplace {textButtonTwo}</Link>
+                </button>
+              </div>
             </div>
           </div>
         </div>

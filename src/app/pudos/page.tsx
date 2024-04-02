@@ -22,6 +22,7 @@ import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
 import pudoLogo from "@/assets/logos/pudos.svg";
+import ProductInstitutional from "@/components/produtos/institucional";
 
 const contentFeatures = [
   {
@@ -104,6 +105,8 @@ export default function Pudos() {
           banner=""
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+        <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
         <SecondSection
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"

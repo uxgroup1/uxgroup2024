@@ -15,6 +15,7 @@ import arrowImage from "@/assets/fusion/arrow/arrowListComponentesPudo.svg";
 import fusionLogo from "@/assets/logos/fusion.svg";
 import Cta from "@/components/cta";
 import ProductInstitutional from "@/components/produtos/institucional";
+import Numbers from "@/components/produtos/numbers";
 
 const contentFeatures = [
   {
@@ -177,6 +178,25 @@ const contentFeaturesSix = [
   },
 ];
 
+const number = [
+  {
+    number:"100+",
+    text:"hubs"
+  },
+  {
+    number:"+50%",
+    text:"hubs"
+  },
+  {
+    number:"10+",
+    text:"hubs"
+  },
+  {
+    number:"10+",
+    text:"hubs"
+  }
+]
+
 export default function Fusion() {
   return (
     <>
@@ -195,7 +215,8 @@ export default function Fusion() {
           text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-        <ProductInstitutional/>
+        <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
         <FeaturesComponent
           titleSection="Ofereça as melhores opções de frete"
           text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
@@ -245,6 +266,7 @@ export default function Fusion() {
           content={contentFeaturesSix}
           rowReverse={true}
         />
+        <Numbers title="Tecnologia de ponta a ponta para gestão logística da sua venda digital." number={number} banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif" subtitle="Garanta o melhor desempenho das suas vendas com uma gestão 100% integrada." text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."/>
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm />
         <Footer />

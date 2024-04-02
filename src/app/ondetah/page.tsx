@@ -19,6 +19,7 @@ import smartphoneImage from "@/assets/ondetah/smartphone.svg";
 import imageOndetah from "@/assets/ondetah/ondetah.jpeg";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
+import ProductInstitutional from "@/components/produtos/institucional";
 
 const content = [
   {
@@ -86,6 +87,8 @@ export default function Ondetah() {
         text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP, TMS Embarcador, TMS Transportador e uma estrutura única de SAC que facilitam a gestão do pedido. É mais do que apenas informação: é conexão, satisfação e tecnologia avançada."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+      <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
       <ThreeTopics
         content={contentTopics}
         title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio"

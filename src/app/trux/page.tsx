@@ -14,6 +14,7 @@ const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import Cta from "@/components/cta";
+import ProductInstitutional from "@/components/produtos/institucional";
 
 const contentFeatures = [
   {
@@ -102,6 +103,8 @@ export default function Trux() {
           text="Alcance novos patamares de eficiência e controle na gestão de transportadores. Com o nosso TMS transportador você não apenas organiza, gerencia e monitora cada etapa do transporte e motoristas, mas também otimiza rotas, reduz custos e aumenta a precisão das entregas."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+        <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
         <FeaturesComponent
           titleSection="Roteirização de entrega"
           text="Otimize suas rotas, acelere processos, ganhe mais produtividade."

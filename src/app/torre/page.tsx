@@ -16,6 +16,7 @@ import natureImage from "@/assets/torre/icons/nature.svg";
 import packgeImage from "@/assets/torre/icons/package.svg";
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg";
 import torreLogo from "@/assets/logos/torre.svg";
+import ProductInstitutional from "@/components/produtos/institucional";
 
 const contentFeaturesOne = [
   {
@@ -81,6 +82,8 @@ export default function Torre() {
         text="Oferecemos soluções integradas e inovadoras para otimizar toda a cadeia logística da sua empresa. Combinamos tecnologia de ponta com expertise em logística para garantir que suas operações de transporte sejam eficientes, econômicas e ecologicamente sustentáveis."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+      <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
       <FeaturesComponent
         banner=""
         rowReverse={false}

@@ -25,6 +25,7 @@ import barueriImage from "@/assets/logistica/cdsImages/barueri.jpg";
 import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg";
 import anvisaImage from "@/assets/logistica/anvisa.png";
 import fulfillmet from "@/assets/logos/fulfillment.svg"
+import ProductInstitutional from "@/components/produtos/institucional";
 
 
 
@@ -85,6 +86,8 @@ export default function Logistica() {
         banner=""
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+      <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
+          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
       <SecondSection
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
