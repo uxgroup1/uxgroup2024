@@ -1,4 +1,8 @@
 .CarroselVertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
   background-color: hsl(0, 0%, 100%);
   padding-bottom: 80px;
@@ -7,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1996px;
     width: 100%;
     height: 100%;
 
@@ -15,7 +20,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 90%;
       height: 700px;
       background-color: #fff;
       padding-top: 3%;
@@ -40,7 +45,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 90%;
+      width: 100%;
       height: 90%;
       background-color: var(--color-secundary-ux);
       border-radius: 16px;
