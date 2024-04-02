@@ -34,7 +34,7 @@ export default function Integrations() {
                 selectedItem === "Transportadores"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
-              } transition w-[340px] lg:w-52 border hover:shadow-md rounded-2xl p-4`}
+              } transition w-[340px] lg:w-52 h-12 border hover:shadow-md rounded-lg p-1`}
               onClick={() => handleClick(imageTwo, "Transportadores")}
             >
               <h3>Transportadores</h3>
@@ -44,7 +44,7 @@ export default function Integrations() {
                 selectedItem === "HUBs"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
-              } transition w-[340px] lg:w-52 border hover:shadow-md rounded-2xl p-4`}
+              } transition w-[340px] lg:w-52  h-12 border hover:shadow-md rounded-lg p-4`}
               onClick={() => handleClick(imageThree, "HUBs")}
             >
               <h3>HUBs</h3>
@@ -54,7 +54,7 @@ export default function Integrations() {
                 selectedItem === "Canais de Vendas"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
-              } transition w-[340px] lg:w-52 border hover:shadow-md rounded-2xl p-4`}
+              } transition w-[340px] lg:w-52  h-12 border hover:shadow-md rounded-lg p-4`}
               onClick={() => handleClick(imageOne, "Canais de Vendas")}
             >
               <h3 >Canais de Vendas</h3>
@@ -64,7 +64,7 @@ export default function Integrations() {
                 selectedItem === "ERPs"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
-              } transition w-[340px] lg:w-52 border hover:shadow-md rounded-2xl p-4`}
+              } transition w-[340px] lg:w-52  h-12 border hover:shadow-md rounded-lg p-4`}
               onClick={() => handleClick(imageFour, "ERPs")}
             >
               <h3>ERPs</h3>

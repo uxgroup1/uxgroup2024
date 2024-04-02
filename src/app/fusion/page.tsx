@@ -30,6 +30,7 @@ import imageThree from "@/assets/fusion/e-final.png";
 import imageFour from "@/assets/fusion/c-final.png";
 import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
+import banner from "@/assets/fusion/fusionBanner.png"
 
 const contentFeatures = [
   {
@@ -224,7 +225,7 @@ export default function Fusion() {
         corButtonThree="#1F1D47"
         logo={fusionLogo}
         title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
-        banner=""
+        banner={banner.src}
         text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
