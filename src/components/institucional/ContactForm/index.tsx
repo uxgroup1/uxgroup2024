@@ -148,7 +148,7 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            className="text-white md:w-full w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center"
+            className="text-white md:w-full hover:font-semibold w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center"
           >
             enviar contato
           </button>

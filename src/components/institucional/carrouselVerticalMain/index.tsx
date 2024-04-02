@@ -57,7 +57,7 @@ function CarroselVertical({title, text,content} : ContentSlide) {
               <div className={`${style.content}`}>
                 <h1 className="w-4/5">{content[contentIndex].contentTitle}</h1>
                 <p>{content[contentIndex].contentText}</p>
-                <button className="hover:border hover:border-black text-white bg-black border border-transparent hover:text-black hover:bg-white transition  hover:shadow-md">saiba mais</button>
+                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black border border-transparent hover:text-black hover:bg-white transition  hover:shadow-md">saiba mais</button>
               </div>
             </div>
           </div>

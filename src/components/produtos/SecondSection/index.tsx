@@ -31,7 +31,7 @@ function SecondSection({
     backgroundSize: "200% 100%",
     transition: " 0.1s ease",
     cursor: "pointer",
-    backgroundPosition: hovered ? "70% 100%" : "0% 100%", // Definido inicialmente para a cor 3 caso o hover seja ativado
+    backgroundPosition: hovered ? "70% 100%" : "0% 100%", 
   };
 
   if (!corButtonTwo && corButtonThree && hovered) {

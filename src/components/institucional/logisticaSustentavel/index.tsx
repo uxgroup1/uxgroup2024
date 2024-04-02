@@ -29,7 +29,7 @@ function LogisticaSustentavel() {
                     Juntos, Podemos Criar um Futuro Mais Verde.
                   </Link>
                 </p>
-                <button className="hover:border hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
                   saiba mais
                 </button>
               </div>

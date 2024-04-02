@@ -30,12 +30,12 @@ function EcoSistemaUx() {
                   seu negócio com foco em impulsionar os resultados e reduzir os
                   custos.
                 </p>
-                <button className="hover:border hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md" >saiba mais</button>
+                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md" >saiba mais</button>
               </div>
             </div>
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
-                <Image className="w-[100%]  h-[80%] " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
+                <Image className="w-[100%] " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
               </div>
             </div>
           </div>

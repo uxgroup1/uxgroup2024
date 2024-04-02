@@ -34,7 +34,7 @@ export function Blog() {
     <section className={style.container}>
       <div className={style.margin}>
           <div className={`w-full m-0  ${style.titleBlock}`}>
-          <h1 className='md:w-4/5 w-full text-left md:text-center ' >
+          <h1 className='md:w-4/5 w-full text-black text-left md:text-center ' >
             Conteúdos exclusivos sobre o nosso setor.
           </h1>
         </div>
@@ -140,7 +140,7 @@ export function Blog() {
           <Link
             href="https://blog.uxgroup.com.br/"
             target="_blank"
-            className={style.gotoBlog}
+            className={`hover:font-semibold text-white transition hover:shadow-md bg-black rounded-lg hover:bg-white hover:text-black border-black border ${style.gotoBlog}`}
           >
             acessar blog completo
           </Link>

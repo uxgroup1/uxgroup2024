@@ -13,7 +13,7 @@ function UxPartners() {
                 proposta de valor de uma solução full commerce.
               </h1>
               <p>Conheça as experiências reais dos nossos parceiros.</p>
-              <button>fale com um consultor</button>
+              <button className="hover:font-semibold transition">fale com um consultor</button>
             </div>
           </div>
         </div>
