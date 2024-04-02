@@ -188,7 +188,7 @@ export default function Home() {
       <Cta
         button={true}
         title={
-          "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
+          "Descubra  como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
         }
         banner={ctaTwo.src}
       />
