@@ -19,8 +19,8 @@ export default function Integrations() {
     <section className="flex flex-col gap- items-center justify-center max-w-[1996px] w-full">
       <div className="w-[90%] flex flex-col gap-5 justify-center">
         <div className="w-full flex flex-col gap-2 justify-center items-center">
-          <h1 className="text-center">Overview integrações.</h1>
-          <p className="lg:w-4/5 text-center">
+          <h1 className="text-center text-black ">Overview integrações.</h1>
+          <p className="lg:w-4/5 text-black text-center">
             A UX possui conexão com as principais plataformas do mercado,
             garantindo informações, gestão e integração para todo o e-commerce.
             A UX ainda conta com tecnologias próprias para garantir uma
