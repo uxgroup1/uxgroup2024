@@ -2,23 +2,31 @@
 
 import dynamic from "next/dynamic";
 
-const Footer = dynamic(() => import("@/components/Footer"));
-const Header = dynamic(() => import("@/components/header"));
+const Footer = dynamic(() => import("@/components/Footer/index"));
+const Header = dynamic(() => import("@/components/header/index"));
 const ContactForm = dynamic(
-  () => import("@/components/institucional/ContactForm")
+  () => import("@/components/institucional/ContactForm/index")
 );
 const FeaturesComponent = dynamic(
-  () => import("@/components/produtos/features")
+  () => import("@/components/produtos/features/index")
 );
-const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
+const JumboTron = dynamic(
+  () => import("@/components/produtos/jumbotron/index")
+);
+const Cta = dynamic(() => import("@/components/cta"));
+const ProductInstitutional = dynamic(
+  () => import("@/components/produtos/institucional/index")
+);
+const Integrations = dynamic(
+  () => import("@/components/produtos/integracoes/index")
+);
+
 import arrowImage from "@/assets/fusion/arrow/arrowListComponentesPudo.svg";
 import fusionLogo from "@/assets/logos/fusion.svg";
-import Cta from "@/components/cta";
-import ProductInstitutional from "@/components/produtos/institucional";
 import Numbers from "@/components/produtos/numbers";
 import imageOne from "@/assets/fusion/cf-final.png";
-import imageTwo from "@/assets/fusion/e-final.png";
-import imageThree from "@/assets/fusion/r-final.png";
+import imageTwo from "@/assets/fusion/r-final.png";
+import imageThree from "@/assets/fusion/e-final.png";
 import imageFour from "@/assets/fusion/c-final.png";
 import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
@@ -205,92 +213,91 @@ const number = [
 
 export default function Fusion() {
   return (
-    <>
-      <main>
-        <Header />
-        <JumboTron
-          linkButtonOne="#"
-          linkButtonTwo="#"
-          textButtonOne="saiba mais"
-          textButtonTwo="entrar em contato"
-          corButtonOne="#28265b"
-          corButtonThree="#1F1D47"
-          logo={fusionLogo}
-          title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
-          banner=""
-          text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
-        />
-        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-        <ProductInstitutional
-          title=""
-          text=""
-          banner=""
-          corButtonOne="#28265b"
-          corButtonThree="#1F1D47"
-          linkButtonOne=""
-          linkButtonTwo=""
-          textButtonOne=""
-          textButtonTwo=""
-        />
-        <FeaturesComponent
-          titleSection="Ofereça as melhores opções de frete"
-          text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
-          banner={imageOne.src}
-          content={contentFeaturesTwo}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Reduza os contatos no SAC com Rastreamento"
-          text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
-          banner={imageTwo.src}
-          content={contentFeatures}
-          rowReverse={true}
-        />
-        <FeaturesComponent
-          titleSection="Agilize a entrega com automatização na Expedição"
-          text="Comunicação 100% integrada via API com o transportador para aviso de coleta de pedidos."
-          banner={imageThree.src}
-          content={contentFeaturesThree}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Pague somente o acordado com os transportadores"
-          text="Tenha a certeza de que está pagando o correto pelos fretes do seu negócio,, utilize uma solução de conciliação de frete."
-          banner={imageFour.src}
-          content={contentFeaturesFour}
-          rowReverse={true}
-        />
-        <Cta
-          button
-          banner={""}
-          title={"Lorem"}
-          text={"lorem ispum njkb"}
-          corButtonOne="#FFF"
-        />
-        <FeaturesComponent
-          titleSection="Fusion Envios          "
-          text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
-          banner={imageFive.src}
-          content={contentFeaturesFive}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Expanda suas opções de frete          "
-          text="Cálculo de frete do seu marketplace totalmente integrado aos sellers. Através do gateway de fretes ofereça a mesma possibilidade de um cálculo preciso, resposta rápida e redução de custos através de tabelas parametrizáveis."
-          banner={imageSix.src}
-          content={contentFeaturesSix}
-          rowReverse={true}
-        />
-        <Numbers
-          title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
-          number={number}
-          banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-          text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
-        />
-        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm />
-        <Footer />
-      </main>
-    </>
+    <main>
+      <Header />
+      <JumboTron
+        linkButtonOne="#"
+        linkButtonTwo="#"
+        textButtonOne="saiba mais"
+        textButtonTwo="entrar em contato"
+        corButtonOne="#28265b"
+        corButtonThree="#1F1D47"
+        logo={fusionLogo}
+        title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
+        banner=""
+        text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
+      />
+      <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+      <ProductInstitutional
+        title=""
+        text=""
+        banner=""
+        corButtonOne="#28265b"
+        corButtonThree="#1F1D47"
+        linkButtonOne=""
+        linkButtonTwo=""
+        textButtonOne=""
+        textButtonTwo=""
+      />
+      <FeaturesComponent
+        titleSection="Ofereça as melhores opções de frete"
+        text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
+        banner={imageOne.src}
+        content={contentFeaturesTwo}
+        rowReverse={false}
+      />
+      <FeaturesComponent
+        titleSection="Reduza os contatos no SAC com Rastreamento"
+        text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
+        banner={imageTwo.src}
+        content={contentFeatures}
+        rowReverse={true}
+      />
+      <FeaturesComponent
+        titleSection="Agilize a entrega com automatização na Expedição"
+        text="Comunicação 100% integrada via API com o transportador para aviso de coleta de pedidos."
+        banner={imageThree.src}
+        content={contentFeaturesThree}
+        rowReverse={false}
+      />
+      <FeaturesComponent
+        titleSection="Pague somente o acordado com os transportadores"
+        text="Tenha a certeza de que está pagando o correto pelos fretes do seu negócio,, utilize uma solução de conciliação de frete."
+        banner={imageFour.src}
+        content={contentFeaturesFour}
+        rowReverse={true}
+      />
+      <Cta
+        button
+        banner={""}
+        title={"Lorem"}
+        text={"lorem ispum njkb"}
+        corButtonOne="#FFF"
+      />
+      <FeaturesComponent
+        titleSection="Fusion Envios          "
+        text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
+        banner={imageFive.src}
+        content={contentFeaturesFive}
+        rowReverse={false}
+      />
+      <FeaturesComponent
+        titleSection="Expanda suas opções de frete          "
+        text="Cálculo de frete do seu marketplace totalmente integrado aos sellers. Através do gateway de fretes ofereça a mesma possibilidade de um cálculo preciso, resposta rápida e redução de custos através de tabelas parametrizáveis."
+        banner={imageSix.src}
+        content={contentFeaturesSix}
+        rowReverse={true}
+      />
+      <Numbers
+        title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
+        number={number}
+        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+        text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
+      />
+      <Integrations />
+      <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
+      <ContactForm />
+      <Footer />
+    </main>
   );
 }
