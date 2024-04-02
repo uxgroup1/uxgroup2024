@@ -44,7 +44,7 @@ export default function Numbers({
                 className="flex flex-col cursor-pointer items-center justify-center rounded-2xl transition-all p-5 text-black border-transparent w-full lg:w-[200px]"
                 key={index}
               >
-                <h1 className={`text-[#28265b] text-5xl`}>{item.number}</h1>
+                <h1 className={`text-[#28265b] text-7xl`}>{item.number}</h1>
                 <p className="font-bold">{item.text}</p>
               </div>
             );
