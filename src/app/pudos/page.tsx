@@ -52,6 +52,7 @@ const content = [
     contentTitle: "Aumente a Satisfação do Cliente",
     contentText:
       "Com os pontos de pick-up and drop-off, você acelera o processo de entrega, reduzindo as etapas para que a mercadoria chegue para o seu cliente.",
+    banner: "",
   },
   {
     index: 1,
@@ -59,6 +60,8 @@ const content = [
     contentTitle: "Reduza Custos de Entrega",
     contentText:
       "Com o PUDO, você pode reduzir os custos de entrega, com menos paradas para o motoristas, você tem uma economia significativa em despesas de transporte e logística.",
+
+    banner: "",
   },
   {
     index: 2,
@@ -66,6 +69,8 @@ const content = [
     contentTitle: "Aumente a Confiabilidade da Entrega",
     contentText:
       "Ao utilizar uma rede confiável de pontos de coleta, você pode garantir aos sellers que realizem o processo de expedição de forma rápida e segura, melhorando a reputação da sua marca.",
+
+    banner: "",
   },
 ];
 
@@ -105,8 +110,17 @@ export default function Pudos() {
           banner=""
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-        <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
-          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
+        <ProductInstitutional
+          title=""
+          text=""
+          banner=""
+          corButtonOne="#28265b"
+          corButtonThree="#1F1D47"
+          linkButtonOne=""
+          linkButtonTwo=""
+          textButtonOne=""
+          textButtonTwo=""
+        />
         <SecondSection
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
