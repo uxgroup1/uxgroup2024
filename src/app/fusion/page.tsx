@@ -16,12 +16,12 @@ import fusionLogo from "@/assets/logos/fusion.svg";
 import Cta from "@/components/cta";
 import ProductInstitutional from "@/components/produtos/institucional";
 import Numbers from "@/components/produtos/numbers";
-import imageOne from "@/assets/fusion/cf-final.png"
-import imageTwo from "@/assets/fusion/e-final.png"
-import imageThree from "@/assets/fusion/c-final.png"
-import imageFour from "@/assets/fusion/r-final.png"
-import imageFive from "@/assets/fusion/envios-final.png"
-import imageSix from "@/assets/fusion/cf-mktpl-final.png"
+import imageOne from "@/assets/fusion/cf-final.png";
+import imageTwo from "@/assets/fusion/e-final.png";
+import imageThree from "@/assets/fusion/r-final.png";
+import imageFour from "@/assets/fusion/c-final.png";
+import imageFive from "@/assets/fusion/envios-final.png";
+import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 
 const contentFeatures = [
   {

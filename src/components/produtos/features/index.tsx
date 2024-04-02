@@ -28,7 +28,7 @@ export default function FeaturesComponent({
         <div className="max-w-[1996px] w-full flex items-center justify-center md:justify-center">
           <div
             className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${
-              rowReverse === true ? "lg:flex-row-reverse md:gap-28" : "lg:flex"
+              rowReverse === true ? "lg:flex-row-reverse md:gap-28  " : "lg:flex"
             }  lg:items-center`}
           >
             <div
@@ -56,7 +56,7 @@ export default function FeaturesComponent({
                         height={100}
                       />
                       <div className="mt-4 w-full  h-full md:mt-0">
-                        <h3 className="font-semibold pb-3 md:pb-0 md:w-[90%] cursor-default  text-black w-full ">
+                        <h3 className="font-semibold pb-3 md:pb-0 md:w-[80%] cursor-default  text-black w-full ">
                           {item.title}
                         </h3>
                       </div>
