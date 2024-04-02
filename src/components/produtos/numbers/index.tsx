@@ -41,13 +41,13 @@ export default function Numbers({
         </div>
       </div>
       <div className=" w-full lg:w-[90%] lg:mt-0 mt-5 ">
-        <div style={{boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px;"}} className="lg:flex gap-3 p-10 lg:p-20 justify-evenly items-center w-full h-full lg:h-[200px] lg:rounded-2xl bg-white">
+        <div style={{boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px"}} className="lg:flex gap-3 p-10 lg:p-20 justify-evenly items-center w-full h-full lg:h-[200px] lg:rounded-2xl bg-white">
           {number.map((item, index) => {
             return (
-              <div className="flex flex-col items-center justify-center rounded-2xl transition-all p-5 text-black border-transparent hover:border-2 hover:shadow-md w-full lg:w-[200px]" key={index}>
-                <h1 className={`text-[#28265b] text-4xl`}>{item.number}</h1>
+              <div className="flex flex-col cursor-pointer items-center justify-center rounded-2xl transition-all p-5 text-black border-transparent hover:border-2 hover:shadow-md w-full lg:w-[200px]" key={index}>
+                <h1 className={`text-[#28265b] text-5xl`}>{item.number}</h1>
                 <p className="font-bold">{item.text}</p>
-              </div>
+              </div>  
             );
           })}
         </div>

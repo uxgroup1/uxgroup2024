@@ -12,7 +12,7 @@ interface ContentArray {
   banner: string;
   titleSection: string;
   text?: string;
-  rowReverse: boolean
+  rowReverse: boolean;
 }
 
 export default function FeaturesComponent({
@@ -24,11 +24,21 @@ export default function FeaturesComponent({
 }: ContentArray) {
   return (
     <>
-      <section className="bg-white flex items-center  w-full md:px-0 px-5 ">
-        <div className="max-w-[1996px] w-full flex items-center md:justify-center">
-          <div className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${rowReverse === true ? "lg:flex-row-reverse md:gap-28" : "lg:flex"}  lg:items-center`}>
-            <div className={`w-full md:w-[65%] ${rowReverse === true ? "md:w-[50%]" : "" }  `}>
-              <h1 className=" w-[90%] font-bold pb-4 text-black">{titleSection}</h1>
+      <section className="bg-white flex items-center justify-center  w-full md:px-0 px-5 ">
+        <div className="max-w-[1996px] w-full flex items-center justify-center md:justify-center">
+          <div
+            className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${
+              rowReverse === true ? "lg:flex-row-reverse md:gap-28" : "lg:flex"
+            }  lg:items-center`}
+          >
+            <div
+              className={`w-full md:w-[65%] ${
+                rowReverse === true ? "md:w-[50%]" : ""
+              }  `}
+            >
+              <h1 className=" w-[90%] font-bold pb-4 text-black">
+                {titleSection}
+              </h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
 
               <div className="md:flex w-full flex-col gap-2 md:items-start">
@@ -55,12 +65,16 @@ export default function FeaturesComponent({
                 })}
               </div>
             </div>
-            <div className={`${rowReverse === true ? "md:justify-start" : ""} rounded-2xl flex lg:items-center md:pb-0 pb-10 w-full md:w-1/2 lg:justify-center`}>
+            <div
+              className={`${
+                rowReverse === true ? "md:justify-start" : ""
+              } rounded-2xl flex lg:items-center md:pb-0 pb-10 w-full md:w-1/2 lg:justify-center`}
+            >
               <Image
                 width={100}
                 height={100}
                 className="w-full  object-cover h-full"
-                src={svg}
+                src={banner}
                 alt=""
               />
             </div>

@@ -27,8 +27,8 @@ function CarroselVerticalMobile() {
     },
     {
       index: 3,
-      title: "Loja digital",
-      contentTitle: "Loja digital",
+      title: "Consultoria",
+      contentTitle: "Consultoria",
       contentText:
         "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     },
