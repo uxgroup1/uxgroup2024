@@ -205,13 +205,6 @@ export default function Home() {
       <UxPartners />
       <Blog />
       <UxMidia colorText="#fff" content={contentUxMidia} />
-      <Cta
-        button={true}
-        title={
-          "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
-        }
-        banner={image.src}
-      />
       <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
       <ContactForm />
       <Footer />

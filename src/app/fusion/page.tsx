@@ -296,6 +296,7 @@ export default function Fusion() {
         text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
       />
       <Integrations />
+      <Cta title={"Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"} banner={""} button/>
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />
