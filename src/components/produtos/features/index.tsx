@@ -36,7 +36,7 @@ export default function FeaturesComponent({
                 rowReverse === true ? "md:w-[50%]" : ""
               }  `}
             >
-              <h1 className=" w-[90%] font-bold pb-4 text-black">
+              <h1 className="w-[90%] font-bold pb-4 text-black">
                 {titleSection}
               </h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
@@ -56,9 +56,9 @@ export default function FeaturesComponent({
                         height={100}
                       />
                       <div className="mt-4 w-full  h-full md:mt-0">
-                        <h3 className="font-semibold pb-3 md:pb-0 md:w-[80%] cursor-default  text-black w-full ">
+                        <p className=" pb-3 md:pb-0 md:w-[80%] cursor-default  text-black w-full ">
                           {item.title}
-                        </h3>
+                        </p>
                       </div>
                     </div>
                   );
