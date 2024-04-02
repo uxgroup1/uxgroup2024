@@ -16,7 +16,7 @@ const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
 import headsetImage from "@/assets/ondetah/headset.svg";
 import counterImage from "@/assets/ondetah/counter.svg";
 import smartphoneImage from "@/assets/ondetah/smartphone.svg";
-import imageOndetah from "@/assets/ondetah/ondetah.jpeg";
+import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";

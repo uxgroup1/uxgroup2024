@@ -11,33 +11,45 @@ export default function Footer() {
     {
       index: 0,
       image: logoLinkedIn,
+      link:"https://www.linkedin.com/company/uxgroup/"
     },
     {
       index: 1,
       image: logoInstagram,
+      link:"https://www.instagram.com/uxgroup_/"
     },
     {
       index: 2,
       image: logoFacebook,
+      link:"https://www.facebook.com/UX-GROUP-103113961067558/"
     },
     {
       index: 3,
       image: logoYoutube,
+      link:" https://www.youtube.com/channel/UCzgk7wIIwM3IUQeBQxz7big"
     },
   ];
 
   const pages = [
     {
       index: 0,
-      name: "Tecnologia",
+      name: "Gestão",
       products: [
         {
-          namePage: "ondetah",
+          namePage: " TMS embarcador",
+          url: "/fusion",
+        },
+        {
+          namePage: " TMS transportador",
+          url: "/trux",
+        },
+        {
+          namePage: "Plataforma de comunicação",
           url: "/ondetah",
         },
         {
-          namePage: "fusion",
-          url: "/fusion",
+          namePage: "Consultoria",
+          url: "/consultoria",
         },
       ],
     },
@@ -46,17 +58,18 @@ export default function Footer() {
       name: "Logística",
       products: [
         {
-          namePage: "Torre",
+          namePage: "Fulfillment",
+          url: "/logistica",
+        },
+        {
+          namePage: "Torre de controle",
           url: "/torre",
         },
         {
           namePage: "Pudos",
           url: "/pudos",
         },
-        {
-          namePage: "Fulfillment",
-          url: "/logistica",
-        },
+        
       ],
     },
     {
@@ -89,7 +102,7 @@ export default function Footer() {
               <div className="flex md:flex-row flex-col pt-5 md:pt-0 md:grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
                 {pages.map((data) => {
                   return (
-                    <div key={data.index} className="w-full">
+                    <div key={data.index} className="w-fullx`">
                       <h2 className="mb-4 text-[16px] font-semibold text-white uppercase ">
                         {data.name}
                       </h2>
@@ -99,7 +112,7 @@ export default function Footer() {
                             <li key={data.index} className="mb-4 ">
                               <Link
                                 href={product.url}
-                                className="text-white font-medium pt-5 hover:border-b pb-1 transition-all border-b-white border-transparent"
+                                className="text-white font-medium pt-5  pb-1 transition-all border-b-white border-transparent"
                               >
                                 {product.namePage}
                               </Link>
@@ -125,12 +138,13 @@ export default function Footer() {
                   return (
                     <Link
                       key={data.index}
-                      href="/"
+                      href={data.link}
+                      target="_blank"
                       className="text-white hover:text-black hover:rounded-xl  transition-all hover:text-2xl "
                     >
                       <Image
                         src={data.image.src}
-                        alt="Facebook"
+                        alt="Redes sociais UX"
                         className="hover:rounded-[8px]  transition-all"
                         width={30}
                         height={100}
