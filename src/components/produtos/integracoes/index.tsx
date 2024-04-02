@@ -30,7 +30,7 @@ export default function Integrations() {
         <div className="w-full flex flex-col-reverse lg:flex-col pt-5 gap-10 lg:gap-20 justify-center items-center">
           <ul className="flex lg:flex-row flex-col gap-4 lg:gap-10 justify-evenly">
             <li
-              className={`flex justify-center items-center shadow cursor-pointer ${
+              className={`flex justify-center items-center text-black shadow cursor-pointer ${
                 selectedItem === "Transportadores"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
@@ -40,7 +40,7 @@ export default function Integrations() {
               <h3>Transportadores</h3>
             </li>
             <li
-              className={`flex justify-center items-center shadow cursor-pointer ${
+              className={`flex justify-center items-center text-black shadow cursor-pointer ${
                 selectedItem === "HUBs"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
@@ -50,17 +50,17 @@ export default function Integrations() {
               <h3>HUBs</h3>
             </li>
             <li
-              className={`flex justify-center items-center shadow cursor-pointer ${
+              className={`flex justify-center items-center text-black shadow cursor-pointer ${
                 selectedItem === "Canais de Vendas"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
               } transition w-[340px] lg:w-52 border hover:shadow-md rounded-2xl p-4`}
               onClick={() => handleClick(imageOne, "Canais de Vendas")}
             >
-              <h3>Canais de Vendas</h3>
+              <h3 >Canais de Vendas</h3>
             </li>
             <li
-              className={`flex justify-center items-center shadow cursor-pointer ${
+              className={`flex justify-center text-black items-center shadow cursor-pointer ${
                 selectedItem === "ERPs"
                   ? "bg-[#28265b] text-white border hover:bg-[#28265b] hover:text-white"
                   : "hover:bg-[#28265b] hover:text-white hover:border"
