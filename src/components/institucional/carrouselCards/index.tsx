@@ -23,7 +23,7 @@ function CarrouselCards({ content,colorText }: carrouselCards) {
           {content?.map((data, index) => {            
             return (
               <div
-                style={{ backgroundImage: `url(${data.banner})` }}
+                style={{ backgroundImage: `url(${data.banner})`, backgroundPosition: `center` }}
                 key={index}
                 className={` bg-cover ${style.Card}`}
               >

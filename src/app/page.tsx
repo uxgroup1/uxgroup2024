@@ -32,15 +32,9 @@ const ContactForm = dynamic(
 const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx/index"));
 import { Cases } from "@/components/institucional/cases/index";
 import dynamic from "next/dynamic";
-import InteligenciaOperacional from "@/assets/home/UX-na-midia/inteligencia-operacional-e-seus-impactos-na-performance-logistica-e-commerce-brasil.png";
-import PetLoveEleva from "@/assets/home/UX-na-midia/petlove-eleva-performance-logistica-em-90-no-sul-do-pais-sbvc.png";
-import Chatbots from "@/assets/home/UX-na-midia/como-os-chatbots-podem-apoiar-a-logistica-mundo-logistica.png";
-import Fulfillment from "@/assets/home/UX-na-midia/fulfillment-por-que-interessa-aos-pequenos-e-grandes.png";
-import Estrategias from "@/assets/home/UX-na-midia/estrategias-para-ser-diferente-aos-olhos-da-geracao-z-clientesa.png";
-import Amazon from "@/assets/home/UX-na-midia/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn - mundo-do-marketing.png";
-import Gestao from "@/assets/home/UX-na-midia/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas.png";
-import ImageCaio from "@/assets/home/UX-na-midia/ImageCaio.jpg";
-import ImageOndetah from "@/assets/home/UX-na-midia/imageOndetah.png";
+import ImageUxMidiaOne from "@/assets/home/UX-na-midia/logistica.png"
+import ImageUxMidiaTwo from "@/assets/home/UX-na-midia/tecnologia.png"
+import ImageUxMidiaThree from "@/assets/home/UX-na-midia/gestão.png"
 import ClientsCases from "@/components/institucional/clients";
 import ctaOne from "@/assets/cta/cta-1-home.png";
 import ctaTwo from "@/assets/cta/cta-2-home.png";
@@ -112,60 +106,60 @@ const contentUxMidia = [
   {
     title: "Os influencers como nicho promissor para o fulfillment",
     text: "Para vencer no ambiente de e-commerce, é preciso oferecer uma experiência de compra positiva por todo o processo de venda digital...",
-    banner: ImageCaio.src,
+    banner: ImageUxMidiaOne.src,
     link: "https://portal.clientesa.com.br/cliente-sa/os-influencers-como-nicho-promissor-para-o-fulfillment/",
   },
   {
     title:
       "Dafiti firma parceria com UX Group para automatizar operações logísticas",
     text: "A UX Group anunciou contrato com a Dafiti para a adoção de soluções tecnológicas voltadas para a automatização de suas operações logísticas...",
-    banner: ImageOndetah.src,
+    banner: ImageUxMidiaTwo.src,
     link: "https://mundologistica.com.br/noticias/dafiti-firma-parceria-com-ux-group-para-automatizar-operacoes-logisticas",
   },
   {
     title:
       "Inteligência operacional e seus impactos na performance logística E-commerce Brasil",
     text: "Em logística, o ato de entregar não está atrelado somente ao transporte. Ele envolve um conjunto de atividades e estratégias...",
-    banner: InteligenciaOperacional.src,
+    banner: ImageUxMidiaOne.src,
     link: "https://www.ecommercebrasil.com.br/artigos/inteligencia-operacional-e-seus-impactos-na-performance-logistica",
   },
   {
     title: "Como os chatbots podem apoiar a logística? - Mundo Logística",
     text: "Um robô com nível de inteligência notável interage com clientes, soluciona dúvidas e encaminha questões críticas para as devidas tratativas...",
-    banner: Chatbots.src,
+    banner: ImageUxMidiaThree.src,
     link: "https://mundologistica.com.br/revista-extra/como-os-chatbots-podem-apoiar-a-logistica",
   },
   {
     title: "Petlove eleva performance logística em 90% no Sul do país-SBVC",
     text: "A Petlove anuncia elevação de sua performance em 90% graças ao modelo de fulfillment adotado junto à UX Group, empresa especializada em gestão inteligente de logística e transportes...",
-    banner: PetLoveEleva.src,
+    banner: ImageUxMidiaOne.src,
     link: "https://sbvc.com.br/petlove-eleva-performance-logistica-em-90-no-sul-do-pais/",
   },
   {
     title:
       "Fulfillment: por que interessa aos pequenos e grandes? E-commerce Brasil",
     text: "Para os pequenos, certos investimentos passam a não fazer sentido quando são colocados na ponta do papel e comparados a um modelo de terceirização...",
-    banner: Fulfillment.src,
+    banner: ImageUxMidiaOne.src,
     link: "https://www.ecommercebrasil.com.br/artigos/fulfillment-por-que-interessa-aos-pequenos-e-grandes",
   },
   {
     title: "Estratégias para ser diferente aos olhos da geração Z-ClienteSA",
     text: "Mais tecnologia para atender à demanda do escoamento, descentralização do estoque, redução de despesas, implementação de recursos mais inovadores...",
-    banner: Estrategias.src,
+    banner: ImageUxMidiaThree.src,
     link: "https://portal.clientesa.com.br/cliente-sa/estrategias-para-ser-diferente-aos-olhos-da-geracao-z/",
   },
   {
     title:
       "UX Group sela acordo com Amazon para integrar o grupo de parceiros SPN- Mundo do Marketing",
     text: "Diferenciar-se diante de um público cada vez mais conectado, ávido por novidades e movido a propósitos...",
-    banner: Amazon.src,
+    banner:ImageUxMidiaTwo.src,
     link: "https://www.mundodomarketing.com.br/noticias-corporativas/conteudo/285412/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn/",
   },
   {
     title:
       "UX Group desenvolve sistema de gestão de parceiros e aprimora operacionalização das entregas",
     text: "A UX Group, hub de soluções de tecnologia, operação e serviços logísticos, acaba de assinar contrato com a Amazon para que sua vertical de Fulfillment...",
-    banner: Gestao.src,
+    banner: ImageUxMidiaThree.src,
     link: "https://www.tecnologistica.com.br/noticias/lancamento-de-produtos/16917/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas/#:~:text=UX%20Group%20desenvolve%20sistema%20de%20gest%C3%A3o%20de%20parceiros%20e%20aprimora%20operacionaliza%C3%A7%C3%A3o%20das%20entregas,-Empresa%20espera%20atender&text=A%20UX%20Group%20anuncia%20o,das%20entregas%2C%20denominado%20Rede%20Credenciada.",
   },
 ];
