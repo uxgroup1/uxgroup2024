@@ -41,17 +41,17 @@ export default function FeaturesComponent({
               </h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
 
-              <div className="md:flex w-full flex-col gap-2 md:items-start">
+              <div className="md:flex w-full flex-col gap-1 md:items-start">
                 {content?.map((item, index) => {
                   return (
                     <div
                       key={index}
-                      className="flex w-full p-1 items-center gap-5 justify-start"
+                      className="flex w-full items-center gap-2 justify-start"
                     >
                       <Image
                         className="flex hover:border-[2px] hover:animate-pulse  w-[40px] hover:border-transparent object-cover h-[40px]"
                         src={item.icons}
-                        alt=""
+                        alt="Seta identificadora do item"
                         width={100}
                         height={100}
                       />
@@ -75,7 +75,7 @@ export default function FeaturesComponent({
                 height={100}
                 className="w-full  object-cover h-full"
                 src={banner}
-                alt=""
+                alt="Tecnologia, Logística e sustentabilidade"
               />
             </div>
           </div>

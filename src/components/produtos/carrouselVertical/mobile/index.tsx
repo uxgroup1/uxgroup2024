@@ -63,7 +63,7 @@ function CarroselImageMobile({ content }: ContentSection) {
                         index <= contentIndex ? "bg-[#FBC709]" : "bg-white "
                       }`}
                     >
-                      <Image alt="" width={30} height={30} src={packegeImage} />
+                      <Image alt="Logística sustentavel" width={30} height={30} src={packegeImage} />
                     </span>
                   </li>
                 ))}

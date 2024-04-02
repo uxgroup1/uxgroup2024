@@ -58,7 +58,7 @@ export default function ProductInstitutional({
               src={banner}
               width={100}
               height={100}
-              alt=""
+              alt="ESG"
             />
 
             <div className="flex flex-col gap-5 mt-8 lg:px-10 lg:mt-0">

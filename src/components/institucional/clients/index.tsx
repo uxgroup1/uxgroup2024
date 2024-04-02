@@ -55,7 +55,7 @@ export default function ClientsCases() {
           <div className="hidden lg:flex lg:items-center  lg:justify-start">
             <Image
               className="w-[100%]"
-              alt=""
+              alt=" Clintes UX"
               width={100}
               height={100}
               src={logo}
