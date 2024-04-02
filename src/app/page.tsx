@@ -44,6 +44,10 @@ import ImageOndetah from "@/assets/home/UX-na-midia/imageOndetah.png";
 import ClientsCases from "@/components/institucional/clients";
 import ctaOne from "@/assets/cta/cta-1-home.png";
 import ctaTwo from "@/assets/cta/cta-2-home.png";
+import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
+import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
+import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
+import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
 
 // const slides = [
 //   {
@@ -76,6 +80,7 @@ const content = [
     contentTitle: "TMS embarcador",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+    banner: imageCarroselVerticalOne.src,
   },
   {
     index: 1,
@@ -83,6 +88,7 @@ const content = [
     contentTitle: "TMS Transportador",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+    banner: imageCarroselVerticalTwo.src,
   },
   {
     index: 2,
@@ -90,6 +96,7 @@ const content = [
     contentTitle: "Plataforma de comunicação",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+    banner: imageCarroselVerticalThree.src,
   },
   {
     index: 3,
@@ -97,6 +104,7 @@ const content = [
     contentTitle: "Consultoria",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+    banner: imageCarroselVerticalFour.src,
   },
 ];
 
