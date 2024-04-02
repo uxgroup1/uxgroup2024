@@ -27,7 +27,7 @@ export default function Integrations() {
             logística altamente gerenciável.
           </p>
         </div>
-        <div className="w-full flex flex-col-reverse lg:flex-col pt-5 gap-10 lg:gap-20 justify-center items-center">
+        <div className="w-full flex flex-col pt-5 gap-10 lg:gap-20 justify-center items-center">
           <ul className="flex lg:flex-row flex-col gap-4 lg:gap-10 justify-evenly">
             <li
               className={`flex justify-center items-center text-black shadow cursor-pointer ${
