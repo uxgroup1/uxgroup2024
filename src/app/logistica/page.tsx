@@ -32,7 +32,7 @@ import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
 import bannerInstitucional from "@/assets/logistica/img-ff.png";
 import FeaturesComponent from "@/components/produtos/features";
 import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
-import institucional from "@/assets/home/institucional/ff-final.png"
+
 
 const content = [
   {

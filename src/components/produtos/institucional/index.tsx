@@ -47,29 +47,25 @@ export default function ProductInstitutional({
 
   return (
     <section className="bg-white max-w-[1996px] w-full lg:h-[80vh]">
-      <div className="relative h-full bg-red-100 flex">
-        
-        <div className="hidden w-full rounded-2xl  bg-gray-100 h-full lg:block"></div>
+      <div className="relative h-full flex">
+        <div className="h-full lg:w-1/3"></div>
+        <div className="hidden w-3/4 rounded-2xl  bg-gray-100 h-full lg:block"></div>
 
-        <div className="w-[80%] flex flex-col justify-center h-full lg:px-0 bg-black lg:py-10 mx-auto lg:absolute lg:left-[10%]">
+        <div className="w-[90%] flex flex-col justify-center h-full lg:px-0  lg:py-10 mx-auto lg:absolute lg:inset-x-0">
           <div className="mt-10 lg:mt-20 lg:flex lg:items-center">
             <Image
-              className="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96"
               src={banner}
+              className="w-full lg:w-[42rem] rounded-lg "
               width={100}
               height={100}
               alt="ESG"
             />
 
-            <div className="flex flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-black ">
-                
-                {title}
-              </h1>
+            <div className="flex w-full lg:pl-24 lg:w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
+              <h1 className="text-black w-[90%] ">{title}</h1>
 
-              <p className="max-w-lg text-black">
-                {text}
-              </p>
+              <p className="w-4/5 text-black">{text}</p>
+
               <div className="flex lg:flex-row flex-col items-center gap-5">
                 <button
                   className={`lg:w-[170px] w-full  h-10 rounded-lg text-white hover:font-semibold transition-all`}
@@ -77,13 +73,10 @@ export default function ProductInstitutional({
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                 >
-                  <Link href={linkButtonTwo}>
-                    {textButtonOne}
-                    E-commerce
-                  </Link>
+                  <Link href={linkButtonTwo}>{textButtonOne}</Link>
                 </button>
                 <button className="lg:w-[170px] border w-full  h-10 rounded-lg text-black hover:font-semibold transition-all">
-                  <Link href={linkButtonOne}> Marketplace {textButtonTwo}</Link>
+                  <Link href={linkButtonOne}> {textButtonTwo}</Link>
                 </button>
               </div>
             </div>
