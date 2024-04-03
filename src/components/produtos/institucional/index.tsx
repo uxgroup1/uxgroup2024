@@ -57,7 +57,7 @@ export default function ProductInstitutional({
           <div className="mt-10 lg:mt-20 lg:flex lg:items-center">
             <Image
               src={banner}
-              className="w-full lg:w-[42rem] rounded-lg "
+              className="w-full lg:w-[42rem] rounded-2xl shadow-md "
               width={100}
               height={100}
               alt="ESG"

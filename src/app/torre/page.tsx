@@ -17,6 +17,10 @@ import packgeImage from "@/assets/torre/icons/package.svg";
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg";
 import torreLogo from "@/assets/logos/torre.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
+import sac from "@/assets/sac.png"
+import transporte from "@/assets/transporte.png"
+import banner from "@/assets/trux/torre.png"
+
 
 const contentFeaturesOne = [
   {
@@ -77,15 +81,24 @@ export default function Torre() {
         linkButtonOne=""
         linkButtonTwo=""
         logo={torreLogo}
-        banner=""
-        title="We invest in the world’s potential"
+        banner={banner.src}
+        title="Solução completa e inteligente para otimizar transportes, entregas e atendimento ao cliente."
         text="Tecnologia de ponta e um time com expertise em logística que garantem performance na operação de transportes."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-      <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
-          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
+      <ProductInstitutional
+        title="Otimize e transforme sua operação com Torre de Controle"
+        text="Gerenciamento de transportes, entrega sustentável e suporte ao cliente integrado para um operação de entregas eficiente. Soluções inovadoras com tecnologia própria em todas as etapas que otimizam o processo logístico e garantem uma melhor experiência ao cliente."
+        banner={banner.src}
+        corButtonOne="#fac30c"
+        corButtonThree="#fe8012"
+        linkButtonOne=""
+        linkButtonTwo=""
+        textButtonOne="saiba mais"
+        textButtonTwo="agendar reunião"
+      />
       <FeaturesComponent
-        banner=""
+        banner={transporte.src}
         rowReverse={false}
         content={contentFeaturesOne}
         titleSection="Gestão de Transportes"
@@ -98,7 +111,7 @@ export default function Torre() {
       />
       <FeaturesComponent
         rowReverse={true}
-        banner=""
+        banner={sac.src}
         content={contentFeaturesTwo}
         titleSection="SAC (Serviço de Atendimento ao Cliente) Integrado"
         text="Nosso compromisso com a excelência no atendimento ao cliente é evidenciado pelo nosso serviço de atendimento integrado. Com uma equipe dedicada, estamos sempre prontos para atender às suas necessidades, resolver problemas e garantir uma experiência positiva para seus clientes. Utilizando tecnologia de ponta, oferecemos suporte personalizado e eficiente."
