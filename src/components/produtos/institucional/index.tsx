@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import insti from "@/assets/home/ecossistema.png"
 
 interface Content {
   title: string;
@@ -28,7 +29,8 @@ export default function ProductInstitutional({
   linkButtonTwo,
 }: Content) {
   const [hovered, setHovered] = useState(false);
-
+  console.log(banner);
+  
   const buttonStyle = {
     background: `linear-gradient(to right, ${corButtonOne} 0%, ${
       corButtonTwo ? corButtonTwo : corButtonOne
