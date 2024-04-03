@@ -18,6 +18,9 @@ import Cta from "@/components/cta";
 const ProductInstitutional = dynamic(
   () => import("@/components/produtos/institucional")
 );
+import imageGestao from "@/assets/trux/gestao-financeira.png"
+import imageRoteirizacao from "@/assets/trux/roteirizacao-de-entrega.png"
+import imageTrux from "@/assets/trux/trux.png"
 
 const contentFeatures = [
   {
@@ -109,46 +112,32 @@ export default function Trux() {
         <ProductInstitutional
           title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
           text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."
-          banner=""
-          corButtonOne="#28265b"
-          corButtonThree="#1F1D47"
+          banner={banner.src}
+          corButtonOne="#009881"
+          corButtonThree="#046C5C"
           linkButtonOne=""
           linkButtonTwo=""
-          textButtonOne=""
-          textButtonTwo=""
+          textButtonOne="saiba mais"
+          textButtonTwo="agende uma demo"
         />
         <FeaturesComponent
           titleSection="Roteirização de entrega"
           text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
-          banner=""
+          banner={imageRoteirizacao.src}
           content={contentFeaturesTwo}
-          rowReverse
+          rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Gestão financeira"
           text="Tenha o controle total das suas finanças e automatize processos."
-          banner=""
+          banner={imageGestao.src}
           content={contentFeatures}
-          rowReverse={false}
-        />
-        <Cta
-          button
-          banner={""}
-          title={"Lorem"}
-          text={"lorem ispum njkb"}
-          corButtonOne="#FFF"
-        />
-        <FeaturesComponent
-          titleSection="Averbação de Carga"
-          text="Sua carga protegida em todas as etapas da entrega."
-          banner=""
-          content={contentFeaturesThree}
           rowReverse={true}
         />
         <FeaturesComponent
           titleSection="App para Motoristas: Agilidade e Eficiência na Ponta dos Dedos"
           text="Nosso aplicativo exclusivo para first e last mile, permite interação instantânea com os motoristas e transportadores, proporcionando uma comunicação eficaz e ágil durante todo o processo de entrega. Com o uso do app, você reduz o índice de insucessos, tem mais precisão na informação e contribui para a redução do uso de papel na operação, promovendo uma abordagem mais sustentável e eficiente."
-          banner=""
+          banner={imageTrux.src}
           content={contentFeaturesFour}
           rowReverse={false}
         />

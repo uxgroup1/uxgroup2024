@@ -134,14 +134,6 @@ export default function Logistica() {
         text=""
         content={contentTopics}
       />
-      {/* <SecondSection
-        corButtonOne="#fbc705"
-        corButtonThree="#D3A707"
-        flowReverse={false}
-        title="Fulfillment Personalizado."
-        text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
-        image={bannerInstitucional.src}
-      /> */}
       <FeaturesComponent
         banner={bannerInstitucional.src}
         rowReverse={false}
