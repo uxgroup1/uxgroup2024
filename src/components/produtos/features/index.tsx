@@ -28,7 +28,9 @@ export default function FeaturesComponent({
         <div className="max-w-[1996px] w-full flex items-center justify-center md:justify-center">
           <div
             className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${
-              rowReverse === true ? "lg:flex-row-reverse md:gap-28  " : "lg:flex"
+              rowReverse === true
+                ? "lg:flex-row-reverse md:gap-28  "
+                : "lg:flex"
             }  lg:items-center`}
           >
             <div
@@ -46,10 +48,10 @@ export default function FeaturesComponent({
                   return (
                     <div
                       key={index}
-                      className="flex w-full items-center gap-2 justify-start"
+                      className="flex w-full items-center  gap-2 justify-start"
                     >
                       <Image
-                        className="flex hover:border-[2px] hover:animate-pulse  w-[40px] hover:border-transparent object-cover h-[40px]"
+                        className="flex hover:border-[2px]  hover:animate-pulse  w-[40px] hover:border-transparent object-cover h-[40px]"
                         src={item.icons}
                         alt="Seta identificadora do item"
                         width={100}
@@ -73,7 +75,7 @@ export default function FeaturesComponent({
               <Image
                 width={100}
                 height={100}
-                className="w-full  object-cover h-full"
+                className="w-full rounded-2xl object-cover h-full"
                 src={banner}
                 alt="Tecnologia, Logística e sustentabilidade"
               />

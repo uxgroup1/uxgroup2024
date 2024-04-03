@@ -5,42 +5,23 @@ import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
 
-function CarroselVerticalMobile() {
+interface Content {
+  index: number;
+  title: string;
+  contentTitle: string;
+  contentText: string;
+  banner: string;
+}
+
+interface ContentProduct {
+  content : Content[]
+  title: string;
+  sub: string;
+}
+
+function CarroselVerticalMobile({content, title, sub}: ContentProduct) {
   const [contentIndex, setContentIndex] = useState(0);
-  const content = [
-    {
-      index: 0,
-      title: "TMS embarcador",
-      contentTitle: "TMS embarcador",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-      banner: imageCarroselVerticalOne.src,
-    },
-    {
-      index: 1,
-      title: "TMS Transportador",
-      contentTitle: "TMS Transportador",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-      banner: imageCarroselVerticalTwo.src,
-    },
-    {
-      index: 2,
-      title: "Plataforma de comunicação",
-      contentTitle: "Plataforma de comunicação",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-      banner: imageCarroselVerticalThree.src,
-    },
-    {
-      index: 3,
-      title: "Consultoria",
-      contentTitle: "Consultoria",
-      contentText:
-        "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-      banner: imageCarroselVerticalFour.src,
-    },
-  ];
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,13 +41,10 @@ function CarroselVerticalMobile() {
         <div className="bg-white ">
           <div className="mb-8">
             <h1 className="text-3xl text-black font-bold mb-2">
-              Inove, Controle e Venda Mais
+              {title}
             </h1>
             <p className="text-black">
-              Adapte-se às mudanças do mercado com facilidade. Nossas soluções
-              de tecnologia modulares oferecem flexibilidade, informação e
-              eficiência para a gestão de fretes, gestão de transportes e
-              comunicação das suas vendas digitais. Conheça nossas soluções!
+              {sub}
             </p>
           </div>
 

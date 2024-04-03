@@ -43,30 +43,6 @@ import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
 
-// const slides = [
-//   {
-//     title: "Lorem Ipsum",
-//     text: "lorem Ips laborum et sapien et dolor sit amet",
-//     imageSrc:
-//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-//     author: "Ema Watson",
-//   },
-//   {
-//     title: "UX Group",
-//     text: "lorem Ips laborum et sapien et dolor sit amet",
-//     imageSrc:
-//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-//     author: "John Doe",
-//   },
-//   {
-//     title: "UX Log",
-//     text: "lorem Ips laborum et sapien et dolor sit amet",
-//     imageSrc:
-//       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-//     author: "Jane Smith",
-//   },
-// ];
-
 const content = [
   {
     index: 0,
@@ -167,13 +143,16 @@ export default function Home() {
       <BannerMain />
       <EcoSistemaUx />
       <ClientsCases />
-      {/* <Cases content={slides} /> */}
       <CarroselVertical
         title="Tecnologia para gestão da logística"
-        text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia são modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação para o cliente."
+        text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
         content={content}
       />
-      <CarroselVerticalMobile />
+      <CarroselVerticalMobile
+        title="Tecnologia para gestão da logística"
+        sub="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
+        content={content}
+      />
       <Cta
         button={true}
         title={

@@ -2,6 +2,7 @@ import { text } from "stream/consumers";
 import style from "./style.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 interface ConteudoCTA {
   title: String;
@@ -10,6 +11,7 @@ interface ConteudoCTA {
   button: boolean;
   corButtonOne?: string;
   corButtonTwo?: string;
+  logo?: string;
 }
 
 function Cta({
@@ -19,6 +21,7 @@ function Cta({
   button,
   corButtonOne,
   corButtonTwo,
+  logo,
 }: ConteudoCTA) {
   return (
     <>
@@ -32,9 +35,17 @@ function Cta({
               <div className={style.Controller}>
                 <div className="flex flex-col">
                   <h1>{title}</h1>
-                  <p className="w-full">{text}</p>
+                  <p className="w-4/5">{text}</p>
                 </div>
-
+                {logo && (
+                  <Image
+                    className="flex items-center justify-center w-4/5"
+                    src={logo}
+                    alt="Logística Sustentável"
+                    width={100}
+                    height={100}
+                  />
+                )}
                 {button && (
                   <button
                     className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"

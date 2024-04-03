@@ -26,19 +26,34 @@ import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg";
 import anvisaImage from "@/assets/logistica/anvisa.png";
 import fulfillmet from "@/assets/logos/fulfillment.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
+import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
+import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
+import logoAmazon from "@/assets/logistica/logo-amzn.png"
 
-const CarroselImagesContent = [
+const content = [
   {
+    index: 0,
     title: "CD Itapevi",
-    image: itapeviImage.src,
+    contentTitle: "CD Itapevi",
+    contentText:
+      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
+    banner: itapeviImage.src,
   },
   {
+    index: 1,
     title: "CD Barueri",
-    image: barueriImage.src,
+    contentTitle: "CD Barueri",
+    contentText:
+      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
+    banner: barueriImage.src,
   },
   {
+    index: 2,
     title: "CD Itajaí",
-    image: itajaiImage.src,
+    contentTitle: "CD Barueri",
+    contentText:
+      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
+    banner: itajaiImage.src,
   },
 ];
 
@@ -111,12 +126,16 @@ export default function Logistica() {
         title="Implementação de WMS"
         text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
       />
-      <CarroselImages
+      <CarroselVertical
         title="Infraestrutura de Armazenamento"
-        subtitle="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
-        content={CarroselImagesContent}
+        text="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
+        content={content}
       />
-      <CarroselImageMobile content={CarroselImagesContent} />
+      <CarroselVerticalMobile
+        title="Infraestrutura de Armazenamento"
+        sub="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
+        content={content}
+      />
       <Cta
         button={false}
         title={"Certificação ANVISA"}
@@ -130,6 +149,15 @@ export default function Logistica() {
         titleSection="Benefícios de escolher a UX"
         content={contentFeatures}
         banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"
+      />
+      <Cta
+        button={false}
+        title={"CD homologado Amazon"}
+        text={
+          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
+        }
+        logo={logoAmazon.src}
+        banner={anvisaImage.src}
       />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
