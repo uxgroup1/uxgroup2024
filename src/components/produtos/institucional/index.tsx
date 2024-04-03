@@ -61,18 +61,10 @@ export default function ProductInstitutional({
               alt="ESG"
             />
 
-            <div className="flex flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-black ">
-                Help us improve our productivity
-                {title}
-              </h1>
+            <div className="flex lg:pl-24 w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
+              <h1 className="text-black ">{title}</h1>
 
-              <p className="max-w-lg text-black">
-                {text}“ Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Tempore quibusdam ducimus libero ad tempora doloribus
-                expedita laborum saepe voluptas perferendis delectus assumenda
-                rerum, culpa aperiam dolorum, obcaecati corrupti aspernatur a. ”
-              </p>
+              <p className="w-4/5 text-black">{text}</p>
               <div className="flex lg:flex-row flex-col items-center gap-5">
                 <button
                   className={`lg:w-[170px] w-full  h-10 rounded-lg text-white hover:font-semibold transition-all`}
@@ -82,11 +74,11 @@ export default function ProductInstitutional({
                 >
                   <Link href={linkButtonTwo}>
                     {textButtonOne}
-                    E-commerce
+                    
                   </Link>
                 </button>
                 <button className="lg:w-[170px] border w-full  h-10 rounded-lg text-black hover:font-semibold transition-all">
-                  <Link href={linkButtonOne}> Marketplace {textButtonTwo}</Link>
+                  <Link href={linkButtonOne}> {textButtonTwo}</Link>
                 </button>
               </div>
             </div>

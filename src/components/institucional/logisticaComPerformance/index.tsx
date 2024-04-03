@@ -64,7 +64,7 @@ function LogisticaComPerformance() {
             <div className={style.Controller}>
               <div className={style.ControllerContent}>
                 <div className="flex gap-0 flex-col leading-[120%]">
-                  <h1> Logística com Performance </h1> e indicadores de sucesso
+                  <h1> Tecnologia na operação logística</h1> 
                 </div>
                 <p>
                   Da armazenagem inteligente à torre de controle, oferecemos uma

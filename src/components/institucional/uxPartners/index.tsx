@@ -9,8 +9,7 @@ function UxPartners() {
             <div className={style.UX_partners}>UX Partners</div>
             <div className={style.Content}>
               <h1>
-                Diversas categorias de parceiros especialistas que agregam a
-                proposta de valor de uma solução full commerce.
+              UX Partners e Aceleradora de Startups
               </h1>
               <p>Conheça as experiências reais dos nossos parceiros.</p>
               <button className="hover:font-semibold transition">fale com um consultor</button>

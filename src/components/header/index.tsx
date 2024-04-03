@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
 
 export default function Header() {
@@ -67,7 +68,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/"
-                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                    className="flex md:hover:border-b md:border-b hover:transition-all  items-center cursor-pointer justify-between w-20 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
                     Home
@@ -79,19 +80,22 @@ export default function Header() {
                     onClick={handleOpenClickGestao}
                     id="mega-menu-full-cta-image-button"
                     data-collapse-toggle="mega-menu-full-image-dropdown"
-                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                    className="flex hover:transition-all  items-center hover:font-normal cursor-pointer justify-between  bg-transparent font-normal py-2 w-20  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
                     Gestão
+                    <MdKeyboardArrowDown className={`${openMenuGestao === true ? "rotate-180 transition ease-in-out" : ""} text-xl`} />
                   </Link>
                 </li>
-                <li>
+                <li>  
                   <Link
                     href={""}
                     onClick={handleOpenClickLog}
-                    className="flex md:hover:border-b md:border-b hover:transition-all hover:border-b-white items-center cursor-pointer justify-between w-full bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                    className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                     aria-current="page"
                   >
                     Logística
+                    
+                    <MdKeyboardArrowDown className={`${openMenuLog === true ? "rotate-180 transition ease-in-out" : ""} text-xl`} />
                   </Link>
                 </li>
               </ul>

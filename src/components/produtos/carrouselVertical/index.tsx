@@ -9,10 +9,12 @@ interface Content {
 
 interface ContentSection {
   content: Content[];
+  title: string;
+  subtitle: string;
 
 }
 
-function CarroselImages({ content }: ContentSection) {
+function CarroselImages({ content, title, subtitle }: ContentSection) {
   const [contentIndex, setContentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const handleButtonClick = (index: number) => {
@@ -29,17 +31,16 @@ function CarroselImages({ content }: ContentSection) {
                 isTransitioning ? "opacity-0" : "opacity-100"
               } ${style.containerTitulo}`}
             >
-              <h1>Inove, Controle e Venda Mais</h1>
+              <h1>{title}</h1>
               <p>
-                Adapte-se às mudanças do mercado com facilidade. Nossas soluções
-                de tecnologia modulares oferecem flexibilidade, informação e
-                eficiência para a gestão de fretes, gestão de transportes e
-                comunicação das suas vendas digitais. Conheça nossas soluções!
+                {subtitle}
               </p>
             </div>
             <div
               style={{
                 backgroundImage: `url(${content[contentIndex].image})`,
+                backgroundSize:'cover',
+                transition:'0.3s ease-in-out',
               }}
               className={`bg-no-repeat bg-center bg-cover ${style.containerCarrouselVertical}`}
             >
