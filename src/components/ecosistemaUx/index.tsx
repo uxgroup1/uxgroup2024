@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.scss";
-import ecoImage from "../../assets/home/ecossistema.png"
+import ecoImage from "../../assets/home/ecossistema.png";
 
 interface Content {
   title: string;
@@ -17,25 +17,32 @@ function EcoSistemaUx() {
             <div className={style.Controller}>
               <div className={style.ContentText}>
                 <div>
-                  <h1>Ecossistema UX</h1>
+                  <h1>Ecossistema UX.</h1>
                 </div>
                 <p>
-                  Inovamos e entregamos ao mercado soluções para uma gestão
-                  completa da venda digital. Através de Tecnologia, Logística e
-                  Sustentabilidade automatizamos os processos, otimizamos a sua
-                  operação e geramos valor para o seu cliente.
+                  Nosso propósito é apoiar a evolução do mercado de e-commerce
+                  através de tecnologias inovadoras e imprescindíveis para o
+                  gestor de operações digitais.
                 </p>
                 <p>
-                  Fazemos estratégias personalizadas e adaptadas ao tamanho do
-                  seu negócio com foco em impulsionar os resultados e reduzir os
-                  custos.
+                  Acreditamos que a experiência do cliente é fundamental para o
+                  sucesso no mundo online e que há uma etapa do processo capaz
+                  de diferenciar um negócio: a logística.
                 </p>
-                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md" >saiba mais</button>
+                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                  saiba mais
+                </button>
               </div>
             </div>
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
-                <Image className="w-[100%] " src={ecoImage} width={100} height={100} alt="Ecosistema Sustentavel UX"/>
+                <Image
+                  className="w-[100%] "
+                  src={ecoImage}
+                  width={100}
+                  height={100}
+                  alt="Ecosistema Sustentavel UX"
+                />
               </div>
             </div>
           </div>

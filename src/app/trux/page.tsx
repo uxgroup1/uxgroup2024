@@ -101,14 +101,14 @@ export default function Trux() {
           corButtonOne="#009881"
           corButtonThree="#046C5C"
           logo={truxLogo}
-          title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
+          title="Transforme a sua gestão de transportes com o TMS: eficiência, controle, redução de custos e crescimento para sua empresa."
           banner={banner.src}
-          text="Alcance novos patamares de eficiência e controle na gestão de transportadores. Com o nosso TMS transportador você não apenas organiza, gerencia e monitora cada etapa do transporte e motoristas, mas também otimiza rotas, reduz custos e aumenta a precisão das entregas."
+          text="Tenha visão completa da sua operação em tempo real e tome decisões inteligentes baseada em dados sobre a sua operação de transportes."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
-          title=""
-          text=""
+          title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
+          text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."
           banner=""
           corButtonOne="#28265b"
           corButtonThree="#1F1D47"

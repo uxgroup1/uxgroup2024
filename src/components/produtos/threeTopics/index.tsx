@@ -41,7 +41,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       className="hover:animate-pulse"
                     />
 
-                    <h3 className="mt-4 md:w-4/5 w-full text-black text- text-center font-semibold">
+                    <h3 className="mt-4 md:w-4/5 w-full text-black text- text-center font-medium">
                       {item.title}
                     </h3>
 

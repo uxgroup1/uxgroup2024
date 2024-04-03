@@ -61,8 +61,8 @@ export default function ProductInstitutional({
               alt="ESG"
             />
 
-            <div className="flex lg:pl-24 w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-black ">{title}</h1>
+            <div className="flex w-full lg:pl-24 lg:w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
+              <h1 className="text-black w-[90%] ">{title}</h1>
 
               <p className="w-4/5 text-black">{text}</p>
               <div className="flex lg:flex-row flex-col items-center gap-5">

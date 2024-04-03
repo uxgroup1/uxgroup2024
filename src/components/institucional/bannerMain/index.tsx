@@ -7,30 +7,27 @@ import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";
 
 export default function BannerMain() {
-
-  
-
   const [contentIndex, setContentIndex] = useState(0);
 
   const contentBanners = [
     {
-      title: "Institucional",
+      title: "Somos UX.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       background: institucionalImage.src,
     },
     {
-      title: "Gestão",
+      title: "Somos tecnologia para gestão.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       background: gestaoImage.src,
     },
 
     {
-      title: "Logística",
+      title: "Somos tecnologia para logística.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       background: logImage.src,
     },
     {
-      title: "Sustentabilidade",
+      title: "Somos tecnologia para sustentabilidade.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       background: esgImage.src,
     },
@@ -61,7 +58,8 @@ export default function BannerMain() {
             <div className="flex flex-col-reverse md:flex-row-reverse  text-white md:text-4xl text-xl items-center w-full md:h-4/5 h-full">
               <div className="md:w-1/2 w-full h-2/5 md:h-full flex items-center md:justify-start md:pl-20  justify-center text-center md:text-start">
                 <h1
-                  className={`font-bold md:pt-36 w-full flex md:h-full justify-center md:items-start items-center flex-col md:text-5xl text-center md:text-left  text-white transition-transform ${
+                  style={{lineHeight:"120%"}}
+                  className={`font-bold md:pt-36 lg:w-[65%] w-full flex md:h-full justify-center md:items-start items-center flex-col md:text-5xl text-center md:text-left  text-white transition-transform ${
                     contentIndex === 0
                       ? "animated-state-one"
                       : contentIndex === 1

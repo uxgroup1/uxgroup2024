@@ -23,7 +23,7 @@ function UxMidia({content, colorText}: ContentCard) {
         <div className={style.Container}>
           <div className={style.BoxUxMidia}>
             <div className={style.Content}>
-              <h1>UX na mídia</h1>
+              <h1>UX na mídia.</h1>
             </div>
           </div>
         </div>

@@ -218,8 +218,8 @@ export default function Consultoria() {
       <JumboTron
         linkButtonOne="#"
         linkButtonTwo="#"
-        textButtonOne="saiba mais"
-        textButtonTwo="entrar em contato"
+        textButtonOne="falar com especialisat"
+        textButtonTwo="saiba mais"
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
         logo={""}

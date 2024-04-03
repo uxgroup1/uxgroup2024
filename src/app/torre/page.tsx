@@ -79,7 +79,7 @@ export default function Torre() {
         logo={torreLogo}
         banner=""
         title="We invest in the world’s potential"
-        text="Oferecemos soluções integradas e inovadoras para otimizar toda a cadeia logística da sua empresa. Combinamos tecnologia de ponta com expertise em logística para garantir que suas operações de transporte sejam eficientes, econômicas e ecologicamente sustentáveis."
+        text="Tecnologia de ponta e um time com expertise em logística que garantem performance na operação de transportes."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"

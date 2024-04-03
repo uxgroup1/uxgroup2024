@@ -82,16 +82,25 @@ export default function Ondetah() {
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         logo={ondetahLogo}
-        title="We invest in the world’s potential"
+        title="Aplique eficiência, controle e sustentabilidade à sua operação através de tecnologia."
         banner={imageOndetah.src}
-        text="Oferecemos uma experiência de rastreamento única, focada na experiência do cliente e na sustentabilidade. São diversas possibilidades de integração com tecnologias ERP, TMS Embarcador, TMS Transportador e uma estrutura única de SAC que facilitam a gestão do pedido. É mais do que apenas informação: é conexão, satisfação e tecnologia avançada."
+        text="Gerenciamento simplificado de prazos e ocorrências, informação em tempo real e compensação de carbono que garantem a experiência do cliente."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-      <ProductInstitutional title="" text="" banner=""  corButtonOne="#28265b"
-          corButtonThree="#1F1D47" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo=""/>
+      <ProductInstitutional
+        title="Produtividade e sustentabilidade um um único lugar."
+        text="Uma solução tecnológica inovadora de rastreamento que permite ao gestor das vendas digitais e de transportes o acompanhamento em tempo real de todas as etapas do processo, podendo atuar de forma inteligente com base em dados e assim,  reduzir custos, melhorar a performance e a satisfação do cliente."
+        banner=""
+        corButtonOne="#28265b"
+        corButtonThree="#1F1D47"
+        linkButtonOne=""
+        linkButtonTwo=""
+        textButtonOne=""
+        textButtonTwo=""
+      />
       <ThreeTopics
         content={contentTopics}
-        title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio"
+        title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio."
         text=""
       />
       {/* <CarroselVertical

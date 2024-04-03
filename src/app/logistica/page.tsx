@@ -11,24 +11,25 @@ const SecondSection = dynamic(
   () => import("@/components/produtos/SecondSection")
 );
 
-const CarroselImages = dynamic(
-  () => import("@/components/produtos/carrouselVertical")
-);
-const CarroselImageMobile = dynamic(
-  () => import("@/components/produtos/carrouselVertical/mobile")
-);
 const Cta = dynamic(() => import("@/components/cta"));
-import FeaturesComponent from "@/components/produtos/features";
-import arrowImage from "@/assets/logistica/arrow/arrowListComponentes.svg";
-import itapeviImage from "@/assets/logistica/cdsImages/itapevi.jpg";
-import barueriImage from "@/assets/logistica/cdsImages/barueri.jpg";
-import itajaiImage from "@/assets/logistica/cdsImages/itajai.jpg";
+import itapeviImage from "@/assets/logistica/cdsImages/itapevi.png";
+import barueriImage from "@/assets/logistica/cdsImages/barueri.png";
+import itajaiImage from "@/assets/logistica/cdsImages/itajai.png";
 import anvisaImage from "@/assets/logistica/anvisa.png";
 import fulfillmet from "@/assets/logos/fulfillment.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
 import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
 import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
-import logoAmazon from "@/assets/logistica/logo-amzn.png"
+import logoAmazon from "@/assets/logistica/logo-amzn.png";
+import wmsImage from "@/assets/logistica/wms.png";
+import ThreeTopics from "@/components/produtos/threeTopics";
+import imageOne from "@/assets/logistica/one.svg";
+import imageTwo from "@/assets/logistica/two.svg";
+import imageThree from "@/assets/logistica/three.svg";
+import imageFour from "@/assets/logistica/four.svg";
+import banner from "@/assets/logistica/ffBanner.png";
+import logoAnvisa from "@/assets/logistica/anvisa-logo.png"
+import bannerInstitucional from "@/assets/logistica/img-ff.png"
 
 const content = [
   {
@@ -57,28 +58,28 @@ const content = [
   },
 ];
 
-const contentFeatures = [
+const contentTopics = [
   {
-    title: "Experiência comprovada em fulfillment e logística integrada.",
-    icons: arrowImage,
+    icon: imageOne,
+    title: `Experiência comprovada em fulfillment e logística integrada.`,
+    text: "",
   },
   {
+    icon: imageTwo,
     title:
-      "Personalização de serviços para atender às necessidades exclusivas do seu negócio.",
-    icons: arrowImage,
+      "Personalização de serviços para atender às necessidades do seu negócio.",
+    text: "",
   },
   {
+    icon: imageThree,
     title: "Implementação de WMS para uma gestão eficiente do estoque.",
-    icons: arrowImage,
+    text: "",
   },
   {
-    title: "Rede de distribuição abrangente com três CDs próprios.",
-    icons: arrowImage,
-  },
-  {
+    icon: imageFour,
     title:
       "Equipe dedicada e suporte personalizado para garantir a satisfação do cliente.",
-    icons: arrowImage,
+    text: "",
   },
 ];
 
@@ -94,13 +95,13 @@ export default function Logistica() {
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         logo={fulfillmet}
-        title="Fulfillment inteligente que garante performance e impulsionam suas vendas"
+        title="Fulfillment inteligente que garante performance e impulsionam suas vendas."
         text="Aumente suas vendas, reduza prazo de entrega e custos de frete e fidelize seus clientes com nossa solução de fulfillment escalável e personalizada."
-        banner=""
+        banner={banner.src}
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
-        title="Controle, Armazenagem e Entrega Eficientes"
+        title="Controle, Armazenagem e Entrega Eficientes."
         text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
         banner=""
         corButtonOne="#FBC709"
@@ -110,49 +111,50 @@ export default function Logistica() {
         textButtonOne="saiba mais"
         textButtonTwo="falar com consultor"
       />
+      <ThreeTopics
+        title="Benefícios de escolher a UX."
+        text=""
+        content={contentTopics}
+      />
       <SecondSection
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         flowReverse={false}
-        title="Fulfillment Personalizado"
+        title="Fulfillment Personalizado."
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
-        image="."
+        image={bannerInstitucional.src}
+      />
+      <Cta
+        button={false}
+        title={"Certificação ANVISA."}
+        text={
+          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
+        }
+        logo={logoAnvisa.src}
+        banner={anvisaImage.src}
       />
       <SecondSection
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         flowReverse={true}
-        image="."
-        title="Implementação de WMS"
+        image={wmsImage.src}
+        title="Implementação de WMS."
         text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
       />
       <CarroselVertical
-        title="Infraestrutura de Armazenamento"
+        title="Infraestrutura de Armazenamento."
         text="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
         content={content}
       />
       <CarroselVerticalMobile
-        title="Infraestrutura de Armazenamento"
+        title="Infraestrutura de Armazenamento."
         sub="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
         content={content}
       />
+
       <Cta
         button={false}
-        title={"Certificação ANVISA"}
-        text={
-          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
-        }
-        banner={anvisaImage.src}
-      />
-      <FeaturesComponent
-        rowReverse
-        titleSection="Benefícios de escolher a UX"
-        content={contentFeatures}
-        banner="https://uxgroup.com.br/_next/static/media/Desktop-sessao-fluxo-PLANEJAMENTO.f88261ee.png"
-      />
-      <Cta
-        button={false}
-        title={"CD homologado Amazon"}
+        title={"CD homologado Amazon."}
         text={
           "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
         }

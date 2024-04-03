@@ -30,7 +30,6 @@ const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm/index")
 );
 const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx/index"));
-import { Cases } from "@/components/institucional/cases/index";
 import dynamic from "next/dynamic";
 import ImageUxMidiaOne from "@/assets/home/UX-na-midia/logistica.png";
 import ImageUxMidiaTwo from "@/assets/home/UX-na-midia/tecnologia.png";
@@ -144,19 +143,19 @@ export default function Home() {
       <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
-        title="Tecnologia para gestão da logística"
+        title="Tecnologia para gestão da logística."
         text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
         content={content}
       />
       <CarroselVerticalMobile
-        title="Tecnologia para gestão da logística"
+        title="Tecnologia para gestão da logística."
         sub="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
         content={content}
       />
       <Cta
         button={true}
         title={
-          "Eficiência, Sustentabilidade e Informação: Descubra o futuro da logística com a UX"
+          "Eficiência, Sustentabilidade e Informação: Descubra o futuro da logística com a UX."
         }
         banner={ctaOne.src}
       />
@@ -165,7 +164,7 @@ export default function Home() {
       <Cta
         button={true}
         title={
-          "Descubra  como podemos transformar sua operação, reduzir custos e impulsionar seus resultados"
+          "Descubra  como podemos transformar sua operação, reduzir custos e impulsionar seus resultados."
         }
         banner={ctaTwo.src}
       />

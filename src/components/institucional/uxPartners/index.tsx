@@ -9,7 +9,7 @@ function UxPartners() {
             <div className={style.UX_partners}>UX Partners</div>
             <div className={style.Content}>
               <h1>
-              UX Partners e Aceleradora de Startups
+              UX Partners e Aceleradora de Startups.
               </h1>
               <p>Conheça as experiências reais dos nossos parceiros.</p>
               <button className="hover:font-semibold transition">fale com um consultor</button>

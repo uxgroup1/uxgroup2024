@@ -105,46 +105,49 @@ export default function Pudos() {
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           logo={pudoLogo}
-          title="We invest in the world’s potential"
-          text="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
+          title="Otimize tempo e custos do processo de entrega."
+          text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
           banner=""
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
-          title=""
-          text=""
+          title="Entregas mais simples e convenientes.          "
+          text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
           banner=""
-          corButtonOne="#28265b"
-          corButtonThree="#1F1D47"
+          corButtonOne="#ff7f12"
+          corButtonThree="#CA620A"
           linkButtonOne=""
           linkButtonTwo=""
           textButtonOne=""
           textButtonTwo=""
         />
-        <SecondSection
+
+        {/* <SecondSection
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           flowReverse={false}
           title="Lorem"
           text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."
           image={svg}
-        />
+        /> */}
         <CarroselVertical
           title="Para Marketplaces"
           text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
           content={content}
+        />
+        <FeaturesComponent
+          rowReverse={false}
+          titleSection="Benefícios de escolher o PUDO da UX"
+          content={contentFeatures}
+          banner={svg}
+
         />
         <ThreeTopics
           content={contentTopics}
           title="Para Proprietários de Lojas Físicas"
           text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
         />
-        <FeaturesComponent
-          rowReverse={true}
-          titleSection="Benefícios de escolher o PUDO da UX"
-          content={contentFeatures}
-          banner={svg}
-        />
+
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm />
         <Footer />

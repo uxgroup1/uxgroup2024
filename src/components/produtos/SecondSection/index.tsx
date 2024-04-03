@@ -79,7 +79,7 @@ function SecondSection({
               >
                 <Image
                   className="md:w-[87%] w-[97%] object-cover h-full"
-                  src={imageteste}
+                  src={image}
                   alt="Imagem"
                   width={100}
                   height={100}

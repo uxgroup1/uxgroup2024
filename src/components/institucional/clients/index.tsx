@@ -15,21 +15,27 @@ import logoDafiti from "@/assets/home/imageClients/dafiti-8.png";
 import logoCurta from "@/assets/home/imageClients/curta-8.png";
 import logoCarrefour from "@/assets/home/imageClients/Carrefour-8.png";
 import logoCargo from "@/assets/home/imageClients/cargo-8.png";
+import logoHer from "@/assets/home/imageClients/ah-8.png";
+import logoGinger from "@/assets/home/imageClients/ginger-8.png";
+import logoDuty from "@/assets/home/imageClients/duty-8.png";
 
 const images = [
   logoWhirpol,
   logoVia,
-  logoVested,
-  logoShopee,
-  logoSalon,
   logoPetlove,
-  logoMulti,
-  logoLemon,
-  logoKabum,
-  logoDorel,
-  logoDafiti,
-  logoCurta,
+  logoShopee,
   logoCarrefour,
+  logoDafiti,
+  logoKabum,
+  logoHer,
+  logoSalon,
+  logoCurta,
+  logoVested,
+  logoLemon,
+  logoGinger,
+  logoDuty,
+  logoMulti,
+  logoDorel,
   logoCargo,
 ];
 
@@ -45,9 +51,8 @@ export default function ClientsCases() {
                 experience.
               </h1>
               <p className="text-black w-full lg:w-4/5">
-                Ou seja, uma expêriencia única, pensada no cliente final, com
-                soluções integradas entre tecnologia e operções que geram valor
-                ao negócio.
+                Ou seja, uma experiência única, pensada no cliente final, com
+                soluções personalizadas, que conectam tecnologias e operações.
               </p>
             </div>
           </div>
