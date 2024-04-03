@@ -28,8 +28,10 @@ import imageTwo from "@/assets/logistica/two.svg";
 import imageThree from "@/assets/logistica/three.svg";
 import imageFour from "@/assets/logistica/four.svg";
 import banner from "@/assets/logistica/ffBanner.png";
-import logoAnvisa from "@/assets/logistica/anvisa-logo.png"
-import bannerInstitucional from "@/assets/logistica/img-ff.png"
+import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
+import bannerInstitucional from "@/assets/logistica/img-ff.png";
+import FeaturesComponent from "@/components/produtos/features";
+import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
 
 const content = [
   {
@@ -55,6 +57,21 @@ const content = [
     contentText:
       "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
     banner: itajaiImage.src,
+  },
+];
+
+const contentFeaturesOne = [
+  {
+    title: "Redução de custos operacionais.",
+    icons: arrow,
+  },
+  {
+    title: "Aumento da eficiência e produtividade.",
+    icons: arrow,
+  },
+  {
+    title: "Maior visibilidade e controle dos processos.",
+    icons: arrow,
   },
 ];
 
@@ -116,13 +133,21 @@ export default function Logistica() {
         text=""
         content={contentTopics}
       />
-      <SecondSection
+      {/* <SecondSection
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         flowReverse={false}
         title="Fulfillment Personalizado."
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
         image={bannerInstitucional.src}
+      /> */}
+      <FeaturesComponent
+        banner={bannerInstitucional.src}
+        rowReverse={false}
+        content={contentFeaturesOne}
+        button
+        titleSection="Fulfillment Personalizado."
+        text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
       />
       <Cta
         button={false}
@@ -141,6 +166,15 @@ export default function Logistica() {
         title="Implementação de WMS."
         text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
       />
+      <Cta
+        button={false}
+        title={"CD homologado Amazon."}
+        text={
+          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
+        }
+        logo={logoAmazon.src}
+        banner={""}
+      />
       <CarroselVertical
         title="Infraestrutura de Armazenamento."
         text="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
@@ -152,15 +186,6 @@ export default function Logistica() {
         content={content}
       />
 
-      <Cta
-        button={false}
-        title={"CD homologado Amazon."}
-        text={
-          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
-        }
-        logo={logoAmazon.src}
-        banner={anvisaImage.src}
-      />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

@@ -92,7 +92,7 @@ export default function Ondetah() {
         text="Uma solução tecnológica inovadora de rastreamento que permite ao gestor das vendas digitais e de transportes o acompanhamento em tempo real de todas as etapas do processo, podendo atuar de forma inteligente com base em dados e assim,  reduzir custos, melhorar a performance e a satisfação do cliente."
         banner=""
         corButtonOne="#28265b"
-        corButtonThree="#1F1D47"
+        corButtonTwo="#009580"
         linkButtonOne=""
         linkButtonTwo=""
         textButtonOne=""

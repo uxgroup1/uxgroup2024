@@ -103,8 +103,9 @@ export default function Header() {
           </div>
           {openMenuLog && (
             <div
+              
               id="mega-menu-full-image-dropdown"
-              className="mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white "
+              className={`mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
             >
               <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
                 <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
@@ -172,7 +173,7 @@ export default function Header() {
           {openMenuGestao && (
             <div
               id="mega-menu-full-image-dropdown"
-              className="mt-1 bg-black w-full absolute pt-5 pb-10 top-[90%] md:top-16 left-0 border-t-white "
+              className="mt-1 bg-black w-full absolute pt-5 pb-10 top-[90%] md:top-16 left-0 border-t-white transform animated-state-header "
             >
               <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
                 <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">

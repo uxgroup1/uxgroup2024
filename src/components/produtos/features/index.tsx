@@ -1,6 +1,7 @@
 import Image from "next/image";
 import svg from "../../../assets/faviconBanner/ux-log.svg";
 import { text } from "stream/consumers";
+import Link from "next/link";
 
 interface Content {
   title: string;
@@ -13,6 +14,8 @@ interface ContentArray {
   titleSection: string;
   text?: string;
   rowReverse: boolean;
+  button?: boolean;
+  linkButton?: string;
 }
 
 export default function FeaturesComponent({
@@ -21,6 +24,8 @@ export default function FeaturesComponent({
   text,
   rowReverse,
   titleSection,
+  button,
+  linkButton
 }: ContentArray) {
   return (
     <>
@@ -65,6 +70,16 @@ export default function FeaturesComponent({
                     </div>
                   );
                 })}
+                {button && (
+                  <button
+                    className={`bg-[#FBC709] lg:mt-5 lg:w-[20%] h-10 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
+                  > 
+                      <Link href={`${linkButton}`}>
+                  saiba mais
+                  </Link>
+                    
+                  </button>
+                )}
               </div>
             </div>
             <div
