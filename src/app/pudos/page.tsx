@@ -23,6 +23,7 @@ import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
 import pudoLogo from "@/assets/logos/pudos.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
+import institucional from "@/assets/home/institucional/pudo-final.png"
 
 const contentFeatures = [
   {
@@ -113,7 +114,7 @@ export default function Pudos() {
         <ProductInstitutional
           title="Entregas mais simples e convenientes.          "
           text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
-          banner=""
+          banner={""}
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           linkButtonOne=""

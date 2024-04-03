@@ -31,6 +31,7 @@ import imageFour from "@/assets/fusion/c-final.png";
 import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
+import institucional from "@/assets/home/institucional/fusion-final.png"
 
 const contentFeatures = [
   {
@@ -232,7 +233,7 @@ export default function Fusion() {
       <ProductInstitutional
         title=""
         text=""
-        banner=""
+        banner={""}
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
         linkButtonOne=""

@@ -20,6 +20,7 @@ import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";
+import institucional from "@/assets/home/institucional/ondetah-final.png"
 
 const content = [
   {
@@ -90,7 +91,7 @@ export default function Ondetah() {
       <ProductInstitutional
         title="Produtividade e sustentabilidade um um único lugar."
         text="Uma solução tecnológica inovadora de rastreamento que permite ao gestor das vendas digitais e de transportes o acompanhamento em tempo real de todas as etapas do processo, podendo atuar de forma inteligente com base em dados e assim,  reduzir custos, melhorar a performance e a satisfação do cliente."
-        banner=""
+        banner={""}
         corButtonOne="#28265b"
         corButtonTwo="#009580"
         linkButtonOne=""
