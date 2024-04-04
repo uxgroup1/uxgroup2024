@@ -20,6 +20,34 @@ import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";
+import FeaturesComponent from "@/components/produtos/features";
+import arrowList from "@/assets/ondetah/arrow/arrowListComponentesPudo.svg";
+
+const contentFeatures = [
+  {
+    title: "Entrega Pontual: Garanta que seus produtos sejam entregues dentro do prazo previsto, aumente a satisfação do cliente e fortaleça a reputação da sua marca.",
+    icons: arrowList,
+  },
+  {
+    title:
+      "Redução de Custos: Evite atrasos e custos adicionais associados a entregas fora do prazo ou reenvios de produtos devido a problemas não resolvidos. ",
+    icons: arrowList,
+  },
+  {
+    title: "Maior Confiança do Cliente: Lide de forma rápida com as ocorrências e forneça atualizações transparentes sobre o status dos pedidos. Crie conexão com o seu cliente com comprometimento com a qualidade e o serviço.    ",
+    icons: arrowList,
+  },
+  {
+    title:
+      "Melhoria da Experiência do Cliente: Tenha uma abordagem proativa para lidar com ocorrências e resolva os problemas antes que afetem negativamente a experiência do cliente.",
+    icons: arrowList,
+  },
+  {
+    title:
+      "Feedback Valioso: Acompanhe de perto os feedback dos clientes, assim você consegue identificar áreas de melhoria e implementar mudanças para otimizar ainda mais seus processos.",
+    icons: arrowList,
+  },
+];
 
 const content = [
   {
@@ -28,6 +56,7 @@ const content = [
     contentTitle: "Informação em Tempo Real",
     contentText:
       "Acompanhe cada etapa do pedido em tempo real. Desde a confirmação até a entrega, atualizações regulares, incluindo notificações em caso de eventos inesperados.",
+    banner: "",
   },
   {
     index: 1,
@@ -35,6 +64,8 @@ const content = [
     contentTitle: "Redução de Contatos no SAC",
     contentText:
       "Utilize nosso SAC 4.0 com um chatbot disponível 24 horas por dia. Reduza o tempo de espera e resolva questões rapidamente através de aplicativos de mensagens, garantindo uma experiência mais positiva para o cliente e reduzindo custos.",
+
+    banner: "",
   },
   {
     index: 2,
@@ -42,6 +73,8 @@ const content = [
     contentTitle: "Entrega Sustentável",
     contentText:
       "Deixe suas entregas mais ecológicas através da compensação de carbono. Utilizamos tecnologia para calcular e neutralizar as emissões de carbono associadas aos seus pedidos, e fornecemos certificados de compensação para cada compra.",
+
+    banner: "",
   },
   {
     index: 3,
@@ -49,6 +82,8 @@ const content = [
     contentTitle: "Pesquisas de Satisfação Personalizadas",
     contentText:
       "Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.",
+
+    banner: "",
   },
 ];
 
@@ -95,35 +130,26 @@ export default function Ondetah() {
         corButtonTwo="#009580"
         linkButtonOne=""
         linkButtonTwo=""
-        textButtonOne=""
-        textButtonTwo=""
+        textButtonOne="saiba mais"
+        textButtonTwo="agendar reunião"
       />
       <ThreeTopics
         content={contentTopics}
         title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio."
         text=""
       />
-      {/* <CarroselVertical
+      <CarroselVertical
         content={content}
         title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
         text=""
-      /> */}
-
-      <SecondSection
-        corButtonOne="#29265B"
-        corButtonTwo="#009580"
-        title="Acompanhe em tempo real todas as etapas do pedido."
-        text="A cada etapa realizada, o cliente é informado sobre o status da sua compra. Desde a confirmação de pagamento até a entrega, com pushes ao longo do processo até mesmo em caso de ocorrência. Tecnologias integradas que possibilitam assertividade e agilidade da informação para o cliente."
-        image=""
-        flowReverse={false}
       />
       <SecondSection
         corButtonOne="#29265B"
         corButtonTwo="#009580"
-        title="Reduza o contato no SAC com atendimento facilitado com chatbot disponível 24h."
-        text="Através de aplicativos de mensagens, conseguimos auxiliar o cliente de forma mais ágil, tornando a relação da marca com o cliente mais positiva. Essa comunicação facilitada com contato 100% digital para atendimento, acompanhamento e solicitação de serviços reflete em uma redução de contato no SAC."
+        title="Gestão de Prazos e Ocorrências."
+        text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente. Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
         image=""
-        flowReverse={true}
+        flowReverse={false}
       />
       <Cta
         banner={
@@ -132,22 +158,13 @@ export default function Ondetah() {
         button
         title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "
       />
-      <SecondSection
-        corButtonOne="#29265B"
-        corButtonTwo="#009580"
-        title="Gere valor a sua marca através da compensação de carbono com baixo investimento."
-        text="Entregas verdes usando tecnologia na operação. A Ondetah possibilita a neutralização através do cálculo do carbono emitido pelo pedido pré ou pós venda. Dessa forma, você cria uma conexão direta com o cliente, entregando ao final da compra um certificado nominal com as informações sobre a compensação de carbono do pedido."
-        image=""
-        flowReverse={false}
-      />
-      <SecondSection
-        corButtonOne="#29265B"
-        corButtonTwo="#009580"
-        title="Fidelize clientes através das informações obtidas no seu pós-venda."
-        text="Com intuito de tornar o atendimento cada vez mais próximo e facilitar a interação com o cliente, a pesquisa de satisfação é personalizada de acordo com o que deseja medir sobre o seu processo de entrega. Além de demonstrar a sua preocupação com o cliente, permite que você reverta possíveis insatisfações e garanta uma experiência mais positiva."
-        image=""
-        flowReverse={true}
-      />
+      <FeaturesComponent
+          rowReverse={false}
+          titleSection="Confira os benefícios da nossa solução para uma gestão de prazos e ocorrências:"
+          content={contentFeatures}
+          banner={""}
+        />
+
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

@@ -289,6 +289,7 @@ export default function Consultoria() {
         rowReverse={true}
       />
       <Numbers
+        cor="#000"
         title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
         number={number}
         banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"

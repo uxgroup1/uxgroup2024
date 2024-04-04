@@ -58,7 +58,7 @@ export default function FeaturesComponent({
                 {titleSection}
               </h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
-              <div className="md:flex w-full flex-col gap-1 md:items-start">
+              <div className="md:flex w-full flex-col gap-4 md:items-start">
                 {content?.map((item, index) => {
                   return (
                     <div
