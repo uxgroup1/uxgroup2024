@@ -47,8 +47,8 @@ export default function FeaturesComponent({
               {" "}
               {imageSobTitle && (
                 <Image
-                  className="w-[8%] pb-5"
-                  src={svg}
+                  className="w-[45%] lg:w-[35%] pb-5"
+                  src={imageSobTitle}
                   alt=""
                   width={100}
                   height={100}

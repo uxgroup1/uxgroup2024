@@ -31,7 +31,8 @@ import imageFour from "@/assets/fusion/c-final.png";
 import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
-import institucional from "@/assets/home/institucional/fusion-final.png";
+import iconeEnvios from "@/assets/fusion/fusion-envios.svg";
+
 
 const contentFeatures = [
   {
@@ -196,20 +197,20 @@ const contentFeaturesSix = [
 
 const number = [
   {
-    number: "100+",
-    text: "hubs",
+    number: "+700",
+    text: "Transportadores conectados.",
   },
   {
-    number: "+50%",
-    text: "hubs",
+    number: "+14",
+    text: "HUBs conectados.",
   },
   {
-    number: "10+",
-    text: "hubs",
+    number: "+12",
+    text: "Marketplaces conectados.",
   },
   {
-    number: "10+",
-    text: "hubs",
+    number: "+12",
+    text: "ERPs conectados.",
   },
 ];
 
@@ -241,13 +242,19 @@ export default function Fusion() {
         textButtonOne="e-commerce"
         textButtonTwo="marketplace"
       />
+      <Numbers
+        title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
+        number={number}
+        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+        text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
+      />
       <FeaturesComponent
         titleSection="Ofereça as melhores opções de frete"
         text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
         banner={imageOne.src}
         content={contentFeaturesTwo}
         rowReverse={false}
-        imageSobTitle="jk"
+
       />
       <FeaturesComponent
         titleSection="Reduza os contatos no SAC com Rastreamento"
@@ -255,7 +262,7 @@ export default function Fusion() {
         banner={imageTwo.src}
         content={contentFeatures}
         rowReverse={true}
-        imageSobTitle="jk"
+
       />
       <FeaturesComponent
         titleSection="Agilize a entrega com automatização na Expedição"
@@ -263,7 +270,7 @@ export default function Fusion() {
         banner={imageThree.src}
         content={contentFeaturesThree}
         rowReverse={false}
-        imageSobTitle="jk"
+
       />
       <FeaturesComponent
         titleSection="Pague somente o acordado com os transportadores"
@@ -271,7 +278,7 @@ export default function Fusion() {
         banner={imageFour.src}
         content={contentFeaturesFour}
         rowReverse={true}
-        imageSobTitle="jk"
+
       />
 
       <Cta
@@ -283,12 +290,12 @@ export default function Fusion() {
       />
 
       <FeaturesComponent
-        titleSection="Fusion Envios          "
+        titleSection=""
         text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
         banner={imageFive.src}
         content={contentFeaturesFive}
         rowReverse={false}
-        imageSobTitle="jk"
+        imageSobTitle={iconeEnvios}
       />
       <FeaturesComponent
         titleSection="Expanda suas opções de frete          "
@@ -296,14 +303,8 @@ export default function Fusion() {
         banner={imageSix.src}
         content={contentFeaturesSix}
         rowReverse={true}
-        imageSobTitle="jk"
       />
-      <Numbers
-        title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
-        number={number}
-        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-        text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
-      />
+
       <Integrations />
 
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>

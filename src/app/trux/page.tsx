@@ -14,13 +14,13 @@ const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import banner from "@/assets/trux/tms-transp.png";
-import Cta from "@/components/cta";
 const ProductInstitutional = dynamic(
   () => import("@/components/produtos/institucional")
 );
-import imageGestao from "@/assets/trux/gestao-financeira.png"
-import imageRoteirizacao from "@/assets/trux/roteirizacao-de-entrega.png"
-import imageTrux from "@/assets/trux/trux.png"
+import imageGestao from "@/assets/trux/gestao-financeira.png";
+import imageRoteirizacao from "@/assets/trux/roteirizacao-de-entrega.png";
+import imageTrux from "@/assets/trux/trux.png";
+import Numbers from "@/components/produtos/numbers";
 
 const contentFeatures = [
   {
@@ -90,6 +90,24 @@ const contentFeaturesFour = [
     icons: arrowImage,
   },
 ];
+const number = [
+  {
+    number: "100+",
+    text: "hubs",
+  },
+  {
+    number: "+50%",
+    text: "hubs",
+  },
+  {
+    number: "10+",
+    text: "hubs",
+  },
+  {
+    number: "10+",
+    text: "hubs",
+  },
+];
 
 export default function Trux() {
   return (
@@ -119,6 +137,12 @@ export default function Trux() {
           linkButtonTwo=""
           textButtonOne="saiba mais"
           textButtonTwo="agende uma demo"
+        />
+        <Numbers
+          title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
+          number={number}
+          banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+          text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
         />
         <FeaturesComponent
           titleSection="Roteirização de entrega"

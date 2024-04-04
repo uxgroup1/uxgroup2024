@@ -26,7 +26,7 @@ export default function Numbers({
         <div className="flex justify-center items-center flex-col gap-2 w-full">
           <h1 className="text-black text-center">{title}</h1>
           {subtitle && (
-            <h2 className="text-black font-semibold w-full lg:w-4/5">
+            <h2 className="text-black text-center font-semibold w-full lg:w-4/5">
               {subtitle}
             </h2>
           )}
@@ -45,7 +45,7 @@ export default function Numbers({
                 key={index}
               >
                 <h1 className={`text-[#28265b] text-7xl`}>{item.number}</h1>
-                <p className="font-bold">{item.text}</p>
+                <p className="font-bold text-center">{item.text}</p>
               </div>
             );
           })}
