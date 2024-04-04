@@ -1,6 +1,5 @@
 import Image from "next/image";
 import svg from "../../../assets/faviconBanner/ux-log.svg";
-import { text } from "stream/consumers";
 import Link from "next/link";
 
 interface Content {
@@ -16,6 +15,7 @@ interface ContentArray {
   rowReverse: boolean;
   button?: boolean;
   linkButton?: string;
+  imageSobTitle?: string;
 }
 
 export default function FeaturesComponent({
@@ -25,7 +25,8 @@ export default function FeaturesComponent({
   rowReverse,
   titleSection,
   button,
-  linkButton
+  linkButton,
+  imageSobTitle,
 }: ContentArray) {
   return (
     <>
@@ -43,11 +44,20 @@ export default function FeaturesComponent({
                 rowReverse === true ? "md:w-[50%]" : ""
               }  `}
             >
+              {" "}
+              {imageSobTitle && (
+                <Image
+                  className="w-[8%] pb-5"
+                  src={svg}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+              )}
               <h1 className="w-[90%] font-bold pb-4 text-black">
                 {titleSection}
               </h1>
               {text && <p className="pb-7 md:w-4/5 text-black">{text}</p>}
-
               <div className="md:flex w-full flex-col gap-1 md:items-start">
                 {content?.map((item, index) => {
                   return (
@@ -73,11 +83,8 @@ export default function FeaturesComponent({
                 {button && (
                   <button
                     className={`bg-[#FBC709] lg:mt-5 lg:w-[20%] h-10 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
-                  > 
-                      <Link href={`${linkButton}`}>
-                  saiba mais
-                  </Link>
-                    
+                  >
+                    <Link href={`${linkButton}`}>saiba mais</Link>
                   </button>
                 )}
               </div>

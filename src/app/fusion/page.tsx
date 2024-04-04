@@ -31,7 +31,7 @@ import imageFour from "@/assets/fusion/c-final.png";
 import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
-import institucional from "@/assets/home/institucional/fusion-final.png"
+import institucional from "@/assets/home/institucional/fusion-final.png";
 
 const contentFeatures = [
   {
@@ -231,15 +231,15 @@ export default function Fusion() {
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
-        title=""
-        text=""
-        banner={""}
+        title="Tecnologia de Fretes Inovadora: Otimização, Economia e Escalabilidade"
+        text="Uma tecnologia modular desde o cálculo de frete à conciliação, nossa solução para gestão de fretes garante ao gestor das vendas digitais, a melhora de performance, redução de custos, resolvendo os desafios de cada uma das etapas da cadeia de entrega seja no mundo do e-commerce ou do marketplace.        "
+        banner={banner.src}
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
         linkButtonOne=""
         linkButtonTwo=""
-        textButtonOne=""
-        textButtonTwo=""
+        textButtonOne="e-commerce"
+        textButtonTwo="marketplace"
       />
       <FeaturesComponent
         titleSection="Ofereça as melhores opções de frete"
@@ -247,6 +247,7 @@ export default function Fusion() {
         banner={imageOne.src}
         content={contentFeaturesTwo}
         rowReverse={false}
+        imageSobTitle="jk"
       />
       <FeaturesComponent
         titleSection="Reduza os contatos no SAC com Rastreamento"
@@ -254,6 +255,7 @@ export default function Fusion() {
         banner={imageTwo.src}
         content={contentFeatures}
         rowReverse={true}
+        imageSobTitle="jk"
       />
       <FeaturesComponent
         titleSection="Agilize a entrega com automatização na Expedição"
@@ -261,6 +263,7 @@ export default function Fusion() {
         banner={imageThree.src}
         content={contentFeaturesThree}
         rowReverse={false}
+        imageSobTitle="jk"
       />
       <FeaturesComponent
         titleSection="Pague somente o acordado com os transportadores"
@@ -268,20 +271,24 @@ export default function Fusion() {
         banner={imageFour.src}
         content={contentFeaturesFour}
         rowReverse={true}
+        imageSobTitle="jk"
       />
+
       <Cta
-        button
+        title={
+          "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"
+        }
         banner={""}
-        title={"Lorem"}
-        text={"lorem ispum njkb"}
-        corButtonOne="#FFF"
+        button
       />
+
       <FeaturesComponent
         titleSection="Fusion Envios          "
         text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
         banner={imageFive.src}
         content={contentFeaturesFive}
         rowReverse={false}
+        imageSobTitle="jk"
       />
       <FeaturesComponent
         titleSection="Expanda suas opções de frete          "
@@ -289,6 +296,7 @@ export default function Fusion() {
         banner={imageSix.src}
         content={contentFeaturesSix}
         rowReverse={true}
+        imageSobTitle="jk"
       />
       <Numbers
         title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
@@ -297,13 +305,7 @@ export default function Fusion() {
         text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
       />
       <Integrations />
-      <Cta
-        title={
-          "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"
-        }
-        banner={""}
-        button
-      />
+
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

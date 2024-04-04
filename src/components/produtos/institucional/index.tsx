@@ -53,11 +53,11 @@ export default function ProductInstitutional({
         <div className="h-full lg:w-1/3"></div>
         <div className="hidden w-3/4 rounded-2xl  bg-gray-100 h-full lg:block"></div>
 
-        <div className="w-[90%] flex flex-col justify-center h-full lg:px-0  lg:py-10 mx-auto lg:absolute lg:inset-x-0">
-          <div className="mt-10 lg:mt-20 lg:flex lg:items-center">
+        <div className="w-[90%] flex items-center flex-col justify-center h-full lg:px-0  lg:py-10 mx-auto lg:absolute lg:inset-x-0">
+          <div className="lg:flex lg:items-center">
             <Image
               src={banner}
-              className="w-full lg:w-[42rem] rounded-2xl shadow-md "
+              className="w-full lg:w-[52rem] rounded-2xl shadow-2xl "
               width={100}
               height={100}
               alt="ESG"
@@ -66,7 +66,7 @@ export default function ProductInstitutional({
             <div className="flex w-full lg:pl-24 lg:w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
               <h1 className="text-black w-[90%] ">{title}</h1>
 
-              <p className="w-4/5 text-black">{text}</p>
+              <p className="lg:w-4/5 w-full text-black">{text}</p>
 
               <div className="flex lg:flex-row flex-col items-center gap-5">
                 <button
