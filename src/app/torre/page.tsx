@@ -16,7 +16,7 @@ import natureImage from "@/assets/torre/icons/nature.svg";
 import packgeImage from "@/assets/torre/icons/package.svg";
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg";
 import torreLogo from "@/assets/logos/torre.svg";
-import ProductInstitutional from "@/components/produtos/institucional";
+const ProductInstitutional = dynamic(() => import("@/components/produtos/institucional")) ;
 import sac from "@/assets/sac.png"
 import transporte from "@/assets/transporte.png"
 import banner from "@/assets/trux/torre.png"
