@@ -60,17 +60,7 @@ const contentFeaturesTwo = [
     icons: arrowImage,
   },
 ];
-const contentFeaturesThree = [
-  {
-    title: "Envio automático do XML via FTP.",
-    icons: arrowImage,
-  },
-  {
-    title:
-      "Cadastro de diferentes apólices de seguro, para garantir a vigência das regras e restrições.",
-    icons: arrowImage,
-  },
-];
+
 const contentFeaturesFour = [
   {
     title:
@@ -92,24 +82,25 @@ const contentFeaturesFour = [
 ];
 const number = [
   {
-    number: "100+",
-    text: "hubs",
+    number: "+98%",
+    text: "pedidos concluídos com sucesso",
   },
   {
-    number: "+50%",
-    text: "hubs",
+    number: "+99,9%",
+    text: "de disponibilidade do sistema",
   },
   {
-    number: "10+",
-    text: "hubs",
+    number: "+96%",
+    text: "dos pedidos integrados",
   },
   {
-    number: "10+",
-    text: "hubs",
+    number: "30 MM",
+    text: "de entregas",
   },
 ];
 
 export default function Trux() {
+  
   return (
     <>
       <main>
@@ -141,6 +132,7 @@ export default function Trux() {
         <Numbers
           title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
           number={number}
+          cor="#009881"
           banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
           text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
         />

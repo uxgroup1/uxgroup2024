@@ -23,7 +23,11 @@ import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
 import pudoLogo from "@/assets/logos/pudos.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
-import institucional from "@/assets/home/institucional/pudo-final.png"
+import banner from "@/assets/pudo/pudoImages/banner-pudo.png";
+import confiabilidade from "@/assets/pudo/pudoImages/confiabilidade.png";
+import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
+import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
+import pudo from "@/assets/pudo/pudoImages/pudo.png";
 
 const contentFeatures = [
   {
@@ -53,7 +57,7 @@ const content = [
     contentTitle: "Aumente a Satisfação do Cliente",
     contentText:
       "Com os pontos de pick-up and drop-off, você acelera o processo de entrega, reduzindo as etapas para que a mercadoria chegue para o seu cliente.",
-    banner: "",
+    banner: satisfacao.src,
   },
   {
     index: 1,
@@ -62,7 +66,7 @@ const content = [
     contentText:
       "Com o PUDO, você pode reduzir os custos de entrega, com menos paradas para o motoristas, você tem uma economia significativa em despesas de transporte e logística.",
 
-    banner: "",
+    banner: custo.src,
   },
   {
     index: 2,
@@ -71,7 +75,7 @@ const content = [
     contentText:
       "Ao utilizar uma rede confiável de pontos de coleta, você pode garantir aos sellers que realizem o processo de expedição de forma rápida e segura, melhorando a reputação da sua marca.",
 
-    banner: "",
+    banner: confiabilidade.src,
   },
 ];
 
@@ -108,19 +112,24 @@ export default function Pudos() {
           logo={pudoLogo}
           title="Otimize tempo e custos do processo de entrega."
           text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
-          banner=""
+          banner={banner.src}
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
           title="Entregas mais simples e convenientes.          "
           text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
-          banner={""}
+          banner={banner.src}
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           linkButtonOne=""
           linkButtonTwo=""
-          textButtonOne=""
-          textButtonTwo=""
+          textButtonOne="saiba mais"
+          textButtonTwo="agendar reunião"
+        />
+        <ThreeTopics
+          content={contentTopics}
+          title="Para Proprietários de Lojas Físicas"
+          text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
         />
 
         {/* <SecondSection
@@ -140,13 +149,7 @@ export default function Pudos() {
           rowReverse={false}
           titleSection="Benefícios de escolher o PUDO da UX"
           content={contentFeatures}
-          banner={svg}
-
-        />
-        <ThreeTopics
-          content={contentTopics}
-          title="Para Proprietários de Lojas Físicas"
-          text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
+          banner={pudo.src}
         />
 
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>

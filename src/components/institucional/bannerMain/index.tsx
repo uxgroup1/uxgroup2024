@@ -5,6 +5,10 @@ import institucionalImage from "@/assets/home/bannerMain/institucional.jpeg";
 import gestaoImage from "@/assets/home/bannerMain/gestao.jpeg";
 import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";
+import svgGestao from "@/assets/home/bannerMain/gestão.svg"
+import svgLog from "@/assets/home/bannerMain/logistica.svg"
+import svgTech from "@/assets/home/bannerMain/tecnologia.svg"
+import svgEsg from "@/assets/home/bannerMain/esg.svg"
 
 export default function BannerMain() {
   const [contentIndex, setContentIndex] = useState(0);
@@ -13,23 +17,27 @@ export default function BannerMain() {
     {
       title: "Somos UX.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      background: institucionalImage.src,
+      background: gestaoImage.src,
+      image: svgGestao,
     },
     {
       title: "Somos tecnologia para gestão.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       background: gestaoImage.src,
+      image: svgTech,
     },
 
     {
       title: "Somos tecnologia para logística.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       background: logImage.src,
+      image: svgLog,
     },
     {
       title: "Somos tecnologia para sustentabilidade.",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       background: esgImage.src,
+      image: svgEsg,
     },
   ];
 
@@ -80,7 +88,7 @@ export default function BannerMain() {
               </div>
               <div className=" flex items-end justify-start md:pl-[5%] h-2/5 md:h-full w-full md:w-1/2  ">
                 <div
-                  className={`rounded-[16px] w-full h-full md:h-4/5  transition-transform ${
+                  className={`rounded-[16px] w-full h-full md:h-4/5 flex items-center justify-center  transition-transform ${
                     contentIndex === 0
                       ? "animated-state-Banner"
                       : contentIndex === 1
@@ -91,10 +99,10 @@ export default function BannerMain() {
                   }`}
                 >
                   <Image
-                    className="w-full md:pt-0 object-cover md:object-cover h-full"
+                    className="w-[500px] md:pt-0 "
                     width={100}
                     height={100}
-                    src={imageTest.src}
+                    src={contentBanners[contentIndex].image}
                     alt="teste"
                   />
                 </div>

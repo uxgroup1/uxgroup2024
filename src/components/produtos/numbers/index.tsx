@@ -10,6 +10,7 @@ interface Content {
   subtitle?: string;
   text: string;
   banner: string;
+  cor: string;
   number: numbers[];
 }
 
@@ -19,7 +20,10 @@ export default function Numbers({
   subtitle,
   banner,
   number,
+  cor
 }: Content) {
+
+  
   return (
     <section className="flex flex-col gap- items-center justify-center max-w-[1996px] w-full">
       <div className="w-[90%] flex justify-center">
@@ -41,11 +45,11 @@ export default function Numbers({
           {number.map((item, index) => {
             return (
               <div
-                className="flex flex-col cursor-pointer items-center justify-center rounded-2xl transition-all p-5 text-black border-transparent w-full lg:w-[200px]"
+                className="flex flex-col cursor-pointer items-center justify-center rounded-2xl transition-all p-5  border-transparent w-full lg:w-[200px]"
                 key={index}
               >
-                <h1 className={`text-[#28265b] text-7xl`}>{item.number}</h1>
-                <p className="font-bold text-center">{item.text}</p>
+                <h1 style={{color:`${cor}`}} className={`text-[3rem]`}>{item.number}</h1>
+                <p className="font-bold text-center text-black">{item.text}</p>
               </div>
             );
           })}

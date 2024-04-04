@@ -33,7 +33,6 @@ import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
 import iconeEnvios from "@/assets/fusion/fusion-envios.svg";
 
-
 const contentFeatures = [
   {
     title: "Envio de ocorrências simultâneo para vários sistemas.",
@@ -243,6 +242,7 @@ export default function Fusion() {
         textButtonTwo="marketplace"
       />
       <Numbers
+        cor="#28265b"
         title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
         number={number}
         banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
@@ -254,7 +254,6 @@ export default function Fusion() {
         banner={imageOne.src}
         content={contentFeaturesTwo}
         rowReverse={false}
-
       />
       <FeaturesComponent
         titleSection="Reduza os contatos no SAC com Rastreamento"
@@ -262,7 +261,6 @@ export default function Fusion() {
         banner={imageTwo.src}
         content={contentFeatures}
         rowReverse={true}
-
       />
       <FeaturesComponent
         titleSection="Agilize a entrega com automatização na Expedição"
@@ -270,7 +268,6 @@ export default function Fusion() {
         banner={imageThree.src}
         content={contentFeaturesThree}
         rowReverse={false}
-
       />
       <FeaturesComponent
         titleSection="Pague somente o acordado com os transportadores"
@@ -278,7 +275,6 @@ export default function Fusion() {
         banner={imageFour.src}
         content={contentFeaturesFour}
         rowReverse={true}
-
       />
 
       <Cta
@@ -287,6 +283,7 @@ export default function Fusion() {
         }
         banner={""}
         button
+        gradient={true}
       />
 
       <FeaturesComponent
