@@ -3,6 +3,7 @@ import logoFacebook from "../../assets/Footer/logo-facebook.svg";
 import logoInstagram from "../../assets/Footer/logo-instagram.svg";
 import logoYoutube from "../../assets/Footer/logo-youtube.svg";
 import logoLinkedIn from "../../assets/Footer/logo-linkedin.svg";
+import imageCarbono from "../../assets/carbono.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -127,6 +128,9 @@ export default function Footer() {
                     </div>
                   );
                 })}
+                <div className="lg:ml-20">
+                  <Image src={imageCarbono.src} alt="" width={100} height={100} />
+                </div>
               </div>
             </div>
             <hr className="my-6 border-transparent relative w-full lg:border-white sm:mx-auto lg:my-8" />
