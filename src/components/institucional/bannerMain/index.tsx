@@ -5,7 +5,7 @@ import institucionalImage from "@/assets/home/bannerMain/institucional.jpeg";
 import gestaoImage from "@/assets/home/bannerMain/gestao.jpeg";
 import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";
-import svgGestao from "@/assets/home/bannerMain/gestão.svg"
+import svgGestao from "@/assets/home/bannerMain/gestaoSvg.svg"
 import svgLog from "@/assets/home/bannerMain/logistica.svg"
 import svgTech from "@/assets/home/bannerMain/tecnologia.svg"
 import svgEsg from "@/assets/home/bannerMain/esg.svg"
