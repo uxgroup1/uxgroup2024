@@ -22,10 +22,18 @@ import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";
 import FeaturesComponent from "@/components/produtos/features";
 import arrowList from "@/assets/ondetah/arrow/arrowListComponentesPudo.svg";
+import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
+import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png"
+import imageTwo from "@/assets/ondetah/imagesSections/ondetah-2.png"
+import imageSlideOne from "@/assets/ondetah/imagesSections/1.png"
+import imageSlideTwo from "@/assets/ondetah/imagesSections/2.png"
+import imageSlideThree from "@/assets/ondetah/imagesSections/3.png"
+import imageSlideFour from "@/assets/ondetah/imagesSections/4.png"
 
 const contentFeatures = [
   {
-    title: "Entrega Pontual: Garanta que seus produtos sejam entregues dentro do prazo previsto, aumente a satisfação do cliente e fortaleça a reputação da sua marca.",
+    title:
+      "Entrega Pontual: Garanta que seus produtos sejam entregues dentro do prazo previsto, aumente a satisfação do cliente e fortaleça a reputação da sua marca.",
     icons: arrowList,
   },
   {
@@ -34,7 +42,8 @@ const contentFeatures = [
     icons: arrowList,
   },
   {
-    title: "Maior Confiança do Cliente: Lide de forma rápida com as ocorrências e forneça atualizações transparentes sobre o status dos pedidos. Crie conexão com o seu cliente com comprometimento com a qualidade e o serviço.    ",
+    title:
+      "Maior Confiança do Cliente: Lide de forma rápida com as ocorrências e forneça atualizações transparentes sobre o status dos pedidos. Crie conexão com o seu cliente com comprometimento com a qualidade e o serviço.    ",
     icons: arrowList,
   },
   {
@@ -56,7 +65,7 @@ const content = [
     contentTitle: "Informação em Tempo Real",
     contentText:
       "Acompanhe cada etapa do pedido em tempo real. Desde a confirmação até a entrega, atualizações regulares, incluindo notificações em caso de eventos inesperados.",
-    banner: "",
+    banner: imageSlideOne.src,
   },
   {
     index: 1,
@@ -65,7 +74,7 @@ const content = [
     contentText:
       "Utilize nosso SAC 4.0 com um chatbot disponível 24 horas por dia. Reduza o tempo de espera e resolva questões rapidamente através de aplicativos de mensagens, garantindo uma experiência mais positiva para o cliente e reduzindo custos.",
 
-    banner: "",
+    banner: imageSlideTwo.src,
   },
   {
     index: 2,
@@ -74,7 +83,7 @@ const content = [
     contentText:
       "Deixe suas entregas mais ecológicas através da compensação de carbono. Utilizamos tecnologia para calcular e neutralizar as emissões de carbono associadas aos seus pedidos, e fornecemos certificados de compensação para cada compra.",
 
-    banner: "",
+    banner: imageSlideThree.src,
   },
   {
     index: 3,
@@ -83,7 +92,7 @@ const content = [
     contentText:
       "Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.",
 
-    banner: "",
+    banner: imageSlideFour.src,
   },
 ];
 
@@ -143,12 +152,17 @@ export default function Ondetah() {
         title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
         text=""
       />
+      <CarroselVerticalMobile
+        content={content}
+        title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
+        sub=""
+      />
       <SecondSection
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Gestão de Prazos e Ocorrências."
         text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente. Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
-        image=""
+        image={imageOne.src}
         flowReverse={true}
       />
       <Cta
@@ -159,11 +173,11 @@ export default function Ondetah() {
         title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "
       />
       <FeaturesComponent
-          rowReverse={false}
-          titleSection="Confira os benefícios da nossa solução para uma gestão de prazos e ocorrências:"
-          content={contentFeatures}
-          banner={""}
-        />
+        rowReverse={false}
+        titleSection="Confira os benefícios da nossa solução para uma gestão de prazos e ocorrências:"
+        content={contentFeatures}
+        banner={imageTwo.src}
+      />
 
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
