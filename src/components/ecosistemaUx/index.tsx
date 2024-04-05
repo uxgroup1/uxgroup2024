@@ -37,7 +37,7 @@ function EcoSistemaUx() {
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
                 <Image
-                  className="w-[100%] "
+                  className="w-full "
                   src={ecoImage}
                   width={100}
                   height={100}
