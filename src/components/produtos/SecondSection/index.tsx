@@ -51,9 +51,9 @@ function SecondSection({
           >
             <div className={style.Controller}>
               <div className={style.ContentText}>
-                <div className="flex flex-col gap-3">
+                <div className="flex w-full flex-col gap-3">
                   <h1 className="w-full">{title}</h1>
-                  <p className="w-full">{text}</p>
+                  <p className="w-full lg:w-3/4">{text}</p>
                 </div>
 
                 <div className={` ${style.containerTeste}`}></div>

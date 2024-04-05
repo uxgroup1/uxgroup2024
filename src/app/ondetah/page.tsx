@@ -149,7 +149,7 @@ export default function Ondetah() {
         title="Gestão de Prazos e Ocorrências."
         text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente. Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
         image=""
-        flowReverse={false}
+        flowReverse={true}
       />
       <Cta
         banner={

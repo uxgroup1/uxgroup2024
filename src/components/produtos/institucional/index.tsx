@@ -64,7 +64,7 @@ export default function ProductInstitutional({
             />
 
             <div className="flex w-full lg:pl-24 lg:w-4/5 flex-col gap-5 mt-8 lg:px-10 lg:mt-0">
-              <h1 className="text-black w-[90%] ">{title}</h1>
+              <h1 className="text-black lg:w-[90%] ">{title}</h1>
 
               <p className="lg:w-4/5 w-full text-black">{text}</p>
 
