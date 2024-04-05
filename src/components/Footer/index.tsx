@@ -69,6 +69,10 @@ export default function Footer() {
           namePage: "Pudos",
           url: "/pudos",
         },
+        {
+          namePage: "S&OP",
+          url: "/s&op",
+        },
         
       ],
     },

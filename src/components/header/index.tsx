@@ -137,6 +137,14 @@ export default function Header() {
                       Pudos
                     </Link>
                   </li>
+                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                    <Link
+                      href="/s&op"
+                      className="font-normal text-white text-lg "
+                    >
+                      S&OP
+                    </Link>
+                  </li>
                 </ul>
                 <Link
                   href="#"

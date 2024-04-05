@@ -23,12 +23,13 @@ import ProductInstitutional from "@/components/produtos/institucional";
 import FeaturesComponent from "@/components/produtos/features";
 import arrowList from "@/assets/ondetah/arrow/arrowListComponentesPudo.svg";
 import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
-import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png"
-import imageTwo from "@/assets/ondetah/imagesSections/ondetah-2.png"
-import imageSlideOne from "@/assets/ondetah/imagesSections/1.png"
-import imageSlideTwo from "@/assets/ondetah/imagesSections/2.png"
-import imageSlideThree from "@/assets/ondetah/imagesSections/3.png"
-import imageSlideFour from "@/assets/ondetah/imagesSections/4.png"
+import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png";
+import imageTwo from "@/assets/ondetah/imagesSections/ondetah-2.png";
+import imageSlideOne from "@/assets/ondetah/imagesSections/1.png";
+import imageSlideTwo from "@/assets/ondetah/imagesSections/2.png";
+import imageSlideThree from "@/assets/ondetah/imagesSections/3.png";
+import imageSlideFour from "@/assets/ondetah/imagesSections/4.png";
+import Numbers from "@/components/produtos/numbers";
 
 const contentFeatures = [
   {
@@ -114,6 +115,25 @@ const contentTopics = [
   },
 ];
 
+const number = [
+  {
+    number: "50%",
+    text: "de redução de contato com SAC.",
+  },
+  {
+    number: "20TON",
+    text: "de carbono compensadas/mês.",
+  },
+  {
+    number: "+5P.P",
+    text: "na performance de entrega.",
+  },
+  {
+    number: "100%",
+    text: "dos pedidos com tracking centralizado.",
+  },
+];
+
 export default function Ondetah() {
   return (
     <main>
@@ -142,6 +162,13 @@ export default function Ondetah() {
         textButtonOne="saiba mais"
         textButtonTwo="agendar reunião"
       />
+      <Numbers
+        cor="#009580"
+        title="Garanta redução de custos no seu pós-venda com uma solução completa focada na experiência do cliente."
+        number={number}
+        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+        text=""
+      />
       <ThreeTopics
         content={contentTopics}
         title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio."
@@ -164,13 +191,6 @@ export default function Ondetah() {
         text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente. Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
         image={imageOne.src}
         flowReverse={true}
-      />
-      <Cta
-        banner={
-          "https://ondetah.com.br/wp-content/uploads/2023/08/ondetah-banner03.png"
-        }
-        button
-        title="Garanta mais informações sobre suas entregas através de nosso dashboard exclusivo. "
       />
       <FeaturesComponent
         rowReverse={false}
