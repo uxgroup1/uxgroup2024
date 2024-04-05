@@ -23,7 +23,7 @@ function Cta({
   corButtonOne,
   corButtonTwo,
   logo,
-  gradient
+  gradient,
 }: ConteudoCTA) {
   return (
     <>
@@ -31,9 +31,15 @@ function Cta({
         <div className={style.Container}>
           <div
             className={`${style.BoxCta} ${
-              gradient === true && !banner ? "bg-gradient-to-l from-[#009881] to-[#29265B]" : ""
+              gradient === true && !banner
+                ? "bg-gradient-to-l from-[#009881] to-[#29265B]"
+                : "bg-black"
             }`}
-            style={banner ? { backgroundImage: `url(${banner})` } : {}}
+            style={
+              banner
+                ? { backgroundImage: `url(${banner})` }
+                : { backgroundColor: "black" }
+            }
           >
             <div className={style.ContainerContent}>
               <div className={style.Controller}>
