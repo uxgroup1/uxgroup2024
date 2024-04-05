@@ -82,7 +82,7 @@ export default function Footer() {
       name: "ESG",
       products: [
         {
-          namePage: "saiba mais",
+          namePage: "Saiba mais",
           url: "https://esg.uxgroup.com.br",
         },
       ],
