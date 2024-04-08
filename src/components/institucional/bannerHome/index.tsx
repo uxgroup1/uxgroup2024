@@ -1,5 +1,7 @@
 import Image from "next/image";
 import ecoImage from "@/assets/home/ecossistema.png";
+import { IoIosArrowDropdown } from "react-icons/io";
+import Link from "next/link";
 
 export default function BannerHome() {
   return (
@@ -8,7 +10,7 @@ export default function BannerHome() {
         <div className="flex items-center justify-center flex-col">
           <div className="w-full transition-transform animated-state-Jumbotron flex items-center justify-center flex-col">
             <div className="flex items-center justify-center font-semibold w-48 p-3 mb-5 rounded-full border-2 border-black bg-white text-black">
-                SOMOS UX
+              SOMOS UX
             </div>
             <h1 className="text-black w-[90%] text-3xl xl:text-5xl text-center xl:w-[60%]">
               Transformamos a experiência do cliente através da tecnologia para
@@ -24,14 +26,17 @@ export default function BannerHome() {
 
           <div className="flex w-full justify-center transition-transform animated-state-Jumbotron-two mt-10">
             <Image
-            
-            alt=""
-            width={100}
-            height={100}
+              alt=""
+              width={100}
+              height={100}
               className="xl:w-[65%] w-full"
-              src={ecoImage.src}     />
+              src={ecoImage.src}
+            />
           </div>
         </div>
+        <Link href={"#"}>
+          <IoIosArrowDropdown className="text-black xl:flex lg:[display:none] absolute text-5xl animate-pulse top-[94%] left-[49%] " />
+        </Link>
       </section>
     </>
   );
