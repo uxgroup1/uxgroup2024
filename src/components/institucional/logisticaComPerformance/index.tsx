@@ -51,7 +51,7 @@ const content = [
 function LogisticaComPerformance() {
   return (
     <>
-      <section className={style.CarrouselProducts}>
+      <section  className={` ${style.CarrouselProducts}`}>
         <div className={style.Container}>
           <div className={style.BoxCarrouselProducts}>
             <div className={style.Controller}>

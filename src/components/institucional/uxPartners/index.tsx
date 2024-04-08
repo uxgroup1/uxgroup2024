@@ -1,18 +1,19 @@
 import Image from "next/image";
 import style from "./style.module.scss";
 import imageUxPartners from "@/assets/logos/ux-partners.svg";
+import background from "@/assets/home/bg-ux-partners.png"
 
 function UxPartners() {
   return (
     <>
-      <section className={style.UxPartners}>
+      <section style={{backgroundImage:`url(${(background.src)})`}} className={style.UxPartners}>
         <div className={style.Container}>
           <div className={style.BoxUxPartners}>
             <div className={style.UX_partners}>
               <Image
                 className="lg:w-[400px] w-[300px]"
                 src={imageUxPartners}
-                alt=""
+                alt="Logo UX Partners"
                 width={0}
                 height={0}
               />
