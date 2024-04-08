@@ -7,7 +7,7 @@ export default function BannerHome() {
       <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[06%] w-full  ">
         <div className="flex items-center justify-center flex-col">
           <div className="w-full flex items-center justify-center flex-col">
-            <div className="flex items-center justify-center font-semibold w-48 p-5 mb-5 rounded-full border-2 border-black bg-white text-black">
+            <div className="flex items-center justify-center font-semibold w-48 p-3 mb-5 rounded-full border-2 border-black bg-white text-black">
                 SOMOS UX
             </div>
             <h1 className="text-black w-[90%] text-3xl xl:text-5xl text-center xl:w-[60%]">
