@@ -1,5 +1,6 @@
 import Image from "next/image";
-import ecoImage from "@/assets/home/ecossistema.png";
+import ecoImage from "@/assets/home/ecossistema-ux-grande.png";
+import ecoImageMob from "@/assets/home/ecossistema.png";
 import { IoIosArrowDropdown } from "react-icons/io";
 import Link from "next/link";
 
@@ -26,11 +27,18 @@ export default function BannerHome() {
 
           <div className="flex w-full justify-center transition-transform animated-state-Jumbotron-two mt-10">
             <Image
-              alt=""
+              alt="Sustentabilidade"
               width={100}
               height={100}
-              className="xl:w-[65%] w-full"
+              className="xl:w-full md:flex lg:flex xl:flex md:w-full lg:w-full [display:none] w-full"
               src={ecoImage.src}
+            />
+            <Image
+              alt="Sustentabilidade"
+              width={100}
+              height={100}
+              className="xl:w-full md:[display:none] lg:[display:none] xl:[display:none] md:w-full lg:w-full flex w-full"
+              src={ecoImageMob.src}
             />
           </div>
         </div>
