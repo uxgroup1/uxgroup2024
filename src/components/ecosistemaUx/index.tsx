@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.scss";
-import ecoImage from "../../assets/home/ecossistema.png";
+import ecoImage from "../../assets/ecossistema.png";
 
 interface Content {
   title: string;

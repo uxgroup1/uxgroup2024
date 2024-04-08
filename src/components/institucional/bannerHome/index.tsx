@@ -42,9 +42,6 @@ export default function BannerHome() {
             />
           </div>
         </div>
-        {/* <Link href={"#"}>
-          <IoIosArrowDropdown className="text-black xl:flex lg:[display:none] absolute text-5xl animate-pulse top-[94%] left-[49%] " />
-        </Link> */}
       </section>
     </>
   );

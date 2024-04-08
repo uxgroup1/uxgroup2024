@@ -8,9 +8,6 @@ const Cta = dynamic(() => import("@/components/cta/index"));
 const LogisticaComPerformance = dynamic(
   () => import("@/components/institucional/logisticaComPerformance/index")
 );
-const BannerMain = dynamic(
-  () => import("@/components/institucional/bannerMain/index")
-);
 const UxPartners = dynamic(
   () => import("@/components/institucional/uxPartners/index")
 );
@@ -156,17 +153,6 @@ export default function Home() {
       </noscript>
       {/* <!-- End Google Tag Manager (noscript) --> */}
       <Header />
-      {/* <BannerMain /> */}
-      {/* <JumboTron
-        banner={imageInstitucional.src}
-        corButtonOne="#000"
-        linkButtonOne=""
-        textButtonOne="fale com um consultor"
-        linkButtonTwo=""
-        textButtonTwo="saiba mais"
-        title="Transformamos a experiência do cliente através da tecnologia para gestão, logística e sustentabilidade."
-        text=" Conheça nosso ecossistema de soluções para vendas digitais."
-      /> */}
       <BannerHome/>
       <EcoSistemaUx />
       <ClientsCases />
