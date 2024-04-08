@@ -80,7 +80,7 @@ export default function Torre() {
         textButtonTwo="saiba mais"
         linkButtonOne=""
         linkButtonTwo=""
-        logo={torreLogo}
+        logo={torreLogo.src}
         banner={banner.src}
         title="Solução completa e inteligente para otimizar transportes, entregas e atendimento ao cliente."
         text="Tecnologia de ponta e um time com expertise em logística que garantem performance na operação de transportes."

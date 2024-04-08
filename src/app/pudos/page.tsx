@@ -109,7 +109,7 @@ export default function Pudos() {
           linkButtonTwo=""
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
-          logo={pudoLogo}
+          logo={pudoLogo.src}
           title="Otimize tempo e custos do processo de entrega."
           text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
           banner={banner.src}

@@ -112,7 +112,7 @@ export default function Logistica() {
         linkButtonTwo=""
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
-        logo={fulfillmet}
+        logo={fulfillmet.src}
         title="Fulfillment inteligente que garante performance e impulsionam suas vendas."
         text="Aumente suas vendas, reduza prazo de entrega e custos de frete e fidelize seus clientes com nossa solução de fulfillment escalável e personalizada."
         banner={banner.src}

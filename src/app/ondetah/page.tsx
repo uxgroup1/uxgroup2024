@@ -145,7 +145,7 @@ export default function Ondetah() {
         linkButtonTwo=""
         corButtonOne="#29265B"
         corButtonTwo="#009580"
-        logo={ondetahLogo}
+        logo={ondetahLogo.src}
         title="Aplique eficiência, controle e sustentabilidade à sua operação através de tecnologia."
         banner={imageOndetah.src}
         text="Gerenciamento simplificado de prazos e ocorrências, informação em tempo real e compensação de carbono que garantem a experiência do cliente."

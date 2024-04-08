@@ -112,7 +112,7 @@ export default function Trux() {
           textButtonTwo="saiba mais"
           corButtonOne="#009881"
           corButtonThree="#046C5C"
-          logo={truxLogo}
+          logo={truxLogo.src}
           title="Transforme a sua gestão de transportes com o TMS: eficiência, controle, redução de custos e crescimento para sua empresa."
           banner={banner.src}
           text="Tenha visão completa da sua operação em tempo real e tome decisões inteligentes baseada em dados sobre a sua operação de transportes."

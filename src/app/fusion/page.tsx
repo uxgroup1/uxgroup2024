@@ -224,7 +224,7 @@ export default function Fusion() {
         textButtonTwo="saiba mais"
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
-        logo={fusionLogo}
+        logo={fusionLogo.src}
         title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
         banner={banner.src}
         text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
