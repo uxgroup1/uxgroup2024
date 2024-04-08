@@ -44,7 +44,7 @@ import logoFusion from "@/assets/logos/fusion.svg";
 import logoTrux from "@/assets/logos/trux.svg";
 import logoOndetah from "@/assets/logos/ondetah.svg";
 import JumboTron from "@/components/produtos/jumbotron";
-import imageInstitucional from "@/assets/home/bannerMain/institucional.png"
+import imageInstitucional from "@/assets/home/bannerMain/institucional.png";
 
 const content = [
   {
@@ -137,9 +137,25 @@ const contentUxMidia = [
 export default function Home() {
   return (
     <main>
+      {/* <!-- Google Tag Manager --> */}
+      <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</script>
+      {/* <!-- End Google Tag Manager --> */}
       <Header />
       {/* <BannerMain /> */}
-      <JumboTron banner={imageInstitucional.src} corButtonOne="#000"  linkButtonOne=""  textButtonOne="fale com um consultor" linkButtonTwo="" textButtonTwo="saiba mais" title="Transformamos a experiência do cliente através da tecnologia para gestão, logística e sustentabilidade." text=" Conheça nosso ecossistema de soluções para vendas digitais."/>
+      <JumboTron
+        banner={imageInstitucional.src}
+        corButtonOne="#000"
+        linkButtonOne=""
+        textButtonOne="fale com um consultor"
+        linkButtonTwo=""
+        textButtonTwo="saiba mais"
+        title="Transformamos a experiência do cliente através da tecnologia para gestão, logística e sustentabilidade."
+        text=" Conheça nosso ecossistema de soluções para vendas digitais."
+      />
       <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
