@@ -25,8 +25,8 @@ export default function JumboTron({
   corButtonTwo,
   corButtonThree,
   textButtonOne,
-  textButtonTwo,
   linkButtonOne,
+  textButtonTwo,
   linkButtonTwo,
 }: Content) {
   const [hovered, setHovered] = useState(false);
@@ -50,12 +50,12 @@ export default function JumboTron({
   return (
     <section
       style={{ backgroundImage: `url(${banner})` }}
-      className={`md:bg-center bg-[70%] bg-cover   md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
+      className={`md:bg-center bg-[70%] bg-cover  xl:h-[115vh] lg:h-[120vh]  md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
     >
       <div className="w-full py-20 h-full bg-[#000000a0]">
         <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
           <Image
-            className={`md:w-[500px] transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
+            className={`md:w-[500px] xl:w-[500px] lg:w-80 transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
             width={0}
             height={0}
             src={logo}
@@ -63,13 +63,13 @@ export default function JumboTron({
           />
           <h1
             style={{lineHeight: '120%'}}
-            className={`mb-4 w-4/5 leading-snug text-[2rem] md:text-3xl transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl`}
+            className={`mb-4 w-4/5 leading-snug xl:text-6xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
           >
             {title}
           </h1>
           
           <p
-            className={`mb-8 text-sm text-white w-4/5 transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
+            className={`mb-8 text-sm text-white w-4/5  xl:w-4/5 lg:w-full transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
           >
             {text}
           </p>
@@ -77,12 +77,12 @@ export default function JumboTron({
             className={`flex flex-col gap-0 md:gap-5 transition-transform ${"animated-state-Jumbotron-two"} space-y-4 sm:flex-row sm:justify-center sm:space-y-0`}
           >
             <button
-              className={`w-[200px] h-10 rounded-lg transition-all hover:font-semibold`}
+              className={`w-[200px] xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg transition-all hover:font-semibold`}
             >
               <Link href={linkButtonOne}>{textButtonOne}</Link>
             </button>
             <button
-              className={`md:w-[170px] h-10 rounded-lg text-white hover:font-semibold transition-all`}
+              className={`md:w-[170px] xl:w-[170px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
               style={buttonStyle}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
