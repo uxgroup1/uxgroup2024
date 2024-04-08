@@ -116,135 +116,139 @@ export default function Header() {
             {openMenuLog && (
               <div
                 id="mega-menu-full-image-dropdown"
-                className={`mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
-                <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
-                  <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
-                    <h1 className="text-white">Logística</h1>
-                  </div>
+                <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
+                  <div className="grid bg-black w-[90%] md:grid-cols-2 md:px-0">
+                    <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                      <h1 className="text-white">Logística</h1>
+                    </div>
 
-                  <ul className="mb-4 space-y-4 md:mb-0">
-                    <li className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/logistica"
-                        className="font-normal text-white text-lg "
-                      >
-                        Fulfillment
-                      </Link>
-                    </li>
-                    <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/torre"
-                        className="font-normal text-white text-lg "
-                      >
-                        Torre de controle
-                      </Link>
-                    </li>
-                    <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/pudos"
-                        className="font-normal text-white text-lg "
-                      >
-                        Pudos
-                      </Link>
-                    </li>
-                  </ul>
-                  <Link
-                    href="#"
-                    className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
-                  >
-                    <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                      Preview the new Flowbite dashboard navigation.
-                    </p>
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                    <ul className="mb-4 space-y-4 md:mb-0">
+                      <li className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/logistica"
+                          className="font-normal text-white text-lg "
+                        >
+                          Fulfillment
+                        </Link>
+                      </li>
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/torre"
+                          className="font-normal text-white text-lg "
+                        >
+                          Torre de controle
+                        </Link>
+                      </li>
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/pudos"
+                          className="font-normal text-white text-lg "
+                        >
+                          Pudos
+                        </Link>
+                      </li>
+                    </ul>
+                    <Link
+                      href="#"
+                      className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
                     >
-                      Get started
-                      <svg
-                        className="w-3 h-3 ms-2 rtl:rotate-180"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10"
+                      <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
+                        Preview the new Flowbite dashboard navigation.
+                      </p>
+                      <button
+                        type="button"
+                        className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                       >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                      </svg>
-                    </button>
-                  </Link>
+                        Get started
+                        <svg
+                          className="w-3 h-3 ms-2 rtl:rotate-180"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 10"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                          />
+                        </svg>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
             {openMenuGestao && (
               <div
                 id="mega-menu-full-image-dropdown"
-                className="mt-1 bg-black w-full absolute pt-5 pb-10 top-[90%] md:top-16 left-0 border-t-white transform animated-state-header "
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full  top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
-                <div className="grid bg-black max-w-[85%] md:max-w-[90%] py-5 mx-auto text-sm   md:grid-cols-2 md:px-0">
-                  <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
-                    <h1 className="text-white">Gestão</h1>
-                  </div>
-                  <ul className="mb-4 space-y-4 md:mb-0">
-                    <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/fusion"
-                        className="font-normal text-white text-lg"
-                      >
-                        TMS embarcador
-                      </Link>
-                    </li>
-                    <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/trux"
-                        className="font-normal text-white text-lg"
-                      >
-                        TMS Transportador
-                      </Link>
-                    </li>
-                    <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                      <Link
-                        href="/ondetah"
-                        className="font-normal text-white text-lg"
-                      >
-                        Plataforma de comunicação
-                      </Link>
-                    </li>
-                  </ul>
-                  <Link
-                    href="#"
-                    className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
-                  >
-                    <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                      Preview the new Flowbite dashboard navigation.
-                    </p>
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                <div className=" flex items-center justify-center w-full py-5 xl:pl-5  pl-0 text-sm max-w-[1996px]">
+                  <div className="grid bg-black w-[90%]  md:grid-cols-2 md:px-0">
+                    <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                      <h1 className="text-white">Gestão</h1>
+                    </div>
+                    <ul className="mb-4 space-y-4 md:mb-0">
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/fusion"
+                          className="font-normal text-white text-lg"
+                        >
+                          TMS embarcador
+                        </Link>
+                      </li>
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/trux"
+                          className="font-normal text-white text-lg"
+                        >
+                          TMS Transportador
+                        </Link>
+                      </li>
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/ondetah"
+                          className="font-normal text-white text-lg"
+                        >
+                          Plataforma de comunicação
+                        </Link>
+                      </li>
+                    </ul>
+                    <Link
+                      href="#"
+                      className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
                     >
-                      Get started
-                      <svg
-                        className="w-3 h-3 ms-2 rtl:rotate-180"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10"
+                      <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
+                        Preview the new Flowbite dashboard navigation.
+                      </p>
+                      <button
+                        type="button"
+                        className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                       >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                      </svg>
-                    </button>
-                  </Link>
+                        Get started
+                        <svg
+                          className="w-3 h-3 ms-2 rtl:rotate-180"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 10"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                          />
+                        </svg>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}

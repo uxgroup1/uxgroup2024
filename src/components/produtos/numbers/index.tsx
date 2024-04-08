@@ -28,7 +28,7 @@ export default function Numbers({
     <section className="flex flex-col gap- items-center justify-center max-w-[1996px] w-full">
       <div className="w-[90%] flex justify-center">
         <div className="flex justify-center items-center flex-col gap-2 w-full">
-          <h1 className="text-black text-center">{title}</h1>
+          <h1 className="text-black xl:text-3xl lg:text-2xl text-center">{title}</h1>
           {subtitle && (
             <h2 className="text-black text-center font-semibold w-full lg:w-4/5">
               {subtitle}
