@@ -157,7 +157,7 @@ section{
 }
 .animated-state-BannerTwo {
   /* Animação específica para o terceiro título */
-  transform: translateX(0); /* Posiciona o conteúdo na tela */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
   opacity: 1; /* Mostra o conteúdo */
   animation: animate-BannerTwo 1s ease-in-out forwards; /* Adiciona animação */
 }
@@ -269,11 +269,11 @@ section{
 
 @keyframes animate-BannerTwo {
   from {
-    transform: translateX(-100%);
+    transform: translateY(100%);
     opacity: 0;
   }
   to {
-    transform: translateX(0%);
+    transform: translateY(0%);
     opacity: 1;
   }
 }

@@ -6,7 +6,7 @@ export default function BannerHome() {
     <>
       <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[06%] w-full  ">
         <div className="flex items-center justify-center flex-col">
-          <div className="w-full flex items-center justify-center flex-col">
+          <div className="w-full transition-transform animated-state-Jumbotron flex items-center justify-center flex-col">
             <div className="flex items-center justify-center font-semibold w-48 p-3 mb-5 rounded-full border-2 border-black bg-white text-black">
                 SOMOS UX
             </div>
@@ -22,13 +22,13 @@ export default function BannerHome() {
             </button>
           </div>
 
-          <div className="flex justify-center mt-10">
+          <div className="flex w-full justify-center transition-transform animated-state-Jumbotron-two mt-10">
             <Image
             
             alt=""
             width={100}
             height={100}
-              className="xl:w-[70%] w-full"
+              className="xl:w-[65%] w-full"
               src={ecoImage.src}     />
           </div>
         </div>

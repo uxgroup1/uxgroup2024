@@ -30,6 +30,7 @@ const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm/index")
 );
 const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx/index"));
+const BannerHome = dynamic(() => import("@/components/institucional/bannerHome")) ;
 import dynamic from "next/dynamic";
 import ImageUxMidiaOne from "@/assets/home/UX-na-midia/logistica.png";
 import ImageUxMidiaTwo from "@/assets/home/UX-na-midia/tecnologia.png";
@@ -37,17 +38,14 @@ import ImageUxMidiaThree from "@/assets/home/UX-na-midia/gestão.png";
 import ClientsCases from "@/components/institucional/clients";
 import ctaOne from "@/assets/cta/cta-1-home.png";
 import ctaTwo from "@/assets/cta/cta-2-home.png";
-
 import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
 import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import logoFusion from "@/assets/home/fusion-gestao.png";
 import logoTrux from "@/assets/home/trux-gestao.png";
 import logoOndetah from "@/assets/home/ondetah-gestao.png";
-import JumboTron from "@/components/produtos/jumbotron";
-import imageInstitucional from "@/assets/home/bannerMain/institucional.png";
 import Script from "next/script";
-import BannerHome from "@/components/institucional/bannerHome";
+
 
 const content = [
   {
@@ -170,7 +168,7 @@ export default function Home() {
         text=" Conheça nosso ecossistema de soluções para vendas digitais."
       /> */}
       <BannerHome/>
-      {/* <EcoSistemaUx /> */}
+      <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
         title="Tecnologia para gestão da logística."
