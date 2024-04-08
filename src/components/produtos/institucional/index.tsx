@@ -48,7 +48,7 @@ export default function ProductInstitutional({
   }
 
   return (
-    <section className="bg-white max-w-[1996px] w-full xl:h-[80vh] lg:h-[80vh]">
+    <section className="bg-white max-w-[1996px] w-full xl:h-[100vh] lg:h-[80vh]">
       <div className="relative h-full flex">
         <div className="h-full lg:w-1/3"></div>
         <div className="hidden w-3/4 rounded-2xl  bg-gray-100 xl:h-full  lg:block"></div>
@@ -57,7 +57,7 @@ export default function ProductInstitutional({
           <div className="lg:flex lg:items-center">
             <Image
               src={banner}
-              className="w-full xl:w-[52rem] lg:w-[30rem] rounded-2xl shadow-2xl "
+              className="w-full xl:w-[35rem] lg:w-[30rem] rounded-2xl shadow-2xl "
               width={100}
               height={100}
               alt="ESG"

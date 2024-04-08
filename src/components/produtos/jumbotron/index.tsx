@@ -50,7 +50,7 @@ export default function JumboTron({
   return (
     <section
       style={{ backgroundImage: `url(${banner})` }}
-      className={`md:bg-center bg-[70%] bg-cover  xl:h-[115vh] lg:h-[120vh]  md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
+      className={`md:bg-center bg-[70%] bg-cover  xl:h-[135vh] lg:h-[120vh]  md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
     >
       <div className="w-full py-20 h-full bg-[#000000a0]">
         <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
@@ -65,7 +65,7 @@ export default function JumboTron({
           )}
           <h1
             style={{ lineHeight: "120%" }}
-            className={`mb-4 w-4/5 leading-snug xl:text-6xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
+            className={`mb-4 w-4/5 leading-snug xl:text-5xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
           >
             {title}
           </h1>
