@@ -199,15 +199,7 @@ export default function Header() {
                           href="/fusion"
                           className="font-normal text-white text-lg"
                         >
-                          TMS embarcador
-                        </Link>
-                      </li>
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                        <Link
-                          href="/trux"
-                          className="font-normal text-white text-lg"
-                        >
-                          TMS Transportador
+                          TMS para Embarcadores
                         </Link>
                       </li>
                       <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
@@ -215,7 +207,15 @@ export default function Header() {
                           href="/ondetah"
                           className="font-normal text-white text-lg"
                         >
-                          Plataforma de comunicação
+                          Experiência do Cliente
+                        </Link>
+                      </li>
+                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                        <Link
+                          href="/trux"
+                          className="font-normal text-white text-lg"
+                        >
+                          TMS para Transportadores
                         </Link>
                       </li>
                     </ul>

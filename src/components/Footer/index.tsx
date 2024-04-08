@@ -37,16 +37,16 @@ export default function Footer() {
       name: "Gestão",
       products: [
         {
-          namePage: " TMS embarcador",
+          namePage: "TMS para Embarcadores",
           url: "/fusion",
         },
         {
-          namePage: " TMS transportador",
-          url: "/trux",
+          namePage: "Experiência do Cliente",
+          url: "/ondetah",
         },
         {
-          namePage: "Plataforma de comunicação",
-          url: "/ondetah",
+          namePage: "TMS para Transportadores",
+          url: "/trux",
         },
       ],
     },

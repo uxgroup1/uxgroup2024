@@ -37,20 +37,22 @@ import ImageUxMidiaThree from "@/assets/home/UX-na-midia/gestão.png";
 import ClientsCases from "@/components/institucional/clients";
 import ctaOne from "@/assets/cta/cta-1-home.png";
 import ctaTwo from "@/assets/cta/cta-2-home.png";
+
 import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
 import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
-import logoFusion from "@/assets/logos/fusion.svg";
-import logoTrux from "@/assets/logos/trux.svg";
-import logoOndetah from "@/assets/logos/ondetah.svg";
+import logoFusion from "@/assets/home/fusion-gestao.png";
+import logoTrux from "@/assets/home/trux-gestao.png";
+import logoOndetah from "@/assets/home/ondetah-gestao.png";
 import JumboTron from "@/components/produtos/jumbotron";
 import imageInstitucional from "@/assets/home/bannerMain/institucional.png";
 import Script from "next/script";
+import BannerHome from "@/components/institucional/bannerHome";
 
 const content = [
   {
     index: 0,
-    title: "TMS embarcador",
+    title: "TMS para Embarcadores",
     contentTitle: "Gestão de fretes para e-commerce e marketplaces.    ",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
@@ -59,7 +61,7 @@ const content = [
   },
   {
     index: 2,
-    title: "Plataforma de comunicação",
+    title: "Experiência do Cliente",
     contentTitle: "Gestão e comunicação com o cliente a partir do tracking.",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
@@ -68,7 +70,7 @@ const content = [
   },
   {
     index: 1,
-    title: "TMS Transportador",
+    title: "TMS para Transportadores",
     contentTitle: "Gestão de entregas e de transportadores.",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
@@ -157,7 +159,7 @@ export default function Home() {
       {/* <!-- End Google Tag Manager (noscript) --> */}
       <Header />
       {/* <BannerMain /> */}
-      <JumboTron
+      {/* <JumboTron
         banner={imageInstitucional.src}
         corButtonOne="#000"
         linkButtonOne=""
@@ -166,8 +168,9 @@ export default function Home() {
         textButtonTwo="saiba mais"
         title="Transformamos a experiência do cliente através da tecnologia para gestão, logística e sustentabilidade."
         text=" Conheça nosso ecossistema de soluções para vendas digitais."
-      />
-      <EcoSistemaUx />
+      /> */}
+      <BannerHome/>
+      {/* <EcoSistemaUx /> */}
       <ClientsCases />
       <CarroselVertical
         title="Tecnologia para gestão da logística."

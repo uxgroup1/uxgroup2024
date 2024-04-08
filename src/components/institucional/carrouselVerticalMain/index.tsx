@@ -27,6 +27,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
   return (
     <>
       <section className={style.CarroselVertical}>
+        
         <div className={style.Container}>
           <div className={style.BoxCarrosel}>
             <div
@@ -44,6 +45,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 transition: "0.3s",
+
               }}
               className={style.containerCarrouselVertical}
             >
