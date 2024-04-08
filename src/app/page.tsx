@@ -40,40 +40,39 @@ import ctaTwo from "@/assets/cta/cta-2-home.png";
 import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
 import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
-import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
+import logoFusion from "@/assets/logos/fusion.svg";
+import logoTrux from "@/assets/logos/trux.svg";
+import logoOndetah from "@/assets/logos/ondetah.svg";
+import JumboTron from "@/components/produtos/jumbotron";
+import imageInstitucional from "@/assets/home/bannerMain/institucional.png"
 
 const content = [
   {
     index: 0,
     title: "TMS embarcador",
-    contentTitle: "TMS embarcador",
+    contentTitle: "Gestão de fretes para e-commerce e marketplaces.    ",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     banner: imageCarroselVerticalOne.src,
-  },
-  {
-    index: 1,
-    title: "TMS Transportador",
-    contentTitle: "TMS Transportador",
-    contentText:
-      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    banner: imageCarroselVerticalTwo.src,
+    logo: logoFusion.src,
   },
   {
     index: 2,
     title: "Plataforma de comunicação",
-    contentTitle: "Plataforma de comunicação",
+    contentTitle: "Gestão e comunicação com o cliente a partir do tracking.",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     banner: imageCarroselVerticalThree.src,
+    logo: logoOndetah.src,
   },
   {
-    index: 3,
-    title: "Consultoria",
-    contentTitle: "Consultoria",
+    index: 1,
+    title: "TMS Transportador",
+    contentTitle: "Gestão de entregas e de transportadores.",
     contentText:
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
-    banner: imageCarroselVerticalFour.src,
+    banner: imageCarroselVerticalTwo.src,
+    logo: logoTrux.src,
   },
 ];
 
@@ -139,12 +138,13 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <BannerMain />
+      {/* <BannerMain /> */}
+      <JumboTron banner={imageInstitucional.src} corButtonOne="#000"  linkButtonOne=""  textButtonOne="fale com um consultor" linkButtonTwo="" textButtonTwo="saiba mais" title="Transformamos a experiência do cliente através da tecnologia para gestão, logística e sustentabilidade." text=" Conheça nosso ecossistema de soluções para vendas digitais."/>
       <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
         title="Tecnologia para gestão da logística."
-        text="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
+        text="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente.        "
         content={content}
       />
       <CarroselVerticalMobile
@@ -155,7 +155,7 @@ export default function Home() {
       <Cta
         button={true}
         title={
-          "Eficiência, Sustentabilidade e Informação: Descubra o futuro da logística com a UX."
+          "Eficiência, Informação e Sustentabilidade: Descubra o futuro da logística com a UX.          "
         }
         banner={ctaOne.src}
       />

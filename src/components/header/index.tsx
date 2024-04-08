@@ -83,10 +83,16 @@ export default function Header() {
                     className="flex hover:transition-all  items-center hover:font-normal cursor-pointer justify-between  bg-transparent font-normal py-2 w-20  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                   >
                     Gestão
-                    <MdKeyboardArrowDown className={`${openMenuGestao === true ? "rotate-180 transition ease-in-out" : ""} text-xl`} />
+                    <MdKeyboardArrowDown
+                      className={`${
+                        openMenuGestao === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                      } text-xl`}
+                    />
                   </Link>
                 </li>
-                <li>  
+                <li>
                   <Link
                     href={""}
                     onClick={handleOpenClickLog}
@@ -94,8 +100,13 @@ export default function Header() {
                     aria-current="page"
                   >
                     Logística
-                    
-                    <MdKeyboardArrowDown className={`${openMenuLog === true ? "rotate-180 transition ease-in-out" : ""} text-xl`} />
+                    <MdKeyboardArrowDown
+                      className={`${
+                        openMenuLog === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                      } text-xl`}
+                    />
                   </Link>
                 </li>
               </ul>
@@ -103,7 +114,6 @@ export default function Header() {
           </div>
           {openMenuLog && (
             <div
-              
               id="mega-menu-full-image-dropdown"
               className={`mt-1 bg-black w-full absolute top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
             >
@@ -135,14 +145,6 @@ export default function Header() {
                       className="font-normal text-white text-lg "
                     >
                       Pudos
-                    </Link>
-                  </li>
-                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                    <Link
-                      href="/s&op"
-                      className="font-normal text-white text-lg "
-                    >
-                      S&OP
                     </Link>
                   </li>
                 </ul>
@@ -210,14 +212,6 @@ export default function Header() {
                       className="font-normal text-white text-lg"
                     >
                       Plataforma de comunicação
-                    </Link>
-                  </li>
-                  <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
-                    <Link
-                      href="/consultoria"
-                      className="font-normal text-white text-lg"
-                    >
-                      Consultoria
                     </Link>
                   </li>
                 </ul>

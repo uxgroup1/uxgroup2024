@@ -12,22 +12,22 @@ export default function Footer() {
     {
       index: 0,
       image: logoLinkedIn,
-      link:"https://www.linkedin.com/company/uxgroup/"
+      link: "https://www.linkedin.com/company/uxgroup/",
     },
     {
       index: 1,
       image: logoInstagram,
-      link:"https://www.instagram.com/uxgroup_/"
+      link: "https://www.instagram.com/uxgroup_/",
     },
     {
       index: 2,
       image: logoFacebook,
-      link:"https://www.facebook.com/UX-GROUP-103113961067558/"
+      link: "https://www.facebook.com/UX-GROUP-103113961067558/",
     },
     {
       index: 3,
       image: logoYoutube,
-      link:" https://www.youtube.com/channel/UCzgk7wIIwM3IUQeBQxz7big"
+      link: " https://www.youtube.com/channel/UCzgk7wIIwM3IUQeBQxz7big",
     },
   ];
 
@@ -48,10 +48,6 @@ export default function Footer() {
           namePage: "Plataforma de comunicação",
           url: "/ondetah",
         },
-        {
-          namePage: "Consultoria",
-          url: "/consultoria",
-        },
       ],
     },
     {
@@ -70,11 +66,6 @@ export default function Footer() {
           namePage: "Pudos",
           url: "/pudos",
         },
-        {
-          namePage: "S&OP",
-          url: "/s&op",
-        },
-        
       ],
     },
     {
@@ -129,14 +120,19 @@ export default function Footer() {
                   );
                 })}
                 <div className="lg:ml-20">
-                  <Image src={imageCarbono.src} alt="" width={100} height={100} />
+                  <Image
+                    src={imageCarbono.src}
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
                 </div>
               </div>
             </div>
             <hr className="my-6 border-transparent relative w-full lg:border-white sm:mx-auto lg:my-8" />
             <div className="sm:flex md:flex-row flex flex-col-reverse gap-5  sm:items-center sm:justify-between">
               <span className="text-sm text-white sm:text-center">
-                © 2024 | UX Group | Todos os direitos reservados. 
+                © 2024 | UX Group | Todos os direitos reservados.
               </span>
               <Link className="md:ml[-20px] hover:underline" href="">
                 Política de Privacidade

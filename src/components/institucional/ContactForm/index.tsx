@@ -4,7 +4,7 @@ export default function ContactForm() {
       <section className="bg-black pt-[100px] w-full ">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col pb-10">
           <h1 className="w-full text-center">
-            Saiba mais sobre nossas soluções.
+            Fale diretamente com o nosso time.
           </h1>
           <p className="w-4/5 md:w-full">
             Nos informe qual tipo de contato gostaria de fazer.
@@ -41,6 +41,22 @@ export default function ContactForm() {
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               E-mail
+            </label>
+          </div>
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              type="tel"
+              name="floating_phone"
+              id="floating_phone"
+              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="floating_email"
+              className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Telefone
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -85,31 +101,25 @@ export default function ContactForm() {
               className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none  focus:outline-none focus:ring-0 focus:border-gray-200 peer"
             >
               <option value={"0"} className="text-white">
-                De qual solução você gostaria de saber mais?
+                Qual assunto gostaria de falar?
               </option>
               <option
                 className="text-white"
-                value="Logística - Armazenagem e gestão de estoque"
+                value="Quero conhecer todo o ecossistema UX.                "
               >
-                Logística - Armazenagem e gestão de estoque
+                Quero conhecer todo o ecossistema UX.
               </option>
-              <option value="Logística - Rede credenciada">
-                Logística - Rede credenciada
+              <option value="Quero conhecer as tecnologias para operação.">
+                Quero conhecer as tecnologias para operação.
               </option>
-              <option value="Logística - Green Mile">
-                Logística - Green Mile
+              <option value="Quero conhecer os serviços logísticos.">
+                Quero conhecer os serviços logísticos.
               </option>
-              <option value="Logística - Gestão de Transportes">
-                Logística - Gestão de Transportes
+              <option value="Quero que meu negócio seja parte do ecossistema.">
+                Quero que meu negócio seja parte do ecossistema.
               </option>
-              <option value="Tecnologia - TMS Embarcador">
-                Tecnologia - TMS Embarcador
-              </option>
-              <option value="Tecnologia - TMS Transportador">
-                Tecnologia - TMS Transportador
-              </option>
-              <option value="Tecnologia - Live Tracking">
-                Tecnologia - Live Tracking
+              <option value="Quero trabalhar na UX.">
+                Quero trabalhar na UX.
               </option>
             </select>
           </div>

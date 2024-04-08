@@ -47,7 +47,7 @@ export default function ClientsCases() {
           <div className="w-full space-y-12  ">
             <div className="lg:w-[65%]">
               <h1 className="text-black lg:w-[85%]">
-                UX {"(user experience)"} para nós, também siginifica unique
+                UX {"(user experience),"} para nós, também siginifica unique
                 experience.
               </h1>
               <p className="text-black w-full lg:w-4/5">

@@ -13,20 +13,22 @@ function LogisticaSustentavel() {
               <div className={style.ContentText}>
                 <div>
                   <h1>Logística Sustentável:</h1>
-                  Redefina o seu compromisso com o futuro
+                  Redefina o seu compromisso com o futuro e promova a
+                  sustentabilidade em cada pedido.
                 </div>
                 <p>
-                  Promova a sustentabilidade em cada pedido. Nossas soluções
-                  abrangem desde o Green Mile com entregas de moto elétrica até
-                  avançadas tecnologias pré e pós-venda com compensação de
-                  carbono. Além do uso da tecnologia em todo o processo
-                  logístico para redução do uso de papel na operação.
+                  Nossas soluções abrangem desde o Green Mile com entregas
+                  realizadas com motos elétricas até avançadas tecnologias pré e
+                  pós-venda que calculam a emissão e geram a compensação de
+                  carbono de cada venda.
                 </p>
                 <p>
-                  Faça parte da mudança: Conheça nossas soluções para uma
-                  logística sustentável. <br />
+                  Além disso, o uso da tecnologia em todo o processo logístico
+                  permite não só a eficiência operacional como também a redução
+                  do uso de papel nos CDs. <br />
                   <Link href={""} style={{ fontWeight: "bold" }}>
-                    Juntos, Podemos Criar um Futuro Mais Verde.
+                    Faça parte da mudança: Juntos podemos criar um futuro mais
+                    verde.
                   </Link>
                 </p>
                 <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">

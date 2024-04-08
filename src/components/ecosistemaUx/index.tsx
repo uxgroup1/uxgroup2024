@@ -17,7 +17,7 @@ function EcoSistemaUx() {
             <div className={style.Controller}>
               <div className={style.ContentText}>
                 <div>
-                  <h1>Ecossistema UX.</h1>
+                  <h1>Por quê UX?</h1>
                 </div>
                 <p>
                   Nosso propósito é apoiar a evolução do mercado de e-commerce
@@ -25,9 +25,10 @@ function EcoSistemaUx() {
                   gestor de operações digitais.
                 </p>
                 <p>
-                  Acreditamos que a experiência do cliente é fundamental para o
-                  sucesso no mundo online e que há uma etapa do processo capaz
-                  de diferenciar um negócio: a logística.
+                  Acreditamos que a excelência na experiência do cliente é
+                  fundamental para o sucesso no mundo online e que há uma etapa
+                  do processo capaz de diferenciar e transformar um negócio: a
+                  logística.
                 </p>
                 <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
                   saiba mais
@@ -37,7 +38,7 @@ function EcoSistemaUx() {
             <div className={style.ContentImage}>
               <div className={style.BoxImage}>
                 <Image
-                  className="w-full "
+                  className="w-[900px] "
                   src={ecoImage}
                   width={100}
                   height={100}

@@ -142,7 +142,7 @@ export function Blog() {
             target="_blank"
             className={`hover:font-semibold text-white transition hover:shadow-md bg-black rounded-lg hover:bg-white hover:text-black border-black border ${style.gotoBlog}`}
           >
-            acessar blog completo
+            acesse o blog
           </Link>
         </footer>
       </div>

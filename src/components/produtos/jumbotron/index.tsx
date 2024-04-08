@@ -6,7 +6,7 @@ interface Content {
   title: string;
   text: string;
   banner: string;
-  logo: string;
+  logo?: string;
   corButtonOne: string;
   corButtonTwo?: string;
   corButtonThree?: string;
@@ -54,20 +54,22 @@ export default function JumboTron({
     >
       <div className="w-full py-20 h-full bg-[#000000a0]">
         <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
-          <Image
-            className={`md:w-[500px] xl:w-[500px] lg:w-80 transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
-            width={0}
-            height={0}
-            src={logo}
-            alt="Logo do produto UX"
-          />
+          {logo && (
+            <Image
+              className={`md:w-[500px] xl:w-[500px] lg:w-80 transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
+              width={0}
+              height={0}
+              src={`${logo}`}
+              alt="Logo do produto UX"
+            />
+          )}
           <h1
-            style={{lineHeight: '120%'}}
+            style={{ lineHeight: "120%" }}
             className={`mb-4 w-4/5 leading-snug xl:text-6xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
           >
             {title}
           </h1>
-          
+
           <p
             className={`mb-8 text-sm text-white w-4/5  xl:w-4/5 lg:w-full transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
           >

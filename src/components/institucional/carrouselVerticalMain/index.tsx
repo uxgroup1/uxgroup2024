@@ -1,11 +1,13 @@
 import { useState } from "react";
 import style from "./style.module.scss";
+import Image from "next/image";
 
 interface Content {
   title: string;
   contentTitle: string;
   contentText: string;
   banner: string;
+  logo?: string;
 }
 
 interface ContentSlide {
@@ -75,6 +77,16 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                       : "animated-state-two"
                   }  ${style.content}`}
                 >
+                  {content[contentIndex].logo && (
+                    <Image
+                      src={`${content[contentIndex].logo} `}
+                      alt="Logo Produto do UX"
+                      width={10}
+                      height={10}
+                      className="w-[300px] pb-5"
+                    />
+                  )}
+
                   <h1
                     className={`transition-transform ${
                       contentIndex === 0
@@ -87,7 +99,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                   </h1>
                   <p>{content[contentIndex].contentText}</p>
                   <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
-                    saiba mais
+                    conheça a solução
                   </button>
                 </div>
               </div>
