@@ -57,7 +57,7 @@ export default function ProductInstitutional({
           <div className="lg:flex lg:items-center">
             <Image
               src={banner}
-              className="w-full xl:w-[35rem] lg:w-[30rem] rounded-2xl shadow-2xl "
+              className="w-full xl:w-[60%] lg:w-[30rem] rounded-2xl shadow-2xl "
               width={100}
               height={100}
               alt="ESG"
