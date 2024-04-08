@@ -28,6 +28,7 @@ import confiabilidade from "@/assets/pudo/pudoImages/confiabilidade.png";
 import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
 import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
 import pudo from "@/assets/pudo/pudoImages/pudo.png";
+import Script from "next/script";
 
 const contentFeatures = [
   {
@@ -102,12 +103,12 @@ export default function Pudos() {
     <>
       <main>
         {/* <!-- Google Tag Manager --> */}
-        <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</script>
-        {/* <!-- End Google Tag Manager --> */}
+                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
+      {/* <!-- End Google Tag Manager --> */}
         {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>
         <iframe

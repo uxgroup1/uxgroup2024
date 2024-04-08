@@ -32,6 +32,7 @@ import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
 import bannerInstitucional from "@/assets/logistica/img-ff.png";
 import FeaturesComponent from "@/components/produtos/features";
 import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
+import Script from "next/script";
 
 
 const content = [
@@ -104,12 +105,13 @@ const contentTopics = [
 export default function Logistica() {
   return (
     <main>
+
        {/* <!-- Google Tag Manager --> */}
-       <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</script>
+                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
       {/* <!-- End Google Tag Manager --> */}
       {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>
