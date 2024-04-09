@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function BannerHome() {
   return (
     <>
-      <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[04%] w-full  ">
+      <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[03%] w-full  ">
         <div className="flex items-center justify-center flex-col">
-          <div className="w-full transition-transform md:p-36 animated-state-Jumbotron flex items-center justify-center flex-col">
+          <div className="w-full transition-transform md:p-32 animated-state-Jumbotron flex items-center justify-center flex-col">
             <div className="flex items-center justify-center font-semibold w-48 p-3 mb-5 rounded-full border-2 border-black bg-white text-black">
               SOMOS UX
             </div>
