@@ -65,13 +65,13 @@ export default function JumboTron({
           )}
           <h1
             style={{ lineHeight: "120%" }}
-            className={`mb-4 w-4/5 leading-snug xl:text-5xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
+            className={`mb-4 md:w-4/5 w-[95%] leading-snug xl:text-5xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
           >
             {title}
           </h1>
 
           <p
-            className={`mb-8 text-sm text-white w-4/5  xl:w-4/5 lg:w-full transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
+            className={`mb-8  text-white md:w-4/5 w-[95%]  xl:w-4/5 lg:w-full transition-transform ${"animated-state-Jumbotron-two"} sm:px-16 lg:px-52`}
           >
             {text}
           </p>

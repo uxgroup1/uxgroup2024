@@ -51,7 +51,7 @@ export default function BannerHome() {
               alt="Sustentabilidade"
               width={100}
               height={100}
-              className="xl:w-full md:[display:none] lg:[display:none] xl:[display:none] md:w-full lg:w-full flex w-full"
+              className="xl:w-full md:[display:none] lg:[display:none] xl:[display:none] md:w-full lg:w-full flex w-[100%]"
               src={ecoImageMob.src}
             />
           </div>

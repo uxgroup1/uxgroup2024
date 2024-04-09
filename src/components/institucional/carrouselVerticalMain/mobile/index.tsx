@@ -103,10 +103,10 @@ function CarroselVerticalMobile({content, title, sub}: ContentProduct) {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-              className="flex h-[400px] flex-col md:flex-row"
+              className="flex h-[500px] flex-col md:flex-row"
             >
               <div className="w-full h-full bg-[#0000009b] rounded-b-2xl">
-                <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[50px] pt-[50px]">
+                <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[60px] pt-[60px]">
                   <h1 className="text-2xl text-white font-bold mb-4">
                     {content[contentIndex].contentTitle}
                   </h1>
