@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Content {
   title: string;
@@ -8,6 +9,8 @@ interface Content {
   contentText: string;
   banner: string;
   logo?: string;
+  link?: string;
+  corBarra?: string;
 }
 
 interface ContentSlide {
@@ -50,6 +53,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
               <div className="w-full h-full flex gap-[15%] rounded-2xl bg-[#0000007e]">
                 <div className={style.verticalMenu}>
                   {content.map((item, index) => (
+                    
                     <div
                       key={index}
                       className={`transition-transform "animated-state-Jumbotron 
@@ -57,7 +61,10 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                       }`}
                       onClick={() => handleButtonClick(index)}
                     >
-                      <div className={style.barra}></div>
+                      <h1>
+                        {item.corBarra}
+                      </h1>
+                      <div  className={`bg-white hover:bg-black ${style.barra}`}></div>
                       <h3
                         className={` ${
                           content.length === 4 ? "text-[19px]" : ""
@@ -69,7 +76,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                   ))}
                 </div>
                 <div
-                  style={{transition:"0.5s"}}
+                  style={{ transition: "0.5s" }}
                   className={` transition-transform ${
                     contentIndex === 0
                       ? "animated-state-one"
@@ -90,14 +97,14 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                     />
                   )}
 
-                  <h1
-                    className={`w-[76%]`}
-                  >
+                  <h1 className={`w-[76%]`}>
                     {content[contentIndex].contentTitle}
                   </h1>
                   <p>{content[contentIndex].contentText}</p>
                   <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
-                    conheça a solução
+                    <Link target="_blank" href={`${content[contentIndex].link}`}>
+                      conheça a solução
+                    </Link>
                   </button>
                 </div>
               </div>

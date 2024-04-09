@@ -12,7 +12,7 @@ interface Content {
 function EcoSistemaUx() {
   return (
     <>
-      <section className={style.LogisticaSustentavel}>
+      <section   className={style.LogisticaSustentavel}>
         <div className={style.Container}>
           <div className={style.BoxLogisticaSustentavel}>
             <div className={style.Controller}>

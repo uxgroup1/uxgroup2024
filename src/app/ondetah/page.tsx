@@ -210,12 +210,12 @@ export default function Ondetah() {
         banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
         text=""
       />
-      <ThreeTopics
+      {/* <ThreeTopics
         content={contentTopics}
         title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio."
         text=""
-      />
-      <CarroselVertical
+      /> */}
+      {/* <CarroselVertical
         content={content}
         title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
         text=""
@@ -224,7 +224,7 @@ export default function Ondetah() {
         content={content}
         title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
         sub=""
-      />
+      /> */}
       <SecondSection
         corButtonOne="#29265B"
         corButtonTwo="#009580"
@@ -233,13 +233,45 @@ export default function Ondetah() {
         image={imageOne.src}
         flowReverse={true}
       />
+
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Informação em Tempo Real."
+        text="Acompanhe cada etapa do pedido em tempo real. Desde a confirmação até a entrega, atualizações regulares, incluindo notificações em caso de eventos inesperados."
+        image={""}
+        flowReverse={false}
+      />
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Redução de Contatos no SAC."
+        text="Utilize nosso SAC 4.0 com um chatbot disponível 24 horas por dia. Reduza o tempo de espera e resolva questões rapidamente através de aplicativos de mensagens, garantindo uma experiência mais positiva para o cliente e reduzindo custos."
+        image={""}
+        flowReverse={true}
+      />
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Entrega Sustentável."
+        text="Deixe suas entregas mais ecológicas através da compensação de carbono. Utilizamos tecnologia para calcular e neutralizar as emissões de carbono associadas aos seus pedidos, e fornecemos certificados de compensação para cada compra."
+        image={""}
+        flowReverse={false}
+      />
+      <SecondSection
+        corButtonOne="#29265B"
+        corButtonTwo="#009580"
+        title="Pesquisas de Satisfação Personalizadas."
+        text="Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.        "
+        image={""}
+        flowReverse={true}
+      />
       <FeaturesComponent
         rowReverse={false}
         titleSection="Confira os benefícios da nossa solução para uma gestão de prazos e ocorrências:"
         content={contentFeatures}
         banner={imageTwo.src}
       />
-
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

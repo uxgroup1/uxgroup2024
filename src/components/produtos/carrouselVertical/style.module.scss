@@ -23,7 +23,6 @@
       width: 90%;
       height: 700px;
       background-color: #fff;
-      padding-top: 3%;
       gap: 15px;
 
       .containerTitulo {
@@ -65,6 +64,7 @@
         .barra {
           width: 320px;
           height: 5px;
+          border-radius: 16px; 
           background-color: #fff;
         }
 

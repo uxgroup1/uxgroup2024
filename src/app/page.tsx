@@ -53,6 +53,8 @@ const content = [
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     banner: imageCarroselVerticalOne.src,
     logo: logoFusion.src,
+    link:"/fusion",
+
   },
   {
     index: 2,
@@ -62,6 +64,7 @@ const content = [
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     banner: imageCarroselVerticalThree.src,
     logo: logoOndetah.src,
+    link:"/ondetah"
   },
   {
     index: 1,
@@ -71,6 +74,7 @@ const content = [
       "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
     banner: imageCarroselVerticalTwo.src,
     logo: logoTrux.src,
+    link:"/trux"
   },
 ];
 

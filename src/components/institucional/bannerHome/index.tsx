@@ -14,19 +14,28 @@ export default function BannerHome() {
               SOMOS UX
             </div>
             <h1 className="text-black w-[90%] text-3xl xl:text-6xl text-center xl:w-[63%]">
-              Transformamos a experiência do cliente através da tecnologia para
-              gestão, logística e sustentabilidade.
+              Transformamos a experiência do cliente através da tecnologia.
             </h1>
-            <p className="text-black py-5 w-4/5 text-center text-lg">
+            <div className="w-full py-5 flex-col md:flex-row flex justify-center items-center gap-5">
+              <button className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#29265B] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#009881] border-black`}>
+                Gestão
+              </button>
+              <button className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#FBC709] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#FF7F13] border-black`}>
+                Logística
+              </button>
+              <button className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#7DAD58] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#014C34] border-black`}>
+                Sustentabilidade
+              </button>
+              
+            </div>
+            {/* <p className="text-black py-5 w-4/5 text-center text-lg">
               Conheça nosso ecossistema de soluções para vendas digitais.
-            </p>
-            <button className="h-12 w-48 leading-6 bg-black hover:bg-white hover:shadow-lg hover:border-black border hover:text-black transition text-white rounded-lg">
-              <Link href={""}>saiba mais</Link>
-            </button>
+            </p> */}
           </div>
 
           <div className="flex w-[150%] justify-center transition-transform animated-state-Jumbotron-two mt-10">
             <Image
+              id="imageContent"
               alt="Sustentabilidade"
               width={100}
               height={100}

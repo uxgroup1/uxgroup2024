@@ -6,7 +6,7 @@ import background from "@/assets/home/bg-ux-partners.png"
 function UxPartners() {
   return (
     <>
-      <section style={{backgroundImage:`url(${(background.src)})`}} className={style.UxPartners}>
+      <section style={{backgroundImage:`url(${(background.src)})`, backgroundRepeat: "no-repeat", backgroundSize:"cover" }} className={style.UxPartners}>
         <div className={style.Container}>
           <div className={style.BoxUxPartners}>
             <div className={style.UX_partners}>

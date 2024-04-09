@@ -1,6 +1,8 @@
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import ondetahBanner from "@/assets/ondetah/ondetah.png";
+import bannerFulfillment from "@/assets/logistica/ffBanner.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -157,35 +159,40 @@ export default function Header() {
                         </Link>
                       </li>
                     </ul>
-                    <Link
-                      href="#"
-                      className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                    <div
+                      className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
+                      style={{
+                        backgroundImage: `url(${bannerFulfillment.src})`,
+                      }}
                     >
-                      <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                        Preview the new Flowbite dashboard navigation.
-                      </p>
-                      <button
-                        type="button"
-                        className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-                      >
-                        Get started
-                        <svg
-                          className="w-3 h-3 ms-2 rtl:rotate-180"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 14 10"
+                      <div className="w-full h-full bg-[#00000080] p-8">
+                        <p className="max-w-xl mb-5 text-xl font-extrabold leading-tight tracking-tight text-white">
+                          Controle, Armazenagem e Entregas Eficientes.
+                        </p>
+                        <button
+                          type="button"
+                          className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9"
-                          />
-                        </svg>
-                      </button>
-                    </Link>
+                          <Link href={"/logistica"}>conhecer solução</Link>
+
+                          <svg
+                            className="w-3 h-3 ms-2 rtl:rotate-180"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 10"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M1 5h12m0 0L9 1m4 4L9 9"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -226,35 +233,38 @@ export default function Header() {
                         </Link>
                       </li>
                     </ul>
-                    <Link
-                      href="#"
-                      className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                    <div
+                      className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
+                      style={{ backgroundImage: `url(${ondetahBanner.src})` }}
                     >
-                      <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                        Preview the new Flowbite dashboard navigation.
-                      </p>
-                      <button
-                        type="button"
-                        className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-                      >
-                        Get started
-                        <svg
-                          className="w-3 h-3 ms-2 rtl:rotate-180"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 14 10"
+                      <div className="w-full h-full bg-[#00000080] p-8">
+                        <p className="max-w-xl text-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
+                          Gestão e comunicação com o cliente a partir do
+                          tracking.
+                        </p>
+                        <button
+                          type="button"
+                          className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9"
-                          />
-                        </svg>
-                      </button>
-                    </Link>
+                          conhecer solução
+                          <svg
+                            className="w-3 h-3 ms-2 rtl:rotate-180"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 10"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M1 5h12m0 0L9 1m4 4L9 9"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
