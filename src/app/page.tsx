@@ -161,6 +161,7 @@ export default function Home() {
       <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
+        id="gestao"
         title="Tecnologia para gestão da logística."
         text="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente.        "
         content={content}
@@ -177,7 +178,7 @@ export default function Home() {
         }
         banner={ctaOne.src}
       />
-      <LogisticaComPerformance />
+      <LogisticaComPerformance id={"logistica"}/>
 
       <Cta
         button={true}
@@ -187,7 +188,7 @@ export default function Home() {
         banner={ctaTwo.src}
       />
 
-      <LogisticaSustentavel />
+      <LogisticaSustentavel id={"sustentabilidade"} />
       <UxPartners />
       <Blog />
       <UxMidia colorText="#fff" content={contentUxMidia} />

@@ -61,6 +61,66 @@ const contentFeaturesTwo = [
     icons: arrowImage,
   },
 ];
+const contentFeaturesSix = [
+  {
+    title: "Integração simples das notas de entrada diretamente no TMS.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Implementação de sistema de rastreamento de devoluções com acompanhamento em tempo real.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Otimização do processo de gestão de devoluções, reduzindo o tempo e os recursos necessários para processar e reembolsar devoluções.",
+    icons: arrowImage,
+  },
+];
+const contentFeaturesSeven = [
+  {
+    title: "Envio automático do XML via FTP.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Cadastro de diferentes apólices de seguro, para garantir a vigência das regras e restrições.",
+    icons: arrowImage,
+  },
+];
+const contentFeaturesFive = [
+  {
+    title:
+      "Nossos dashboards oferecem uma visão instantânea e informada da operação logística, incluindo desempenho de transporte e status de pedidos, permitindo uma análise rápida da situação atual.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Personalizamos os dashboards para atender às necessidades e preferências de cada usuário, garantindo uma experiência otimizada para todos na organização.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Com alertas personalizáveis, nossos dashboards garantem uma resposta rápida a situações críticas, permitindo que os usuários definam seus próprios critérios de notificação.",
+    icons: arrowImage,
+  },
+];
+const contentFeaturesThree = [
+  {
+    title: "Atualizações automáticas sobre as entregas.",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Suporte acessível e conveniente via telefone, e-mail ou chat para resolver dúvidas ou problemas    .",
+    icons: arrowImage,
+  },
+  {
+    title:
+      "Base de conhecimento completa no portal do cliente com vídeos, artigos e tutoriais.",
+    icons: arrowImage,
+  },
+];
 
 const contentFeaturesFour = [
   {
@@ -105,22 +165,22 @@ export default function Trux() {
     <>
       <main>
         {/* <!-- Google Tag Manager --> */}
-      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-      {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- End Google Tag Manager --> */}
         {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-      {/* <!-- End Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
           linkButtonOne="#"
@@ -165,6 +225,34 @@ export default function Trux() {
           text="Tenha o controle total das suas finanças e automatize processos."
           banner={imageGestao.src}
           content={contentFeatures}
+          rowReverse={true}
+        />
+        <FeaturesComponent
+          titleSection="Atendimento"
+          text="Atendimento personalizado e suporte 24/7."
+          banner={imageGestao.src}
+          content={contentFeaturesThree}
+          rowReverse={false}
+        />
+        <FeaturesComponent
+          titleSection="Dashboards"
+          text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
+          banner={imageGestao.src}
+          content={contentFeaturesFive}
+          rowReverse={true}
+        />
+        <FeaturesComponent
+          titleSection="Reversa"
+          text="Gerencie suas cargas de retorno de forma automatizada com total visibilidade do processo."
+          banner={imageGestao.src}
+          content={contentFeaturesSix}
+          rowReverse={false}
+        />
+        <FeaturesComponent
+          titleSection="Averbação de Carga"
+          text="Sua carga protegida em todas as etapas da entrega."
+          banner={imageGestao.src}
+          content={contentFeaturesSeven}
           rowReverse={true}
         />
         <FeaturesComponent

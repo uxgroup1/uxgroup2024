@@ -48,10 +48,10 @@ const content = [
   },
 ];
 
-function LogisticaComPerformance() {
+function LogisticaComPerformance({id}:any) {
   return (
     <>
-      <section  className={` ${style.CarrouselProducts}`}>
+      <section  id={id} className={` ${style.CarrouselProducts}`}>
         <div className={style.Container}>
           <div className={style.BoxCarrouselProducts}>
             <div className={style.Controller}>

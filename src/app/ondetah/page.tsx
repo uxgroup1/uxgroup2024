@@ -31,6 +31,7 @@ import imageSlideThree from "@/assets/ondetah/imagesSections/3.png";
 import imageSlideFour from "@/assets/ondetah/imagesSections/4.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
+import SliderTopics from "@/components/slider";
 
 const contentFeatures = [
   {
@@ -272,6 +273,7 @@ export default function Ondetah() {
         content={contentFeatures}
         banner={imageTwo.src}
       />
+      <SliderTopics />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

@@ -17,9 +17,10 @@ interface ContentSlide {
   content: Content[];
   title: string;
   text: string;
+  id?: string;
 }
 
-function CarroselVertical({ title, text, content }: ContentSlide) {
+function CarroselVertical({ title, text, content,id }: ContentSlide) {
   const [contentIndex, setContentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -29,7 +30,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
 
   return (
     <>
-      <section className={style.CarroselVertical}>
+      <section id={id} className={style.CarroselVertical}>
         <div className={style.Container}>
           <div className={style.BoxCarrosel}>
             <div
@@ -61,9 +62,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                       }`}
                       onClick={() => handleButtonClick(index)}
                     >
-                      <h1>
-                        {item.corBarra}
-                      </h1>
+                    
                       <div  className={`bg-white hover:bg-black ${style.barra}`}></div>
                       <h3
                         className={` ${

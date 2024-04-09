@@ -102,7 +102,7 @@ h3{
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   padding-bottom: 16px;
 }
@@ -171,6 +171,24 @@ section{
 }
 
 .animated-state-Jumbotron {
+  /* Animação específica para o terceiro título */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-Jumbotron 1s ease-in-out forwards; /* Adiciona animação */
+}
+.animated-state-Jumbotron-two {
+  /* Animação específica para o terceiro título */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-Jumbotron 1s ease-in-out forwards; /* Adiciona animação */
+}
+.animated-state-Jumbotron-three {
+  /* Animação específica para o terceiro título */
+  transform: translateY(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-Jumbotron 1s ease-in-out forwards; /* Adiciona animação */
+}
+.animated-state-Jumbotron-four {
   /* Animação específica para o terceiro título */
   transform: translateY(0); /* Posiciona o conteúdo na tela */
   opacity: 1; /* Mostra o conteúdo */

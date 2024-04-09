@@ -56,17 +56,17 @@ const contentTopics = [
   {
     icon: natureImage,
     title: "Redução da pegada de carbono",
-    text: "lorem Ipsum et al.",
+    text: "",
   },
   {
     icon: packgeImage,
     title: "Entregas mais rápidas e eficientes",
-    text: "lorem Ipsum et al.",
+    text: "",
   },
   {
     icon: movingImage,
     title: "Geração de valor para sua marca",
-    text: "lorem Ipsum et al.",
+    text: "",
   },
 ];
 

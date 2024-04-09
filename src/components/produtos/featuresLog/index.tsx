@@ -71,7 +71,7 @@ export default function FeaturesComponentLog({
                       className="flex w-full items-center gap-5 justify-start"
                     >
                       <Image
-                        className="flex hover:border-[2px] justify-start items-start  hover:animate-pulse  w-[45px] hover:border-transparent object-cover h-[45px]"
+                        className="flex hover:border-[2px] justify-start items-start  hover:animate-pulse  w-[55px] hover:border-transparent object-cover h-[55px]"
                         src={item.icons}
                         alt="Seta identificadora do item"
                         width={100}

@@ -3,10 +3,10 @@ import style from "./style.module.scss";
 import motoEletrica from "@/assets/home/moto-eletrica.png";
 import Image from "next/image";
 
-function LogisticaSustentavel() {
+function LogisticaSustentavel({ id }: any) {
   return (
     <>
-      <section className={style.LogisticaSustentavel}>
+      <section id={id} className={style.LogisticaSustentavel}>
         <div className={style.Container}>
           <div className={style.BoxLogisticaSustentavel}>
             <div className={style.Controller}>

@@ -17,16 +17,21 @@ export default function BannerHome() {
               Transformamos a experiência do cliente através da tecnologia.
             </h1>
             <div className="w-full py-5 flex-col md:flex-row flex justify-center items-center gap-5">
-              <button className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#29265B] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#009881] border-black`}>
-                Gestão
+              <button
+                className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#29265B] hover:border-transparent hover:transition hover:text-white hover:font-semibold hover:to-[#009881] border-black`}
+              >
+                <Link href={"#gestao"}>Gestão</Link>
               </button>
-              <button className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#FBC709] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#FF7F13] border-black`}>
-                Logística
+              <button
+                className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#FBC709] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#FF7F13] border-black`}
+              >
+                <Link href={"#logistica"}>Logística</Link>
               </button>
-              <button className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#7DAD58] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#014C34] border-black`}>
-                Sustentabilidade
+              <button
+                className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#7DAD58] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#014C34] border-black`}
+              >
+                <Link href={"#sustentabilidade"}>Sustentabilidade</Link>
               </button>
-              
             </div>
             {/* <p className="text-black py-5 w-4/5 text-center text-lg">
               Conheça nosso ecossistema de soluções para vendas digitais.

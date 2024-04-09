@@ -36,10 +36,10 @@ import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
 import Script from "next/script";
 import Numbers from "@/components/produtos/numbers";
 import FeaturesComponentLog from "@/components/produtos/featuresLog";
-import iconeOne from "@/assets/logistica/icones/gestao.png"
-import iconeTwo from "@/assets/logistica/icones/homologados.png"
-import iconeThree from "@/assets/logistica/icones/localizacao.png"
-import iconeFour from "@/assets/logistica/icones/pudos.png"
+import iconeOne from "@/assets/logistica/icones/gestao.svg"
+import iconeTwo from "@/assets/logistica/icones/homologados.svg"
+import iconeThree from "@/assets/logistica/icones/localizacao.svg"
+import iconeFour from "@/assets/logistica/icones/pudos.svg"
 
 const content = [
   {
