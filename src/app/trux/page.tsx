@@ -217,14 +217,14 @@ export default function Trux() {
           titleSection="Roteirização de entrega"
           text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
           banner={imageRoteirizacao.src}
-          content={contentFeaturesTwo}
+          content={contentFeatures}
           rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Gestão financeira"
           text="Tenha o controle total das suas finanças e automatize processos."
           banner={imageGestao.src}
-          content={contentFeatures}
+          content={contentFeaturesTwo}
           rowReverse={true}
         />
         <FeaturesComponent

@@ -267,12 +267,6 @@ export default function Ondetah() {
         image={""}
         flowReverse={true}
       />
-      <FeaturesComponent
-        rowReverse={false}
-        titleSection="Confira os benefícios da nossa solução para uma gestão de prazos e ocorrências:"
-        content={contentFeatures}
-        banner={imageTwo.src}
-      />
       <SliderTopics />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
