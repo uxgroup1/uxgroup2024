@@ -27,7 +27,6 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
   return (
     <>
       <section className={style.CarroselVertical}>
-        
         <div className={style.Container}>
           <div className={style.BoxCarrosel}>
             <div
@@ -44,21 +43,18 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                transition: "0.3s",
-
+                transition: "0.6s",
               }}
-              className={style.containerCarrouselVertical}
+              className={` transition-transform animated-state-Jumbotron  ${style.containerCarrouselVertical}`}
             >
               <div className="w-full h-full flex gap-[15%] rounded-2xl bg-[#0000007e]">
                 <div className={style.verticalMenu}>
                   {content.map((item, index) => (
                     <div
                       key={index}
-                      className={`transition-transform ${
-                        contentIndex === 0
-                          ? "animated-state-one"
-                          : "animated-state-two"
-                      } ${style.itemMenu}`}
+                      className={`transition-transform "animated-state-Jumbotron 
+                        ${style.itemMenu}
+                      }`}
                       onClick={() => handleButtonClick(index)}
                     >
                       <div className={style.barra}></div>
@@ -73,11 +69,16 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                   ))}
                 </div>
                 <div
+                  style={{transition:"0.5s"}}
                   className={` transition-transform ${
                     contentIndex === 0
                       ? "animated-state-one"
                       : "animated-state-two"
-                  }  ${style.content}`}
+                  } ${
+                    contentIndex === 1
+                      ? "animated-state-three"
+                      : "animated-state-one"
+                  } ${style.content}`}
                 >
                   {content[contentIndex].logo && (
                     <Image
@@ -90,12 +91,7 @@ function CarroselVertical({ title, text, content }: ContentSlide) {
                   )}
 
                   <h1
-                    className={`transition-transform ${
-                      contentIndex === 0
-                        ? "animated-state-one"
-                        : "animated-state-two"
-                    }, 
-                  w-4/5`}
+                    className={`w-[76%]`}
                   >
                     {content[contentIndex].contentTitle}
                   </h1>
