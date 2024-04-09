@@ -123,7 +123,7 @@ export default function Pudos() {
         <JumboTron
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
-          linkButtonOne=""
+          linkButtonOne="#contactForm"
           linkButtonTwo=""
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
@@ -171,7 +171,7 @@ export default function Pudos() {
         />
 
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm />
+        <ContactForm/>
         <Footer />
       </main>
     </>

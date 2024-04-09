@@ -89,7 +89,9 @@ export default function Footer() {
               <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                   <Link href="#" className="flex items-center">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src={logoUX.src}
                       className="h-11 me-3 hover:border border-transparent "
                       alt="Gestão e tecnologia"

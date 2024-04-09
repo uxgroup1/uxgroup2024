@@ -7,25 +7,25 @@ import Link from "next/link";
 export default function BannerHome() {
   return (
     <>
-      <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[06%] w-full  ">
+      <section className="bg-white max-w-[1996px] pt-[30%] xl:pt-[04%] w-full  ">
         <div className="flex items-center justify-center flex-col">
-          <div className="w-full transition-transform  animate-none xl:animated-state-Jumbotron flex items-center justify-center flex-col">
+          <div className="w-full transition-transform md:p-36 animated-state-Jumbotron flex items-center justify-center flex-col">
             <div className="flex items-center justify-center font-semibold w-48 p-3 mb-5 rounded-full border-2 border-black bg-white text-black">
               SOMOS UX
             </div>
-            <h1 className="text-black w-[90%] text-3xl xl:text-5xl text-center xl:w-[60%]">
+            <h1 className="text-black w-[90%] text-3xl xl:text-6xl text-center xl:w-[63%]">
               Transformamos a experiência do cliente através da tecnologia para
               gestão, logística e sustentabilidade.
             </h1>
             <p className="text-black py-5 w-4/5 text-center text-lg">
               Conheça nosso ecossistema de soluções para vendas digitais.
             </p>
-            <button className="h-12 w-48 leading-6 bg-black text-white rounded-lg">
-              saiba mais
+            <button className="h-12 w-48 leading-6 bg-black hover:bg-white hover:shadow-lg hover:border-black border hover:text-black transition text-white rounded-lg">
+              <Link href={""}>saiba mais</Link>
             </button>
           </div>
 
-          <div className="flex w-full justify-center transition-transform animate-none xl:animated-state-Jumbotron-two mt-10">
+          <div className="flex w-[150%] justify-center transition-transform animated-state-Jumbotron-two mt-10">
             <Image
               alt="Sustentabilidade"
               width={100}

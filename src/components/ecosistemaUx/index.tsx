@@ -1,6 +1,7 @@
 import Image from "next/image";
 import style from "./style.module.scss";
 import ecoImage from "../../assets/ecossistema.png";
+import Link from "next/link";
 
 interface Content {
   title: string;
@@ -31,7 +32,7 @@ function EcoSistemaUx() {
                   logística.
                 </p>
                 <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
-                  saiba mais
+                  <Link href={"#contactForm"}>saiba mais</Link>
                 </button>
               </div>
             </div>

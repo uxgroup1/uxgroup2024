@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 
@@ -26,7 +27,7 @@ export function Cases({content}: ContentSlide) {
           prevSlide === content.length - 1 ? 0 : prevSlide + 1
         );
         setIsTransitioning(false);
-      }, 300); // Tempo da animação
+      }, 300); 
     }
   };
 
@@ -38,7 +39,7 @@ export function Cases({content}: ContentSlide) {
           prevSlide === 0 ? content.length - 1 : prevSlide - 1
         );
         setIsTransitioning(false);
-      }, 300); // Tempo da animação
+      }, 300); 
     }
   };
 
@@ -52,7 +53,9 @@ export function Cases({content}: ContentSlide) {
         <main className="relative flex justify-center items-center z-20 lg:w-[92%] mt-8 md:flex md:items-center xl:mt-12">
           <div style={{boxShadow: 'rgba(0, 0, 0, 0.3) 2px 4px 12px 0px'}} className="absolute flex justify-center items-center box-shadow  w-full bg-[#bfbfbf] -z-10 md:h-96 rounded-2xl"></div>
           <div className="w-full bg-black md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
-            <img
+            <Image
+              width={100}
+              height={100}
               style={{boxShadow: 'rgba(0, 0, 0, 0.3) 2px 4px 12px 0px'}}
               className={`h-40 w-full md:mx-6 rounded-t-[16px] object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[50%] md:rounded-2xl transition-opacity ${
                 isTransitioning ? "opacity-0" : "opacity-100"
@@ -62,9 +65,11 @@ export function Cases({content}: ContentSlide) {
             />
             <div className="mt-2 md:mx-6 p-5">
               <div className="flex flex-col gap-3">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={content[currentSlide].imageSrc}
-                  alt="client photo"
+                  alt="Clientes UX"
                   className={`md:w-[70px] md:h-[70px] w-20 h-20 mb-3 rounded-[8px]  transition-opacity ${
                     isTransitioning ? "opacity-0" : "opacity-100"
                   }`}

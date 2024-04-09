@@ -2,6 +2,7 @@ import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
@@ -29,10 +30,10 @@ export default function Header() {
           <div className="w-[90%]">
             <div className="flex w-full flex-wrap justify-between items-center mx-auto  py-5">
               <Link
-                href="#"
+                href="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse"
               >
-                <img src={logoUx.src} className="h-8" alt="Flowbite Logo" />
+                <Image width={100} height={100} src={logoUx.src} className="h-8" alt="Flowbite Logo" />
               </Link>
               <button
                 onClick={handleOpenClick}
