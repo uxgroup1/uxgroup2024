@@ -70,11 +70,11 @@ export default function SliderTopics() {
 
           <div
             style={{ transition: "0.9s ease-in-out" }}
-            className={` order-2 w-full flex flex-col justify-center md:items-start items-center md:pt-0 pt-10 md:w-[80%]`}
+            className={` order-2 w-full h-[500px] flex flex-col justify-center md:items-start items-center md:pt-0 pt-10 md:w-[80%]`}
           >
             <Image
               src={content[contentIndex].icon}
-              className="md:w-20 flex items-center justify-center w-[50%] pb-5"
+              className="md:w-20 flex items-center justify-center w-[30%] pb-5"
               width={0}
               height={0}
               alt="icone"
@@ -89,8 +89,10 @@ export default function SliderTopics() {
         </div>
 
         <div className="flex items-center justify-start w-full">
-          <img
-            className="object-cover w-full h-full max-w-2xl rounded-md"
+          <Image
+            width={100}
+            height={100} 
+            className="object-cover w-full md:w-[80%] h-full  rounded-2xl"
             src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
             alt="apple watch photo"
           />
