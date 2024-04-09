@@ -26,14 +26,20 @@ export default function Header() {
   return (
     <>
       <nav className="bg-black fixed flex items-center   justify-center z-50  top-0 w-full px-1 md:px-4 border-gray-200">
-        <div className="flex items-center justify-center w-full  max-w-[1996px] h-full">
-          <div className="w-[94%]">
+        <div className="flex items-center justify-center w-full max-w-[1996px] h-full">
+          <div className="xl:w-[94%] lg:w-[95%] w-[97%] flex items-center justify-center">
             <div className="flex w-full flex-wrap justify-between items-center mx-auto  py-5">
               <Link
                 href="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse"
               >
-                <Image width={100} height={100} src={logoUx.src} className="h-8" alt="Flowbite Logo" />
+                <Image
+                  width={100}
+                  height={100}
+                  src={logoUx.src}
+                  className="h-8 flex items-start justify-start"
+                  alt="Flowbite Logo"
+                />
               </Link>
               <button
                 onClick={handleOpenClick}
@@ -64,7 +70,7 @@ export default function Header() {
                 id="mega-menu-full-image"
                 className={`items-center justify-between ${
                   openMenu ? "block" : "hidden"
-                } w-full md:flex md:w-auto md:order-1`}
+                } w-full pl-5 md:flex md:w-auto md:order-1`}
               >
                 <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                   <li>
@@ -120,7 +126,7 @@ export default function Header() {
                 className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
-                  <div className="grid bg-black w-[92%] md:grid-cols-2 md:px-0">
+                  <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">
                     <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
                       <h1 className="text-white">Logística</h1>
                     </div>
@@ -190,7 +196,7 @@ export default function Header() {
                 className={`mt-1 bg-black flex items-center justify-center absolute w-full  top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 xl:pl-5  pl-0 text-sm max-w-[1996px]">
-                  <div className="grid bg-black w-[92%]  md:grid-cols-2 md:px-0">
+                  <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">
                     <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
                       <h1 className="text-white">Gestão</h1>
                     </div>

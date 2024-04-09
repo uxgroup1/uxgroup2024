@@ -55,10 +55,14 @@ export default function FeaturesComponentLog({
                   height={100}
                 />
               )}
-              <h1 className="w-[93%] xl:text-3xl lg:text-2xl font-bold pb-8 text-black">
-                {titleSection}
+              <h1 className="w-[93%] flex items-center gap-2 xl:text-4xl lg:text-2xl font-bold pb-8 text-black">
+                Estoque avançado.
               </h1>
-              {text && <p className="pb-7 xl:text-sm lg:text-[0.7rem] md:w-4/5 text-black">{text}</p>}
+              {text && (
+                <p className="pb-7 xl:text-sm lg:text-[0.7rem] md:w-4/5 text-black">
+                  {text}
+                </p>
+              )}
               <div className="md:flex w-full flex-col lg:gap-1 gap-4 xl:gap-8 md:items-start">
                 {content?.map((item, index) => {
                   return (
@@ -74,9 +78,7 @@ export default function FeaturesComponentLog({
                         height={100}
                       />
                       <div className="mt-4 w-full  flex flex-col gap-1 h-full md:mt-0">
-                      <h3 className="text-black">
-                          {item.title}
-                        </h3>
+                        <h3 className="text-black">{item.title}</h3>
 
                         <p className=" pb-3 md:pb-0 md:w-[80%] font-medium xl:text-sm lg:text-[0.8rem] cursor-default  text-black w-full ">
                           {item.text}

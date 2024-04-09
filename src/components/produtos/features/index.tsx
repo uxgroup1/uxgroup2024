@@ -54,10 +54,14 @@ export default function FeaturesComponent({
                   height={100}
                 />
               )}
-              <h1 className="w-[93%] xl:text-3xl lg:text-2xl font-bold pb-4 text-black">
+              <h1 className="w-[93%] xl:text-4xl lg:text-2xl font-bold pb-4 text-black">
                 {titleSection}
               </h1>
-              {text && <p className="pb-7 xl:text-sm lg:text-[0.7rem] md:w-4/5 text-black">{text}</p>}
+              {text && (
+                <p className="pb-7 xl:text-sm lg:text-[0.7rem] md:w-4/5 text-black">
+                  {text}
+                </p>
+              )}
               <div className="md:flex w-full flex-col lg:gap-1 gap-4 xl:gap-4 md:items-start">
                 {content?.map((item, index) => {
                   return (
@@ -73,7 +77,6 @@ export default function FeaturesComponent({
                         height={100}
                       />
                       <div className="mt-4 w-full  h-full md:mt-0">
-                        
                         <p className=" pb-3 md:pb-0 md:w-[80%] font-medium xl:text-sm lg:text-[0.8rem] cursor-default  text-black w-full ">
                           {item.title}
                         </p>
