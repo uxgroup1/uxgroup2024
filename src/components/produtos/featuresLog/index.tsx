@@ -5,6 +5,7 @@ import Link from "next/link";
 interface Content {
   title: string;
   icons: string;
+  text: string;
 }
 
 interface ContentArray {
@@ -18,7 +19,7 @@ interface ContentArray {
   imageSobTitle?: string;
 }
 
-export default function FeaturesComponent({
+export default function FeaturesComponentLog({
   content,
   banner,
   text,
@@ -54,28 +55,31 @@ export default function FeaturesComponent({
                   height={100}
                 />
               )}
-              <h1 className="w-[93%] xl:text-3xl lg:text-2xl font-bold pb-4 text-black">
+              <h1 className="w-[93%] xl:text-3xl lg:text-2xl font-bold pb-8 text-black">
                 {titleSection}
               </h1>
               {text && <p className="pb-7 xl:text-sm lg:text-[0.7rem] md:w-4/5 text-black">{text}</p>}
-              <div className="md:flex w-full flex-col lg:gap-1 gap-4 xl:gap-4 md:items-start">
+              <div className="md:flex w-full flex-col lg:gap-1 gap-4 xl:gap-8 md:items-start">
                 {content?.map((item, index) => {
                   return (
                     <div
                       key={index}
-                      className="flex w-full items-center gap-2 justify-start"
+                      className="flex w-full items-center gap-5 justify-start"
                     >
                       <Image
-                        className="flex hover:border-[2px] justify-start items-start  hover:animate-pulse  w-[40px] hover:border-transparent object-cover h-[40px]"
+                        className="flex hover:border-[2px] justify-start items-start  hover:animate-pulse  w-[45px] hover:border-transparent object-cover h-[45px]"
                         src={item.icons}
                         alt="Seta identificadora do item"
                         width={100}
                         height={100}
                       />
-                      <div className="mt-4 w-full  h-full md:mt-0">
-                        
-                        <p className=" pb-3 md:pb-0 md:w-[80%] font-medium xl:text-sm lg:text-[0.8rem] cursor-default  text-black w-full ">
+                      <div className="mt-4 w-full  flex flex-col gap-1 h-full md:mt-0">
+                      <h3 className="text-black">
                           {item.title}
+                        </h3>
+
+                        <p className=" pb-3 md:pb-0 md:w-[80%] font-medium xl:text-sm lg:text-[0.8rem] cursor-default  text-black w-full ">
+                          {item.text}
                         </p>
                       </div>
                     </div>

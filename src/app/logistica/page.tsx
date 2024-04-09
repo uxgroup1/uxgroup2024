@@ -30,10 +30,16 @@ import imageFour from "@/assets/logistica/four.svg";
 import banner from "@/assets/logistica/ffBanner.png";
 import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
 import bannerInstitucional from "@/assets/logistica/img-ff.png";
+import estoqueImage from "@/assets/logistica/estoque-avancado.gif";
 import FeaturesComponent from "@/components/produtos/features";
 import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
 import Script from "next/script";
-
+import Numbers from "@/components/produtos/numbers";
+import FeaturesComponentLog from "@/components/produtos/featuresLog";
+import iconeOne from "@/assets/logistica/icones/gestao.png"
+import iconeTwo from "@/assets/logistica/icones/homologados.png"
+import iconeThree from "@/assets/logistica/icones/localizacao.png"
+import iconeFour from "@/assets/logistica/icones/pudos.png"
 
 const content = [
   {
@@ -62,6 +68,25 @@ const content = [
   },
 ];
 
+const number = [
+  {
+    number: "+30K m²",
+    text: "CDs próprios para Fulfillment.",
+  },
+  {
+    number: "99,3%",
+    text: "Armazenagem e CD no prazo D0.",
+  },
+  {
+    number: "+98,86%",
+    text: "Acurácia de Inventário.",
+  },
+  {
+    number: "70K",
+    text: "pedidos pesados faturados por mês.",
+  },
+];
+
 const contentFeaturesOne = [
   {
     title: "Redução de custos operacionais.",
@@ -74,6 +99,32 @@ const contentFeaturesOne = [
   {
     title: "Maior visibilidade e controle dos processos.",
     icons: arrow,
+  },
+];
+const contentFeaturesTwo = [
+  {
+    title:
+      "Localização estratégica:",
+     text:"CDs distintos para operação de itens leves e pesados localizados na região metropolitana de São Paulo, local de maior volume de vendas do e-commerce brasileiro.",
+    icons: iconeThree.src,
+  },
+  {
+    title:
+      "CDs homologados: ",
+      text:"Pelos principais marketplaces que possibilita a concentração em um único estoque ou estoque avançado (Curva A).",
+    icons: iconeTwo.src,
+  },
+  {
+    title:
+      "140 pontos de PUDOs: ",
+      text:"Espalhados no centro da cidade em parceria com marketplaces.",
+    icons: iconeFour.src,
+  },
+  {
+    title:
+      "Gestão logística: ",
+      text:"Integrada com um time especializado em fulfillment trabalhando lado a lado a uma equipe de transportes para redução de prazo de entrega (Same Day e Next Day Delivery).",
+    icons: iconeOne.src,
   },
 ];
 
@@ -105,8 +156,7 @@ const contentTopics = [
 export default function Logistica() {
   return (
     <main>
-
-       {/* <!-- Google Tag Manager --> */}
+      {/* <!-- Google Tag Manager --> */}
       <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -148,6 +198,13 @@ export default function Logistica() {
         textButtonOne="saiba mais"
         textButtonTwo="falar com consultor"
       />
+      <Numbers
+        cor="#fbc705"
+        title="Garanta a satisfação do seu cliente com uma gestão logística 100% integrada em todas as etapas."
+        number={number}
+        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+        text=""
+      />
       <ThreeTopics
         title="Benefícios de escolher a UX."
         text=""
@@ -160,6 +217,14 @@ export default function Logistica() {
         button
         titleSection="Fulfillment Personalizado."
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
+      />
+      <FeaturesComponentLog
+        banner={estoqueImage.src}
+        rowReverse={true}
+        content={contentFeaturesTwo}
+        button={false}
+        titleSection="Estoque avançado."
+        text=""
       />
       <Cta
         button={false}

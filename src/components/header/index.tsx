@@ -120,7 +120,7 @@ export default function Header() {
                 className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
-                  <div className="grid bg-black w-[90%] md:grid-cols-2 md:px-0">
+                  <div className="grid bg-black w-[92%] md:grid-cols-2 md:px-0">
                     <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
                       <h1 className="text-white">Logística</h1>
                     </div>
@@ -190,7 +190,7 @@ export default function Header() {
                 className={`mt-1 bg-black flex items-center justify-center absolute w-full  top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 xl:pl-5  pl-0 text-sm max-w-[1996px]">
-                  <div className="grid bg-black w-[90%]  md:grid-cols-2 md:px-0">
+                  <div className="grid bg-black w-[92%]  md:grid-cols-2 md:px-0">
                     <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
                       <h1 className="text-white">Gestão</h1>
                     </div>

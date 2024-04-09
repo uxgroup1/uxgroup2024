@@ -45,7 +45,7 @@ export default function Numbers({
           {number.map((item, index) => {
             return (
               <div
-                className="flex flex-col cursor-pointer items-center justify-center rounded-2xl transition-all p-5  border-transparent w-full lg:w-[200px]"
+                className="flex flex-col cursor-pointer items-center justify-center transition-all p-5  border-transparent w-full h-auto lg:w-[260px]"
                 key={index}
               >
                 <h1 style={{color:`${cor}`}} className={`text-[3rem]`}>{item.number}</h1>
