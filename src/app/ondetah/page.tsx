@@ -36,8 +36,7 @@ import IntegrationsOndetah from "@/components/produtos/integracoesOndetah";
 import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.png";
 import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
-import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png"
-
+import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
 
 const contentFeatures = [
   {
@@ -239,7 +238,8 @@ export default function Ondetah() {
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Gestão de Prazos e Ocorrências."
-        text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente. Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
+        text="Entendemos a importância de uma gestão de prazos eficiente e de como lidar com ocorrências de maneira proativa pode impactar positivamente sua operação e a experiência do seu cliente."
+        textTwo="Com o Ondetah você pode acompanhar de perto o desempenho da sua operação e identificar possíveis distorções entre os prazos prometidos e os prazos reais de entrega. Atue de maneira preventiva, evite contatos no SAC e ainda melhore a satisfação do cliente."
         image={imageOne.src}
         flowReverse={true}
       />

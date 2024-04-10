@@ -7,6 +7,7 @@ import Link from "next/link";
 interface Content {
   title: string;
   text: string;
+  textTwo?: string;
   image: string;
   flowReverse: boolean;
   corButtonOne: string;
@@ -26,6 +27,7 @@ function SecondSection({
   corButtonThree,
   id,
   link,
+  textTwo,
 }: Content) {
   const [hovered, setHovered] = useState(false);
 
@@ -57,7 +59,10 @@ function SecondSection({
             <div className={`${style.ContentText}`}>
               <div className="flex w-full flex-col gap-3">
                 <h1 className="w-full md:w-[90%]">{title}</h1>
-                <p className="w-full lg:w-3/4">{text}</p>
+                <div>
+                  <p className="w-full lg:w-3/4">{text}</p>
+                  {textTwo && <p className="w-full lg:w-3/4">{textTwo}</p>}
+                </div>
               </div>
 
               <div className={` ${style.containerTeste}`}></div>
