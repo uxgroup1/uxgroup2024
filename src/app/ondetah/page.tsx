@@ -206,7 +206,7 @@ export default function Ondetah() {
         linkButtonOne="#gestao-de-prazos"
         linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
         textButtonOne="saiba mais"
-        textButtonTwo="agendar reunião"
+        textButtonTwo="agende uma reunião"
       />
       <Numbers
         cor="#009580"
