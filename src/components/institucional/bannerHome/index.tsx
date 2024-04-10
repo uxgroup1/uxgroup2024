@@ -16,27 +16,27 @@ export default function BannerHome() {
             <h1 className="text-black w-[90%] text-3xl xl:text-6xl text-center xl:w-[63%]">
               Transformamos a experiência do cliente através da tecnologia.
             </h1>
-            <p className="text-black pt-5 text-lg">
+            <p className="text-black pt-5 md:w-full w-4/5 text-center text-lg">
               Conheça nosso ecossistema de soluções para vendas digitais.
             </p>
             <div className="w-full py-5 flex-col md:flex-row flex justify-center items-center gap-5">
-              <Link href={"#gestao"}>
+              <Link className="w-[80%]" href={"#gestao"}>
                 <button
-                  className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg bg-gradient-to-r from-[#29265B] hover:border-transparent hover:transition text-white hover:font-semibold to-[#009881]`}
+                  className={`md:w-52 w-full border text-xl h-12 rounded-lg bg-gradient-to-r from-[#29265B] hover:border-transparent hover:transition text-white hover:font-semibold to-[#009881]`}
                 >
                   Gestão
                 </button>
               </Link>
-              <Link href={"#logistica"}>
+              <Link className="w-[80%]" href={"#logistica"}>
                 <button
-                  className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#FBC709] hover:border-transparent transition text-white hover:font-semibold to-[#FF7F13] `}
+                  className={`md:w-52 w-full  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#FBC709] hover:border-transparent transition text-white hover:font-semibold to-[#FF7F13] `}
                 >
                   Logística
                 </button>
               </Link>
-              <Link href={"#sustentabilidade"}>
+              <Link className="w-[80%]" href={"#sustentabilidade"}>
                 <button
-                  className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#7DAD58] border-transparent transition text-white hover:font-semibold to-[#014C34] `}
+                  className={`md:w-52 w-full  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#7DAD58] border-transparent transition text-white hover:font-semibold to-[#014C34] `}
                 >
                   Sustentabilidade
                 </button>
