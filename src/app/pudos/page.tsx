@@ -84,12 +84,12 @@ const content = [
 const contentTopics = [
   {
     icon: imageMonetizationTopics,
-    title: "Aumente o Tráfego na Loja",
+    title: "Aumente o tráfego na loja",
     text: "Ao se tornar um PUDO, você pode aumentar o número de visitantes e atrair novos clientes que podem acabar comprando em sua loja.",
   },
   {
     icon: imageStoreFrontTopics,
-    title: "Tenha uma Nova Fonte de Renda",
+    title: "Nova fonte de renda",
     text: "Se você possui espaços ociosos na sua loja, você pode rentabilizar em até 5 mil reais, tornando um PUDO.",
   },
   {
