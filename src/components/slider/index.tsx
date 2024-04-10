@@ -69,8 +69,8 @@ export default function SliderTopics() {
           </div>
 
           <div
-            style={{ transition: "0.9s ease-in-out" }}
-            className={` order-2 w-full h-[500px] flex flex-col justify-center md:items-start items-center md:pt-0 pt-10 md:w-[80%]`}
+            
+            className={` order-2 w-full h-[500px]  transition duration-200 flex flex-col justify-center md:items-start items-center md:pt-0 pt-10 md:w-[80%]`}
           >
             <Image
               src={content[contentIndex].icon}
