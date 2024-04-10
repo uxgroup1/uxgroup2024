@@ -182,6 +182,7 @@ export default function ContactForm() {
           ></div>
           <Script
             type="text/javascript"
+            async
             src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
             onLoad={() => {
               console.log("eval");

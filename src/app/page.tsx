@@ -31,7 +31,7 @@ const BannerHome = dynamic(() => import("@/components/institucional/bannerHome")
 import dynamic from "next/dynamic";
 import ImageUxMidiaOne from "@/assets/home/UX-na-midia/logistica.png";
 import ImageUxMidiaTwo from "@/assets/home/UX-na-midia/tecnologia.png";
-import ImageUxMidiaThree from "@/assets/home/UX-na-midia/gestão.png";
+import ImageUxMidiaThree from "@/assets/home/UX-na-midia/gestao.png";
 import ClientsCases from "@/components/institucional/clients";
 import ctaOne from "@/assets/cta/cta-1-home.png";
 import ctaTwo from "@/assets/cta/cta-2-home.png";
