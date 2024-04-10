@@ -20,21 +20,21 @@ export default function BannerHome() {
               Conheça nosso ecossistema de soluções para vendas digitais.
             </p>
             <div className="w-full py-5 flex-col md:flex-row flex justify-center items-center gap-5">
-              <Link className="w-[80%]" href={"#gestao"}>
+              <Link className="md:w-[200px] w-[80%]" href={"#gestao"}>
                 <button
                   className={`md:w-52 w-full border text-xl h-12 rounded-lg bg-gradient-to-r from-[#29265B] hover:border-transparent hover:transition text-white hover:font-semibold to-[#009881]`}
                 >
                   Gestão
                 </button>
               </Link>
-              <Link className="w-[80%]" href={"#logistica"}>
+              <Link className="md:w-[200px] w-[80%]" href={"#logistica"}>
                 <button
                   className={`md:w-52 w-full  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#FBC709] hover:border-transparent transition text-white hover:font-semibold to-[#FF7F13] `}
                 >
                   Logística
                 </button>
               </Link>
-              <Link className="w-[80%]" href={"#sustentabilidade"}>
+              <Link className="md:w-[200px] w-[80%]" href={"#sustentabilidade"}>
                 <button
                   className={`md:w-52 w-full  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#7DAD58] border-transparent transition text-white hover:font-semibold to-[#014C34] `}
                 >
