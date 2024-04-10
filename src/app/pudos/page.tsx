@@ -147,7 +147,7 @@ export default function Pudos() {
         />
         <ThreeTopics
           content={contentTopics}
-          title="Para Proprietários de Lojas Físicas"
+          title="Para Proprietários de Lojas Físicas."
           text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
         />
 
@@ -161,13 +161,13 @@ export default function Pudos() {
         /> */}
         <CarroselVertical
         id="para-marketplaces"
-          title="Para Marketplaces"
+          title="Para Marketplaces."
           text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
           content={content}
         />
         <FeaturesComponent
           rowReverse={false}
-          titleSection="Benefícios de escolher o PUDO da UX"
+          titleSection="Benefícios de escolher o PUDO da UX."
           content={contentFeatures}
           banner={pudo.src}
         />

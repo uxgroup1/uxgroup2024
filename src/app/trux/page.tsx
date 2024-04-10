@@ -216,49 +216,49 @@ export default function Trux() {
         />
         <FeaturesComponent
           id="roteirizacao-entregas"
-          titleSection="Roteirização de entrega"
+          titleSection="Roteirização de entrega."
           text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
           banner={imageRoteirizacao.src}
           content={contentFeatures}
           rowReverse={false}
         />
         <FeaturesComponent
-          titleSection="Gestão financeira"
+          titleSection="Gestão financeira."
           text="Tenha o controle total das suas finanças e automatize processos."
           banner={imageGestao.src}
           content={contentFeaturesTwo}
           rowReverse={true}
         />
         <FeaturesComponent
-          titleSection="Atendimento"
+          titleSection="Atendimento."
           text="Atendimento personalizado e suporte 24/7."
           banner={imageGestao.src}
           content={contentFeaturesThree}
           rowReverse={false}
         />
         <FeaturesComponent
-          titleSection="Dashboards"
+          titleSection="Dashboards."
           text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
           banner={imageGestao.src}
           content={contentFeaturesFive}
           rowReverse={true}
         />
         <FeaturesComponent
-          titleSection="Reversa"
+          titleSection="Reversa."
           text="Gerencie suas cargas de retorno de forma automatizada com total visibilidade do processo."
           banner={imageGestao.src}
           content={contentFeaturesSix}
           rowReverse={false}
         />
         <FeaturesComponent
-          titleSection="Averbação de Carga"
+          titleSection="Averbação de Carga."
           text="Sua carga protegida em todas as etapas da entrega."
           banner={imageGestao.src}
           content={contentFeaturesSeven}
           rowReverse={true}
         />
         <FeaturesComponent
-          titleSection="App para Motoristas: Agilidade e Eficiência na Ponta dos Dedos"
+          titleSection="App para Motoristas: Agilidade e Eficiência na Ponta dos Dedos."
           text="Nosso aplicativo exclusivo para first e last mile, permite interação instantânea com os motoristas e transportadores, proporcionando uma comunicação eficaz e ágil durante todo o processo de entrega. Com o uso do app, você reduz o índice de insucessos, tem mais precisão na informação e contribui para a redução do uso de papel na operação, promovendo uma abordagem mais sustentável e eficiente."
           banner={imageTrux.src}
           content={contentFeaturesFour}
