@@ -136,11 +136,11 @@ export function Blog() {
           </div>
         </div>
 
-        <div className={` ${style.divFooter} w-full`}>
+        <div className={` ${style.divFooter} flex items-center justify-center w-full`}>
           <Link
             href="https://blog.uxgroup.com.br/"
             target="_blank"
-            className={`hover:font-semibold md:-w[225px] w-full text-white transition hover:shadow-md bg-black rounded-lg hover:bg-white hover:text-black border-black border ${style.gotoBlog}`}
+            className={`hover:font-semibold md:w-[225px] w-full text-white transition hover:shadow-md bg-black rounded-lg hover:bg-white hover:text-black border-black border ${style.gotoBlog}`}
           >
             acesse o blog
           </Link>

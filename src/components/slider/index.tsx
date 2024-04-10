@@ -70,7 +70,7 @@ export default function SliderTopics() {
           </div>
 
           <div
-            className={` order-2 w-full md:h-[450px] rounded-2xl  md:p-10 h-[400px] flex flex-col justify-center md:items-start items-center  md:w-[80%]`}
+            className={` order-2 md:pt-0 pt-10 w-full md:h-[450px] rounded-2xl  md:p-10 h-[400px] flex flex-col justify-center md:items-start items-center  md:w-[80%]`}
           >
             <Image
               src={content[contentIndex].icon}
