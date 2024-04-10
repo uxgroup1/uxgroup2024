@@ -5,6 +5,7 @@ import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Content {
   title: string;
@@ -12,6 +13,7 @@ interface Content {
   contentText: string;
   banner: string;
   logo?: string;
+  icon?: string;
   link?: string;
   corBarra?: string;
 }
@@ -49,7 +51,7 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
           <div className="flex justify-center flex-col items-center mb-8">
             <div
               style={{ boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px" }}
-              className="z-20 w-full flex items-center rounded-t-[16px] bg-black justify-center h-20"
+              className="z-20 w-full flex items-center rounded-t-[16px] bg-white justify-center h-20"
             >
               <ol className="flex justify-center w-full">
                 {content.map((item, index) => (
@@ -63,30 +65,19 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
                     onClick={() => handleStepClick(index)}
                   >
                     <span
-                      className={`flex items-center justify-center w-10 h-10 rounded-full ${
-                        index <= contentIndex ? "bg-[#fff]" : "bg-white "
-                      }`}
+                      className={`flex items-center justify-center w-14 h-14 rounded-2xl ${
+                        index <= contentIndex
+                          ? " border-2 border-[#bfbfbf] bg-white "
+                          : "shadow-2xl"
+                      } `}
                     >
-                      <svg
-                        className={`w-5 h-5 ${
-                          index <= contentIndex
-                            ? "text-black"
-                            : "text-[#bfbfbf]"
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        {index === 0 ? (
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-9a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1V9zM10 5a1 1 0 100 2 1 1 0 000-2z"
-                            clipRule="evenodd"
-                          />
-                        ) : (
-                          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        )}
-                      </svg>
+                      <Image
+                        className="w-[50%]"
+                        src={`${item.icon}`}
+                        width={100}
+                        height={100}
+                        alt="Gestão"
+                      ></Image>
                     </span>
                   </li>
                 ))}
@@ -105,6 +96,13 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
             >
               <div className="w-full h-full bg-[#0000009b] rounded-b-2xl">
                 <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[60px] pt-[60px]">
+                  <Image
+                  className="w-4/5 pb-5"
+                    src={`${content[contentIndex].logo}`}
+                    width={100}
+                    height={1000}
+                    alt=""
+                  />
                   <h1 className="text-2xl text-white font-bold mb-4">
                     {content[contentIndex].contentTitle}
                   </h1>

@@ -41,6 +41,9 @@ import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import logoFusion from "@/assets/home/fusion-gestao.png";
 import logoTrux from "@/assets/home/trux-gestao.png";
 import logoOndetah from "@/assets/home/ondetah-gestao.png";
+import iconFusion from "@/assets/home/fusion.svg";
+import iconOndetah from "@/assets/home/ondetah.svg";
+import iconTrux from "@/assets/home/trux.svg"
 import Script from "next/script";
 
 
@@ -50,10 +53,11 @@ const content = [
     title: "TMS para Embarcadores",
     contentTitle: "Gestão de fretes para e-commerce e marketplaces.    ",
     contentText:
-      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+      "",
     banner: imageCarroselVerticalOne.src,
     logo: logoFusion.src,
     link:"/fusion",
+    icon:iconFusion.src
 
   },
   {
@@ -61,20 +65,22 @@ const content = [
     title: "Experiência do Cliente",
     contentTitle: "Gestão e comunicação com o cliente a partir do tracking.",
     contentText:
-      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+      "",
     banner: imageCarroselVerticalThree.src,
     logo: logoOndetah.src,
-    link:"/ondetah"
+    link:"/ondetah",
+    icon:iconOndetah.src
   },
   {
     index: 1,
     title: "TMS para Transportadores",
     contentTitle: "Gestão de entregas e de transportadores.",
     contentText:
-      "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.",
+      "",
     banner: imageCarroselVerticalTwo.src,
     logo: logoTrux.src,
-    link:"/trux"
+    link:"/trux",
+    icon:iconTrux.src
   },
 ];
 
