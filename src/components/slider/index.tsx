@@ -5,7 +5,7 @@ import reducao from "@/assets/ondetah/icones/reducaoCusto.svg";
 import confianca from "@/assets/ondetah/icones/confianca.svg";
 import experiencia from "@/assets/ondetah/icones/experiencia.svg";
 import feedback from "@/assets/ondetah/icones/feedback.svg";
-
+import beneficios from "@/assets/ondetah/imagesSections/beneficios.png";
 
 const content = [
   {
@@ -53,8 +53,8 @@ export default function SliderTopics() {
 
   return (
     <section className="bg-white flex items-center justify-center w-full max-w-[1996px]">
-      <div className="flex flex-col-reverse  md:flex-row-reverse w-[90%] justify-center items-center">
-        <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-start gap-[20%] w-full">
+      <div className="flex flex-col-reverse  md:flex-row w-[90%] justify-center items-center">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-start gap-[10%] w-full">
           <div className="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
             {content.map((_, index) => (
               <button
@@ -88,12 +88,12 @@ export default function SliderTopics() {
           </div>
         </div>
 
-        <div className="flex items-center justify-start w-full">
+        <div className="flex items-center justify-end w-full">
           <Image
             width={100}
             height={100}
             className="object-cover w-full md:w-[80%] h-full  rounded-2xl"
-            src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+            src={beneficios.src}
             alt="apple watch photo"
           />
         </div>

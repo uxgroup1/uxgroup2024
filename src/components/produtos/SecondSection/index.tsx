@@ -53,8 +53,8 @@ function SecondSection({
             style.BoxLogisticaSustentavel
           }`}
         >
-          <div className={style.Controller}>
-            <div className={style.ContentText}>
+          <div className={`${style.Controller}`}>
+            <div className={`${style.ContentText}`}>
               <div className="flex w-full flex-col gap-3">
                 <h1 className="w-full md:w-[90%]">{title}</h1>
                 <p className="w-full lg:w-3/4">{text}</p>
@@ -62,9 +62,9 @@ function SecondSection({
 
               <div className={` ${style.containerTeste}`}></div>
               <div className={style.ButtonContainer}>
-                <Link href={`${link}`}>
+                <Link className="w-full md:w-[170px] h-10 " href={`${link}`}>
                   <button
-                    className="hover:border hover:shadow-sm hover:font-semibold hover:transition-all"
+                    className=" w-full md:w-[170px] h-10 hover:border hover:shadow-sm hover:font-semibold hover:transition-all"
                     style={buttonStyle}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}
@@ -84,7 +84,7 @@ function SecondSection({
               } ${style.BoxImage} `}
             >
               <Image
-                className="md:w-[87%] w-[97%] object-cover h-full"
+                className={` md:w-[600px] w-[97%] object-cover h-full`}
                 src={image}
                 alt="Imagem"
                 width={100}

@@ -81,7 +81,7 @@ export default function FeaturesComponent({
               })}
               {button && (
                 <button
-                  className={`bg-[#FBC709] lg:mt-5 lg:w-[20%] h-10 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
+                  className={`bg-[#FBC709] lg:mt-5 w-full lg:w-[20%] h-10 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
                 >
                   <Link href={`${linkButton}`}>saiba mais</Link>
                 </button>

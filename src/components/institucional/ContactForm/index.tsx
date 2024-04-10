@@ -3,7 +3,7 @@ export default function ContactForm() {
     <>
       <section id="contactForm" className="bg-black pt-[100px] w-full ">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col pb-10">
-          <h1 className="w-full text-center">
+          <h1 className=" w-[90%] md:w-full text-center">
             Fale diretamente com o nosso time.
           </h1>
           <p className="w-4/5 md:w-full">

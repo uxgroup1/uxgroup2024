@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.scss";
-import ecoImage from "../../assets/ecossistema.png";
+import ecoImage from "../../assets/ondetah/imagesSections/porqueUx.png";
 import Link from "next/link";
 
 interface Content {

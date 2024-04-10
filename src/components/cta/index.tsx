@@ -49,7 +49,7 @@ function Cta({
                 </div>
                 {logo && (
                   <Image
-                    className="flex items-center justify-center w-4/5"
+                    className="flex items-center justify-center w-4/5 "
                     src={logo}
                     alt="Logística Sustentável"
                     width={100}

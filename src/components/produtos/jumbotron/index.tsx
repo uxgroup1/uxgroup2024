@@ -76,19 +76,19 @@ export default function JumboTron({
             {text}
           </p>
           <div
-            className={`flex flex-col gap-0 md:gap-5 transition-transform ${"animated-state-Jumbotron-two"} space-y-4 sm:flex-row sm:justify-center sm:space-y-0`}
+            className={`flex w-full items-center flex-col gap-0 md:gap-5 transition-transform ${"animated-state-Jumbotron-two"} space-y-4 sm:flex-row sm:justify-center sm:space-y-0`}
           >
-            <Link href={linkButtonOne}>
+            <Link className="w-[95%] xl:w-[200px] lg:w-[180px]" href={linkButtonOne}>
               <button
-                className={`w-[200px] xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg transition-all hover:font-semibold`}
+                className={`w-full xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg transition-all hover:font-semibold`}
               >
                 {textButtonOne}
               </button>
             </Link>
 
-            <Link href={linkButtonTwo}>
+            <Link className="w-[95%] xl:w-[200px] lg:w-[180px]" href={linkButtonTwo}>
               <button
-                className={`md:w-[170px] xl:w-[170px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                className={`w-full lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
                 style={buttonStyle}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}

@@ -33,6 +33,11 @@ import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
 import SliderTopics from "@/components/slider";
 import IntegrationsOndetah from "@/components/produtos/integracoesOndetah";
+import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.png";
+import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
+import sac from "@/assets/ondetah/imagesSections/sac.png";
+import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png"
+
 
 const contentFeatures = [
   {
@@ -245,7 +250,7 @@ export default function Ondetah() {
         corButtonTwo="#009580"
         title="Informação em Tempo Real."
         text="Acompanhe cada etapa do pedido em tempo real. Desde a confirmação até a entrega, atualizações regulares, incluindo notificações em caso de eventos inesperados."
-        image={""}
+        image={informacoes.src}
         flowReverse={false}
       />
       <SecondSection
@@ -254,7 +259,7 @@ export default function Ondetah() {
         corButtonTwo="#009580"
         title="Redução de Contatos no SAC."
         text="Utilize nosso SAC 4.0 com um chatbot disponível 24 horas por dia. Reduza o tempo de espera e resolva questões rapidamente através de aplicativos de mensagens, garantindo uma experiência mais positiva para o cliente e reduzindo custos."
-        image={""}
+        image={sac.src}
         flowReverse={true}
       />
       <SecondSection
@@ -263,7 +268,7 @@ export default function Ondetah() {
         corButtonTwo="#009580"
         title="Entrega Sustentável."
         text="Deixe suas entregas mais ecológicas através da compensação de carbono. Utilizamos tecnologia para calcular e neutralizar as emissões de carbono associadas aos seus pedidos, e fornecemos certificados de compensação para cada compra."
-        image={""}
+        image={sustentavel.src}
         flowReverse={false}
       />
       <SecondSection
@@ -272,7 +277,7 @@ export default function Ondetah() {
         corButtonTwo="#009580"
         title="Pesquisas de Satisfação Personalizadas."
         text="Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.        "
-        image={""}
+        image={satisfacao.src}
         flowReverse={true}
       />
       <SliderTopics />
