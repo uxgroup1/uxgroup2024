@@ -2,8 +2,12 @@ import Script from "next/script";
 
 export default function ContactForm() {
   return (
-    <> 
-    <Script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js" ></Script>
+    <>
+      <Script
+        type="text/javascript"
+        async
+        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+      ></Script>
       <section id="contactForm" className="bg-black pt-[100px] w-full ">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col pb-10">
           <h1 className=" w-[90%] md:w-full text-center">
@@ -127,7 +131,7 @@ export default function ContactForm() {
             </select>
           </div>
           <div className="grid md:grid-cols-1 md:gap-6">
-            {/* <div className="relative z-0 w-full mb-5 group">
+            <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -135,7 +139,6 @@ export default function ContactForm() {
                 id="floating_phone"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
                 placeholder=""
-                required
               />
               <label
                 htmlFor="floating_phone"
@@ -143,7 +146,7 @@ export default function ContactForm() {
               >
                 Mensagem
               </label>
-            </div> */}
+            </div>
             <div className="flex items-center pb-10">
               <input
                 id="disabled-checked-checkbox"
