@@ -174,8 +174,7 @@ export default function Home() {
       />
       <CarroselVerticalMobile
         title="Tecnologia para gestão da logística."
-        sub="Adapte-se às mudanças do mercado com facilidade. Nossas soluções de tecnologia modulares oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação das suas vendas digitais. Conheça nossas soluções!"
-        content={content}
+        sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."      content={content}
       />
       <Cta
         button={true}
