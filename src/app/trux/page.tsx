@@ -17,8 +17,8 @@ import banner from "@/assets/trux/tms-transp.png";
 const ProductInstitutional = dynamic(
   () => import("@/components/produtos/institucional")
 );
-import imageGestao from "@/assets/trux/gestao-financeira.png";
-import imageRoteirizacao from "@/assets/trux/roteirizacao-de-entrega.png";
+import imageGestao from "@/assets/ondetah/imagesSections/gestaoFinanceira.png";
+import imageRoteirizacao from "@/assets/trux/roteirizacao.png";
 import imageTrux from "@/assets/trux/trux.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";

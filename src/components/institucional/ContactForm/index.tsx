@@ -1,6 +1,12 @@
 import Script from "next/script";
+import { useState } from "react";
 
 export default function ContactForm() {
+  const [rendered, setRendered] = useState<boolean>(false);
+
+  const onLoad = () => {
+    setRendered(true);
+  };
   return (
     <>
       <Script
@@ -9,7 +15,7 @@ export default function ContactForm() {
         src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
       ></Script>
       <section id="contactForm" className="bg-black pt-[100px] w-full ">
-        <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col pb-10">
+        <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col">
           <h1 className=" w-[90%] md:w-full text-center">
             Fale diretamente com o nosso time.
           </h1>
@@ -18,7 +24,7 @@ export default function ContactForm() {
           </p>
         </div>
         <form className="max-w-md w-[90%] mx-auto">
-          <div className="relative z-0 w-full mb-5 group">
+          {/* <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
               name="floating_first_name"
@@ -167,7 +173,23 @@ export default function ContactForm() {
             className="text-white md:w-full hover:font-semibold w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center"
           >
             enviar contato
-          </button>
+          </button> */}
+
+          <div
+            role="main"
+            id="formulario-provisorio-novo-site-ux-ea9cfd47c9dd2de18f79"
+            onLoad={onLoad}
+          ></div>
+          <Script
+            type="text/javascript"
+            src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
+            onLoad={() => {
+              console.log("eval");
+              eval(
+                `new RDStationForms('formulario-provisorio-novo-site-ux-ea9cfd47c9dd2de18f79', 'UA-191432220-1').createForm()`
+              );
+            }}
+          />
         </form>
       </section>
     </>

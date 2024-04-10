@@ -84,7 +84,7 @@ function SecondSection({
               } ${style.BoxImage} `}
             >
               <Image
-                className={` md:w-[600px] w-[97%] object-cover h-full`}
+                className={` md:w-[800px] w-[97%] object-cover h-full`}
                 src={image}
                 alt="Imagem"
                 width={100}
