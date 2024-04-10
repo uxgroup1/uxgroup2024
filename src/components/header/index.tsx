@@ -129,6 +129,16 @@ export default function Header() {
                       ESG
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                    target="_blank"
+                      href={"https://blog.uxgroup.com.br/"}
+                      className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                      aria-current="page"
+                    >
+                      Blog 
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
