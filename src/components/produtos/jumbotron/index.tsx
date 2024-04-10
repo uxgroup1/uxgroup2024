@@ -86,9 +86,9 @@ export default function JumboTron({
               </button>
             </Link>
 
-            <Link className="w-[95%] xl:w-[200px] lg:w-[180px]" href={linkButtonTwo}>
+            <Link className="w-[95%] xl:w-[200px] xl:text-[0.9rem] lg:w-[180px]" href={linkButtonTwo}>
               <button
-                className={`w-full lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                className={`w-full h-10 rounded-lg text-white hover:font-semibold transition-all`}
                 style={buttonStyle}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
