@@ -119,6 +119,16 @@ export default function Header() {
                       />
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                    target="_blank"
+                      href={"https://esg.uxgroup.com.br/"}
+                      className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                      aria-current="page"
+                    >
+                      ESG
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -246,7 +256,8 @@ export default function Header() {
                           type="button"
                           className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          conhecer solução
+                          <Link href={"/ondetah"}>conhecer solução</Link>
+
                           <svg
                             className="w-3 h-3 ms-2 rtl:rotate-180"
                             aria-hidden="true"
