@@ -20,11 +20,8 @@ import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";
-import FeaturesComponent from "@/components/produtos/features";
 import arrowList from "@/assets/ondetah/arrow/arrowListComponentesPudo.svg";
-import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
 import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png";
-import imageTwo from "@/assets/ondetah/imagesSections/ondetah-2.png";
 import imageSlideOne from "@/assets/ondetah/imagesSections/1.png";
 import imageSlideTwo from "@/assets/ondetah/imagesSections/2.png";
 import imageSlideThree from "@/assets/ondetah/imagesSections/3.png";
@@ -37,6 +34,7 @@ import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.p
 import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
+
 
 const contentFeatures = [
   {

@@ -19,6 +19,10 @@ const ProductInstitutional = dynamic(
 );
 import imageGestao from "@/assets/ondetah/imagesSections/gestaoFinanceira.png";
 import imageRoteirizacao from "@/assets/trux/roteirizacao.png";
+import atendimento from "@/assets/trux/atendimento.png";
+import averbacao from "@/assets/trux/averbacao.png";
+import dash from "@/assets/trux/dashboards.png"
+import reversa from "@/assets/trux/reversa.png";
 import imageTrux from "@/assets/trux/trux.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
@@ -232,28 +236,28 @@ export default function Trux() {
         <FeaturesComponent
           titleSection="Atendimento."
           text="Atendimento personalizado e suporte 24/7."
-          banner={imageGestao.src}
+          banner={atendimento.src}
           content={contentFeaturesThree}
           rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Dashboards."
           text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
-          banner={imageGestao.src}
+          banner={dash.src}
           content={contentFeaturesFive}
           rowReverse={true}
         />
         <FeaturesComponent
           titleSection="Reversa."
           text="Gerencie suas cargas de retorno de forma automatizada com total visibilidade do processo."
-          banner={imageGestao.src}
+          banner={reversa.src}
           content={contentFeaturesSix}
           rowReverse={false}
         />
         <FeaturesComponent
           titleSection="Averbação de Carga."
           text="Sua carga protegida em todas as etapas da entrega."
-          banner={imageGestao.src}
+          banner={averbacao.src}
           content={contentFeaturesSeven}
           rowReverse={true}
         />
