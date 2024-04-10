@@ -32,6 +32,7 @@ import imageSlideFour from "@/assets/ondetah/imagesSections/4.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
 import SliderTopics from "@/components/slider";
+import IntegrationsOndetah from "@/components/produtos/integracoesOndetah";
 
 const contentFeatures = [
   {
@@ -183,24 +184,25 @@ export default function Ondetah() {
       <JumboTron
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#contactForm"
+        linkButtonTwo="#sobre"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         logo={ondetahLogo.src}
-        title="Aplique eficiência, controle e sustentabilidade à sua operação através de tecnologia."
+        title="Gestão e comunicação com o cliente a partir do tracking personalizado."
         banner={imageOndetah.src}
-        text="Gerenciamento simplificado de prazos e ocorrências, informação em tempo real e compensação de carbono que garantem a experiência do cliente."
+        text="Visão simplificada de prazos e ocorrências, informação em tempo real e compensação de carbono que garantem excelência na experiência do cliente."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
+        id="sobre"
         title="Produtividade e sustentabilidade um um único lugar."
         text="Uma solução tecnológica inovadora de rastreamento que permite ao gestor das vendas digitais e de transportes o acompanhamento em tempo real de todas as etapas do processo, podendo atuar de forma inteligente com base em dados e assim,  reduzir custos, melhorar a performance e a satisfação do cliente."
         banner={imageOndetah.src}
         corButtonOne="#28265b"
         corButtonTwo="#009580"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#gestao-de-prazos"
+        linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
         textButtonOne="saiba mais"
         textButtonTwo="agendar reunião"
       />
@@ -227,6 +229,8 @@ export default function Ondetah() {
         sub=""
       /> */}
       <SecondSection
+        id="gestao-de-prazos"
+        link="#contactForm"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Gestão de Prazos e Ocorrências."
@@ -236,6 +240,7 @@ export default function Ondetah() {
       />
 
       <SecondSection
+        link="#contactForm"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Informação em Tempo Real."
@@ -244,6 +249,7 @@ export default function Ondetah() {
         flowReverse={false}
       />
       <SecondSection
+        link="#contactForm"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Redução de Contatos no SAC."
@@ -252,6 +258,7 @@ export default function Ondetah() {
         flowReverse={true}
       />
       <SecondSection
+        link="#contactForm"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Entrega Sustentável."
@@ -260,6 +267,7 @@ export default function Ondetah() {
         flowReverse={false}
       />
       <SecondSection
+        link="#contactForm"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Pesquisas de Satisfação Personalizadas."
@@ -268,6 +276,7 @@ export default function Ondetah() {
         flowReverse={true}
       />
       <SliderTopics />
+      <IntegrationsOndetah />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

@@ -20,7 +20,7 @@ interface ContentSlide {
   id?: string;
 }
 
-function CarroselVertical({ title, text, content,id }: ContentSlide) {
+function CarroselVertical({ title, text, content, id }: ContentSlide) {
   const [contentIndex, setContentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -54,7 +54,6 @@ function CarroselVertical({ title, text, content,id }: ContentSlide) {
               <div className="w-full h-full flex gap-[15%] rounded-2xl bg-[#0000007e]">
                 <div className={style.verticalMenu}>
                   {content.map((item, index) => (
-                    
                     <div
                       key={index}
                       className={`transition-transform "animated-state-Jumbotron 
@@ -62,8 +61,9 @@ function CarroselVertical({ title, text, content,id }: ContentSlide) {
                       }`}
                       onClick={() => handleButtonClick(index)}
                     >
-                    
-                      <div  className={`bg-white hover:bg-black ${style.barra}`}></div>
+                      <div
+                        className={`bg-white hover:bg-black ${style.barra}`}
+                      ></div>
                       <h3
                         className={` ${
                           content.length === 4 ? "text-[19px]" : ""
@@ -100,11 +100,11 @@ function CarroselVertical({ title, text, content,id }: ContentSlide) {
                     {content[contentIndex].contentTitle}
                   </h1>
                   <p>{content[contentIndex].contentText}</p>
-                  <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
-                    <Link target="_blank" href={`${content[contentIndex].link}`}>
+                  <Link target="_blank" href={`${content[contentIndex].link}`}>
+                    <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
                       conheça a solução
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

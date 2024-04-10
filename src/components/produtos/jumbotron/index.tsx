@@ -50,7 +50,7 @@ export default function JumboTron({
   return (
     <section
       style={{ backgroundImage: `url(${banner})` }}
-      className={`md:bg-center bg-[70%] bg-cover  xl:h-[135vh] lg:h-[120vh]  md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
+      className={`md:bg-center bg-[70%] bg-cover  xl:h-[120vh] lg:h-[120vh]  md:h-screen w-full pb-0 bg-no-repeat bg-[#bfbfbf] bg-blend-multiply`}
     >
       <div className="w-full py-20 h-full bg-[#000000a0]">
         <div className="px-4  flex flex-col items-center justify-center h-full w-full text-center  lg:py-56">
@@ -65,7 +65,7 @@ export default function JumboTron({
           )}
           <h1
             style={{ lineHeight: "120%" }}
-            className={`mb-4 md:w-4/5 w-[95%] leading-snug xl:text-5xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
+            className={`mb-4 md:w-[70%] w-[95%] leading-snug xl:text-5xl text-[2rem] md:text-3xl  transition-transform ${"animated-state-Jumbotron-two"} font-extrabold tracking-tight text-white md:text-5xl lg:text-4xl`}
           >
             {title}
           </h1>
@@ -78,19 +78,24 @@ export default function JumboTron({
           <div
             className={`flex flex-col gap-0 md:gap-5 transition-transform ${"animated-state-Jumbotron-two"} space-y-4 sm:flex-row sm:justify-center sm:space-y-0`}
           >
-            <button
-              className={`w-[200px] xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg transition-all hover:font-semibold`}
-            >
-              <Link href={linkButtonOne}>{textButtonOne}</Link>
-            </button>
-            <button
-              className={`md:w-[170px] xl:w-[170px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
-              style={buttonStyle}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-            >
-              <Link href={linkButtonTwo}>{textButtonTwo}</Link>
-            </button>
+            <Link href={linkButtonOne}>
+              <button
+                className={`w-[200px] xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg transition-all hover:font-semibold`}
+              >
+                {textButtonOne}
+              </button>
+            </Link>
+
+            <Link href={linkButtonTwo}>
+              <button
+                className={`md:w-[170px] xl:w-[170px] xl:text-[0.9rem] lg:text-xs h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                style={buttonStyle}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+              >
+                {textButtonTwo}
+              </button>
+            </Link>
           </div>
         </div>
       </div>

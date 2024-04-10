@@ -26,14 +26,16 @@ function LogisticaSustentavel({ id }: any) {
                   Além disso, o uso da tecnologia em todo o processo logístico
                   permite não só a eficiência operacional como também a redução
                   do uso de papel nos CDs. <br />
-                  <Link href={""} style={{ fontWeight: "bold" }}>
+                  <Link href={"/torre"} style={{ fontWeight: "bold" }}>
                     Faça parte da mudança: Juntos podemos criar um futuro mais
                     verde.
                   </Link>
                 </p>
+                <Link target="_blank" href={"/torre"} >
                 <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
                   saiba mais
                 </button>
+                </Link>
               </div>
             </div>
             <div className={style.ContentImage}>

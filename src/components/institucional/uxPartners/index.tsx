@@ -1,12 +1,20 @@
 import Image from "next/image";
 import style from "./style.module.scss";
 import imageUxPartners from "@/assets/logos/ux-partners.svg";
-import background from "@/assets/home/bg-ux-partners.png"
+import background from "@/assets/home/bg-ux-partners.png";
+import Link from "next/link";
 
 function UxPartners() {
   return (
     <>
-      <section style={{backgroundImage:`url(${(background.src)})`, backgroundRepeat: "no-repeat", backgroundSize:"cover" }} className={style.UxPartners}>
+      <section
+        style={{
+          backgroundImage: `url(${background.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className={style.UxPartners}
+      >
         <div className={style.Container}>
           <div className={style.BoxUxPartners}>
             <div className={style.UX_partners}>
@@ -28,9 +36,11 @@ function UxPartners() {
                 acreditam nesse propósito e investimos em startups que nascem
                 com o desafio de trazer inovação para o setor.
               </p>
-              <button className="hover:font-semibold transition">
-                fale com a gente
-              </button>
+              <Link href={"#contactForm"}>
+                <button className="hover:font-semibold transition">
+                  fale com a gente
+                </button>
+              </Link>
             </div>
           </div>
         </div>

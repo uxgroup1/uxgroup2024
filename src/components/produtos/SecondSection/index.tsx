@@ -2,6 +2,7 @@ import Image from "next/image";
 import style from "./style.module.scss";
 import imageteste from "../../../assets/faviconBanner/ux-log.svg";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Content {
   title: string;
@@ -10,7 +11,9 @@ interface Content {
   flowReverse: boolean;
   corButtonOne: string;
   corButtonTwo?: string;
-  corButtonThree?: string; // Cor corrigida para seguir a definição na interface
+  corButtonThree?: string;
+  id?: string;
+  link?: string;
 }
 
 function SecondSection({
@@ -21,6 +24,8 @@ function SecondSection({
   corButtonOne,
   corButtonTwo,
   corButtonThree,
+  id,
+  link,
 }: Content) {
   const [hovered, setHovered] = useState(false);
 
@@ -31,7 +36,7 @@ function SecondSection({
     backgroundSize: "200% 100%",
     transition: " 0.1s ease",
     cursor: "pointer",
-    backgroundPosition: hovered ? "70% 100%" : "0% 100%", 
+    backgroundPosition: hovered ? "70% 100%" : "0% 100%",
   };
 
   if (!corButtonTwo && corButtonThree && hovered) {
@@ -41,23 +46,23 @@ function SecondSection({
   }
 
   return (
-    <>
-      <section className={style.LogisticaSustentavel}>
-        <div className={style.Container}>
-          <div
-            className={` ${flowReverse === true ? "flex-row-reverse" : ""}  ${
-              style.BoxLogisticaSustentavel
-            }`}
-          >
-            <div className={style.Controller}>
-              <div className={style.ContentText}>
-                <div className="flex w-full flex-col gap-3">
-                  <h1 className="w-full md:w-[90%]">{title}</h1>
-                  <p className="w-full lg:w-3/4">{text}</p>
-                </div>
+    <section id={id} className={style.LogisticaSustentavel}>
+      <div className={style.Container}>
+        <div
+          className={` ${flowReverse === true ? "flex-row-reverse" : ""}  ${
+            style.BoxLogisticaSustentavel
+          }`}
+        >
+          <div className={style.Controller}>
+            <div className={style.ContentText}>
+              <div className="flex w-full flex-col gap-3">
+                <h1 className="w-full md:w-[90%]">{title}</h1>
+                <p className="w-full lg:w-3/4">{text}</p>
+              </div>
 
-                <div className={` ${style.containerTeste}`}></div>
-                <div className={style.ButtonContainer}>
+              <div className={` ${style.containerTeste}`}></div>
+              <div className={style.ButtonContainer}>
+                <Link href={`${link}`}>
                   <button
                     className="hover:border hover:shadow-sm hover:font-semibold hover:transition-all"
                     style={buttonStyle}
@@ -66,30 +71,30 @@ function SecondSection({
                   >
                     saiba mais
                   </button>
-                </div>
-              </div>
-            </div>
-            <div className={style.ContentImage}>
-              <div
-                className={` ${
-                  flowReverse === true
-                    ? "justify-start"
-                    : " md:justify-end justify-start"
-                } ${style.BoxImage} `}
-              >
-                <Image
-                  className="md:w-[87%] w-[97%] object-cover h-full"
-                  src={image}
-                  alt="Imagem"
-                  width={100}
-                  height={100}
-                />
+                </Link>
               </div>
             </div>
           </div>
+          <div className={style.ContentImage}>
+            <div
+              className={` ${
+                flowReverse === true
+                  ? "justify-start"
+                  : " md:justify-end justify-start"
+              } ${style.BoxImage} `}
+            >
+              <Image
+                className="md:w-[87%] w-[97%] object-cover h-full"
+                src={image}
+                alt="Imagem"
+                width={100}
+                height={100}
+              />
+            </div>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

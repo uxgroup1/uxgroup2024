@@ -13,6 +13,7 @@ interface Content {
   linkButtonOne: string;
   textButtonTwo: string;
   linkButtonTwo: string;
+  id?: string;
 }
 
 export default function ProductInstitutional({
@@ -26,6 +27,7 @@ export default function ProductInstitutional({
   textButtonTwo,
   linkButtonOne,
   linkButtonTwo,
+  id,
 }: Content) {
   const [hovered, setHovered] = useState(false);
 
@@ -46,7 +48,10 @@ export default function ProductInstitutional({
   }
 
   return (
-    <section className="bg-white max-w-[1996px] w-full xl:h-[100vh] lg:h-[80vh]">
+    <section
+      id={id}
+      className="bg-white max-w-[1996px] w-full xl:h-[100vh] lg:h-[80vh]"
+    >
       <div className="relative h-full flex">
         <div className="h-full lg:w-1/3"></div>
         <div className="hidden w-3/4 rounded-2xl  bg-gray-100 xl:h-full  lg:block"></div>
@@ -62,22 +67,29 @@ export default function ProductInstitutional({
             />
 
             <div className="flex flex-col gap-5 mt-8 lg:mt-0">
-              <h1 className="text-black xl:text-3xl lg:text-xl lg:w-[90%]">{title}</h1>
+              <h1 className="text-black xl:text-3xl lg:text-xl lg:w-[90%]">
+                {title}
+              </h1>
 
-              <p className="lg:w-4/5 w-full xl:text-sm lg:text-[0.7rem] text-black">{text}</p>
+              <p className="lg:w-4/5 w-full  text-black">{text}</p>
 
               <div className="flex flex-col sm:flex-row gap-5">
-                <button
-                  className={`xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs w-full h-10 rounded-lg text-white hover:font-semibold transition-all`}
-                  style={buttonStyle}
-                  onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
-                >
-                  <Link href={linkButtonTwo}>{textButtonOne}</Link>
-                </button>
-                <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-10 rounded-lg text-black hover:font-semibold transition-all">
-                  <Link href={linkButtonOne}>{textButtonTwo}</Link>
-                </button>
+                <Link href={linkButtonOne}>
+                  <button
+                    className={`xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs w-full h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                    style={buttonStyle}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                  >
+                    {textButtonOne}
+                  </button>
+                </Link>
+
+                <Link href={linkButtonTwo}>
+                  <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-10 rounded-lg text-black hover:font-semibold transition-all">
+                    {textButtonTwo}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

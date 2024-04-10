@@ -57,16 +57,18 @@ function Cta({
                   />
                 )}
                 {button && (
-                  <button
-                    className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"
-                    style={{
-                      background: `linear-gradient(to right, ${corButtonOne}, ${
-                        corButtonOne ? corButtonTwo : corButtonOne
-                      })`,
-                    }}
-                  >
-                    <Link href="/logistica">fale com um consultor</Link>
-                  </button>
+                  <Link href="#contactForm">
+                    <button
+                      className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"
+                      style={{
+                        background: `linear-gradient(to right, ${corButtonOne}, ${
+                          corButtonOne ? corButtonTwo : corButtonOne
+                        })`,
+                      }}
+                    >
+                      fale com um consultor
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>

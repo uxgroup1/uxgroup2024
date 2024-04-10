@@ -6,6 +6,7 @@ import confianca from "@/assets/ondetah/icones/confianca.svg";
 import experiencia from "@/assets/ondetah/icones/experiencia.svg";
 import feedback from "@/assets/ondetah/icones/feedback.svg";
 
+
 const content = [
   {
     title: "Entrega Pontual:",
@@ -69,8 +70,7 @@ export default function SliderTopics() {
           </div>
 
           <div
-            
-            className={` order-2 w-full h-[500px]  transition duration-200 flex flex-col justify-center md:items-start items-center md:pt-0 pt-10 md:w-[80%]`}
+            className={` order-2 w-full md:h-[450px] rounded-2xl  md:p-10 h-[400px] flex flex-col justify-center md:items-start items-center  md:w-[80%]`}
           >
             <Image
               src={content[contentIndex].icon}
@@ -79,7 +79,7 @@ export default function SliderTopics() {
               height={0}
               alt="icone"
             />
-            <h1 className="md:text-4xl md:text-left text-center text-3xl w-full transition-transform font-semibold text-black">
+            <h1 className="md:text-4xl md:text-left text-center text-3xl w-full font-semibold text-black">
               {content[contentIndex].title}
             </h1>
             <p className="mt-2 md:text-left text-center text-black">
@@ -91,7 +91,7 @@ export default function SliderTopics() {
         <div className="flex items-center justify-start w-full">
           <Image
             width={100}
-            height={100} 
+            height={100}
             className="object-cover w-full md:w-[80%] h-full  rounded-2xl"
             src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
             alt="apple watch photo"

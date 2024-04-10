@@ -16,12 +16,13 @@ import natureImage from "@/assets/torre/icons/nature.svg";
 import packgeImage from "@/assets/torre/icons/package.svg";
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg";
 import torreLogo from "@/assets/logos/torre.svg";
-const ProductInstitutional = dynamic(() => import("@/components/produtos/institucional")) ;
-import sac from "@/assets/sac.png"
-import transporte from "@/assets/transporte.png"
-import banner from "@/assets/trux/torre.png"
+const ProductInstitutional = dynamic(
+  () => import("@/components/produtos/institucional")
+);
+import sac from "@/assets/sac.png";
+import transporte from "@/assets/transporte.png";
+import banner from "@/assets/trux/torre.png";
 import Script from "next/script";
-
 
 const contentFeaturesOne = [
   {
@@ -73,7 +74,7 @@ const contentTopics = [
 export default function Torre() {
   return (
     <main>
-       {/* <!-- Google Tag Manager --> */}
+      {/* <!-- Google Tag Manager --> */}
       <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -96,26 +97,28 @@ export default function Torre() {
         corButtonTwo="#fe8012"
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#contactForm"
+        linkButtonTwo="#sobre"
         logo={torreLogo.src}
         banner={banner.src}
-        title="Solução completa e inteligente para otimizar transportes, entregas e atendimento ao cliente."
+        title="Torre de controle e gestão de transportes para operações de e-commerce."
         text="Tecnologia de ponta e um time com expertise em logística que garantem performance na operação de transportes."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
+        id="sobre"
         title="Otimize e transforme sua operação com Torre de Controle"
         text="Gerenciamento de transportes, entrega sustentável e suporte ao cliente integrado para um operação de entregas eficiente. Soluções inovadoras com tecnologia própria em todas as etapas que otimizam o processo logístico e garantem uma melhor experiência ao cliente."
         banner={banner.src}
         corButtonOne="#fac30c"
         corButtonThree="#fe8012"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#gestao-transporte"
+        linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
         textButtonOne="saiba mais"
         textButtonTwo="agendar reunião"
       />
       <FeaturesComponent
+        id="gestao-transporte"
         banner={transporte.src}
         rowReverse={false}
         content={contentFeaturesOne}

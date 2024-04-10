@@ -36,10 +36,10 @@ import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
 import Script from "next/script";
 import Numbers from "@/components/produtos/numbers";
 import FeaturesComponentLog from "@/components/produtos/featuresLog";
-import iconeOne from "@/assets/logistica/icones/gestao.svg"
-import iconeTwo from "@/assets/logistica/icones/homologados.svg"
-import iconeThree from "@/assets/logistica/icones/localizacao.svg"
-import iconeFour from "@/assets/logistica/icones/pudos.svg"
+import iconeOne from "@/assets/logistica/icones/gestao.svg";
+import iconeTwo from "@/assets/logistica/icones/homologados.svg";
+import iconeThree from "@/assets/logistica/icones/localizacao.svg";
+import iconeFour from "@/assets/logistica/icones/pudos.svg";
 
 const content = [
   {
@@ -103,27 +103,23 @@ const contentFeaturesOne = [
 ];
 const contentFeaturesTwo = [
   {
-    title:
-      "Localização estratégica:",
-     text:"CDs distintos para operação de itens leves e pesados localizados na região metropolitana de São Paulo, local de maior volume de vendas do e-commerce brasileiro.",
+    title: "Localização estratégica:",
+    text: "CDs distintos para operação de itens leves e pesados localizados na região metropolitana de São Paulo, local de maior volume de vendas do e-commerce brasileiro.",
     icons: iconeThree.src,
   },
   {
-    title:
-      "CDs homologados: ",
-      text:"Pelos principais marketplaces que possibilita a concentração em um único estoque ou estoque avançado (Curva A).",
+    title: "CDs homologados: ",
+    text: "Pelos principais marketplaces que possibilita a concentração em um único estoque ou estoque avançado (Curva A).",
     icons: iconeTwo.src,
   },
   {
-    title:
-      "140 pontos de PUDOs: ",
-      text:"Espalhados no centro da cidade em parceria com marketplaces.",
+    title: "140 pontos de PUDOs: ",
+    text: "Espalhados no centro da cidade em parceria com marketplaces.",
     icons: iconeFour.src,
   },
   {
-    title:
-      "Gestão logística: ",
-      text:"Integrada com um time especializado em fulfillment trabalhando lado a lado a uma equipe de transportes para redução de prazo de entrega (Same Day e Next Day Delivery).",
+    title: "Gestão logística: ",
+    text: "Integrada com um time especializado em fulfillment trabalhando lado a lado a uma equipe de transportes para redução de prazo de entrega (Same Day e Next Day Delivery).",
     icons: iconeOne.src,
   },
 ];
@@ -177,24 +173,25 @@ export default function Logistica() {
       <JumboTron
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#contactForm"
+        linkButtonTwo="#sobre"
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         logo={fulfillmet.src}
-        title="Fulfillment inteligente que garante performance e impulsionam suas vendas."
-        text="Aumente suas vendas, reduza prazo de entrega e custos de frete e fidelize seus clientes com nossa solução de fulfillment escalável e personalizada."
+        title=" Expertise em operações B2C, B2B e D2C para armazenagem, picking e packing."
+        text="Aumente as vendas, reduza prazos de entregas e custos de frete para fidelização de clientes com uma solução de Fulfillment escalável e personalizada."
         banner={banner.src}
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
+        id="sobre"
         title="Controle, Armazenagem e Entrega Eficientes."
         text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
         banner={banner.src}
         corButtonOne="#FBC709"
         corButtonThree="#D3A707"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#fulfillment-personalizado"
+        linkButtonTwo="#contactForm"
         textButtonOne="saiba mais"
         textButtonTwo="falar com consultor"
       />
@@ -211,6 +208,8 @@ export default function Logistica() {
         content={contentTopics}
       />
       <FeaturesComponent
+        id="fulfillment-personalizado"
+        linkButton="#contactForm"
         banner={bannerInstitucional.src}
         rowReverse={false}
         content={contentFeaturesOne}
@@ -236,6 +235,7 @@ export default function Logistica() {
         banner={anvisaImage.src}
       />
       <SecondSection
+        link="#contactForm"
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         flowReverse={true}
@@ -252,7 +252,7 @@ export default function Logistica() {
         logo={logoAmazon.src}
         banner={""}
       />
-      <CarroselVertical
+      {/* <CarroselVertical
         title="Infraestrutura de Armazenamento."
         text="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
         content={content}
@@ -261,7 +261,7 @@ export default function Logistica() {
         title="Infraestrutura de Armazenamento."
         sub="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
         content={content}
-      />
+      /> */}
 
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />

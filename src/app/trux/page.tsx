@@ -183,26 +183,27 @@ export default function Trux() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
-          linkButtonOne="#"
-          linkButtonTwo="#"
+          linkButtonOne="#contactForm"
+          linkButtonTwo="#sobre"
           textButtonOne="falar com especialista"
           textButtonTwo="saiba mais"
           corButtonOne="#009881"
           corButtonThree="#046C5C"
           logo={truxLogo.src}
-          title="Transforme a sua gestão de transportes com o TMS: eficiência, controle, redução de custos e crescimento para sua empresa."
+          title="Gestão de motoristas e entregas para operações de transporte."
           banner={banner.src}
-          text="Tenha visão completa da sua operação em tempo real e tome decisões inteligentes baseada em dados sobre a sua operação de transportes."
+          text="Tenha visão completa da operação em tempo real e tome decisões inteligentes baseadas em dados de rotas, entregas e performance de motoristas."
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+          id="sobre"
           title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
           text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."
           banner={banner.src}
           corButtonOne="#009881"
           corButtonThree="#046C5C"
-          linkButtonOne=""
-          linkButtonTwo=""
+          linkButtonOne="#roteirizacao-entregas"
+          linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
           textButtonOne="saiba mais"
           textButtonTwo="agende uma demo"
         />
@@ -214,6 +215,7 @@ export default function Trux() {
           text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
         />
         <FeaturesComponent
+          id="roteirizacao-entregas"
           titleSection="Roteirização de entrega"
           text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
           banner={imageRoteirizacao.src}

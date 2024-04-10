@@ -124,23 +124,24 @@ export default function Pudos() {
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
           linkButtonOne="#contactForm"
-          linkButtonTwo=""
+          linkButtonTwo="#sobre"
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
           logo={pudoLogo.src}
-          title="Otimize tempo e custos do processo de entrega."
+          title="Pontos de coleta e entrega para operações first e last mile."
           text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
           banner={banner.src}
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+        id="sobre"
           title="Entregas mais simples e convenientes.          "
           text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
           banner={banner.src}
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"
-          linkButtonOne=""
-          linkButtonTwo=""
+          linkButtonOne="#para-marketplaces"
+          linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
           textButtonOne="saiba mais"
           textButtonTwo="agendar reunião"
         />
@@ -159,6 +160,7 @@ export default function Pudos() {
           image={svg}
         /> */}
         <CarroselVertical
+        id="para-marketplaces"
           title="Para Marketplaces"
           text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
           content={content}

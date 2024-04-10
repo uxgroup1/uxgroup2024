@@ -12,7 +12,7 @@ interface Content {
 function EcoSistemaUx() {
   return (
     <>
-      <section   className={style.LogisticaSustentavel}>
+      <section className={style.LogisticaSustentavel}>
         <div className={style.Container}>
           <div className={style.BoxLogisticaSustentavel}>
             <div className={style.Controller}>
@@ -31,9 +31,11 @@ function EcoSistemaUx() {
                   do processo capaz de diferenciar e transformar um negócio: a
                   logística.
                 </p>
-                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
-                  <Link href={"#contactForm"}>saiba mais</Link>
-                </button>
+                <Link href={"#contactForm"}>
+                  <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                    saiba mais
+                  </button>
+                </Link>
               </div>
             </div>
             <div className={style.ContentImage}>

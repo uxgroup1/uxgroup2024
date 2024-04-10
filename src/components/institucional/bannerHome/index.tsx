@@ -16,22 +16,31 @@ export default function BannerHome() {
             <h1 className="text-black w-[90%] text-3xl xl:text-6xl text-center xl:w-[63%]">
               Transformamos a experiência do cliente através da tecnologia.
             </h1>
+            <p className="text-black pt-5 text-lg">
+              Conheça nosso ecossistema de soluções para vendas digitais.
+            </p>
             <div className="w-full py-5 flex-col md:flex-row flex justify-center items-center gap-5">
-              <button
-                className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#29265B] hover:border-transparent hover:transition hover:text-white hover:font-semibold hover:to-[#009881] border-black`}
-              >
-                <Link href={"#gestao"}>Gestão</Link>
-              </button>
-              <button
-                className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#FBC709] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#FF7F13] border-black`}
-              >
-                <Link href={"#logistica"}>Logística</Link>
-              </button>
-              <button
-                className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg hover:bg-gradient-to-r hover:from-[#7DAD58] hover:border-transparent transition hover:text-white hover:font-semibold hover:to-[#014C34] border-black`}
-              >
-                <Link href={"#sustentabilidade"}>Sustentabilidade</Link>
-              </button>
+              <Link href={"#gestao"}>
+                <button
+                  className={`md:w-52 w-[90%] border text-xl h-12 rounded-lg bg-gradient-to-r from-[#29265B] hover:border-transparent hover:transition text-white hover:font-semibold to-[#009881]`}
+                >
+                  Gestão
+                </button>
+              </Link>
+              <Link href={"#logistica"}>
+                <button
+                  className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#FBC709] hover:border-transparent transition text-white hover:font-semibold to-[#FF7F13] `}
+                >
+                  Logística
+                </button>
+              </Link>
+              <Link href={"#sustentabilidade"}>
+                <button
+                  className={`md:w-52 w-[90%]  border text-xl h-12 rounded-lg bg-gradient-to-r from-[#7DAD58] border-transparent transition text-white hover:font-semibold to-[#014C34] `}
+                >
+                  Sustentabilidade
+                </button>
+              </Link>
             </div>
             {/* <p className="text-black py-5 w-4/5 text-center text-lg">
               Conheça nosso ecossistema de soluções para vendas digitais.

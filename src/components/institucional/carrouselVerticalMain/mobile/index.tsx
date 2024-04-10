@@ -4,24 +4,26 @@ import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
 import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
 import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
 import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
+import Link from "next/link";
 
 interface Content {
-  index: number;
   title: string;
   contentTitle: string;
   contentText: string;
   banner: string;
+  logo?: string;
+  link?: string;
+  corBarra?: string;
 }
 
 interface ContentProduct {
-  content : Content[]
+  content: Content[];
   title: string;
   sub: string;
 }
 
-function CarroselVerticalMobile({content, title, sub}: ContentProduct) {
+function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
   const [contentIndex, setContentIndex] = useState(0);
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,12 +42,8 @@ function CarroselVerticalMobile({content, title, sub}: ContentProduct) {
       <div className="container bg mx-auto px-5">
         <div className="bg-white ">
           <div className="mb-8">
-            <h1 className="text-3xl text-black font-bold mb-2">
-              {title}
-            </h1>
-            <p className="text-black">
-              {sub}
-            </p>
+            <h1 className="text-3xl text-black font-bold mb-2">{title}</h1>
+            <p className="text-black">{sub}</p>
           </div>
 
           <div className="flex justify-center flex-col items-center mb-8">
@@ -113,7 +111,9 @@ function CarroselVerticalMobile({content, title, sub}: ContentProduct) {
                   <p className="text-white">
                     {content[contentIndex].contentText}
                   </p>
-                  <button className={style.Button}>Saiba mais</button>
+                  <Link href={`${content[contentIndex].link}`}>
+                    <button className={style.Button}>conheça a solução</button>
+                  </Link>
                 </div>
               </div>
             </div>

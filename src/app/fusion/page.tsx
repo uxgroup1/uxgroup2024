@@ -236,26 +236,27 @@ export default function Fusion() {
       {/* <!-- End Google Tag Manager (noscript) --> */}
       <Header />
       <JumboTron
-        linkButtonOne="#"
-        linkButtonTwo="#"
+        linkButtonOne="#contactForm"
+        linkButtonTwo="#sobre"
         textButtonOne="falar com especialista"
         textButtonTwo="saiba mais"
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
         logo={fusionLogo.src}
-        title="Satisfação dos clientes do seu e-commerce com uma gestão de fretes 100% integrada."
+        title="Gestão de fretes para e-commerce e marketplaces."
         banner={banner.src}
-        text="Seja no mundo do e-commerce ou em marketplaces, o frete é sempre um desafio, o que torna a tecnologia uma peça fundamental para o sucesso das vendas digitais."
+        text="Aumente a conversão de vendas e reduza custos com entregas, com uma gestão que permite autonomia para criação de campanhas de fretes e conciliação de pagamentos."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
+        id="sobre"
         title="Tecnologia de Fretes Inovadora: Otimização, Economia e Escalabilidade"
         text="Uma tecnologia modular desde o cálculo de frete à conciliação, nossa solução para gestão de fretes garante ao gestor das vendas digitais, a melhora de performance, redução de custos, resolvendo os desafios de cada uma das etapas da cadeia de entrega seja no mundo do e-commerce ou do marketplace.        "
         banner={banner.src}
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"
-        linkButtonOne=""
-        linkButtonTwo=""
+        linkButtonOne="#e-commerce"
+        linkButtonTwo="#marketplace"
         textButtonOne="e-commerce"
         textButtonTwo="marketplace"
       />
@@ -264,9 +265,10 @@ export default function Fusion() {
         title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
         number={number}
         banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-        text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
+        text=""
       />
       <FeaturesComponent
+        id={"e-commerce"}
         titleSection="Ofereça as melhores opções de frete"
         text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
         banner={imageOne.src}
@@ -305,6 +307,7 @@ export default function Fusion() {
       />
 
       <FeaturesComponent
+        id="marketplace"
         titleSection=""
         text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
         banner={imageFive.src}
