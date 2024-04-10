@@ -31,8 +31,8 @@ function EcoSistemaUx() {
                   do processo capaz de diferenciar e transformar um negócio: a
                   logística.
                 </p>
-                <Link href={"#contactForm"}>
-                  <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                <Link className="w-full" href={"#contactForm"}>
+                  <button className="hover:border md:w-[170px] w-full hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
                     saiba mais
                   </button>
                 </Link>

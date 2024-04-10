@@ -176,7 +176,7 @@
     }
   }
 
-  footer {
+  .divFooter {
     margin-top: 36px;
     display: flex;
     justify-content: center;
@@ -190,8 +190,7 @@
       padding: 8px;
       font-size: 16px;
       line-height: 25px;
-      width: 25%;
-      height: 50px;
+      height: 40px;
     }
     
   }
@@ -267,10 +266,10 @@
       }
     }
 
-    footer {
+    .divFooter {
       .gotoBlog {
-        width: 80%;
-        padding: 3%;
+        width: 90%;
+        
       }
     }
   }

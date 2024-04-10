@@ -31,8 +31,8 @@ function LogisticaSustentavel({ id }: any) {
                     verde.
                   </Link>
                 </p>
-                <Link target="_blank" href={"/torre"} >
-                <button className="hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                <Link className="w-full" target="_blank" href={"/torre"} >
+                <button className="md:w-[170px] w-full hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
                   saiba mais
                 </button>
                 </Link>
