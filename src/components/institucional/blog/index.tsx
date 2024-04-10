@@ -12,7 +12,7 @@ export function Blog() {
     link: '',
     title: { rendered: '' },
     excerpt: { rendered: '' },
-    _embedded: { 
+    _embedded: {
       'wp:featuredmedia': [{ source_url: '' }],
       'wp:term': [[{ link: '', name: '' }]],
       author: [{ link: '', name: '' }],
@@ -21,7 +21,7 @@ export function Blog() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch('https://uxgroup2024.vercel.app')
+    fetch('https://uxgroup.com.br/index.php')
       .then((res) => res.json() as Promise<WPResponse>)
       .then((res) => {
         setPost(res['featured']);
