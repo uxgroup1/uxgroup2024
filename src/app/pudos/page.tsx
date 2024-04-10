@@ -22,6 +22,7 @@ import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
 import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
 import pudoLogo from "@/assets/logos/pudos.svg";
+import pudoEmoji from "@/assets/pudo/emoji.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
 import banner from "@/assets/pudo/pudoImages/banner-pudo.png";
 import confiabilidade from "@/assets/pudo/pudoImages/confiabilidade.png";
@@ -92,9 +93,9 @@ const contentTopics = [
     text: "Se você possui espaços ociosos na sua loja, você pode rentabilizar em até 5 mil reais, tornando um PUDO.",
   },
   {
-    icon: "",
-    title: "Lorem ipsum dolor sit amet, consectetur",
-    text: "lorem ipsum dolor sit amet, consectet durit esse cill.",
+    icon: pudoEmoji,
+    title: "Fortalecimento de marca: ",
+    text: "você fortalece laços com grandes marcas criando confiabilidade para os seus clientes e a possibilidade de propostas comerciais futuras.",
   },
 ];
 

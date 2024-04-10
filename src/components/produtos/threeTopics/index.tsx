@@ -30,7 +30,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
               {content?.map((item, index) => {
                 return (
                   <div
-                    className="flex hover:shadow-2xl  p-5 md:p-0 rounded-lg cursor-default  transition-all xl:w-[330px]  lg:w-[250px] md:w-[400px] md:h-[220px] flex-col items-center justify-center"
+                    className="flex hover:shadow-2xl  p-5 md:p-0 rounded-2xl cursor-default  transition-all xl:w-[330px]  lg:w-[250px] md:w-[400px] md:h-[250px] flex-col items-center justify-center"
                     key={index}
                   >
                     <Image
@@ -45,7 +45,7 @@ export default function ThreeTopics({ title, text, content }: ContentSection) {
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-center lg:text-xs w-full md:w-4/5 text-black">
+                    <p className="mt-2 text-center text-[0.99rem] w-full md:w-4/5 text-black">
                       {item.text}
                     </p>
                   </div>
