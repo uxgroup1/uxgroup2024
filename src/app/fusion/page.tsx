@@ -245,7 +245,7 @@ export default function Fusion() {
         logo={fusionLogo.src}
         title="Gestão de fretes para e-commerce e marketplaces."
         banner={banner.src}
-        text="Aumente a conversão de vendas e reduza custos com entregas, com uma gestão que permite autonomia para criação de campanhas de fretes e conciliação de pagamentos."
+        text="Aumente a conversão de vendas e reduza custos com uma gestão que permite autonomia para criação de campanhas de fretes e conciliação de pagamentos."
       />
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
