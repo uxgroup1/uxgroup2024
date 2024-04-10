@@ -189,7 +189,7 @@ export default function Trux() {
         <JumboTron
           linkButtonOne="#contactForm"
           linkButtonTwo="#sobre"
-          textButtonOne="falar com especialista"
+          textButtonOne="fale com especialista"
           textButtonTwo="saiba mais"
           corButtonOne="#009881"
           corButtonThree="#046C5C"

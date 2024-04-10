@@ -238,7 +238,7 @@ export default function Fusion() {
       <JumboTron
         linkButtonOne="#contactForm"
         linkButtonTwo="#sobre"
-        textButtonOne="falar com especialista"
+        textButtonOne="fale com especialista"
         textButtonTwo="saiba mais"
         corButtonOne="#28265b"
         corButtonThree="#1F1D47"

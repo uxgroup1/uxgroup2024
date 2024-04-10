@@ -193,7 +193,7 @@ export default function Logistica() {
         linkButtonOne="#fulfillment-personalizado"
         linkButtonTwo="#contactForm"
         textButtonOne="saiba mais"
-        textButtonTwo="falar com consultor"
+        textButtonTwo="fale com consultor"
       />
       <Numbers
         cor="#fbc705"
