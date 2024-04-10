@@ -115,7 +115,7 @@ export default function Torre() {
         linkButtonOne="#gestao-transporte"
         linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
         textButtonOne="saiba mais"
-        textButtonTwo="agendar reunião"
+        textButtonTwo="agende uma reunião"
       />
       <FeaturesComponent
         id="gestao-transporte"

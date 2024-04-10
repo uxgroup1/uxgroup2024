@@ -143,7 +143,7 @@ export default function Pudos() {
           linkButtonOne="#para-marketplaces"
           linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
           textButtonOne="saiba mais"
-          textButtonTwo="agendar reunião"
+          textButtonTwo="agende uma reunião"
         />
         <ThreeTopics
           content={contentTopics}
