@@ -50,7 +50,7 @@ export default function FeaturesComponentLog({
                 <Image
                   className="w-[45%] lg:w-[35%] pb-5"
                   src={imageSobTitle}
-                  alt=""
+                  alt="Logística Sustentavel"
                   width={100}
                   height={100}
                 />

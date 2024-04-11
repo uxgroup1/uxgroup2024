@@ -11,6 +11,7 @@ interface Content {
   logo?: string;
   link?: string;
   corBarra?: string;
+  textButton?: string;
 }
 
 interface ContentSlide {
@@ -100,9 +101,9 @@ function CarroselVertical({ title, text, content, id }: ContentSlide) {
                     {content[contentIndex].contentTitle}
                   </h1>
                   <p>{content[contentIndex].contentText}</p>
-                  <Link target="_blank" href={`${content[contentIndex].link}`}>
+                  <Link href={`${content[contentIndex].link}`}>
                     <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
-                      conheça a solução
+                      {content[contentIndex].textButton}
                     </button>
                   </Link>
                 </div>

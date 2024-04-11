@@ -125,7 +125,7 @@ export default function Footer() {
                   <div className="lg:ml-20">
                     <Image
                       src={imageCarbono.src}
-                      alt=""
+                      alt="Sustentabilidade"
                       width={100}
                       height={100}
                     />

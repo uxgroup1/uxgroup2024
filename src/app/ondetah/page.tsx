@@ -5,27 +5,15 @@ const Header = dynamic(() => import("@/components/header"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
-const CarroselVertical = dynamic(
-  () => import("@/components/institucional/carrouselVerticalMain")
-);
 const SecondSection = dynamic(
   () => import("@/components/produtos/SecondSection")
 );
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
-const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
-import headsetImage from "@/assets/ondetah/headset.svg";
-import counterImage from "@/assets/ondetah/counter.svg";
-import smartphoneImage from "@/assets/ondetah/smartphone.svg";
 import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
 import ProductInstitutional from "@/components/produtos/institucional";
-import arrowList from "@/assets/ondetah/arrow/arrowListComponentesPudo.svg";
 import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png";
-import imageSlideOne from "@/assets/ondetah/imagesSections/1.png";
-import imageSlideTwo from "@/assets/ondetah/imagesSections/2.png";
-import imageSlideThree from "@/assets/ondetah/imagesSections/3.png";
-import imageSlideFour from "@/assets/ondetah/imagesSections/4.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
 import SliderTopics from "@/components/slider";
@@ -35,90 +23,6 @@ import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
 
-
-const contentFeatures = [
-  {
-    title:
-      "Entrega Pontual: Garanta que seus produtos sejam entregues dentro do prazo previsto, aumente a satisfação do cliente e fortaleça a reputação da sua marca.",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Redução de Custos: Evite atrasos e custos adicionais associados a entregas fora do prazo ou reenvios de produtos devido a problemas não resolvidos. ",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Maior Confiança do Cliente: Lide de forma rápida com as ocorrências e forneça atualizações transparentes sobre o status dos pedidos. Crie conexão com o seu cliente com comprometimento com a qualidade e o serviço.    ",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Melhoria da Experiência do Cliente: Tenha uma abordagem proativa para lidar com ocorrências e resolva os problemas antes que afetem negativamente a experiência do cliente.",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Feedback Valioso: Acompanhe de perto os feedback dos clientes, assim você consegue identificar áreas de melhoria e implementar mudanças para otimizar ainda mais seus processos.",
-    icons: arrowList,
-  },
-];
-
-const content = [
-  {
-    index: 0,
-    title: "Informação em Tempo Real",
-    contentTitle: "Informação em Tempo Real",
-    contentText:
-      "Acompanhe cada etapa do pedido em tempo real. Desde a confirmação até a entrega, atualizações regulares, incluindo notificações em caso de eventos inesperados.",
-    banner: imageSlideOne.src,
-  },
-  {
-    index: 1,
-    title: "Redução de Contatos no SAC",
-    contentTitle: "Redução de Contatos no SAC",
-    contentText:
-      "Utilize nosso SAC 4.0 com um chatbot disponível 24 horas por dia. Reduza o tempo de espera e resolva questões rapidamente através de aplicativos de mensagens, garantindo uma experiência mais positiva para o cliente e reduzindo custos.",
-
-    banner: imageSlideTwo.src,
-  },
-  {
-    index: 2,
-    title: "Entrega Sustentável",
-    contentTitle: "Entrega Sustentável",
-    contentText:
-      "Deixe suas entregas mais ecológicas através da compensação de carbono. Utilizamos tecnologia para calcular e neutralizar as emissões de carbono associadas aos seus pedidos, e fornecemos certificados de compensação para cada compra.",
-
-    banner: imageSlideThree.src,
-  },
-  {
-    index: 3,
-    title: "Pesquisas de Satisfação",
-    contentTitle: "Pesquisas de Satisfação Personalizadas",
-    contentText:
-      "Fidelize seus clientes com pesquisas de satisfação adaptadas às suas necessidades. Entenda melhor a experiência do cliente e reverta possíveis insatisfações, garantindo uma jornada de compra mais positiva.",
-
-    banner: imageSlideFour.src,
-  },
-];
-
-const contentTopics = [
-  {
-    icon: headsetImage,
-    title: `50% de Redução de Contato com SAC`,
-    text: "",
-  },
-  {
-    icon: smartphoneImage,
-    title: "100% dos Pedidos com Tracking Centralizado",
-    text: "",
-  },
-  {
-    icon: counterImage,
-    title: "+5 Pontos Percentuais na Performance de Entrega",
-    text: "",
-  },
-];
 
 const number = [
   {
@@ -215,21 +119,6 @@ export default function Ondetah() {
         banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
         text=""
       />
-      {/* <ThreeTopics
-        content={contentTopics}
-        title="Garanta uma solução completa focada na experiência do cliente e no sucesso do seu negócio."
-        text=""
-      /> */}
-      {/* <CarroselVertical
-        content={content}
-        title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
-        text=""
-      />
-      <CarroselVerticalMobile
-        content={content}
-        title="Transforme a experiência do seu cliente com funcionalidades exclusivas."
-        sub=""
-      /> */}
       <SecondSection
         id="gestao-de-prazos"
         link="#contactForm"

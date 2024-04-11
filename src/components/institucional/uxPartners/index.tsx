@@ -22,8 +22,8 @@ function UxPartners() {
                 className="lg:w-[400px] w-[300px]"
                 src={imageUxPartners}
                 alt="Logo UX Partners"
-                width={0}
-                height={0}
+                width={100}
+                height={100}
               />
             </div>
             <div className={style.Content}>

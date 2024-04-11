@@ -38,7 +38,7 @@ const content = [
     title: "PUDO's",
     text: "Aumente a satisfação do cliente com nossos pontos de coleta e entrega estrategicamente localizados. A conveniência e a agilidade ao alcance do seu cliente.    ",
     banner: pudoImage.src,
-    link: "/pudo",
+    link: "/pudos",
   },
   {
     title: "WMS",

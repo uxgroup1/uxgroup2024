@@ -75,8 +75,8 @@ export default function SliderTopics() {
             <Image
               src={content[contentIndex].icon}
               className="md:w-20 flex items-center justify-center w-[30%] pb-5"
-              width={0}
-              height={0}
+              width={100}
+              height={100}
               alt="icone"
             />
             <h1 className="md:text-4xl md:text-left text-center text-3xl w-full font-semibold text-black">

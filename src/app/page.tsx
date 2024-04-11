@@ -1,9 +1,7 @@
 "use client";
-
 const CarroselVertical = dynamic(
   () => import("@/components/institucional/carrouselVerticalMain/index")
 );
-import image from "../assets/cta/ctaBanner.png";
 const Cta = dynamic(() => import("@/components/cta/index"));
 const LogisticaComPerformance = dynamic(
   () => import("@/components/institucional/logisticaComPerformance/index")
@@ -17,7 +15,6 @@ const LogisticaSustentavel = dynamic(
 const UxMidia = dynamic(
   () => import("@/components/institucional/uxMidia/index")
 );
-import { Blog } from "@/components/institucional/blog/index";
 const CarroselVerticalMobile = dynamic(
   () => import("@/components/institucional/carrouselVerticalMain/mobile/index")
 );
@@ -27,7 +24,9 @@ const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm/index")
 );
 const EcoSistemaUx = dynamic(() => import("@/components/ecosistemaUx/index"));
-const BannerHome = dynamic(() => import("@/components/institucional/bannerHome")) ;
+const BannerHome = dynamic(
+  () => import("@/components/institucional/bannerHome")
+);
 import dynamic from "next/dynamic";
 import ImageUxMidiaOne from "@/assets/home/UX-na-midia/logistica.png";
 import ImageUxMidiaTwo from "@/assets/home/UX-na-midia/tecnologia.png";
@@ -43,44 +42,39 @@ import logoTrux from "@/assets/home/trux-gestao.png";
 import logoOndetah from "@/assets/home/ondetah-gestao.png";
 import iconFusion from "@/assets/home/fusion.svg";
 import iconOndetah from "@/assets/home/ondetah.svg";
-import iconTrux from "@/assets/home/trux.svg"
+import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
-
 
 const content = [
   {
     index: 0,
     title: "TMS para Embarcadores",
-    contentTitle: "Gestão de fretes para e-commerce e marketplaces.    ",
-    contentText:
-      "",
+    contentTitle: "Gestão de fretes para e-commerce e marketplaces.",
+    contentText: "",
     banner: imageCarroselVerticalOne.src,
     logo: logoFusion.src,
-    link:"/fusion",
-    icon:iconFusion.src
-
+    link: "/fusion",
+    icon: iconFusion.src,
   },
   {
     index: 2,
     title: "Experiência do Cliente",
     contentTitle: "Gestão e comunicação com o cliente a partir do tracking.",
-    contentText:
-      "",
+    contentText: "",
     banner: imageCarroselVerticalThree.src,
     logo: logoOndetah.src,
-    link:"/ondetah",
-    icon:iconOndetah.src
+    link: "/ondetah",
+    icon: iconOndetah.src,
   },
   {
     index: 1,
     title: "TMS para Transportadores",
     contentTitle: "Gestão de entregas e de transportadores.",
-    contentText:
-      "",
+    contentText: "",
     banner: imageCarroselVerticalTwo.src,
     logo: logoTrux.src,
-    link:"/trux",
-    icon:iconTrux.src
+    link: "/trux",
+    icon: iconTrux.src,
   },
 ];
 
@@ -163,7 +157,7 @@ export default function Home() {
       </noscript>
       {/* <!-- End Google Tag Manager (noscript) --> */}
       <Header />
-      <BannerHome/>
+      <BannerHome />
       <EcoSistemaUx />
       <ClientsCases />
       <CarroselVertical
@@ -174,7 +168,8 @@ export default function Home() {
       />
       <CarroselVerticalMobile
         title="Tecnologia para gestão da logística."
-        sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."      content={content}
+        sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."
+        content={content}
       />
       <Cta
         button={true}
@@ -183,7 +178,7 @@ export default function Home() {
         }
         banner={ctaOne.src}
       />
-      <LogisticaComPerformance id={"logistica"}/>
+      <LogisticaComPerformance id={"logistica"} />
 
       <Cta
         button={true}
@@ -192,10 +187,8 @@ export default function Home() {
         }
         banner={ctaTwo.src}
       />
-
       <LogisticaSustentavel id={"sustentabilidade"} />
       <UxPartners />
-      {/* <Blog /> */}
       <UxMidia colorText="#fff" content={contentUxMidia} />
       <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
       <ContactForm />

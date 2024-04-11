@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import imageTest from "@/assets/teste.png";
-import institucionalImage from "@/assets/home/bannerMain/institucional.jpeg";
 import gestaoImage from "@/assets/home/bannerMain/gestao.jpeg";
 import logImage from "@/assets/home/bannerMain/logistica.jpeg";
 import esgImage from "@/assets/home/bannerMain/esg.jpeg";

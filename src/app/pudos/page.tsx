@@ -6,9 +6,6 @@ const Header = dynamic(() => import("@/components/header/index"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
-const SecondSection = dynamic(
-  () => import("@/components/produtos/SecondSection")
-);
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import svg from "@/assets/faviconBanner/ux-gestao.svg";
 const FeaturesComponent = dynamic(
@@ -60,6 +57,8 @@ const content = [
     contentText:
       "Com os pontos de pick-up and drop-off, você acelera o processo de entrega, reduzindo as etapas para que a mercadoria chegue para o seu cliente.",
     banner: satisfacao.src,
+    link: "#contactForm",
+    textButton:"saiba mais"
   },
   {
     index: 1,
@@ -69,6 +68,8 @@ const content = [
       "Com o PUDO, você pode reduzir os custos de entrega, com menos paradas para o motoristas, você tem uma economia significativa em despesas de transporte e logística.",
 
     banner: custo.src,
+    link: "#contactForm",
+    textButton:"saiba mais"
   },
   {
     index: 2,
@@ -78,6 +79,8 @@ const content = [
       "Ao utilizar uma rede confiável de pontos de coleta, você pode garantir aos sellers que realizem o processo de expedição de forma rápida e segura, melhorando a reputação da sua marca.",
 
     banner: confiabilidade.src,
+    link: "#contactForm",
+    textButton:"saiba mais"
   },
 ];
 
@@ -104,22 +107,22 @@ export default function Pudos() {
     <>
       <main>
         {/* <!-- Google Tag Manager --> */}
-      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-      {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- End Google Tag Manager --> */}
         {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-      {/* <!-- End Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
           textButtonOne="fale com um especialista"
@@ -135,7 +138,7 @@ export default function Pudos() {
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
-        id="sobre"
+          id="sobre"
           title="Entregas mais simples e convenientes.          "
           text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
           banner={banner.src}
@@ -151,17 +154,8 @@ export default function Pudos() {
           title="Para Proprietários de Lojas Físicas."
           text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
         />
-
-        {/* <SecondSection
-          corButtonOne="#ff7f12"
-          corButtonThree="#CA620A"
-          flowReverse={false}
-          title="Lorem"
-          text="Estamos aqui para tornar suas entregas mais simples e convenientes do que nunca. Com o PUDO, ou Pick-Up and Drop-Off, oferecemos uma solução flexível e eficaz para o last mile. Com mais de 140 pontos espalhados em toda grande São Paulo, você pode escolher um local próximo para entregar ou retirar seu pacote ."
-          image={svg}
-        /> */}
         <CarroselVertical
-        id="para-marketplaces"
+          id="para-marketplaces"
           title="Para Marketplaces."
           text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
           content={content}
@@ -172,9 +166,8 @@ export default function Pudos() {
           content={contentFeatures}
           banner={pudo.src}
         />
-
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm/>
+        <ContactForm />
         <Footer />
       </main>
     </>

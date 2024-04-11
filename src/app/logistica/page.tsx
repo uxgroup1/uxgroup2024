@@ -18,8 +18,6 @@ import itajaiImage from "@/assets/logistica/cdsImages/itajai.png";
 import anvisaImage from "@/assets/logistica/anvisa.png";
 import fulfillmet from "@/assets/logos/fulfillment.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
-import CarroselVertical from "@/components/institucional/carrouselVerticalMain";
-import CarroselVerticalMobile from "@/components/institucional/carrouselVerticalMain/mobile";
 import logoAmazon from "@/assets/logistica/logo-amzn.png";
 import wmsImage from "@/assets/logistica/wms.png";
 import ThreeTopics from "@/components/produtos/threeTopics";
@@ -40,33 +38,6 @@ import iconeOne from "@/assets/logistica/icones/gestao.svg";
 import iconeTwo from "@/assets/logistica/icones/homologados.svg";
 import iconeThree from "@/assets/logistica/icones/localizacao.svg";
 import iconeFour from "@/assets/logistica/icones/pudos.svg";
-
-const content = [
-  {
-    index: 0,
-    title: "CD Itapevi",
-    contentTitle: "CD Itapevi",
-    contentText:
-      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
-    banner: itapeviImage.src,
-  },
-  {
-    index: 1,
-    title: "CD Barueri",
-    contentTitle: "CD Barueri",
-    contentText:
-      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
-    banner: barueriImage.src,
-  },
-  {
-    index: 2,
-    title: "CD Itajaí",
-    contentTitle: "CD Barueri",
-    contentText:
-      "Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega.",
-    banner: itajaiImage.src,
-  },
-];
 
 const number = [
   {
@@ -252,17 +223,6 @@ export default function Logistica() {
         logo={logoAmazon.src}
         banner={""}
       />
-      {/* <CarroselVertical
-        title="Infraestrutura de Armazenamento."
-        text="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
-        content={content}
-      />
-      <CarroselVerticalMobile
-        title="Infraestrutura de Armazenamento."
-        sub="Operamos em 3 Centros de Distribuição próprios, que somam mais de 30.000m2, estrategicamente localizados, garantindo uma ampla cobertura geográfica e reduzindo os prazos de entrega. Nossos CDs são equipados com tecnologia de ponta e segurança de alto nível para proteger seus produtos."
-        content={content}
-      /> */}
-
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
       <ContactForm />
       <Footer />

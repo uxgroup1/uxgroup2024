@@ -57,8 +57,8 @@ export default function JumboTron({
           {logo && (
             <Image
               className={`md:w-[500px] xl:w-[500px] lg:w-80 transition-transform ${"animated-state-Jumbotron "} pb-5 w-[200px] md:pb-14`}
-              width={0}
-              height={0}
+              width={100}
+              height={100}
               src={`${logo}`}
               alt="Logo do produto UX"
             />

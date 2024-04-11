@@ -48,7 +48,7 @@ export default function FeaturesComponent({
               <Image
                 className="w-[45%] lg:w-[35%] pb-5"
                 src={imageSobTitle}
-                alt=""
+                alt="Tecnologia, Logística e sustentabilidade"
                 width={100}
                 height={100}
               />

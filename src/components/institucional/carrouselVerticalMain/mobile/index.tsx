@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+"use client"
+
+import { useEffect, useState } from "react";
 import style from "./style.module.scss";
-import imageCarroselVerticalOne from "@/assets/fusion/fusionBanner.png";
-import imageCarroselVerticalTwo from "@/assets/trux/tms-transp.png";
-import imageCarroselVerticalThree from "@/assets/ondetah/ondetah.png";
-import imageCarroselVerticalFour from "@/assets/consultoria/consultoria.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -101,7 +99,7 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
                     src={`${content[contentIndex].logo}`}
                     width={100}
                     height={1000}
-                    alt=""
+                    alt="Produto UX"
                   />
                   <h1 className="text-2xl text-white font-bold mb-4">
                     {content[contentIndex].contentTitle}
