@@ -1,7 +1,5 @@
 import Image from "next/image";
 import ecoImage from "@/assets/home/ecossistema-ux-grande.png";
-import ecoImageMob from "@/assets/home/ecossistema.png";
-import { IoIosArrowDropdown } from "react-icons/io";
 import Link from "next/link";
 
 export default function BannerHome() {
@@ -42,9 +40,6 @@ export default function BannerHome() {
                 </button>
               </Link>
             </div>
-            {/* <p className="text-black py-5 w-4/5 text-center text-lg">
-              Conheça nosso ecossistema de soluções para vendas digitais.
-            </p> */}
           </div>
 
           <div className="flex w-[150%] justify-center mt-10">
