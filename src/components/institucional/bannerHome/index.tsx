@@ -47,7 +47,7 @@ export default function BannerHome() {
             </p> */}
           </div>
 
-          <div className="flex w-[150%] justify-center transition-transform animated-state-Jumbotron-two mt-10">
+          <div className="flex w-[150%] justify-center mt-10">
             <Image
               id="imageContent"
               alt="Sustentabilidade"
