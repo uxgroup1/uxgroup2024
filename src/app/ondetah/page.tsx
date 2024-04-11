@@ -90,7 +90,7 @@ export default function Ondetah() {
       <JumboTron
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne="#contactForm"
+        linkButtonOne="#formulario"
         linkButtonTwo="#sobre"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
@@ -121,7 +121,7 @@ export default function Ondetah() {
       />
       <SecondSection
         id="gestao-de-prazos"
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Gestão de Prazos e Ocorrências."
@@ -132,7 +132,7 @@ export default function Ondetah() {
       />
 
       <SecondSection
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Informação em Tempo Real."
@@ -141,7 +141,7 @@ export default function Ondetah() {
         flowReverse={false}
       />
       <SecondSection
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Redução de Contatos no SAC."
@@ -150,7 +150,7 @@ export default function Ondetah() {
         flowReverse={true}
       />
       <SecondSection
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Entrega Sustentável."
@@ -159,7 +159,7 @@ export default function Ondetah() {
         flowReverse={false}
       />
       <SecondSection
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#29265B"
         corButtonTwo="#009580"
         title="Pesquisas de Satisfação Personalizadas."

@@ -14,7 +14,7 @@ export default function ContactForm() {
         async
         src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
       ></Script>
-      <section id="contactForm" className="bg-black pt-[100px] w-full ">
+      <section id="formulario" className="bg-black pt-[100px] w-full ">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col">
           <h1 className=" w-[90%] md:w-full text-center">
             Fale diretamente com o nosso time.
@@ -23,7 +23,7 @@ export default function ContactForm() {
             Nos informe qual tipo de contato gostaria de fazer.
           </p>
         </div>
-        <form className="max-w-md w-[90%] mx-auto">
+        <form id="contactForm" className="max-w-md w-[90%] mx-auto">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"

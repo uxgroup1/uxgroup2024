@@ -57,7 +57,7 @@ function Cta({
                   />
                 )}
                 {button && (
-                  <Link href="#contactForm">
+                  <Link href="#formulario">
                     <button
                       className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"
                       style={{

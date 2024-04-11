@@ -57,7 +57,7 @@ const content = [
     contentText:
       "Com os pontos de pick-up and drop-off, você acelera o processo de entrega, reduzindo as etapas para que a mercadoria chegue para o seu cliente.",
     banner: satisfacao.src,
-    link: "#contactForm",
+    link: "#formulario",
     textButton:"saiba mais"
   },
   {
@@ -68,7 +68,7 @@ const content = [
       "Com o PUDO, você pode reduzir os custos de entrega, com menos paradas para o motoristas, você tem uma economia significativa em despesas de transporte e logística.",
 
     banner: custo.src,
-    link: "#contactForm",
+    link: "#formulario",
     textButton:"saiba mais"
   },
   {
@@ -79,7 +79,7 @@ const content = [
       "Ao utilizar uma rede confiável de pontos de coleta, você pode garantir aos sellers que realizem o processo de expedição de forma rápida e segura, melhorando a reputação da sua marca.",
 
     banner: confiabilidade.src,
-    link: "#contactForm",
+    link: "#formulario",
     textButton:"saiba mais"
   },
 ];
@@ -127,7 +127,7 @@ export default function Pudos() {
         <JumboTron
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
-          linkButtonOne="#contactForm"
+          linkButtonOne="#formulario"
           linkButtonTwo="#sobre"
           corButtonOne="#ff7f12"
           corButtonThree="#CA620A"

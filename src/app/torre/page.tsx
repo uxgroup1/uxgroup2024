@@ -97,7 +97,7 @@ export default function Torre() {
         corButtonTwo="#fe8012"
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne="#contactForm"
+        linkButtonOne="#formulario"
         linkButtonTwo="#sobre"
         logo={torreLogo.src}
         banner={banner.src}

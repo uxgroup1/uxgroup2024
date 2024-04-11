@@ -144,7 +144,7 @@ export default function Logistica() {
       <JumboTron
         textButtonOne="fale com um especialista"
         textButtonTwo="saiba mais"
-        linkButtonOne="#contactForm"
+        linkButtonOne="#formulario"
         linkButtonTwo="#sobre"
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
@@ -162,7 +162,7 @@ export default function Logistica() {
         corButtonOne="#FBC709"
         corButtonThree="#D3A707"
         linkButtonOne="#fulfillment-personalizado"
-        linkButtonTwo="#contactForm"
+        linkButtonTwo="#formulario"
         textButtonOne="saiba mais"
         textButtonTwo="fale com consultor"
       />
@@ -180,7 +180,7 @@ export default function Logistica() {
       />
       <FeaturesComponent
         id="fulfillment-personalizado"
-        linkButton="#contactForm"
+        linkButton="#formulario"
         banner={bannerInstitucional.src}
         rowReverse={false}
         content={contentFeaturesOne}
@@ -206,7 +206,7 @@ export default function Logistica() {
         banner={anvisaImage.src}
       />
       <SecondSection
-        link="#contactForm"
+        link="#formulario"
         corButtonOne="#fbc705"
         corButtonThree="#D3A707"
         flowReverse={true}

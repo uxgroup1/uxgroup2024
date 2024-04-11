@@ -187,7 +187,7 @@ export default function Trux() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
-          linkButtonOne="#contactForm"
+          linkButtonOne="#formulario"
           linkButtonTwo="#sobre"
           textButtonOne="fale com especialista"
           textButtonTwo="saiba mais"

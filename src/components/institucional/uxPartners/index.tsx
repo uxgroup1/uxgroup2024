@@ -36,7 +36,7 @@ function UxPartners() {
                 acreditam nesse propósito e investimos em startups que nascem
                 com o desafio de trazer inovação para o setor.
               </p>
-              <Link className="w-full items-center flex justify-center" href={"#contactForm"}>
+              <Link className="w-full items-center flex justify-center" href={"#formulario"}>
                 <button className=" w-full md:w-[225px]  hover:font-semibold transition">
                   fale com a gente
                 </button>
