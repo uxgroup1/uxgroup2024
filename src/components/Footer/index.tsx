@@ -137,7 +137,7 @@ export default function Footer() {
                 <span className="text-sm text-white sm:text-center">
                   © 2024 | UX Group | Todos os direitos reservados.
                 </span>
-                <Link className="md:ml[-20px] hover:underline" href="">
+                <Link className="md:ml[-20px] hover:underline" href="/politica-de-privacidade">
                   Política de Privacidade
                 </Link>
                 <div className="flex mt-4 gap-5 sm:justify-center sm:mt-0">

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import ecoImage from "@/assets/home/ecossistema-ux-grande.png";
+import ecoImageMob from "@/assets/home/ecossistema.png";
+import { IoIosArrowDropdown } from "react-icons/io";
 import Link from "next/link";
 
 export default function BannerHome() {

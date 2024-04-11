@@ -101,8 +101,8 @@ function CarroselVertical({ title, text, content, id }: ContentSlide) {
                     {content[contentIndex].contentTitle}
                   </h1>
                   <p>{content[contentIndex].contentText}</p>
-                  <Link href={`${content[contentIndex].link}`}>
-                    <button className="hover:border hover:font-semibold hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
+                  <Link className="h-12" href={`${content[contentIndex].link}`}>
+                    <button className="hover:border hover:font-semibold h-full hover:border-black text-black bg-white border border-transparent hover:text-black transition  hover:shadow-md">
                       {content[contentIndex].textButton}
                     </button>
                   </Link>

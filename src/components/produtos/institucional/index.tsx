@@ -76,7 +76,7 @@ export default function ProductInstitutional({
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link href={linkButtonOne}>
                   <button
-                    className={`xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs w-full h-10 rounded-lg text-white hover:font-semibold transition-all`}
+                    className={`xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs w-full h-12 rounded-lg text-white hover:font-semibold transition-all`}
                     style={buttonStyle}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}
@@ -86,7 +86,7 @@ export default function ProductInstitutional({
                 </Link>
 
                 <Link href={linkButtonTwo}>
-                  <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-10 rounded-lg text-black hover:font-semibold transition-all">
+                  <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-12 rounded-lg text-black hover:font-semibold transition-all">
                     {textButtonTwo}
                   </button>
                 </Link>

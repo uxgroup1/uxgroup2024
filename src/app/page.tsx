@@ -55,6 +55,7 @@ const content = [
     logo: logoFusion.src,
     link: "/fusion",
     icon: iconFusion.src,
+    textButton:"conheça a solução"
   },
   {
     index: 2,
@@ -65,6 +66,7 @@ const content = [
     logo: logoOndetah.src,
     link: "/ondetah",
     icon: iconOndetah.src,
+    textButton:"conheça a solução"
   },
   {
     index: 1,
@@ -75,6 +77,7 @@ const content = [
     logo: logoTrux.src,
     link: "/trux",
     icon: iconTrux.src,
+    textButton:"conheça a solução"
   },
 ];
 

@@ -47,7 +47,7 @@ export default function Header() {
                 onClick={handleOpenClick}
                 data-collapse-toggle="mega-menu-full-image"
                 type="button"
-                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:font-bold  "
+                className="inline-flex items-center p-2 w-10 h-12 justify-center text-sm text-white rounded-lg md:hidden focus:font-bold  "
                 aria-controls="mega-menu-full-image"
                 aria-expanded={openMenu ? "true" : "false"}
               >

@@ -67,9 +67,9 @@ function SecondSection({
 
               <div className={` ${style.containerTeste}`}></div>
               <div className={style.ButtonContainer}>
-                <Link className="w-full md:w-[170px] h-10 " href={`${link}`}>
+                <Link className="w-full md:w-[170px] h-12 " href={`${link}`}>
                   <button
-                    className=" w-full md:w-[170px] h-10 hover:border hover:shadow-sm hover:font-semibold hover:transition-all"
+                    className=" w-full md:w-[170px] h-12 hover:border hover:shadow-sm hover:font-semibold hover:transition-all"
                     style={buttonStyle}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}

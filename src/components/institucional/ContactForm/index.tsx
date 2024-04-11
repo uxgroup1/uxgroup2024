@@ -24,7 +24,7 @@ export default function ContactForm() {
           </p>
         </div>
         <form className="max-w-md w-[90%] mx-auto">
-          {/* <div className="relative z-0 w-full mb-5 group">
+          <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
               name="floating_first_name"
@@ -91,14 +91,14 @@ export default function ContactForm() {
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
-              name="repeat_password"
-              id="floating_repeat_password"
+              name="floating_cargo"
+              id="floating_cargo"
               className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-nonefocus:outline-none focus:ring-0 focus:border-white peer"
               placeholder=" "
               required
             />
             <label
-              htmlFor="floating_repeat_password"
+              htmlFor="floating_cargo"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Cargo
@@ -140,14 +140,14 @@ export default function ContactForm() {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_first_message"
-                id="floating_first_message"
+                name="floating_message"
+                id="floating_message"
                 className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-white peer"
                 placeholder=" "
                 required
               />
               <label
-                htmlFor="floating_first_name"
+                htmlFor="floating_message"
                 className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Mensagem
@@ -173,24 +173,7 @@ export default function ContactForm() {
             className="text-white md:w-full hover:font-semibold w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center"
           >
             enviar contato
-          </button> */}
-
-          <div 
-            role="main"
-            id="formulario-provisorio-novo-site-ux-ea9cfd47c9dd2de18f79"
-            onLoad={onLoad}
-          ></div>
-          <Script
-            type="text/javascript"
-            async
-            src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
-            onLoad={() => {
-              console.log("eval");
-              eval(
-                `new RDStationForms('formulario-provisorio-novo-site-ux-ea9cfd47c9dd2de18f79', 'UA-191432220-1').createForm()`
-              );
-            }}
-          />
+          </button>
         </form>
       </section>
     </>

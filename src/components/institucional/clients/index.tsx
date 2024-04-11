@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/assets/faviconBanner/ux.svg";
+import logo from "@/assets/faviconBranco.svg";
 import logoHerchcovitch from "@/assets/home/imageClients/herchcovitch.png";
 import logoWhirpol from "@/assets/home/imageClients/whirpool-8.png";
 import logoVia from "@/assets/home/imageClients/Via-8.png";
