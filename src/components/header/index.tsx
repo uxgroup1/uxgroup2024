@@ -40,7 +40,7 @@ export default function Header() {
                   height={100}
                   src={logoUx.src}
                   className="h-8 flex items-start justify-start"
-                  alt="Flowbite Logo"
+                  alt="UX Group"
                 />
               </Link>
               <button

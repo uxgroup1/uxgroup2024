@@ -15,6 +15,7 @@ export default function PrivacyPolicy() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
       <Script>
         {` (function(h,o,t,j,a,r){
@@ -26,37 +27,24 @@ export default function PrivacyPolicy() {
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
       </Script>
-      {/*<!-- Google tag (gtag.js) -->*/}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-J6JJ7N5EGV"
-      ></Script>
-      <Script id="startgtagjs">
-        {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J6JJ7N5EGV');`}
-      </Script>
-      {/*<!-- Google Tag Manager -->*/}
-      <Script id="startGoogleTagManager">
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-K6QH58J');`}
-      </Script>
-      {/*<!-- End Google Tag Manager -->*/}
+
+      {/* <!-- Google Tag Manager --> */}
+      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
+      {/* <!-- End Google Tag Manager --> */}
+      {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>
         <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-K6QH58J"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
           height="0"
           width="0"
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
       </noscript>
-      {/*<!-- End Google Tag Manager (noscript) -->*/}
-      <Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
+      {/* <!-- End Google Tag Manager (noscript) --> */}
       <Header />
       <section className={` text-black ${style.container}`}>
         <div className={style.margin}>

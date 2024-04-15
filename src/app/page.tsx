@@ -83,6 +83,12 @@ const content = [
 
 const contentUxMidia = [
   {
+    title: "UX Group anuncia comando de nova diretoria focada no cliente.",
+    text: "UX Group, ecossistema de inovações em tecnologia, logística e sustentabilidade, acaba de criar uma diretoria focada na experiência do cliente...",
+    banner: ImageUxMidiaTwo.src,
+    link: "https://startups.com.br/danca-das-cadeiras/ux-group-anuncia-comando-de-nova-diretoria-focada-no-cliente/",
+  },
+  {
     title: "Os influencers como nicho promissor para o fulfillment",
     text: "Para vencer no ambiente de e-commerce, é preciso oferecer uma experiência de compra positiva por todo o processo de venda digital...",
     banner: ImageUxMidiaOne.src,

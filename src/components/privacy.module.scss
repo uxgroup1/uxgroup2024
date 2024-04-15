@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     padding: 74px 0;
+    padding-top: 10%;
   
     .margin {
       margin: 0 auto;
@@ -23,26 +24,26 @@
   
     p {
       padding: 0.5rem 0;
-      font-size: 0.75rem;
+      font-size: 16px;
       line-height: 1.325rem;
     }
   
     h2 {
-      font-size: 0.75rem;
-      line-height: 1.325rem;
+      font-size: 16px;
+      line-height: 1.5rem;
       font-weight: bold;
       margin-top: 2rem;
     }
   
     h3 {
-      font-size: 0.75rem;
+      font-size: 16px;
       line-height: 1.325rem;
       font-weight: bold;
       margin-top: 1rem;
     }
   
     span {
-      font-size: 0.75rem;
+      font-size: 16pxrem;
       line-height: 1.325rem;
     }
   }

@@ -4,6 +4,7 @@ import logoInstagram from "../../assets/Footer/logo-instagram.svg";
 import logoYoutube from "../../assets/Footer/logo-youtube.svg";
 import logoLinkedIn from "../../assets/Footer/logo-linkedin.svg";
 import imageCarbono from "../../assets/carbono.png";
+import imageAnvisa from "../../assets/selo-anvisa.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -78,6 +79,16 @@ export default function Footer() {
         },
       ],
     },
+    {
+      index: 3,
+      name: "Conteúdos exclusivos",
+      products: [
+        {
+          namePage: "Blog",
+          url: "https://blog.uxgroup.com.br/",
+        },
+      ],
+    },
   ];
 
   return (
@@ -122,12 +133,20 @@ export default function Footer() {
                       </div>
                     );
                   })}
-                  <div className="lg:ml-20">
+                  <div className="lg:ml-20 flex  gap-4">
                     <Image
                       src={imageCarbono.src}
                       alt="Sustentabilidade"
                       width={100}
                       height={100}
+                      className="w-24 h-24"
+                    />
+                    <Image
+                      src={imageAnvisa.src}
+                      alt="Sustentabilidade"
+                      width={100}
+                      height={100}
+                      className="w-24 h-24"
                     />
                   </div>
                 </div>
@@ -137,7 +156,10 @@ export default function Footer() {
                 <span className="text-sm text-white sm:text-center">
                   © 2024 | UX Group | Todos os direitos reservados.
                 </span>
-                <Link className="md:ml[-20px] hover:underline" href="/politica-de-privacidade">
+                <Link
+                  className="md:ml[-20px] hover:underline"
+                  href="/politica-de-privacidade"
+                >
                   Política de Privacidade
                 </Link>
                 <div className="flex mt-4 gap-5 sm:justify-center sm:mt-0">

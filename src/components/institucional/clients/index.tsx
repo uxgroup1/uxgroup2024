@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import Image from "next/image";
 import logo from "@/assets/faviconBranco.svg";
-import logoHerchcovitch from "@/assets/home/imageClients/herchcovitch.png";
+import arrowLeft from "@/assets/cta/arrowLeft.svg";
+import arrowRight from "@/assets/cta/arrowRigth.svg";
 import logoWhirpol from "@/assets/home/imageClients/whirpool-8.png";
 import logoVia from "@/assets/home/imageClients/Via-8.png";
 import logoVested from "@/assets/home/imageClients/veste-8.png";
@@ -40,11 +42,31 @@ const images = [
 ];
 
 export default function ClientsCases() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft - 1000,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft + 1000,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="bg-white  flex items-center justify-center max-w-[1996px] w-full">
-      <div className="w-[90%] lg:px-0  lg:py-0 pt-10 ">
+    <section className="bg-white flex items-center justify-center max-w-[1996px] w-full">
+      <div className="w-[90%] lg:px-0 lg:py-0 pt-10">
         <div className="lg:flex gap-10 lg:flex-row-reverse lg:items-center">
-          <div className="w-full space-y-12  ">
+          <div className="w-full space-y-12">
             <div className="lg:w-[65%]">
               <h1 className="text-black lg:w-[85%]">
                 UX {"(user experience),"} para nós, também significa unique
@@ -70,19 +92,35 @@ export default function ClientsCases() {
 
         <hr className="lg:my-12 my-5 border-[#bfbfbf9b] border-1 " />
 
-        <div className=" flex w-full lg:flex-row flex-row items-center gap-5 pb-5  lg:flex  lg:pl-[0%] overflow-auto ">
-          {images.map((image, index) => {
-            return (
-              <Image
-                className="w-48 transition border-transparent rounded-2xl hover:border-2 hover:border-transparent hover:shadow-xl lg:p-2  text-black lg:w-[180px]"
-                key={index}
-                src={image.src}
-                alt="Logo dos clientes UX"
-                width={100}
-                height={100}
-              />
-            );
-          })}
+        <div className="w-full flex-row gap-4 pb-2 md:[display:flex] [display:none] justify-center md:justify-end">
+          <div
+            className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#bfbfbf56] cursor-pointer"
+            onClick={handleScrollLeft}
+          >
+            <Image src={arrowLeft} alt="Seta esquerda" width={40} height={40} />
+          </div>
+          <div
+            className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#bfbfbf56] cursor-pointer"
+            onClick={handleScrollRight}
+          >
+            <Image src={arrowRight} alt="Seta direita" width={40} height={40} />
+          </div>
+        </div>
+
+        <div
+          className="flex w-full lg:flex-row flex-row items-center gap-5 pb-5 transition lg:flex  lg:pl-[0%] overflow-auto"
+          ref={containerRef}
+        >
+          {images.map((image, index) => (
+            <Image
+              className="w-48 transition border-transparent rounded-2xl hover:border-2 hover:border-transparent hover:shadow-xl lg:p-2  text-black lg:w-[180px]"
+              key={index}
+              src={image.src}
+              alt="Logo dos clientes UX"
+              width={100}
+              height={100}
+            />
+          ))}
         </div>
       </div>
     </section>

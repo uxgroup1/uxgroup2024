@@ -1,13 +1,16 @@
 const CarrouselCards = dynamic(() => import("../carrouselCards"));
+import { useRef } from "react";
 import style from "./style.module.scss";
 import armazenagemImage from "@/assets/home/carrouselCardsLog/armazenagem.png";
 import gestaoEstoqueImage from "@/assets/home/carrouselCardsLog/gestaoEstoque.png";
-import reversaImage from "@/assets/home/carrouselCardsLog/Reversa.png";
 import gestaoTransporte from "@/assets/home/carrouselCardsLog/gestaoTransporte.png";
 import pudoImage from "@/assets/home/carrouselCardsLog/PUDO.png";
 import wmsImage from "@/assets/home/carrouselCardsLog/WMS.png";
 import seop from "@/assets/home/carrouselCardsLog/seop.png";
+import arrowLeft from "@/assets/cta/arrowLeft.svg";
+import arrowRight from "@/assets/cta/arrowRigth.svg";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const content = [
   {
@@ -48,10 +51,28 @@ const content = [
   },
 ];
 
-function LogisticaComPerformance({id}:any) {
+function LogisticaComPerformance({ id }: any) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const handleScrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft - 1000,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: containerRef.current.scrollLeft + 1000,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
-      <section  id={id} className={` ${style.CarrouselProducts}`}>
+      <section id={id} className={` ${style.CarrouselProducts}`}>
         <div className={style.Container}>
           <div className={style.BoxCarrouselProducts}>
             <div className={style.Controller}>
@@ -66,11 +87,39 @@ function LogisticaComPerformance({id}:any) {
                   suas vendas.
                 </p>
               </div>
+              <div className="w-full flex-row gap-4 pb-2 md:[display:flex] [display:none] justify-center md:justify-end">
+                <div
+                  className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#bfbfbf56] cursor-pointer"
+                  onClick={handleScrollLeft}
+                >
+                  <Image
+                    src={arrowLeft}
+                    alt="Seta esquerda"
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <div
+                  className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#bfbfbf56] cursor-pointer"
+                  onClick={handleScrollRight}
+                >
+                  <Image
+                    src={arrowRight}
+                    alt="Seta direita"
+                    width={40}
+                    height={40}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <CarrouselCards colorText="black" content={content} />
+        <CarrouselCards
+          containerRef={containerRef}
+          colorText="black"
+          content={content}
+        />
       </section>
     </>
   );
