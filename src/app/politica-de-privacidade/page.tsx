@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Head from 'next/head';
-import Script from 'next/script';
-import style from '@/components/privacy.module.scss';
-import  Header  from '@/components/header';
-import  Footer  from '@/components/Footer';
+import Head from "next/head";
+import Script from "next/script";
+import style from "@/components/privacy.module.scss";
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   return (
@@ -15,6 +15,17 @@ export default function PrivacyPolicy() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+      <Script>
+        {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2580853,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
       {/*<!-- Google tag (gtag.js) -->*/}
       <Script
         async
@@ -37,7 +48,7 @@ export default function PrivacyPolicy() {
           src="https://www.googletagmanager.com/ns.html?id=GTM-K6QH58J"
           height="0"
           width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
+          style={{ display: "none", visibility: "hidden" }}
         ></iframe>
       </noscript>
       {/*<!-- End Google Tag Manager (noscript) -->*/}
@@ -56,10 +67,10 @@ export default function PrivacyPolicy() {
             <div className={style.description}>
               <p>
                 Esta Política de Privacidade de Dados Pessoais da
-                <span style={{ fontWeight: 'bold' }}> UX HOLDING LTDA </span>
-                 (“UX GROUP”) faz parte integrante deste Site. Esta Política tem
+                <span style={{ fontWeight: "bold" }}> UX HOLDING LTDA </span>
+                (“UX GROUP”) faz parte integrante deste Site. Esta Política tem
                 como finalidade a demonstrar o compromisso da
-                <span style={{ fontWeight: 'bold' }}> UX GROUP </span> com o
+                <span style={{ fontWeight: "bold" }}> UX GROUP </span> com o
                 tratamento, segurança e a privacidade dos dados pessoais
                 coletados dos usuários (Usuários) , em razão do acesso e uso
                 deste Site, funcionalidades, recursos e serviços (Plataforma).
@@ -98,8 +109,7 @@ export default function PrivacyPolicy() {
                 Todas e quaisquer dúvidas e esclarecimentos sobre a coleta e
                 tratamento de dados pessoais ou o disposto neste Política, por
                 favor, entre em contato conosco pelo seguinte e-mail:
-                <span style={{ fontWeight: '700' }}>
-
+                <span style={{ fontWeight: "700" }}>
                   marketing@uxgroup.com.br
                 </span>
               </p>
@@ -110,11 +120,10 @@ export default function PrivacyPolicy() {
                 dados do usuário e informações pessoais, entre em contacto
                 connosco.
               </p>
-              <h2 style={{paddingBottom:'10px'}}>
+              <h2 style={{ paddingBottom: "10px" }}>
                 1. COLETA DOS SEUS DADOS PESSOAIS <br></br>
-                <span style={{ marginLeft: '10px' }}>
-
-                  <span style={{ fontWeight: '700' }}>1.</span> Identidade e
+                <span style={{ marginLeft: "10px" }}>
+                  <span style={{ fontWeight: "700" }}>1.</span> Identidade e
                   informações de contato do Controlador dos Dados Pessoais dos
                   Usuários. 1 UX HOLDING LTDA. AV. PIRAIBA, 159, CENTRO
                   COMERCIAL JUBRAN, BARUERI/SP, CEP 06.460-121. inscrita no
@@ -124,7 +133,7 @@ export default function PrivacyPolicy() {
                 </span>
               </h2>
               <h2>2. INFORMAÇÕES FORNECIDAS PELO USUÁRIO </h2>
-              <span style={{ paddingLeft: '10px' }}>
+              <span style={{ paddingLeft: "10px" }}>
                 Informações solicitadas. Para acessar, utilizar e otimizar a sua
                 experiência na Plataforma da UX GROUP, podemos solicitar o
                 fornecimento de determinados dados pessoais. Ou seja,
@@ -138,39 +147,37 @@ export default function PrivacyPolicy() {
                 execução dos serviços disponibilizados na Plataforma:
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-                <span style={{ fontWeight: '700' }}>1.</span> Dados de
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>1.</span> Dados de
                 Identificação. Nome, endereço, endereço de e-mail, número de
                 telefone, profissão, data de nascimento, idioma, número de
                 documento de identidade e número de inscrição no Cadastro de
                 Pessoa Física.
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-
-                <span style={{ fontWeight: '700' }}>2.</span> Outros Dados de
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>2.</span> Outros Dados de
                 Identificação. Outros documentos pessoais, dados de contato
                 (e-mail, endereço, telefone, identificadores de aplicativos de
-                comunicação e redes sociais), dados profissionais.{' '}
+                comunicação e redes sociais), dados profissionais.{" "}
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-                <span style={{ fontWeight: '700' }}>3.</span> Dados financeiros
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>3.</span> Dados financeiros
                 e informações patrimoniais. Modo de pagamento usado, data e
                 hora, valor do pagamento, data de vencimento do outros detalhes
                 referentes à transação (incluindo histórico de transações).
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-                <span style={{ fontWeight: '700' }}>4.</span> Informações de
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>4.</span> Informações de
                 uso. Informações de páginas e conteúdos referentes ao que você
                 visualiza, buscas por Anúncios, reservas que você fez e outras
-                ações na Plataforma UX GROUP.{' '}
+                ações na Plataforma UX GROUP.{" "}
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-
-                <span style={{ fontWeight: '700' }}>5.</span> Informações
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>5.</span> Informações
                 coletadas automaticamente pelo uso da plataforma. Após a
                 instalação da plataforma, algumas informações serão coletadas
                 automaticamente, uma vez que queremos garantir que você,
@@ -179,9 +186,8 @@ export default function PrivacyPolicy() {
                 armazenar e acessar certas informações de identificação, e sem
                 essas informações, a UX GROUP pode não funcionar corretamente.
                 Sendo estas:<br></br>
-                <span style={{ paddingLeft: '20px' }}>
-
-                  <span style={{ fontWeight: '700' }}>1.</span> Informações de
+                <span style={{ paddingLeft: "20px" }}>
+                  <span style={{ fontWeight: "700" }}>1.</span> Informações de
                   geolocalização. Poderá coletar dados como a localização
                   precisa ou aproximada determinada a partir do seu endereço IP
                   ou GPS do dispositivo móvel. Também podemos coletar essas
@@ -190,8 +196,8 @@ export default function PrivacyPolicy() {
                   permissões de dispositivo
                 </span>
                 <br></br>
-                <span style={{ paddingLeft: '20px' }}>
-                  <span style={{ fontWeight: '700' }}>2.</span>Informações de
+                <span style={{ paddingLeft: "20px" }}>
+                  <span style={{ fontWeight: "700" }}>2.</span>Informações de
                   transação de pagamento. Como instrumento de pagamento usado,
                   data e hora, valor do pagamento, data de vencimento do
                   instrumento de pagamento e código postal de cobrança, endereço
@@ -203,15 +209,15 @@ export default function PrivacyPolicy() {
               <br></br>
 
               <h3>3. DURANTE O USO DA PLATAFORMA</h3>
-              <span style={{ paddingLeft: '10px' }}>
-                <span style={{ fontWeight: '700' }}>1.</span> Na Plataforma,
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>1.</span> Na Plataforma,
                 poderão ser utilizados cookies, sendo que o usuário pode, a
                 qualquer instante, ativar em seu navegador mecanismos para
                 informá-lo quando estiverem acionados ou até mesmo desativá-los.
               </span>
               <br></br>
-              <span style={{ paddingLeft: '10px' }}>
-                <span style={{ fontWeight: '700' }}>2.</span> Apesar disso, no
+              <span style={{ paddingLeft: "10px" }}>
+                <span style={{ fontWeight: "700" }}>2.</span> Apesar disso, no
                 caso da Plataforma, nenhuma dessas informações está associada ao
                 usuário enquanto indivíduo. Tudo é mensurado somente de forma
                 anônima e agregada. As informações que os cookies permitem
@@ -223,7 +229,7 @@ export default function PrivacyPolicy() {
               <br></br>
               <h3>4. FINALIDADE DE USO DOS DADOS PESSOAIS </h3>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Os dados pessoais do Usuário serão utilizados, entre outras,
@@ -231,64 +237,64 @@ export default function PrivacyPolicy() {
                 Termos e Condições e Regulamento da Plataforma:
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>1.</span> Permitir que o
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>1.</span> Permitir que o
                 Usuário se cadastre em campanhas;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>2.</span> Identificar o
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>2.</span> Identificar o
                 Usuário, aperfeiçoar a navegabilidade da Plataforma e
                 personalizar sua experiência interativa durante a utilização da
                 Plataforma;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>3.</span> PDesenvolver novos
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>3.</span> PDesenvolver novos
                 produtos, serviços e funcionalidades para os usuários;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>4.</span> Cumprir com
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>4.</span> Cumprir com
                 obrigações legais de coleta e compartilhamento de dados com o
                 poder público, na forma da legislação e regulamentação
                 aplicáveis;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>5.</span> Permitir prevenção
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>5.</span> Permitir prevenção
                 à fraude;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>6.</span> Permitir a
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>6.</span> Permitir a
                 divulgação de propaganda direcionada aos usuários e enviar
                 e-mails promocionais, caso o usuário tenha optado por receber
                 tais comunicações no momento do cadastro;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>7.</span> Solicitações para
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>7.</span> Solicitações para
                 a participação do Usuário em pesquisas;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>8.</span> Responder a
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>8.</span> Responder a
                 solicitações de natureza judicial e/ou administrativa;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>9.</span> Elaborar
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>9.</span> Elaborar
                 estatísticas gerais;
               </span>
               <br></br>
-              <span style={{ paddingLeft: '20px' }}>
-                <span style={{ fontWeight: '700' }}>10.</span> Responder às
+              <span style={{ paddingLeft: "20px" }}>
+                <span style={{ fontWeight: "700" }}>10.</span> Responder às
                 dúvidas e solicitações dos Usuários;
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   2.
                 </span>
                 Campanhas e Prestadores de Serviço. O Usuário entende e concorda
@@ -301,7 +307,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   3.
                 </span>
                 Para a execução dos recursos e funcionalidades disponibilizadas
@@ -312,7 +318,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   4.
                 </span>
                 Caso o Usuário opte por receber comunicações contendo materiais
@@ -325,7 +331,7 @@ export default function PrivacyPolicy() {
               <br></br>
               <h3>5. COMPARTILHAMENTO DE DADOS</h3>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Compartilhamento de dados. Sem prejuízo do demais disposto nesta
@@ -360,7 +366,7 @@ export default function PrivacyPolicy() {
               <br></br>
               <h3>6. COMPARTILHAMENTO DE DADOS</h3>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Confidencialidade. A UX GROUP segue padrões rígidos de segurança
@@ -374,7 +380,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   2.
                 </span>
                 Medida de segurança. Medidas padrão da indústria (por exemplo,
@@ -384,7 +390,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   3.
                 </span>
                 Cancelamento de cadastro. Caso o usuário queira cancelar seu
@@ -397,7 +403,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   4.
                 </span>
                 Responsabilidade. Esteja ciente de que, embora nos empenhamos em
@@ -416,28 +422,28 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Confirmação da existência de tratamento de dados
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   2.
                 </span>
                 Acesso aos dados pessoais;
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   3.
                 </span>
                 Revogação do consentimento;
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   4.
                 </span>
                 Correção de dados pessoais incompletos, inexatos ou
@@ -445,7 +451,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   5.
                 </span>
                 Eliminação dos dados pessoais tratados com o consentimento ou
@@ -454,7 +460,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   6.
                 </span>
                 Informação sobre as hipóteses e com quais empresas, parceiros e
@@ -463,7 +469,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   7.
                 </span>
                 Informação sobre a possibilidade de não fornecer consentimento e
@@ -471,7 +477,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   8.
                 </span>
                 Todas as solicitações serão tratadas de forma gratuita, e serão
@@ -484,7 +490,7 @@ export default function PrivacyPolicy() {
               <br></br>
               <h3>8. PERÍODO DE RETENÇÃO</h3>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Prazo de retenção dos dados. A UX GROUP reterá os dados pessoais
@@ -497,7 +503,7 @@ export default function PrivacyPolicy() {
               <br></br>
               <h3>9. DISPOSIÇÕES GERAIS</h3>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   1.
                 </span>
                 Aplicabilidade. Se, por qualquer motivo, um tribunal competente
@@ -509,7 +515,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '10px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "10px" }}>
                   2.
                 </span>
                 Tolerância. Qualquer tolerância a um descumprimento do presente
@@ -518,7 +524,7 @@ export default function PrivacyPolicy() {
               </span>
               <br></br>
               <span>
-                <span style={{ fontWeight: '700', paddingLeft: '20px' }}>
+                <span style={{ fontWeight: "700", paddingLeft: "20px" }}>
                   1.
                 </span>
                 Foro. Fica eleito o foro de Barueri, SP, para dirimir eventuais
@@ -536,4 +542,3 @@ export default function PrivacyPolicy() {
     </>
   );
 }
-

@@ -12,9 +12,6 @@ const SecondSection = dynamic(
 );
 
 const Cta = dynamic(() => import("@/components/cta"));
-import itapeviImage from "@/assets/logistica/cdsImages/itapevi.png";
-import barueriImage from "@/assets/logistica/cdsImages/barueri.png";
-import itajaiImage from "@/assets/logistica/cdsImages/itajai.png";
 import anvisaImage from "@/assets/logistica/anvisa.png";
 import fulfillmet from "@/assets/logos/fulfillment.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
@@ -123,6 +120,18 @@ const contentTopics = [
 export default function Logistica() {
   return (
     <main>
+      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+      <Script>
+        {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2580853,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
+
       {/* <!-- Google Tag Manager --> */}
       <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

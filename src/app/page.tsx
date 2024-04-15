@@ -55,7 +55,7 @@ const content = [
     logo: logoFusion.src,
     link: "/fusion",
     icon: iconFusion.src,
-    textButton:"conheça a solução"
+    textButton: "conheça a solução",
   },
   {
     index: 2,
@@ -66,7 +66,7 @@ const content = [
     logo: logoOndetah.src,
     link: "/ondetah",
     icon: iconOndetah.src,
-    textButton:"conheça a solução"
+    textButton: "conheça a solução",
   },
   {
     index: 1,
@@ -77,7 +77,7 @@ const content = [
     logo: logoTrux.src,
     link: "/trux",
     icon: iconTrux.src,
-    textButton:"conheça a solução"
+    textButton: "conheça a solução",
   },
 ];
 
@@ -142,6 +142,18 @@ const contentUxMidia = [
 export default function Home() {
   return (
     <main>
+      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+      <Script>
+        {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2580853,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
+
       {/* <!-- Google Tag Manager --> */}
       <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

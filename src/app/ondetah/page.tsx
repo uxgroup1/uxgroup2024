@@ -23,7 +23,6 @@ import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
 
-
 const number = [
   {
     number: "50%",
@@ -46,6 +45,17 @@ const number = [
 export default function Ondetah() {
   return (
     <main>
+      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+      <Script>
+        {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2580853,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
       {/* <!-- Google Tag Manager --> */}
       <Script>
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

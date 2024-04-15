@@ -21,7 +21,7 @@ import imageGestao from "@/assets/ondetah/imagesSections/gestaoFinanceira.png";
 import imageRoteirizacao from "@/assets/trux/roteirizacao.png";
 import atendimento from "@/assets/trux/atendimento.png";
 import averbacao from "@/assets/trux/averbacao.png";
-import dash from "@/assets/trux/dashboards.png"
+import dash from "@/assets/trux/dashboards.png";
 import reversa from "@/assets/trux/reversa.png";
 import imageTrux from "@/assets/trux/trux.png";
 import Numbers from "@/components/produtos/numbers";
@@ -168,6 +168,18 @@ export default function Trux() {
   return (
     <>
       <main>
+        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+        <Script>
+          {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2580853,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+        </Script>
+
         {/* <!-- Google Tag Manager --> */}
         <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
