@@ -158,6 +158,12 @@ section{
   opacity: 1; /* Mostra o conteúdo */
   animation: animate-BannerOne 1s ease-in-out forwards; /* Adiciona animação */
 }
+.animated-state-BannerHeader {
+  /* Animação específica para o terceiro título */
+  transform: translateX(0); /* Posiciona o conteúdo na tela */
+  opacity: 1; /* Mostra o conteúdo */
+  animation: animate-BannerOneHeader 1s ease-in-out forwards; /* Adiciona animação */
+}
 .animated-state-BannerTwo {
   /* Animação específica para o terceiro título */
   transform: translateY(0); /* Posiciona o conteúdo na tela */
@@ -287,7 +293,18 @@ section{
   }
 }
 
+
 @keyframes animate-BannerTwo {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes animate-BannerOneHeader {
   from {
     transform: translateY(100%);
     opacity: 0;

@@ -1,15 +1,72 @@
+"use client"
+
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ondetahBanner from "@/assets/ondetah/ondetah.png";
+import truxBanner from "@/assets/trux/tms-transp.png"
+import fusionBanner from "@/assets/fusion/fusionBanner.png"
 import bannerFulfillment from "@/assets/logistica/ffBanner.png";
 import Link from "next/link";
 import Image from "next/image";
+
+
+interface contentCard{
+  index: number;
+  text: string;
+  banner: string;
+  link: string
+}
+
+const contentGestao : contentCard[] = [
+  { 
+    index:0,
+    text:"Gestão e comunicação com o cliente a partir do tracking.",
+    banner:ondetahBanner.src,
+    link:"/ondetah"
+  },
+  { 
+    index:1,
+    text:"Gestão de fretes para e-commerce e marketplaces.",
+    banner:fusionBanner.src,
+    link:"/fusion"
+  },
+  {
+    index:2,
+    text:"Gestão de motoristas e entregas para operações de transporte.",
+    banner:truxBanner.src,
+    link:"/trux"
+  },
+
+]
+const contentLog : contentCard[] = [
+  { 
+    index:0,
+    text:"Gestão e comunicação com o cliente a partir do tracking.",
+    banner:ondetahBanner.src,
+    link:"/ondetah"
+  },
+  { 
+    index:1,
+    text:"Gestão de fretes para e-commerce e marketplaces.",
+    banner:fusionBanner.src,
+    link:"/fusion"
+  },
+  {
+    index:2,
+    text:"Gestão de motoristas e entregas para operações de transporte.",
+    banner:truxBanner.src,
+    link:"/trux"
+  },
+
+]
+
 
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
   const [openMenuLog, setOpenMenuLog] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  let [indexHover, setIndexHover] = useState(0)
 
   const handleOpenClick = () => {
     setOpenMenu(!openMenu);
@@ -228,7 +285,7 @@ export default function Header() {
                       <h1 className="text-white">Gestão</h1>
                     </div>
                     <ul className="mb-4 space-y-4 md:mb-0">
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li onMouseOver={() => setIndexHover(1)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
                         <Link
                           href="/fusion"
                           className="font-normal text-white text-lg"
@@ -236,7 +293,7 @@ export default function Header() {
                           TMS para Embarcadores
                         </Link>
                       </li>
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li onMouseOver={() => setIndexHover(0)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
                         <Link
                           href="/ondetah"
                           className="font-normal text-white text-lg"
@@ -244,7 +301,7 @@ export default function Header() {
                           Experiência do Cliente
                         </Link>
                       </li>
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li onMouseOver={() => setIndexHover(2)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
                         <Link
                           href="/trux"
                           className="font-normal text-white text-lg"
@@ -254,19 +311,18 @@ export default function Header() {
                       </li>
                     </ul>
                     <div
-                      className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
-                      style={{ backgroundImage: `url(${ondetahBanner.src})` }}
+                      className={` bg-local bg-center bg-no-repeat bg-cover  rounded-lg  hover:bg-blend-soft-light `}
+                      style={{transition:"0.4s", backgroundImage: `url(${contentGestao[indexHover].banner})` }}
                     >
                       <div className="w-full h-full bg-[#00000080] p-8">
-                        <p className="max-w-xl text-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                          Gestão e comunicação com o cliente a partir do
-                          tracking.
+                        <p className={`max-w-2xl text-xl mb-5 font-extrabold ${indexHover === 0 ? "animated-state-BannerTwo ":"animated-state-BannerHeader"} animated-state-Banner leading-tight tracking-tight text-white`}>
+                         {contentGestao[indexHover]?.text}
                         </p>
                         <button
                           type="button"
                           className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          <Link href={"/ondetah"}>conhecer solução</Link>
+                          <Link href={contentGestao[indexHover].link}>conhecer solução</Link>
 
                           <svg
                             className="w-3 h-3 ms-2 rtl:rotate-180"
