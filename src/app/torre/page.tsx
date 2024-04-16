@@ -74,6 +74,7 @@ const contentTopics = [
 export default function Torre() {
   return (
     <main>
+
       {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
       <Script>
         {` (function(h,o,t,j,a,r){

@@ -286,7 +286,7 @@ export default function Header() {
                         </p>
                         <button
                           type="button"
-                          className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                          className="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentLog[indexHover].link}>
                             conhecer solução
@@ -389,7 +389,7 @@ export default function Header() {
                         </p>
                         <button
                           type="button"
-                          className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                          className="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentGestao[indexHover].link}>
                             conhecer solução
