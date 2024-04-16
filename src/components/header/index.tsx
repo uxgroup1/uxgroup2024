@@ -1,72 +1,83 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ondetahBanner from "@/assets/ondetah/ondetah.png";
-import truxBanner from "@/assets/trux/tms-transp.png"
-import fusionBanner from "@/assets/fusion/fusionBanner.png"
+import truxBanner from "@/assets/trux/tms-transp.png";
+import fusionBanner from "@/assets/fusion/fusionBanner.png";
 import bannerFulfillment from "@/assets/logistica/ffBanner.png";
+import bannerTorre from "@/assets/trux/torre.png";
+import bannerPudos from "@/assets/pudo/pudoImages/banner-pudo.png";
+import torreLogo from "@/assets/logoProdutosAnimados/torre-animado.gif";
+import truxLogo from "@/assets/logoProdutosAnimados/trux-animado.gif";
+import fusionLogo from "@/assets/logoProdutosAnimados/fusion-animado.gif";
+import fulfillmetlogo from "@/assets/logoProdutosAnimados/fulfillment-animado.gif";
+import ondetahLogo from "@/assets/logoProdutosAnimados/ondetah-animado.gif";
+import pudoLogo from "@/assets/logoProdutosAnimados/pudo-animado.gif";
 import Link from "next/link";
 import Image from "next/image";
 
-
-interface contentCard{
+interface contentCard {
   index: number;
   text: string;
   banner: string;
-  link: string
+  link: string;
+  logo: string;
 }
 
-const contentGestao : contentCard[] = [
-  { 
-    index:0,
-    text:"Gestão e comunicação com o cliente a partir do tracking.",
-    banner:ondetahBanner.src,
-    link:"/ondetah"
-  },
-  { 
-    index:1,
-    text:"Gestão de fretes para e-commerce e marketplaces.",
-    banner:fusionBanner.src,
-    link:"/fusion"
+const contentGestao: contentCard[] = [
+  {
+    index: 0,
+    text: "Gestão e comunicação com o cliente a partir do tracking.",
+    banner: ondetahBanner.src,
+    link: "/ondetah",
+    logo: ondetahLogo.src,
   },
   {
-    index:2,
-    text:"Gestão de motoristas e entregas para operações de transporte.",
-    banner:truxBanner.src,
-    link:"/trux"
-  },
-
-]
-const contentLog : contentCard[] = [
-  { 
-    index:0,
-    text:"Gestão e comunicação com o cliente a partir do tracking.",
-    banner:ondetahBanner.src,
-    link:"/ondetah"
-  },
-  { 
-    index:1,
-    text:"Gestão de fretes para e-commerce e marketplaces.",
-    banner:fusionBanner.src,
-    link:"/fusion"
+    index: 1,
+    text: "Gestão de fretes para e-commerce e marketplaces.",
+    banner: fusionBanner.src,
+    link: "/fusion",
+    logo: fusionLogo.src,
   },
   {
-    index:2,
-    text:"Gestão de motoristas e entregas para operações de transporte.",
-    banner:truxBanner.src,
-    link:"/trux"
+    index: 2,
+    text: "Gestão de motoristas e entregas para operações de transporte.",
+    banner: truxBanner.src,
+    link: "/trux",
+    logo: truxLogo.src,
   },
-
-]
-
+];
+const contentLog: contentCard[] = [
+  {
+    index: 0,
+    text: "Controle, Armazenagem e Entregas Eficientes.",
+    banner: bannerFulfillment.src,
+    link: "/fulfillment",
+    logo: fulfillmetlogo.src,
+  },
+  {
+    index: 1,
+    text: "Torre de controle e gestão de transportes para operações de e-commerce.",
+    banner: bannerTorre.src,
+    link: "/torre",
+    logo: torreLogo.src,
+  },
+  {
+    index: 2,
+    text: "Pontos de coleta e entrega para operações first e last mile.",
+    banner: bannerPudos.src,
+    link: "/pudos",
+    logo: pudoLogo.src,
+  },
+];
 
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
   const [openMenuLog, setOpenMenuLog] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  let [indexHover, setIndexHover] = useState(0)
+  const [indexHover, setIndexHover] = useState(0);
 
   const handleOpenClick = () => {
     setOpenMenu(!openMenu);
@@ -178,7 +189,7 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={"https://esg.uxgroup.com.br/"}
                       className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                       aria-current="page"
@@ -188,12 +199,12 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={"https://blog.uxgroup.com.br/"}
                       className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
                       aria-current="page"
                     >
-                      Blog 
+                      Blog
                     </Link>
                   </li>
                 </ul>
@@ -211,7 +222,10 @@ export default function Header() {
                     </div>
 
                     <ul className="mb-4 space-y-4 md:mb-0">
-                      <li className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li
+                        onMouseOver={() => setIndexHover(0)}
+                        className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white"
+                      >
                         <Link
                           href="/logistica"
                           className="font-normal text-white text-lg "
@@ -219,7 +233,10 @@ export default function Header() {
                           Fulfillment
                         </Link>
                       </li>
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li
+                        onMouseOver={() => setIndexHover(1)}
+                        className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white"
+                      >
                         <Link
                           href="/torre"
                           className="font-normal text-white text-lg "
@@ -227,7 +244,10 @@ export default function Header() {
                           Torre de controle
                         </Link>
                       </li>
-                      <li className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white">
+                      <li
+                        onMouseOver={() => setIndexHover(2)}
+                        className="w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white"
+                      >
                         <Link
                           href="/pudos"
                           className="font-normal text-white text-lg "
@@ -239,18 +259,38 @@ export default function Header() {
                     <div
                       className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
                       style={{
-                        backgroundImage: `url(${bannerFulfillment.src})`,
+                        transition: "0.4s",
+                        backgroundImage: `url(${contentLog[indexHover].banner})`,
                       }}
                     >
-                      <div className="w-full h-full bg-[#00000080] p-8">
-                        <p className="max-w-xl mb-5 text-xl font-extrabold leading-tight tracking-tight text-white">
-                          Controle, Armazenagem e Entregas Eficientes.
+                      <div className={` w-full h-full bg-[#00000080] p-8`}>
+                        <Image
+                          src={contentLog[indexHover].logo}
+                          width={100}
+                          height={100}
+                          className={`${
+                            indexHover === 1
+                              ? "animated-state-BannerTwo "
+                              : "animated-state-BannerHeader"
+                          } h-16 w-auto flex items-start justify-start pb-5`}
+                          alt="Gestão, Logística e Sustentabilidade"
+                        />
+                        <p
+                          className={`max-w-3xl text-xl mb-5 font-extrabold ${
+                            indexHover === 0
+                              ? "animated-state-BannerTwo "
+                              : "animated-state-BannerHeader"
+                          } animated-state-Banner leading-tight tracking-tight text-white`}
+                        >
+                          {contentLog[indexHover].text}
                         </p>
                         <button
                           type="button"
                           className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          <Link href={"/logistica"}>conhecer solução</Link>
+                          <Link href={contentLog[indexHover].link}>
+                            conhecer solução
+                          </Link>
 
                           <svg
                             className="w-3 h-3 ms-2 rtl:rotate-180"
@@ -285,7 +325,10 @@ export default function Header() {
                       <h1 className="text-white">Gestão</h1>
                     </div>
                     <ul className="mb-4 space-y-4 md:mb-0">
-                      <li onMouseOver={() => setIndexHover(1)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
+                      <li
+                        onMouseOver={() => setIndexHover(1)}
+                        className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}
+                      >
                         <Link
                           href="/fusion"
                           className="font-normal text-white text-lg"
@@ -293,7 +336,10 @@ export default function Header() {
                           TMS para Embarcadores
                         </Link>
                       </li>
-                      <li onMouseOver={() => setIndexHover(0)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
+                      <li
+                        onMouseOver={() => setIndexHover(0)}
+                        className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}
+                      >
                         <Link
                           href="/ondetah"
                           className="font-normal text-white text-lg"
@@ -301,7 +347,10 @@ export default function Header() {
                           Experiência do Cliente
                         </Link>
                       </li>
-                      <li onMouseOver={() => setIndexHover(2)} className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}>
+                      <li
+                        onMouseOver={() => setIndexHover(2)}
+                        className={`w-4/5 py-1  pb-1 transition hover:border-b-[0.5px] hover:border-white`}
+                      >
                         <Link
                           href="/trux"
                           className="font-normal text-white text-lg"
@@ -312,17 +361,39 @@ export default function Header() {
                     </ul>
                     <div
                       className={` bg-local bg-center bg-no-repeat bg-cover  rounded-lg  hover:bg-blend-soft-light `}
-                      style={{transition:"0.4s", backgroundImage: `url(${contentGestao[indexHover].banner})` }}
+                      style={{
+                        transition: "0.4s",
+                        backgroundImage: `url(${contentGestao[indexHover].banner})`,
+                      }}
                     >
                       <div className="w-full h-full bg-[#00000080] p-8">
-                        <p className={`max-w-2xl text-xl mb-5 font-extrabold ${indexHover === 0 ? "animated-state-BannerTwo ":"animated-state-BannerHeader"} animated-state-Banner leading-tight tracking-tight text-white`}>
-                         {contentGestao[indexHover]?.text}
+                        <Image
+                          src={contentGestao[indexHover].logo}
+                          width={10}
+                          height={10}
+                          className={`${
+                            indexHover === 0
+                              ? "animated-state-BannerTwo "
+                              : "animated-state-BannerHeader"
+                          } h-16 w-auto flex items-start justify-start pb-5`}
+                          alt="Gestão, Logística e Sustentabilidade"
+                        />
+                        <p
+                          className={`max-w-2xl text-xl mb-5 font-extrabold ${
+                            indexHover === 0
+                              ? "animated-state-BannerTwo "
+                              : "animated-state-BannerHeader"
+                          } animated-state-Banner leading-tight tracking-tight text-white`}
+                        >
+                          {contentGestao[indexHover]?.text}
                         </p>
                         <button
                           type="button"
                           className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
-                          <Link href={contentGestao[indexHover].link}>conhecer solução</Link>
+                          <Link href={contentGestao[indexHover].link}>
+                            conhecer solução
+                          </Link>
 
                           <svg
                             className="w-3 h-3 ms-2 rtl:rotate-180"
