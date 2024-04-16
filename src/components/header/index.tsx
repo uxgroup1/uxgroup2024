@@ -277,7 +277,7 @@ export default function Header() {
                         />
                         <p
                           className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${
-                            indexHover === 0
+                            indexHover === 1
                               ? "animated-state-BannerTwo "
                               : "animated-state-BannerHeader"
                           } animated-state-Banner leading-tight tracking-tight text-white`}
