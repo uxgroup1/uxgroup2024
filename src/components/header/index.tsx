@@ -259,7 +259,7 @@ export default function Header() {
                     <div
                       className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
                       style={{
-                        transition: "0.4s",
+                        transition: "0.1s",
                         backgroundImage: `url(${contentLog[indexHover].banner})`,
                       }}
                     >
@@ -362,7 +362,7 @@ export default function Header() {
                     <div
                       className={` bg-local bg-center bg-no-repeat bg-cover  rounded-lg  hover:bg-blend-soft-light `}
                       style={{
-                        transition: "0.4s",
+                        transition: "0.1s",
                         backgroundImage: `url(${contentGestao[indexHover].banner})`,
                       }}
                     >
