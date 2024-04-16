@@ -276,7 +276,7 @@ export default function Header() {
                           alt="Gestão, Logística e Sustentabilidade"
                         />
                         <p
-                          className={`max-w-3xl text-xl mb-5 font-extrabold ${
+                          className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${
                             indexHover === 0
                               ? "animated-state-BannerTwo "
                               : "animated-state-BannerHeader"
@@ -379,7 +379,7 @@ export default function Header() {
                           alt="Gestão, Logística e Sustentabilidade"
                         />
                         <p
-                          className={`max-w-2xl text-xl mb-5 font-extrabold ${
+                          className={`max-w-2xl text-xl mb-5 font-semibold [letter-spacing:normal] ${
                             indexHover === 0
                               ? "animated-state-BannerTwo "
                               : "animated-state-BannerHeader"
