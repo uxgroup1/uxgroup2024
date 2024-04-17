@@ -17,6 +17,7 @@ import ondetahLogo from "@/assets/logoProdutosAnimados/ondetah-animado.gif";
 import pudoLogo from "@/assets/logoProdutosAnimados/pudo-animado.gif";
 import Link from "next/link";
 import Image from "next/image";
+import PedidoOndetah from "../pedidoOndetah";
 
 interface contentCard {
   index: number;
@@ -78,6 +79,8 @@ export default function Header() {
   const [openMenuLog, setOpenMenuLog] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [indexHover, setIndexHover] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
+  console.log(openModal);
 
   const handleOpenClick = () => {
     setOpenMenu(!openMenu);
@@ -87,11 +90,15 @@ export default function Header() {
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
     setOpenMenuLog(false);
+    setOpenModal(false);
   };
   const handleOpenClickLog = () => {
     setOpenMenuLog(!openMenuLog);
     setOpenMenuGestao(false);
+    setOpenModal(false);
   };
+
+
 
   return (
     <>
@@ -206,6 +213,9 @@ export default function Header() {
                     >
                       Blog
                     </Link>
+                  </li>
+                  <li>
+                    <PedidoOndetah />
                   </li>
                 </ul>
               </div>

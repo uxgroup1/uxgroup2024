@@ -44,6 +44,7 @@ import iconFusion from "@/assets/home/fusion.svg";
 import iconOndetah from "@/assets/home/ondetah.svg";
 import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
+import PedidoOndetah from "@/components/pedidoOndetah";
 
 const content = [
   {
