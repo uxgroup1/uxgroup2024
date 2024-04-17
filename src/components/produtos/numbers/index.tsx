@@ -79,7 +79,7 @@ export default function Numbers({
           if (currentNumber >= targetNumber) {
             clearInterval(interval);
           }
-        }, 1.2); // Intervalo de atualização em milissegundos (20 ms)
+        }, 2); // Intervalo de atualização em milissegundos (20 ms)
       });
     });
   };
