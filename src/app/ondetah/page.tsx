@@ -33,7 +33,7 @@ const number = [
     text: "de carbono compensadas/mês.",
   },
   {
-    number: "+5P.P",
+    number: "5P.P",
     text: "na performance de entrega.",
   },
   {

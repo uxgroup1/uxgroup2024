@@ -38,15 +38,15 @@ import iconeFour from "@/assets/logistica/icones/pudos.svg";
 
 const number = [
   {
-    number: "+30K m²",
+    number: "30K m²",
     text: "CDs próprios para Fulfillment.",
   },
   {
-    number: "99,3%",
+    number: "99%",
     text: "Armazenagem e CD no prazo D0.",
   },
   {
-    number: "+98,86%",
+    number: "98%",
     text: "Acurácia de Inventário.",
   },
   {
