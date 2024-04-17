@@ -227,7 +227,7 @@ export default function Header() {
                         className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white"
                       >
                         <Link
-                          href="/logistica"
+                          href="/fulfillment"
                           className="font-normal text-white text-lg "
                         >
                           Fulfillment

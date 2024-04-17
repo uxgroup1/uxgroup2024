@@ -17,19 +17,19 @@ const content = [
     title: "Armazenagem e expedição de pedidos ",
     text: "Todos os produtos armazenados e expedidos com 99,6% do cumprimento de SLA para uma operação eficiente com foco na experiência do cliente.",
     banner: armazenagemImage.src,
-    link: "/logistica",
+    link: "/fulfillment",
   },
   {
     title: "Gestão de estoque",
     text: "Reduza custos com organização, rastreabilidade e controle dos produtos em estoque e das suas vendas, garantindo eficiência operacional e satisfação do cliente.    ",
     banner: gestaoEstoqueImage.src,
-    link: "/logistica",
+    link: "/fulfillment",
   },
   {
     title: "S&OP",
     text: "Evite atrasos e reclamações, com Planejamento de Vendas e Operação é possível alinhar e integrar as áreas para melhor gerenciamento de produtos e demandas garantindo a eficiência do processo logístico.    ",
     banner: seop.src,
-    link: "/logistica",
+    link: "/fulfillment",
   },
   {
     title: "Gestão de transportes",
@@ -47,7 +47,7 @@ const content = [
     title: "WMS",
     text: "Automação total para uma operação de e-commerce de alta performance. Digitalização e visibilidade em tempo real para gestão de estoque e expedição do pedido.",
     banner: wmsImage.src,
-    link: "/logistica",
+    link: "/fulfillment",
   },
 ];
 

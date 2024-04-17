@@ -57,7 +57,7 @@ export default function Footer() {
       products: [
         {
           namePage: "Fulfillment",
-          url: "/logistica",
+          url: "/fulfillment",
         },
         {
           namePage: "Torre de controle",
