@@ -140,7 +140,7 @@ export default function PedidoOndetah() {
                     className="text-black text-xl hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
                   />
                 </div>
-                <h1 className="md:text-4xl md:text-left w-full text-center text-[19px] text-[#29235c]">
+                <h1 className="md:text-4xl md:text-left w-full text-[19px] text-[#29235c]">
                   Digite o código do seu pedido:
                 </h1>
               </div>
