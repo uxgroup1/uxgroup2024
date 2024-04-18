@@ -131,7 +131,7 @@ export default function PedidoOndetah() {
           aria-hidden="true"
           className={`absolute bg-[#00000093] flex items-center justify-center w-full left-0 h-[120vh] top-0`}
         >
-          <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] md:mb-0  mb-[200px] transition-all">
+          <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] md:mb-0  mb-[350px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
               <div className="flex items-center w-full flex-col">
                 <div className="w-full flex justify-end items-end">
