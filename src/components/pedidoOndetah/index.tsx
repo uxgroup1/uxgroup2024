@@ -20,6 +20,7 @@ export default function PedidoOndetah() {
   const [codigoTransport, setCodigoTransport] = useState("");
   const [messageError, setMessageError] = useState("");
   const [linkUrl, setLinkUrl] = useState("");
+  const [clicked, setClicked] = useState("");
 
   const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
     let result: string;
@@ -47,6 +48,7 @@ export default function PedidoOndetah() {
 
   const handleCodigoTransport = (codigo: string) => {
     setCodigoTransport(codigo);
+    setClicked(codigo);
   };
 
   const handleOpenClick = () => {
@@ -58,43 +60,53 @@ export default function PedidoOndetah() {
   };
 
   const content = [
-    {
+    { 
+      index:0,
       image: carrefour.src,
       codigo: "CRF",
     },
-    {
+    { 
+      index:1,
       image: whirpoll.src,
       codigo: "WHP",
     },
     {
+      index:2,
       image: dafiti.src,
       codigo: "DF",
     },
     {
+      index:3,
       image: curta.src,
       codigo: "CTA",
     },
     {
+      index:4,
       image: dorel.src,
       codigo: "DL",
     },
     {
+      index:5,
       image: scolados.src,
       codigo: "scolados",
     },
     {
+      index:6,
       image: multi.src,
       codigo: "mv",
     },
     {
+      index:7,
       image: veste.src,
       codigo: "VESTE",
     },
     {
+      index:8,
       image: acioly.src,
       codigo: "AGM",
     },
     {
+      index:9,
       image: uxd.src,
       codigo: "uxd",
     },
@@ -119,7 +131,7 @@ export default function PedidoOndetah() {
           aria-hidden="true"
           className={`absolute bg-[#00000093] flex items-center justify-center w-full left-0 h-[120vh] top-0`}
         >
-          <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
+          <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] md:mb-0  mb-[200px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
               <div className="flex items-center w-full flex-col">
                 <div className="w-full flex justify-end items-end">
@@ -128,7 +140,7 @@ export default function PedidoOndetah() {
                     className="text-black text-xl hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
                   />
                 </div>
-                <h1 className="md:text-4xl md:text-left text-center text-[19px] text-[#29235c]">
+                <h1 className="md:text-4xl md:text-left w-full text-center text-[19px] text-[#29235c]">
                   Digite o código do seu pedido:
                 </h1>
               </div>
@@ -158,16 +170,16 @@ export default function PedidoOndetah() {
                   <h3 className="text-[#29235c]">
                     Selecione a loja onde realizou a compra:
                   </h3>
-                  <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-0 pt-10 grid-cols-4 md:flex-wrap">
+                  <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-2 pt-10 grid-cols-4 md:flex-wrap">
                     {content.map((content, index) => {
                       return (
                         <div
                           onClick={() => handleCodigoTransport(content.codigo)}
                           key={index}
-                          className="shadow-md md:w-[100px] w-[70px]"
+                          className={`hover:shadow-md border-[1px] border-[#0000000f] transition-all rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl rounded-md":""}  md:w-[100px] w-[70px]`}
                         >
                           <Image
-                            className="hover:p-1 transition-all"
+                            className={` rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md":""} focus:p-4 transition-all`}
                             src={content.image}
                             quality={100}
                             priority
@@ -180,7 +192,9 @@ export default function PedidoOndetah() {
                     })}
                   </div>
                   {messageError && (
-                    <p className="text-red-500 md:text-lg text-sm pb-0 pt-4">{messageError}</p>
+                    <p className="text-red-500 md:text-lg text-sm pb-0 pt-4">
+                      {messageError}
+                    </p>
                   )}
                   <Link
                     className="w-full h-14 mt-5 hover:p-[1px] transition-all rounded-2xl"
