@@ -170,7 +170,7 @@ export default function PedidoOndetah() {
                   <h3 className="text-[#29235c]">
                     Selecione a loja onde realizou a compra:
                   </h3>
-                  <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-2 pt-10 grid-cols-4 md:flex-wrap">
+                  <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-2 pt-3 grid-cols-4 md:flex-wrap">
                     {content.map((content, index) => {
                       return (
                         <div
