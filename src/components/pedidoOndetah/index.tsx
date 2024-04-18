@@ -20,6 +20,7 @@ export default function PedidoOndetah() {
   const [codigoTransport, setCodigoTransport] = useState("");
   const [messageError, setMessageError] = useState("");
   const [linkUrl, setLinkUrl] = useState("");
+  
   const [clicked, setClicked] = useState("");
 
   const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
@@ -131,7 +132,7 @@ export default function PedidoOndetah() {
           aria-hidden="true"
           className={`absolute bg-[#00000093] flex items-center justify-center w-full left-0 h-[120vh] top-0`}
         >
-          <div className="flex items-center justify-center md:w-[700px] w-[400px] bg-white rounded-2xl h-4/5 md:h-[650px] transition-all">
+          <div className="flex items-center justify-center md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
               <div className="flex items-center justify-center w-full flex-col">
                 <div className="w-full flex justify-end items-end">
