@@ -80,7 +80,7 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [indexHover, setIndexHover] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  console.log(openModal);
+
 
   const handleOpenClick = () => {
     setOpenMenu(!openMenu);
@@ -98,14 +98,12 @@ export default function Header() {
     setOpenModal(false);
   };
 
-
-
   return (
     <>
       <nav className="bg-black fixed flex items-center   justify-center z-50  top-0 w-full px-1 md:px-4 border-gray-200">
         <div className="flex items-center justify-center w-full max-w-[1996px] h-full">
-          <div className="xl:w-[94%] lg:w-[95%] w-[97%] flex items-center justify-center">
-            <div className="flex w-full flex-wrap justify-between items-center mx-auto  py-5">
+          <div className="xl:w-[94%]  lg:w-[95%] w-[97%] flex items-center justify-center">
+            <div className="flex w-full flex-wrap  justify-between items-center mx-auto  py-5">
               <Link
                 href="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -149,7 +147,7 @@ export default function Header() {
                   openMenu ? "block" : "hidden"
                 } w-full pl-5 md:flex md:w-auto md:order-1`}
               >
-                <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+                <ul className="flex md:items-center md:justify-center flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                   <li>
                     <Link
                       href="/"
@@ -214,7 +212,7 @@ export default function Header() {
                       Blog
                     </Link>
                   </li>
-                  <li>
+                  <li className="w-full md:w-[200px]">
                     <PedidoOndetah />
                   </li>
                 </ul>
@@ -223,7 +221,7 @@ export default function Header() {
             {openMenuLog && (
               <div
                 id="mega-menu-full-image-dropdown"
-                className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[95%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
                   <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">
@@ -327,7 +325,7 @@ export default function Header() {
             {openMenuGestao && (
               <div
                 id="mega-menu-full-image-dropdown"
-                className={`mt-1 bg-black flex items-center justify-center absolute w-full  top-[90%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full  top-[95%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
               >
                 <div className=" flex items-center justify-center w-full py-5 xl:pl-5  pl-0 text-sm max-w-[1996px]">
                   <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">

@@ -18,8 +18,28 @@ export default function PedidoOndetah() {
   const [modalOpen, setModalOpen] = useState(false);
   const [codigoPedido, setCodigoPedido] = useState("");
   const [codigoTransport, setCodigoTransport] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [linkUrl, setLinkUrl] = useState("");
 
-  const link = `https://cliente.ondetah.com.br/${codigoTransport}/${codigoPedido}`;
+  const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
+    let result: string;
+    let boolean = false;
+    if (codigoPedido === undefined || codigoPedido.length <= 5) {
+      result = "Por favor informe um número de pedido válido.";
+      setMessageError(result);
+    } else if (codigoTransport === undefined || codigoTransport === "") {
+      result = "Por favor selecione um transportador.";
+      setMessageError(result);
+    } else {
+      result = `https://cliente.ondetah.com.br/${codigoTransport}/${codigoPedido}`;
+      boolean = true;
+      setLinkUrl(result);
+    }
+    return {
+      validate: boolean,
+      message: result,
+    };
+  };
 
   const handleCodigoPedido = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCodigoPedido(event.target.value);
@@ -86,10 +106,10 @@ export default function PedidoOndetah() {
         onClick={() => handleOpenClick()}
         data-modal-target="static-modal"
         data-modal-toggle="static-modal"
-        className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        className="block w-[95%] md:mt-0 mt-3  text-white   bg-gradient-to-r to-[#009581] from-[#29265B] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
         type="button"
       >
-        Toggle modal
+        localiar meu pedido
       </button>
 
       {modalOpen && (
@@ -99,10 +119,7 @@ export default function PedidoOndetah() {
           aria-hidden="true"
           className={`absolute bg-[#00000093] flex items-center justify-center w-full left-0 h-[120vh] top-0`}
         >
-          <div
-            // style={{ backgroundImage: `url(${bannerOndetah.src}` }}
-            className="w-[700px] bg-white rounded-2xl h-[600px] transition-all"
-          >
+          <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
               <div className="flex items-center w-full flex-col">
                 <div className="w-full flex justify-end items-end">
@@ -111,12 +128,12 @@ export default function PedidoOndetah() {
                     className="text-black text-xl hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
                   />
                 </div>
-                <h1 className="text-[#29235c]">
+                <h1 className="md:text-4xl md:text-left text-center text-[19px] text-[#29235c]">
                   Digite o código do seu pedido:
                 </h1>
               </div>
 
-              <form className="w-full flex items-center justify-center pt-4">
+              <form className="w-full flex items-center justify-center pt-0 md:pt-4">
                 <div className="relative z-0 pt-5 w-[90%] mb-5 group">
                   <input
                     type="text"
@@ -141,13 +158,13 @@ export default function PedidoOndetah() {
                   <h3 className="text-[#29235c]">
                     Selecione a loja onde realizou a compra:
                   </h3>
-                  <div className="w-full flex items-center justify-center gap-3 pt-5 flex-wrap">
+                  <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-0 pt-10 grid-cols-4 md:flex-wrap">
                     {content.map((content, index) => {
                       return (
                         <div
                           onClick={() => handleCodigoTransport(content.codigo)}
                           key={index}
-                          className="shadow-md "
+                          className="shadow-md md:w-[100px] w-[70px]"
                         >
                           <Image
                             className="hover:p-1 transition-all"
@@ -162,13 +179,30 @@ export default function PedidoOndetah() {
                       );
                     })}
                   </div>
-
+                  {messageError && (
+                    <p className="text-red-500 md:text-lg text-sm pb-0 pt-4">{messageError}</p>
+                  )}
                   <Link
                     className="w-full h-14 mt-5 hover:p-[1px] transition-all rounded-2xl"
-                    href={link}
+                    onClick={(e) => {
+                      const linkResult = handleSetLink(
+                        codigoTransport,
+                        codigoPedido
+                      );
+                      if (linkResult.validate === false) {
+                        e.preventDefault();
+                        setMessageError(linkResult.message);
+                      } else {
+                        setLinkUrl(linkResult.message);
+                      }
+                    }}
+                    href={linkUrl}
                     target="_blank"
                   >
-                    <button className="w-full h-full hover:shadow-xl transition-all text-white rounded-lg bg-[#009580]">
+                    <button
+                      type="submit"
+                      className="w-full h-full hover:shadow-xl transition-all text-white rounded-lg bg-[#009580]"
+                    >
                       localizar pedido
                     </button>
                   </Link>
