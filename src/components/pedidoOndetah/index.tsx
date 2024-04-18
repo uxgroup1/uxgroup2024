@@ -133,14 +133,14 @@ export default function PedidoOndetah() {
         >
           <div className="md:w-[700px] w-[400px] bg-white rounded-2xl h-[750px] md:h-[650px] md:mb-0  mb-[350px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
-              <div className="flex items-center w-full flex-col">
+              <div className="flex items-center justify-center w-full flex-col">
                 <div className="w-full flex justify-end items-end">
                   <IoClose
                     onClick={() => handleClose()}
                     className="text-black text-xl hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
                   />
                 </div>
-                <h1 className="md:text-4xl md:text-left w-full text-[19px] text-[#29235c]">
+                <h1 className="md:text-4xl md:text-left flex justify-center items-center w-full text-[19px] text-[#29235c]">
                   Digite o código do seu pedido:
                 </h1>
               </div>
