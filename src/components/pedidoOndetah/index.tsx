@@ -130,7 +130,7 @@ export default function PedidoOndetah() {
           id="static-modal"
           data-modal-backdrop="static"
           aria-hidden="true"
-          className={`absolute bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[116vh]  top-0`}
+          className={`absolute bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh]  top-0`}
         >
           <div className="flex absolute md:top-1/4 top-10 items-center justify-center md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
