@@ -45,6 +45,7 @@ import iconOndetah from "@/assets/home/ondetah.svg";
 import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
 import PedidoOndetah from "@/components/pedidoOndetah";
+import { Blog } from "@/components/institucional/blog";
 
 const content = [
   {
@@ -211,6 +212,7 @@ export default function Home() {
       />
       <LogisticaSustentavel id={"sustentabilidade"} />
       <UxPartners />
+      <Blog/>
       <UxMidia colorText="#fff" content={contentUxMidia} />
       <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
       <ContactForm />

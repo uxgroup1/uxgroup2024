@@ -212,9 +212,9 @@ export default function Header() {
                       Blog
                     </Link>
                   </li>
-                  <li className="w-full md:w-[200px]">
+                  {/* <li className="w-full md:w-[200px]">
                     <PedidoOndetah />
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
