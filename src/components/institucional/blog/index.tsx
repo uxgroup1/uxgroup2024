@@ -19,11 +19,11 @@ export function Blog() {
     },
   });
   const [posts, setPosts] = useState<Post[]>([]);
-  console.log(posts);
+
   
 
   useEffect(() => {
-    fetch('https://uxgroup.vercel.app/')
+    fetch('https://uxgroup.com.br/index.php')
       .then((res) => res.json() as Promise<WPResponse>)
       .then((res) => {
         setPost(res['featured']);
