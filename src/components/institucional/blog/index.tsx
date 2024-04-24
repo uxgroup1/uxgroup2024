@@ -23,7 +23,7 @@ export function Blog() {
   
 
   useEffect(() => {
-    fetch('https://uxgroup.com.br/index.php')
+    fetch('https://uxgroup2024.vercel.app/index.php')
       .then((res) => res.json() as Promise<WPResponse>)
       .then((res) => {
         setPost(res['featured']);
