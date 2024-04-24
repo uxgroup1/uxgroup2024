@@ -431,3 +431,24 @@ export default function Header() {
     </>
   );
 }
+
+
+{/* <Link
+                  target="_blank"
+                  className={style.category}
+                  href={p._embedded["wp:term"][0][0].link}
+                  style={{ zIndex: 1 }}
+                >
+                  {p._embedded["wp:term"][0][0].name}
+                  {p._embedded["wp:term"][0][0].name}
+                </Link>
+                <Link
+                  target="_blank"
+                  href={p.link}
+                  style={{
+                    display: "block",
+                    width: "234px",
+                    height: "203px",
+                    position: "relative",
+                  }}
+                ></Link> */}

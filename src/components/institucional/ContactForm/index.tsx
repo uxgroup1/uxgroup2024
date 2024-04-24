@@ -37,7 +37,7 @@ export default function ContactForm() {
               htmlFor="floating_first_name"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Nome
+              Nome*
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -53,7 +53,7 @@ export default function ContactForm() {
               htmlFor="floating_email"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              E-mail
+              E-mail*
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -69,7 +69,7 @@ export default function ContactForm() {
               htmlFor="floating_email"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Telefone
+              Telefone*
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -85,7 +85,7 @@ export default function ContactForm() {
               htmlFor="floating_company"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Empresa (Ex. UX Group)
+              Empresa* (Ex. UX Group)
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -101,7 +101,7 @@ export default function ContactForm() {
               htmlFor="floating_cargo"
               className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Cargo
+              Cargo*
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
@@ -114,7 +114,7 @@ export default function ContactForm() {
               className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none  focus:outline-none focus:ring-0 focus:border-gray-200 peer"
             >
               <option value={"0"} className="text-white">
-                Qual assunto gostaria de falar?
+                Qual assunto gostaria de falar?*
               </option>
               <option
                 className="text-white"
@@ -164,7 +164,7 @@ export default function ContactForm() {
                 htmlFor="disabled-checked-checkbox"
                 className="ms-2 text-sm font-medium text-[#bfbfbf] focus:text-white"
               >
-                Eu concordo em receber comunicações.
+                Eu concordo em receber comunicações.*
               </label>
             </div>
           </div>
