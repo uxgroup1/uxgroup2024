@@ -167,7 +167,7 @@ export default function Logistica() {
       <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
       <ProductInstitutional
         id="sobre"
-        title="Controle, Armazenagem e Entrega Eficientes."
+        title="Controle, Armazenagem e Expedição eficiente."
         text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
         banner={banner.src}
         corButtonOne="#FBC709"
