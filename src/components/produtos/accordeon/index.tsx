@@ -185,7 +185,7 @@ export default function IconesLog({
                       } ${data.title.startsWith("Exp") ? "w-[150px]":""} flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-1 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-1 w-full ">
-                        <div className="w-10 h-10 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow  rounded-full">
+                        <div className="w-10 h-10 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow-md  rounded-full">
                           <div className="w-10 flex items-center justify-center  rounded-full h-full">
                             <Image
                               className="w-4/5"
