@@ -60,6 +60,49 @@ const content = [
     image: iconThree,
   },
 ];
+const contentMobile = [
+  {
+    title: "Recebimento",
+    image: iconEight,
+  },
+  {
+    title: "S&OP",
+    image: iconFive,
+  },
+  {
+    title: "Armazenagem",
+    image: iconSeven,
+  },
+
+  {
+    title: "Picking",
+    image: iconEight,
+  },
+  {
+    title: "Packing",
+    image: iconEight,
+  },
+  {
+    title: "Controle de estoque",
+    image: iconSix,
+  },
+  {
+    title: "WMS",
+    image: iconFour,
+  },
+  {
+    title: "Logística Reversa ",
+    image: iconTwo,
+  },
+  {
+    title: "Expedição",
+    image: iconOne,
+  },
+  {
+    title: "Layout e automação",
+    image: iconThree,
+  },
+];
 
 export default function IconesLog({
   banner,
@@ -101,7 +144,7 @@ export default function IconesLog({
                   {text}
                 </p>
               )}
-              <div className="flex flex-wrap gap-2 pt-3 w-4/5 h-full">
+              <div className="flex-wrap gap-2 md:[display:flex] [display:none] pt-3 md:w-4/5 w-full h-full">
                 {content.map((data, index) => {
                   return (
                     <div
@@ -122,8 +165,43 @@ export default function IconesLog({
                             />
                           </div>
                         </div>
-                        <div className="w-full cursor-default font-medium flex text-base ">
-                          <h1 className="font-medium flex text-base">{data.title}</h1>
+                        <div className="w-full h-full items-center justify-center cursor-default font-medium flex text-base ">
+                          <h1 className="font-medium  items-center justify-center pb-0 h-full flex text-base">
+                            {data.title}
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="flex-wrap gap-2 md:[display:none] [display:flex] pt-3 md:w-4/5 w-full h-full">
+                {contentMobile.map((data, index) => {
+                    console.log(data.title.length);
+                    
+                  return (
+                    <div
+                      key={index}
+                      className={`flex ${
+                        data.title.length >= 11 ? "w-[240px]" : "w-auto "
+                      } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-2 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
+                    >
+                      <div className="flex flex-row items-center justify-center gap-1 w-full ">
+                        <div className="w-16 h-12 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow  rounded-full">
+                          <div className="w-10 flex items-center justify-center  rounded-full h-full">
+                            <Image
+                              className="w-4/5"
+                              src={data.image}
+                              width={100}
+                              height={100}
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div className="w-full h-full items-center justify-start pl-1 cursor-default font-medium flex text-base ">
+                          <h1 className="font-medium  items-center justify-center pb-0 h-full flex text-base">
+                            {data.title}
+                          </h1>
                         </div>
                       </div>
                     </div>
