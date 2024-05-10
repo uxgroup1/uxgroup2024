@@ -188,7 +188,7 @@ export default function IconesLog({
                       className={`flex ${
                         data.title.length >= 14 ? "w-[240px]" : "w-[175px] "
                       } ${
-                        data.title.startsWith("Exp") ? "w-[150px]" : ""
+                        data.title.startsWith("Arm") ? "w-[200px]" : ""
                       } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-1 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-1 w-full ">
