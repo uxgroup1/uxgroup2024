@@ -212,7 +212,7 @@ export default function Home() {
       />
       <LogisticaSustentavel id={"sustentabilidade"} />
       <UxPartners />
-      {/* <Blog/> */}
+      <Blog/>
       <UxMidia colorText="#fff" content={contentUxMidia} />
       <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
       <ContactForm />

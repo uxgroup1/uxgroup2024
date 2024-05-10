@@ -38,7 +38,7 @@ function CarrouselCards({ content, colorText, containerRef }: carrouselCards) {
                     <h2 className={`text-black leading-[30px]`}>
                       {data.title}
                     </h2>
-                    <p className={`text-black text-sm `}>{data.text}</p>
+                    <p className={`text-black text-sm pt-3 `}>{data.text}</p>
                     <button className={`text-black `}>
                       <Link
                         target="_blank"

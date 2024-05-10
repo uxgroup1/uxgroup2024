@@ -35,6 +35,8 @@ import iconeOne from "@/assets/logistica/icones/gestao.svg";
 import iconeTwo from "@/assets/logistica/icones/homologados.svg";
 import iconeThree from "@/assets/logistica/icones/localizacao.svg";
 import iconeFour from "@/assets/logistica/icones/pudos.svg";
+import ClientsCases from "@/components/produtos/accordeon/index";
+import IconesLog from "@/components/produtos/accordeon/index";
 
 const number = [
   {
@@ -187,7 +189,7 @@ export default function Logistica() {
         text=""
         content={contentTopics}
       />
-      <FeaturesComponent
+      {/* <FeaturesComponent
         id="fulfillment-personalizado"
         linkButton="#formulario"
         banner={bannerInstitucional.src}
@@ -196,7 +198,16 @@ export default function Logistica() {
         button
         titleSection="Fulfillment Personalizado."
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
+      /> */}
+      <IconesLog
+        linkButton="#formulario"
+        banner={bannerInstitucional.src}
+        rowReverse={false}
+        button
+        titleSection="Fulfillment Personalizado."
+        text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
       />
+
       <FeaturesComponentLog
         banner={estoqueImage.src}
         rowReverse={true}

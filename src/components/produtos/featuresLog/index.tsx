@@ -78,9 +78,9 @@ export default function FeaturesComponentLog({
                         height={100}
                       />
                       <div className="mt-4 w-full  flex flex-col gap-1 h-full md:mt-0">
-                        <h3 className="text-black">{item.title}</h3>
+                        <h3 className="text-black text-2xl">{item.title}</h3>
 
-                        <p className=" pb-3 md:pb-0 md:w-[80%] font-medium xl:text-sm lg:text-[0.8rem] cursor-default  text-black w-full ">
+                        <p className=" text-lg pb-3 md:pb-0 md:w-[80%] font-medium xl:text-lg lg:text-[0.8rem] cursor-default  text-black w-full ">
                           {item.text}
                         </p>
                       </div>
