@@ -137,7 +137,7 @@ export default function IconesLog({
                 />
               )}
               <h1 className="w-[93%] flex items-center gap-2 xl:text-4xl lg:text-2xl font-bold pb-8 text-black">
-                Estoque avançado.
+              Fulfillment Personalizado.
               </h1>
               {text && (
                 <p className="pb-7 xl:text-lg lg:text-[0.7rem] md:w-4/5 text-black">
