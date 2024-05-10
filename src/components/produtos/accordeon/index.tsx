@@ -175,15 +175,15 @@ export default function IconesLog({
                   );
                 })}
               </div>
-              <div className="flex-wrap gap-2 md:[display:none] [display:flex] pt-3 md:w-4/5 w-full h-full">
+              <div className="flex-wrap gap-2 md:[display:none] [display:flex]  pt-3 md:w-4/5 w-full h-full">
                 {contentMobile.map((data, index) => {
-                    console.log(data.title.length);
+                 
                     
                   return (
                     <div
                       key={index}
                       className={`flex ${
-                        data.title.length >= 11 ? "w-[240px]" : "w-auto "
+                        data.title.length >= 11 ? "w-[240px]" : "w-[145px] "
                       } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-2 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-1 w-full ">
