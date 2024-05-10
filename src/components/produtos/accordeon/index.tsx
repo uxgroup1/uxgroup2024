@@ -28,10 +28,6 @@ const content = [
     image: iconSeven,
   },
   {
-    title: "S&OP",
-    image: iconFive,
-  },
-  {
     title: "Controle de estoque",
     image: iconSix,
   },
@@ -43,21 +39,28 @@ const content = [
     title: "Packing",
     image: iconEight,
   },
+
   {
-    title: "WMS",
-    image: iconFour,
-  },
-  {
-    title: "Logística Reversa ",
-    image: iconTwo,
+    title: "Layout e automação",
+    image: iconThree,
   },
   {
     title: "Expedição",
     image: iconOne,
   },
+
   {
-    title: "Layout e automação",
-    image: iconThree,
+    title: "Logística Reversa ",
+    image: iconTwo,
+  },
+  {
+    title: "WMS",
+    image: iconFour,
+  },
+
+  {
+    title: "S&OP",
+    image: iconFive,
   },
 ];
 const contentMobile = [
@@ -137,7 +140,7 @@ export default function IconesLog({
                 />
               )}
               <h1 className="w-[93%] flex items-center gap-2 xl:text-4xl lg:text-2xl font-bold pb-8 text-black">
-              Fulfillment Personalizado.
+                Fulfillment Personalizado.
               </h1>
               {text && (
                 <p className="pb-7 xl:text-lg lg:text-[0.7rem] md:w-4/5 text-black">
@@ -150,8 +153,10 @@ export default function IconesLog({
                     <div
                       key={index}
                       className={`flex ${
-                        data.title.length === 10 ? "w-[268px]" : ""
-                      } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-2 pr-14 border-2 border-[#FBC709] py-1 bg-transparent`}
+                        data.title.length >= 12 ? "w-[350px]" : ""
+                      }  ${
+                        data.title.startsWith("Log") ? "w-[350px]" : ""
+                      } flex-col items-center justify-center transition-all text-black flex-wrap rounded-full pl-1 pr-14 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-3 w-full ">
                         <div className="w-16 h-12 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow  rounded-full">
@@ -176,13 +181,15 @@ export default function IconesLog({
                 })}
               </div>
               <div className="flex-wrap gap-2 md:[display:none] [display:flex]  pt-3 md:w-4/5 w-full h-full">
-                {contentMobile.map((data, index) => {
+                {content.map((data, index) => {
                   return (
                     <div
                       key={index}
                       className={`flex ${
-                        data.title.length >= 11 ? "w-[240px]" : "w-[155px] "
-                      } ${data.title.startsWith("Exp") ? "w-[150px]":""} flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-1 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
+                        data.title.length >= 14 ? "w-[240px]" : "w-[175px] "
+                      } ${
+                        data.title.startsWith("Exp") ? "w-[150px]" : ""
+                      } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-1 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-1 w-full ">
                         <div className="w-10 h-10 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow-md  rounded-full">
