@@ -7,6 +7,7 @@ import iconFive from "@/assets/iconsLog/five.svg";
 import iconSix from "@/assets/iconsLog/six.svg";
 import iconSeven from "@/assets/iconsLog/seven.svg";
 import iconEight from "@/assets/iconsLog/eight.svg";
+import Link from "next/link";
 
 interface ContentArray {
   banner: string;
@@ -214,6 +215,13 @@ export default function IconesLog({
                   );
                 })}
               </div>
+              <Link href={`#formulario`}>
+                <button
+                  className={`bg-[#FBC709] lg:mt-5 lg:w-[20%] h-12 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
+                >
+                  saiba mais
+                </button>
+              </Link>
             </div>
             <div
               className={`${
