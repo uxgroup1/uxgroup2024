@@ -183,11 +183,11 @@ export default function IconesLog({
                     <div
                       key={index}
                       className={`flex ${
-                        data.title.length >= 11 ? "w-[240px]" : "w-[145px] "
+                        data.title.length >= 11 ? "w-[240px]" : "w-[144px] "
                       } flex-col items-center justify-center  transition-all text-black flex-wrap rounded-full pl-2 pr-5 border-2 border-[#FBC709] py-1 bg-transparent`}
                     >
                       <div className="flex flex-row items-center justify-center gap-1 w-full ">
-                        <div className="w-16 h-12 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow  rounded-full">
+                        <div className="w-10 h-10 p-1 flex items-center justify-center bg-[#FBC709] border border-white shadow  rounded-full">
                           <div className="w-10 flex items-center justify-center  rounded-full h-full">
                             <Image
                               className="w-4/5"
@@ -199,7 +199,7 @@ export default function IconesLog({
                           </div>
                         </div>
                         <div className="w-full h-full items-center justify-start pl-1 cursor-default font-medium flex text-base ">
-                          <h1 className="font-medium  items-center justify-center pb-0 h-full flex text-base">
+                          <h1 className="font-medium  items-center justify-center pb-0 h-full flex text-sm">
                             {data.title}
                           </h1>
                         </div>
