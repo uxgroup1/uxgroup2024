@@ -23,7 +23,7 @@ export default function ContactForm({
             Nos informe qual tipo de contato gostaria de fazer.
           </p>
         </div>
-        <form id="contactFormTeste" className="max-w-md w-[90%] mx-auto">
+        <form id="contactForm" className="max-w-md w-[90%] mx-auto">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
