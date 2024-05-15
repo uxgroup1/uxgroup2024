@@ -214,6 +214,12 @@ const number = [
   },
 ];
 
+const valuesInput = [
+  {
+    value:""
+  }
+]
+
 export default function Fusion() {
   return (
     <main>
@@ -338,7 +344,7 @@ export default function Fusion() {
       <Integrations />
 
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm />
+      <ContactForm page="Fusion" content={valuesInput}/>
       <Footer />
     </main>
   );

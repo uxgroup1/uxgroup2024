@@ -1,12 +1,12 @@
+import { contactFormData } from "@/interfaces/contactFormData";
 import Script from "next/script";
 import { useState } from "react";
 
-export default function ContactForm() {
-  const [rendered, setRendered] = useState<boolean>(false);
-
-  const onLoad = () => {
-    setRendered(true);
-  };
+export default function ContactForm({
+  content,
+  inputAlternative,
+  page
+}: contactFormData) {
   return (
     <>
       <Script
@@ -104,6 +104,26 @@ export default function ContactForm() {
               Cargo*
             </label>
           </div>
+          {inputAlternative?.map((data) => {
+            return (
+              <div className="relative z-0 w-full mb-5 group">
+                <input
+                  type={data.type}
+                  name={data.name}
+                  id={data.id}
+                  className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-nonefocus:outline-none focus:ring-0 focus:border-white peer"
+                  placeholder={data.placeholder}
+                  required={data.required}
+                />
+                <label
+                  htmlFor="floating_cargo"
+                  className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  {data.text}
+                </label>
+              </div>
+            );
+          })}
           <div className="relative z-0 w-full mb-5 group">
             <label htmlFor="underline_select" className="sr-only text-white">
               Underline select
@@ -113,27 +133,13 @@ export default function ContactForm() {
               id="underline_select"
               className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none  focus:outline-none focus:ring-0 focus:border-gray-200 peer"
             >
-              <option value={"0"} className="text-white">
-                Qual assunto gostaria de falar?*
-              </option>
-              <option
-                className="text-white"
-                value="Quero conhecer todo o ecossistema UX.                "
-              >
-                Quero conhecer todo o ecossistema UX.
-              </option>
-              <option value="Quero conhecer as tecnologias para operação.">
-                Quero conhecer as tecnologias para operação.
-              </option>
-              <option value="Quero conhecer os serviços logísticos.">
-                Quero conhecer os serviços logísticos.
-              </option>
-              <option value="Quero que meu negócio seja parte do ecossistema.">
-                Quero que meu negócio seja parte do ecossistema.
-              </option>
-              <option value="Quero trabalhar na UX.">
-                Quero trabalhar na UX.
-              </option>
+              {content.map((data, index) => {
+                return (
+                  <option key={index} value={data.value} className="text-white">
+                    {data.value}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="grid md:grid-cols-1 md:gap-6">
@@ -153,6 +159,7 @@ export default function ContactForm() {
                 Mensagem
               </label>
             </div>
+            <input type="hidden" id="page" name="page" value={page} />
             <div className="flex items-center pb-10">
               <input
                 id="disabled-checked-checkbox"
@@ -179,3 +186,26 @@ export default function ContactForm() {
     </>
   );
 }
+// {
+//   /* <option
+//                 className="text-white"
+//                 value="Quero conhecer todo o ecossistema UX."
+//               >
+//                 Quero conhecer todo o ecossistema UX.
+//               </option>
+//               <option value="Quero conhecer as tecnologias para operação.">
+//                 Quero conhecer as tecnologias para operação.
+//               </option>
+//               <option value="Quero conhecer os serviços logísticos.">
+//                 Quero conhecer os serviços logísticos.
+//               </option>
+//               <option value="Quero que meu negócio seja parte do ecossistema.">
+//                 Quero que meu negócio seja parte do ecossistema.
+//               </option>
+//               <option value="Quero trabalhar na UX.">
+//                 Quero trabalhar na UX.
+//               </option> */
+//               <option value={"0"} className="text-white">
+//                 Qual assunto gostaria de falar?*
+//               </option>
+// }

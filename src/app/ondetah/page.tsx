@@ -42,6 +42,12 @@ const number = [
   },
 ];
 
+const valuesInput = [
+  {
+    value:""
+  }
+]
+
 export default function Ondetah() {
   return (
     <main>
@@ -180,7 +186,7 @@ export default function Ondetah() {
       <SliderTopics />
       <IntegrationsOndetah />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm />
+      <ContactForm page="Ondetah" content={valuesInput} />
       <Footer />
     </main>
   );

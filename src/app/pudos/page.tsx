@@ -48,6 +48,12 @@ const contentFeatures = [
   },
 ];
 
+const valuesInput = [
+  {
+    value:""
+  }
+]
+
 const content = [
   {
     index: 0,
@@ -178,7 +184,7 @@ export default function Pudos() {
           banner={pudo.src}
         />
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm />
+        <ContactForm page="Pudos" content={valuesInput}/>
         <Footer />
       </main>
     </>

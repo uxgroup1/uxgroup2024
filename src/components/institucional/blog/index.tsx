@@ -51,7 +51,7 @@ export function Blog() {
             {posts.map((p) => (
               <div
                 style={{ boxShadow: "rgba(0, 0, 0, 0.05) 2px 4px 12px 0px;" }}
-                className="flex md:h-[500px] flex-col md:w-[420px] w-[380px] h-[500px]  rounded-2xl text-black bg-white border border-gray-200"
+                className="flex md:h-[500px] flex-col md:w-[420px] w-full h-[500px]  rounded-2xl text-black bg-white border border-gray-200"
               >
                 <div className="flex w-full h-[45%]">
                   <Image
@@ -91,7 +91,7 @@ export function Blog() {
                       </h5>
                     </a>
                     <a
-                      href={""}
+                      href={p.link}
                       className="text-sm hover:bg-white hover:text-black border hover:border-black transition font-medium text-center w-[200px] flex items-center justify-center h-10 rounded-lg bg-black text-white "
                     >
                       ler agora

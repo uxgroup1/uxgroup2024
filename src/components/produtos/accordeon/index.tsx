@@ -168,7 +168,7 @@ export default function IconesLog({
                               src={data.image}
                               width={100}
                               height={100}
-                              alt=""
+                              alt="Logística com performance"
                             />
                           </div>
                         </div>
@@ -182,7 +182,7 @@ export default function IconesLog({
                   );
                 })}
               </div>
-              <div className="flex-wrap gap-2 md:[display:none] [display:flex]  pt-3 md:w-4/5 w-full h-full">
+              <div className="flex-wrap gap-2 md:pb-0 pb-7 md:[display:none] [display:flex]  pt-3 md:w-4/5 w-full h-full">
                 {content.map((data, index) => {
                   return (
                     <div
@@ -201,7 +201,7 @@ export default function IconesLog({
                               src={data.image}
                               width={100}
                               height={100}
-                              alt=""
+                              alt="Logística com performance"
                             />
                           </div>
                         </div>
@@ -217,7 +217,7 @@ export default function IconesLog({
               </div>
               <Link href={`#formulario`}>
                 <button
-                  className={`bg-[#FBC709] lg:mt-5 lg:w-[20%] h-12 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
+                  className={`bg-[#FBC709] lg:mt-5 w-full lg:w-[20%] h-12 rounded-lg text-white hover:font-semibold hover:bg-gradient-to-r hover:to-[#D3A707] FBC709 hover:from-[#FBC709]`}
                 >
                   saiba mais
                 </button>

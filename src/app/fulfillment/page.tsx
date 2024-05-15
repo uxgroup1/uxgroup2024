@@ -57,20 +57,12 @@ const number = [
   },
 ];
 
-const contentFeaturesOne = [
+const valuesInput = [
   {
-    title: "Redução de custos operacionais.",
-    icons: arrow,
-  },
-  {
-    title: "Aumento da eficiência e produtividade.",
-    icons: arrow,
-  },
-  {
-    title: "Maior visibilidade e controle dos processos.",
-    icons: arrow,
-  },
-];
+    value:""
+  }
+]
+
 const contentFeaturesTwo = [
   {
     title: "Localização estratégica:",
@@ -244,7 +236,7 @@ export default function Logistica() {
         banner={""}
       />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm />
+      <ContactForm page="Fulfillment" content={valuesInput} />
       <Footer />
     </main>
   );

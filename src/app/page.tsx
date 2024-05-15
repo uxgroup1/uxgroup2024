@@ -147,6 +147,15 @@ const contentUxMidia = [
   },
 ];
 
+const valuesInput = [
+  { value: " Qual assunto gostaria de falar?*" },
+  { value: "Quero conhecer todo o ecossistema UX." },
+  { value: "Quero conhecer as tecnologias para operação." },
+  { value: "Quero conhecer os serviços logísticos." },
+  { value: "Quero que meu negócio seja parte do ecossistema." },
+  { value: "Quero trabalhar na UX." },
+];
+
 export default function Home() {
   return (
     <main>
@@ -212,10 +221,10 @@ export default function Home() {
       />
       <LogisticaSustentavel id={"sustentabilidade"} />
       <UxPartners />
-      <Blog/>
+      <Blog />
       <UxMidia colorText="#fff" content={contentUxMidia} />
       <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
-      <ContactForm />
+      <ContactForm content={valuesInput} page="Home" />
       <Footer />
     </main>
   );

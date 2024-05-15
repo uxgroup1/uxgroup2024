@@ -164,6 +164,12 @@ const number = [
   },
 ];
 
+const valuesInput = [
+  {
+    value:""
+  }
+]
+
 export default function Trux() {
   return (
     <>
@@ -282,7 +288,7 @@ export default function Trux() {
         />
 
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm />
+        <ContactForm page="Trux" content={valuesInput}/>
         <Footer />
       </main>
     </>
