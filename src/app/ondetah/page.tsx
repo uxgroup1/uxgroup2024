@@ -186,7 +186,7 @@ export default function Ondetah() {
       <SliderTopics />
       <IntegrationsOndetah />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm page="Ondetah" content={valuesInput} />
+      <ContactForm nameForm="FormOndetah" page="Ondetah" content={valuesInput} />
       <Footer />
     </main>
   );

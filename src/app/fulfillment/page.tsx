@@ -236,7 +236,7 @@ export default function Logistica() {
         banner={""}
       />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm page="Fulfillment" content={valuesInput} />
+      <ContactForm nameForm="FormFulfillment" page="Fulfillment" content={valuesInput} />
       <Footer />
     </main>
   );

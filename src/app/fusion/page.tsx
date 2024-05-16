@@ -344,7 +344,7 @@ export default function Fusion() {
       <Integrations />
 
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm page="Fusion" content={valuesInput}/>
+      <ContactForm nameForm="FormFusion" page="Fusion" content={valuesInput}/>
       <Footer />
     </main>
   );

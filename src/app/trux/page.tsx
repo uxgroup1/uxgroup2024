@@ -288,7 +288,7 @@ export default function Trux() {
         />
 
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm page="Trux" content={valuesInput}/>
+        <ContactForm nameForm="FormTrux" page="Trux" content={valuesInput}/>
         <Footer />
       </main>
     </>

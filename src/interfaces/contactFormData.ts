@@ -17,4 +17,5 @@ export interface contactFormData{
     content: contactFormSubject[];
     inputAlternative?: contactFormInputAlternative[]
     page:string;
+    nameForm: string;
 }

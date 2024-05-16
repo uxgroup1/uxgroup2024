@@ -156,7 +156,7 @@ export default function Torre() {
         text="Nosso compromisso com a excelência no atendimento ao cliente é evidenciado pelo nosso serviço de atendimento integrado. Com uma equipe dedicada, estamos sempre prontos para atender às suas necessidades, resolver problemas e garantir uma experiência positiva para seus clientes. Utilizando tecnologia de ponta, oferecemos suporte personalizado e eficiente."
       />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm page="Torre de Controle" content={valuesInput} />
+      <ContactForm nameForm="FormTorre" page="Torre de Controle" content={valuesInput} />
       <Footer />
     </main>
   );

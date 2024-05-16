@@ -184,7 +184,7 @@ export default function Pudos() {
           banner={pudo.src}
         />
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm page="Pudos" content={valuesInput}/>
+        <ContactForm nameForm="FormPudos" page="Pudos" content={valuesInput}/>
         <Footer />
       </main>
     </>
