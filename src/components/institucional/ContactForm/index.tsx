@@ -24,7 +24,7 @@ export default function ContactForm({
             Nos informe qual tipo de contato gostaria de fazer.
           </p>
         </div>
-        <form id={nameForm} className="max-w-md w-[90%] mx-auto">
+        <form id={nameForm} name={nameForm} className="max-w-md w-[90%] mx-auto">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
