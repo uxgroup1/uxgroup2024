@@ -44,13 +44,19 @@ const number = [
 
 const valuesInput = [
   {
-    value:""
-  }
-]
+    value: "",
+  },
+];
 
 export default function Ondetah() {
   return (
     <main>
+      <Script
+        type="text/javascript"
+        async
+        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+      ></Script>
+
       {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
       <Script>
         {` (function(h,o,t,j,a,r){
@@ -186,7 +192,11 @@ export default function Ondetah() {
       <SliderTopics />
       <IntegrationsOndetah />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm nameForm="FormOndetah" page="Ondetah" content={valuesInput} />
+      <ContactForm
+        nameForm="FormOndetah"
+        page="Ondetah"
+        content={valuesInput}
+      />
       <Footer />
     </main>
   );

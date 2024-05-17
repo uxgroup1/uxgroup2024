@@ -59,9 +59,9 @@ const number = [
 
 const valuesInput = [
   {
-    value:""
-  }
-]
+    value: "",
+  },
+];
 
 const contentFeaturesTwo = [
   {
@@ -114,6 +114,12 @@ const contentTopics = [
 export default function Logistica() {
   return (
     <main>
+      <Script
+        type="text/javascript"
+        async
+        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+      ></Script>
+
       {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
       <Script>
         {` (function(h,o,t,j,a,r){
@@ -236,7 +242,11 @@ export default function Logistica() {
         banner={""}
       />
       <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm nameForm="FormFulfillment" page="Fulfillment" content={valuesInput} />
+      <ContactForm
+        nameForm="FormFulfillment"
+        page="Fulfillment"
+        content={valuesInput}
+      />
       <Footer />
     </main>
   );
