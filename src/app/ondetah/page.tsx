@@ -22,7 +22,7 @@ import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.p
 import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const number = [
   {

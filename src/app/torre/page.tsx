@@ -23,7 +23,7 @@ import sac from "@/assets/sac.png";
 import transporte from "@/assets/transporte.png";
 import banner from "@/assets/trux/torre.png";
 import Script from "next/script";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const contentFeaturesOne = [
   {

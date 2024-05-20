@@ -32,7 +32,7 @@ import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
 import iconeEnvios from "@/assets/fusion/fusion-envios.svg";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Script from "next/script";
 
 const contentFeatures = [

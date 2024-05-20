@@ -26,7 +26,7 @@ import reversa from "@/assets/trux/reversa.png";
 import imageTrux from "@/assets/trux/trux.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const contentFeatures = [
   {

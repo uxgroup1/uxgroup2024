@@ -26,7 +26,7 @@ import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
 import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
 import pudo from "@/assets/pudo/pudoImages/pudo.png";
 import Script from "next/script";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const contentFeatures = [
   {
