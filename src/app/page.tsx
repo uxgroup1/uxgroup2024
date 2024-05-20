@@ -233,7 +233,7 @@ export default function Home() {
         <Blog />
         <UxMidia colorText="#fff" content={contentUxMidia} />
         <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
-        <ContactForm nameForm="FormularioTeste" content={valuesInput} page="Home" />
+        <ContactForm nameForm="contactFormTeste" content={valuesInput} page="Home" />
         <Footer />
       </main>
     </QueryClientProvider>
