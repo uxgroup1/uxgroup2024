@@ -47,8 +47,6 @@ import Script from "next/script";
 import { Blog } from "@/components/institucional/blog";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
-
 const content = [
   {
     index: 0,
@@ -150,7 +148,6 @@ const contentUxMidia = [
 ];
 
 const valuesInput = [
-  { value: " Qual assunto gostaria de falar?*" },
   { value: "Quero conhecer todo o ecossistema UX." },
   { value: "Quero conhecer as tecnologias para operação." },
   { value: "Quero conhecer os serviços logísticos." },
@@ -162,6 +159,54 @@ export default function Home() {
   return (
     <QueryClientProvider client={new QueryClient()}>
       <main>
+        <Script>
+          {`function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11020932578/BocGCOapxoIYEOKrmIcp',
+                'event_callback': callback
+            });
+            return false;
+          }`}
+        </Script>
+
+        <Script>
+          {`
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11020932578/i8_rCMzPkIUYEOKrmIcp',
+                'event_callback': callback
+            });
+            return false;
+          }
+          `}
+        </Script>
+
+        <Script>
+          {`
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11020932578/IAM7CLz93bEZEOKrmIcp',
+      'event_callback': callback
+  });
+  return false;
+}`}
+        </Script>
+
         <Script
           type="text/javascript"
           async
@@ -233,7 +278,11 @@ export default function Home() {
         <Blog />
         <UxMidia colorText="#fff" content={contentUxMidia} />
         <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
-        <ContactForm nameForm="contactFormTeste" content={valuesInput} page="Home" />
+        <ContactForm
+          nameForm="contactFormTeste"
+          content={valuesInput}
+          page="Home"
+        />
         <Footer />
       </main>
     </QueryClientProvider>

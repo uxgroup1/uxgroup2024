@@ -31,20 +31,20 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
     };
 
     const response = await axios.request<ClientData>(options);
-    console.log(clientData);
-    
+
+
     return response;
 }
 
 export function useClientData() {
     const mutation = useMutation<AxiosResponse<ClientData>, Error, ClientData>({
-      mutationFn: fetchData
+        mutationFn: fetchData
     });
-  
+
     return {
-      mutate: mutation.mutate,
-      contentData: mutation.data?.data,
-      isPending: mutation.isPending,
-      isSuccess: mutation.isSuccess
+        mutate: mutation.mutate,
+        contentData: mutation.data?.data,
+        isPending: mutation.isPending,
+        isSuccess: mutation.isSuccess
     };
-  }
+}

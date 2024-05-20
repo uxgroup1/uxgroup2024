@@ -3,6 +3,8 @@ import { contactFormData } from "@/interfaces/contactFormData";
 import { QueryClientProvider } from "@tanstack/react-query";
 import Script from "next/script";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 export default function ContactForm({
   content,
@@ -10,6 +12,7 @@ export default function ContactForm({
   page,
   nameForm,
 }: contactFormData) {
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     floating_first_name: "",
     floating_email: "",
@@ -23,12 +26,7 @@ export default function ContactForm({
     page_name: page,
   });
 
-
-  console.log(formData);
-  
-
   const { mutate, isPending, isSuccess } = useClientData();
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -44,7 +42,11 @@ export default function ContactForm({
 
   useEffect(() => {
     if (isSuccess) {
-      // Reset form data after successful submission, if needed
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 3000);
+
       setFormData({
         floating_first_name: "",
         floating_email: "",
@@ -261,11 +263,24 @@ export default function ContactForm({
             </div>
           </div>
 
-          {isSuccess && (
-            <p className="text-white text-sm">
-              Obrigado por entrar em contato conosco. Em breve, nossa equipe
-              entrará em contato com você.
-            </p>
+          {showSuccess && (
+            <motion.div
+              initial={{ left: -400, opacity: 0 }}
+              animate={{
+                left: 100,
+                opacity: 100,
+                transition: { duration: 0.5 },
+              }}
+              id="toast-simple"
+              className="fixed bottom-[80%] left-20  flex items-center w-full max-w-sm p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow "
+              role="alert"
+            >
+              <FaRegCheckCircle className="w-9 text-4xl text-[#009580] " />
+              <div className="ps-4 text-sm text-black font-normal">
+                <h1 className="text-base ">Obrigado pelo contato.</h1>
+                Em Breve nosso time comercial entrará em contato com você.
+              </div>
+            </motion.div>
           )}
 
           <button
