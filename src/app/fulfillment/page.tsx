@@ -26,8 +26,6 @@ import banner from "@/assets/logistica/ffBanner.png";
 import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
 import bannerInstitucional from "@/assets/logistica/img-ff.png";
 import estoqueImage from "@/assets/logistica/estoque-avancado.gif";
-import FeaturesComponent from "@/components/produtos/features";
-import arrow from "@/assets/logistica/arrow/arrowListComponentes.svg";
 import Script from "next/script";
 import Numbers from "@/components/produtos/numbers";
 import FeaturesComponentLog from "@/components/produtos/featuresLog";
@@ -35,8 +33,8 @@ import iconeOne from "@/assets/logistica/icones/gestao.svg";
 import iconeTwo from "@/assets/logistica/icones/homologados.svg";
 import iconeThree from "@/assets/logistica/icones/localizacao.svg";
 import iconeFour from "@/assets/logistica/icones/pudos.svg";
-import ClientsCases from "@/components/produtos/accordeon/index";
 import IconesLog from "@/components/produtos/accordeon/index";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const number = [
   {
@@ -113,16 +111,17 @@ const contentTopics = [
 
 export default function Logistica() {
   return (
-    <main>
-      <Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
+    <QueryClientProvider client={new QueryClient()}>
+      <main>
+        <Script
+          type="text/javascript"
+          async
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+        ></Script>
 
-      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-      <Script>
-        {` (function(h,o,t,j,a,r){
+        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+        <Script>
+          {` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2580853,hjsv:6};
         a=o.getElementsByTagName('head')[0];
@@ -130,64 +129,64 @@ export default function Logistica() {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-      </Script>
+        </Script>
 
-      {/* <!-- Google Tag Manager --> */}
-      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        {/* <!-- Google Tag Manager --> */}
+        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-      {/* <!-- End Google Tag Manager --> */}
-      {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-      {/* <!-- End Google Tag Manager (noscript) --> */}
-      <Header />
-      <JumboTron
-        textButtonOne="fale com um especialista"
-        textButtonTwo="saiba mais"
-        linkButtonOne="#formulario"
-        linkButtonTwo="#sobre"
-        corButtonOne="#fbc705"
-        corButtonThree="#D3A707"
-        logo={fulfillmet.src}
-        title=" Expertise em operações B2C, B2B e D2C para armazenagem, picking e packing."
-        text="Aumente as vendas, reduza prazos de entregas e custos de frete para fidelização de clientes com uma solução de Fulfillment escalável e personalizada."
-        banner={banner.src}
-      />
-      <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-      <ProductInstitutional
-        id="sobre"
-        title="Controle, Armazenagem e Expedição eficiente."
-        text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
-        banner={banner.src}
-        corButtonOne="#FBC709"
-        corButtonThree="#D3A707"
-        linkButtonOne="#fulfillment-personalizado"
-        linkButtonTwo="#formulario"
-        textButtonOne="saiba mais"
-        textButtonTwo="fale com consultor"
-      />
-      <Numbers
-        cor="#fbc705"
-        title="Garanta a satisfação do seu cliente com uma gestão logística 100% integrada em todas as etapas."
-        number={number}
-        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-        text=""
-      />
-      <ThreeTopics
-        title="Benefícios de escolher a UX."
-        text=""
-        content={contentTopics}
-      />
-      {/* <FeaturesComponent
+        {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
+        <Header />
+        <JumboTron
+          textButtonOne="fale com um especialista"
+          textButtonTwo="saiba mais"
+          linkButtonOne="#formulario"
+          linkButtonTwo="#sobre"
+          corButtonOne="#fbc705"
+          corButtonThree="#D3A707"
+          logo={fulfillmet.src}
+          title=" Expertise em operações B2C, B2B e D2C para armazenagem, picking e packing."
+          text="Aumente as vendas, reduza prazos de entregas e custos de frete para fidelização de clientes com uma solução de Fulfillment escalável e personalizada."
+          banner={banner.src}
+        />
+        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+        <ProductInstitutional
+          id="sobre"
+          title="Controle, Armazenagem e Expedição eficiente."
+          text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
+          banner={banner.src}
+          corButtonOne="#FBC709"
+          corButtonThree="#D3A707"
+          linkButtonOne="#fulfillment-personalizado"
+          linkButtonTwo="#formulario"
+          textButtonOne="saiba mais"
+          textButtonTwo="fale com consultor"
+        />
+        <Numbers
+          cor="#fbc705"
+          title="Garanta a satisfação do seu cliente com uma gestão logística 100% integrada em todas as etapas."
+          number={number}
+          banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+          text=""
+        />
+        <ThreeTopics
+          title="Benefícios de escolher a UX."
+          text=""
+          content={contentTopics}
+        />
+        {/* <FeaturesComponent
         id="fulfillment-personalizado"
         linkButton="#formulario"
         banner={bannerInstitucional.src}
@@ -197,57 +196,58 @@ export default function Logistica() {
         titleSection="Fulfillment Personalizado."
         text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
       /> */}
-      <IconesLog
-        linkButton="#formulario"
-        banner={bannerInstitucional.src}
-        rowReverse={false}
-        button
-        titleSection="Fulfillment Personalizado."
-        text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
-      />
+        <IconesLog
+          linkButton="#formulario"
+          banner={bannerInstitucional.src}
+          rowReverse={false}
+          button
+          titleSection="Fulfillment Personalizado."
+          text="Nosso foco é fornecer soluções de fulfillment sob medida para atender às demandas específicas do seu negócio. Desde o armazenamento até a entrega, cuidamos de cada etapa do processo para garantir uma experiência de compra excepcional para seus clientes."
+        />
 
-      <FeaturesComponentLog
-        banner={estoqueImage.src}
-        rowReverse={true}
-        content={contentFeaturesTwo}
-        button={false}
-        titleSection="Estoque avançado."
-        text=""
-      />
-      <Cta
-        button={false}
-        title={"Certificação ANVISA."}
-        text={
-          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
-        }
-        logo={logoAnvisa.src}
-        banner={anvisaImage.src}
-      />
-      <SecondSection
-        link="#formulario"
-        corButtonOne="#fbc705"
-        corButtonThree="#D3A707"
-        flowReverse={true}
-        image={wmsImage.src}
-        title="Implementação de WMS."
-        text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
-      />
-      <Cta
-        button={false}
-        title={"CD homologado Amazon."}
-        text={
-          "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
-        }
-        logo={logoAmazon.src}
-        banner={""}
-      />
-      <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm
-        nameForm="FormFulfillment"
-        page="Fulfillment"
-        content={valuesInput}
-      />
-      <Footer />
-    </main>
+        <FeaturesComponentLog
+          banner={estoqueImage.src}
+          rowReverse={true}
+          content={contentFeaturesTwo}
+          button={false}
+          titleSection="Estoque avançado."
+          text=""
+        />
+        <Cta
+          button={false}
+          title={"Certificação ANVISA."}
+          text={
+            "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
+          }
+          logo={logoAnvisa.src}
+          banner={anvisaImage.src}
+        />
+        <SecondSection
+          link="#formulario"
+          corButtonOne="#fbc705"
+          corButtonThree="#D3A707"
+          flowReverse={true}
+          image={wmsImage.src}
+          title="Implementação de WMS."
+          text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
+        />
+        <Cta
+          button={false}
+          title={"CD homologado Amazon."}
+          text={
+            "Nosso CD de Barueri conta com a certificação da ANVISA, um espaço dentro de todos os parâmetros de segurança garantido pela Agência Nacional de Vigilância Sanitária, que nos permite receber e operar: cosméticos, perfumes, produtos de higiene, embalagem para alimentos e alimentos, tudo dentro dos padrões de saúde e segurança que o seu negócio precisa."
+          }
+          logo={logoAmazon.src}
+          banner={""}
+        />
+        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
+        <ContactForm
+          nameForm="FormFulfillment"
+          page="Fulfillment"
+          content={valuesInput}
+        />
+        <Footer />
+      </main>
+    </QueryClientProvider>
   );
 }

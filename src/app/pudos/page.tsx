@@ -26,6 +26,7 @@ import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
 import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
 import pudo from "@/assets/pudo/pudoImages/pudo.png";
 import Script from "next/script";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const contentFeatures = [
   {
@@ -50,9 +51,9 @@ const contentFeatures = [
 
 const valuesInput = [
   {
-    value:""
-  }
-]
+    value: "",
+  },
+];
 
 const content = [
   {
@@ -109,18 +110,18 @@ const contentTopics = [
 
 export default function Pudos() {
   return (
-    <>
-      <main>
+    <QueryClientProvider client={new QueryClient()}>
+      <>
+        <main>
+          <Script
+            type="text/javascript"
+            async
+            src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+          ></Script>
 
-      <Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
-
-        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-        <Script>
-          {` (function(h,o,t,j,a,r){
+          {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+          <Script>
+            {` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2580853,hjsv:6};
         a=o.getElementsByTagName('head')[0];
@@ -128,72 +129,81 @@ export default function Pudos() {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-        </Script>
+          </Script>
 
-        {/* <!-- Google Tag Manager --> */}
-        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          {/* <!-- Google Tag Manager --> */}
+          <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-        {/* <!-- End Google Tag Manager --> */}
-        {/* <!-- Google Tag Manager (noscript) --> */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {/* <!-- End Google Tag Manager (noscript) --> */}
-        <Header />
-        <JumboTron
-          textButtonOne="fale com um especialista"
-          textButtonTwo="saiba mais"
-          linkButtonOne="#formulario"
-          linkButtonTwo="#sobre"
-          corButtonOne="#ff7f12"
-          corButtonThree="#CA620A"
-          logo={pudoLogo.src}
-          title="Pontos de coleta e entrega para operações first e last mile."
-          text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
-          banner={banner.src}
-        />
-        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-        <ProductInstitutional
-          id="sobre"
-          title="Entregas mais simples e convenientes.          "
-          text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
-          banner={banner.src}
-          corButtonOne="#ff7f12"
-          corButtonThree="#CA620A"
-          linkButtonOne="#para-marketplaces"
-          linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
-          textButtonOne="saiba mais"
-          textButtonTwo="agende uma reunião"
-        />
-        <ThreeTopics
-          content={contentTopics}
-          title="Para Proprietários de Lojas Físicas."
-          text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
-        />
-        <CarroselVertical
-          id="para-marketplaces"
-          title="Para Marketplaces."
-          text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
-          content={content}
-        />
-        <FeaturesComponent
-          rowReverse={false}
-          titleSection="Benefícios de escolher o PUDO da UX."
-          content={contentFeatures}
-          banner={pudo.src}
-        />
-        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm nameForm="FormPudos" page="Pudos" content={valuesInput}/>
-        <Footer />
-      </main>
-    </>
+          {/* <!-- End Google Tag Manager --> */}
+          {/* <!-- Google Tag Manager (noscript) --> */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {/* <!-- End Google Tag Manager (noscript) --> */}
+          <Header />
+          <JumboTron
+            textButtonOne="fale com um especialista"
+            textButtonTwo="saiba mais"
+            linkButtonOne="#formulario"
+            linkButtonTwo="#sobre"
+            corButtonOne="#ff7f12"
+            corButtonThree="#CA620A"
+            logo={pudoLogo.src}
+            title="Pontos de coleta e entrega para operações first e last mile."
+            text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
+            banner={banner.src}
+          />
+          <section
+            style={{ paddingTop: "50px", paddingBottom: "0px" }}
+          ></section>
+          <ProductInstitutional
+            id="sobre"
+            title="Entregas mais simples e convenientes.          "
+            text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
+            banner={banner.src}
+            corButtonOne="#ff7f12"
+            corButtonThree="#CA620A"
+            linkButtonOne="#para-marketplaces"
+            linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
+            textButtonOne="saiba mais"
+            textButtonTwo="agende uma reunião"
+          />
+          <ThreeTopics
+            content={contentTopics}
+            title="Para Proprietários de Lojas Físicas."
+            text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
+          />
+          <CarroselVertical
+            id="para-marketplaces"
+            title="Para Marketplaces."
+            text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
+            content={content}
+          />
+          <FeaturesComponent
+            rowReverse={false}
+            titleSection="Benefícios de escolher o PUDO da UX."
+            content={contentFeatures}
+            banner={pudo.src}
+          />
+          <section
+            style={{ paddingTop: "0px", paddingBottom: "50px" }}
+          ></section>
+          <ContactForm
+            nameForm="FormPudos"
+            page="Pudos"
+            content={valuesInput}
+          />
+          <Footer />
+        </main>
+      </>
+    </QueryClientProvider>
   );
 }

@@ -22,6 +22,7 @@ import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.p
 import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const number = [
   {
@@ -50,6 +51,7 @@ const valuesInput = [
 
 export default function Ondetah() {
   return (
+    <QueryClientProvider client={new QueryClient()}>
     <main>
       <Script
         type="text/javascript"
@@ -199,5 +201,6 @@ export default function Ondetah() {
       />
       <Footer />
     </main>
+    </QueryClientProvider>
   );
 }

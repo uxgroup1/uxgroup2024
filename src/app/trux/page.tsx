@@ -26,6 +26,7 @@ import reversa from "@/assets/trux/reversa.png";
 import imageTrux from "@/assets/trux/trux.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const contentFeatures = [
   {
@@ -166,24 +167,24 @@ const number = [
 
 const valuesInput = [
   {
-    value:""
-  }
-]
+    value: "",
+  },
+];
 
 export default function Trux() {
   return (
-    <>
-      <main>
+    <QueryClientProvider client={new QueryClient()}>
+      <>
+        <main>
+          <Script
+            type="text/javascript"
+            async
+            src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+          ></Script>
 
-      <Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
-
-        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-        <Script>
-          {` (function(h,o,t,j,a,r){
+          {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+          <Script>
+            {` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2580853,hjsv:6};
         a=o.getElementsByTagName('head')[0];
@@ -191,113 +192,118 @@ export default function Trux() {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-        </Script>
+          </Script>
 
-        {/* <!-- Google Tag Manager --> */}
-        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          {/* <!-- Google Tag Manager --> */}
+          <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-        {/* <!-- End Google Tag Manager --> */}
-        {/* <!-- Google Tag Manager (noscript) --> */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {/* <!-- End Google Tag Manager (noscript) --> */}
-        <Header />
-        <JumboTron
-          linkButtonOne="#formulario"
-          linkButtonTwo="#sobre"
-          textButtonOne="fale com especialista"
-          textButtonTwo="saiba mais"
-          corButtonOne="#009881"
-          corButtonThree="#046C5C"
-          logo={truxLogo.src}
-          title="Gestão de motoristas e entregas para operações de transporte."
-          banner={banner.src}
-          text="Tenha visão completa da operação em tempo real e tome decisões inteligentes baseadas em dados de rotas, entregas e performance de motoristas."
-        />
-        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-        <ProductInstitutional
-          id="sobre"
-          title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
-          text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."
-          banner={banner.src}
-          corButtonOne="#009881"
-          corButtonThree="#046C5C"
-          linkButtonOne="#roteirizacao-entregas"
-          linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
-          textButtonOne="saiba mais"
-          textButtonTwo="agende uma demo"
-        />
-        <Numbers
-          title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
-          number={number}
-          cor="#009881"
-          banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-          text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
-        />
-        <FeaturesComponent
-          id="roteirizacao-entregas"
-          titleSection="Roteirização de entrega."
-          text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
-          banner={imageRoteirizacao.src}
-          content={contentFeatures}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Gestão financeira."
-          text="Tenha o controle total das suas finanças e automatize processos."
-          banner={imageGestao.src}
-          content={contentFeaturesTwo}
-          rowReverse={true}
-        />
-        <FeaturesComponent
-          titleSection="Atendimento."
-          text="Atendimento personalizado e suporte 24/7."
-          banner={atendimento.src}
-          content={contentFeaturesThree}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Dashboards."
-          text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
-          banner={dash.src}
-          content={contentFeaturesFive}
-          rowReverse={true}
-        />
-        <FeaturesComponent
-          titleSection="Reversa."
-          text="Gerencie suas cargas de retorno de forma automatizada com total visibilidade do processo."
-          banner={reversa.src}
-          content={contentFeaturesSix}
-          rowReverse={false}
-        />
-        <FeaturesComponent
-          titleSection="Averbação de Carga."
-          text="Sua carga protegida em todas as etapas da entrega."
-          banner={averbacao.src}
-          content={contentFeaturesSeven}
-          rowReverse={true}
-        />
-        <FeaturesComponent
-          titleSection="App para Motoristas: Agilidade e Eficiência na Ponta dos Dedos."
-          text="Nosso aplicativo exclusivo para first e last mile, permite interação instantânea com os motoristas e transportadores, proporcionando uma comunicação eficaz e ágil durante todo o processo de entrega. Com o uso do app, você reduz o índice de insucessos, tem mais precisão na informação e contribui para a redução do uso de papel na operação, promovendo uma abordagem mais sustentável e eficiente."
-          banner={imageTrux.src}
-          content={contentFeaturesFour}
-          rowReverse={false}
-        />
+          {/* <!-- End Google Tag Manager --> */}
+          {/* <!-- Google Tag Manager (noscript) --> */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {/* <!-- End Google Tag Manager (noscript) --> */}
+          <Header />
+          <JumboTron
+            linkButtonOne="#formulario"
+            linkButtonTwo="#sobre"
+            textButtonOne="fale com especialista"
+            textButtonTwo="saiba mais"
+            corButtonOne="#009881"
+            corButtonThree="#046C5C"
+            logo={truxLogo.src}
+            title="Gestão de motoristas e entregas para operações de transporte."
+            banner={banner.src}
+            text="Tenha visão completa da operação em tempo real e tome decisões inteligentes baseadas em dados de rotas, entregas e performance de motoristas."
+          />
+          <section
+            style={{ paddingTop: "50px", paddingBottom: "0px" }}
+          ></section>
+          <ProductInstitutional
+            id="sobre"
+            title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
+            text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."
+            banner={banner.src}
+            corButtonOne="#009881"
+            corButtonThree="#046C5C"
+            linkButtonOne="#roteirizacao-entregas"
+            linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
+            textButtonOne="saiba mais"
+            textButtonTwo="agende uma demo"
+          />
+          <Numbers
+            title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
+            number={number}
+            cor="#009881"
+            banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+            text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
+          />
+          <FeaturesComponent
+            id="roteirizacao-entregas"
+            titleSection="Roteirização de entrega."
+            text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
+            banner={imageRoteirizacao.src}
+            content={contentFeatures}
+            rowReverse={false}
+          />
+          <FeaturesComponent
+            titleSection="Gestão financeira."
+            text="Tenha o controle total das suas finanças e automatize processos."
+            banner={imageGestao.src}
+            content={contentFeaturesTwo}
+            rowReverse={true}
+          />
+          <FeaturesComponent
+            titleSection="Atendimento."
+            text="Atendimento personalizado e suporte 24/7."
+            banner={atendimento.src}
+            content={contentFeaturesThree}
+            rowReverse={false}
+          />
+          <FeaturesComponent
+            titleSection="Dashboards."
+            text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
+            banner={dash.src}
+            content={contentFeaturesFive}
+            rowReverse={true}
+          />
+          <FeaturesComponent
+            titleSection="Reversa."
+            text="Gerencie suas cargas de retorno de forma automatizada com total visibilidade do processo."
+            banner={reversa.src}
+            content={contentFeaturesSix}
+            rowReverse={false}
+          />
+          <FeaturesComponent
+            titleSection="Averbação de Carga."
+            text="Sua carga protegida em todas as etapas da entrega."
+            banner={averbacao.src}
+            content={contentFeaturesSeven}
+            rowReverse={true}
+          />
+          <FeaturesComponent
+            titleSection="App para Motoristas: Agilidade e Eficiência na Ponta dos Dedos."
+            text="Nosso aplicativo exclusivo para first e last mile, permite interação instantânea com os motoristas e transportadores, proporcionando uma comunicação eficaz e ágil durante todo o processo de entrega. Com o uso do app, você reduz o índice de insucessos, tem mais precisão na informação e contribui para a redução do uso de papel na operação, promovendo uma abordagem mais sustentável e eficiente."
+            banner={imageTrux.src}
+            content={contentFeaturesFour}
+            rowReverse={false}
+          />
 
-        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-        <ContactForm nameForm="FormTrux" page="Trux" content={valuesInput}/>
-        <Footer />
-      </main>
-    </>
+          <section
+            style={{ paddingTop: "0px", paddingBottom: "50px" }}
+          ></section>
+          <ContactForm nameForm="FormTrux" page="Trux" content={valuesInput} />
+          <Footer />
+        </main>
+      </>
+    </QueryClientProvider>
   );
 }

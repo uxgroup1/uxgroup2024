@@ -44,8 +44,10 @@ import iconFusion from "@/assets/home/fusion.svg";
 import iconOndetah from "@/assets/home/ondetah.svg";
 import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
-import PedidoOndetah from "@/components/pedidoOndetah";
 import { Blog } from "@/components/institucional/blog";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const content = [
   {
@@ -158,18 +160,17 @@ const valuesInput = [
 
 export default function Home() {
   return (
-    <main>
+    <QueryClientProvider client={new QueryClient()}>
+      <main>
+        <Script
+          type="text/javascript"
+          async
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+        ></Script>
 
-<Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
-
-
-      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-      <Script>
-        {` (function(h,o,t,j,a,r){
+        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+        <Script>
+          {` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2580853,hjsv:6};
         a=o.getElementsByTagName('head')[0];
@@ -177,63 +178,64 @@ export default function Home() {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-      </Script>
+        </Script>
 
-      {/* <!-- Google Tag Manager --> */}
-      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        {/* <!-- Google Tag Manager --> */}
+        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-      {/* <!-- End Google Tag Manager --> */}
-      {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-      {/* <!-- End Google Tag Manager (noscript) --> */}
-      <Header />
-      <BannerHome />
-      <EcoSistemaUx />
-      <ClientsCases />
-      <CarroselVertical
-        id="gestao"
-        title="Tecnologia para gestão da logística."
-        text="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente.        "
-        content={content}
-      />
-      <CarroselVerticalMobile
-        title="Tecnologia para gestão da logística."
-        sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."
-        content={content}
-      />
-      <Cta
-        button={true}
-        title={
-          "Eficiência, Informação e Sustentabilidade: Descubra o futuro da logística com a UX.          "
-        }
-        banner={ctaOne.src}
-      />
-      <LogisticaComPerformance id={"logistica"} />
+        {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
+        <Header />
+        <BannerHome />
+        <EcoSistemaUx />
+        <ClientsCases />
+        <CarroselVertical
+          id="gestao"
+          title="Tecnologia para gestão da logística."
+          text="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente.        "
+          content={content}
+        />
+        <CarroselVerticalMobile
+          title="Tecnologia para gestão da logística."
+          sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."
+          content={content}
+        />
+        <Cta
+          button={true}
+          title={
+            "Eficiência, Informação e Sustentabilidade: Descubra o futuro da logística com a UX.          "
+          }
+          banner={ctaOne.src}
+        />
+        <LogisticaComPerformance id={"logistica"} />
 
-      <Cta
-        button={true}
-        title={
-          "Descubra  como podemos transformar sua operação, reduzir custos e impulsionar seus resultados."
-        }
-        banner={ctaTwo.src}
-      />
-      <LogisticaSustentavel id={"sustentabilidade"} />
-      <UxPartners />
-      <Blog />
-      <UxMidia colorText="#fff" content={contentUxMidia} />
-      <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
-      <ContactForm nameForm="ContactForm" content={valuesInput} page="Home" />
-      <Footer />
-    </main>
+        <Cta
+          button={true}
+          title={
+            "Descubra  como podemos transformar sua operação, reduzir custos e impulsionar seus resultados."
+          }
+          banner={ctaTwo.src}
+        />
+        <LogisticaSustentavel id={"sustentabilidade"} />
+        <UxPartners />
+        <Blog />
+        <UxMidia colorText="#fff" content={contentUxMidia} />
+        <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
+        <ContactForm nameForm="FormularioTeste" content={valuesInput} page="Home" />
+        <Footer />
+      </main>
+    </QueryClientProvider>
   );
 }

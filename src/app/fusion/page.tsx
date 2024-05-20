@@ -32,6 +32,7 @@ import imageFive from "@/assets/fusion/envios-final.png";
 import imageSix from "@/assets/fusion/cf-mktpl-final.png";
 import banner from "@/assets/fusion/fusionBanner.png";
 import iconeEnvios from "@/assets/fusion/fusion-envios.svg";
+import { QueryClient, QueryClientProvider } from "react-query";
 import Script from "next/script";
 
 const contentFeatures = [
@@ -216,23 +217,23 @@ const number = [
 
 const valuesInput = [
   {
-    value:""
-  }
-]
+    value: "",
+  },
+];
 
 export default function Fusion() {
   return (
-    <main>
+    <QueryClientProvider client={new QueryClient()}>
+      <main>
+        <Script
+          type="text/javascript"
+          async
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
+        ></Script>
 
-<Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
-
-      {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-      <Script>
-        {` (function(h,o,t,j,a,r){
+        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+        <Script>
+          {` (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2580853,hjsv:6};
         a=o.getElementsByTagName('head')[0];
@@ -240,119 +241,124 @@ export default function Fusion() {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-      </Script>
+        </Script>
 
-      {/* <!-- Google Tag Manager --> */}
-      <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        {/* <!-- Google Tag Manager --> */}
+        <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                     })(window,document,'script','dataLayer','GTM-5M78MWM');`}</Script>
-      {/* <!-- End Google Tag Manager --> */}
-      {/* <!-- Google Tag Manager (noscript) --> */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        ></iframe>
-      </noscript>
-      {/* <!-- End Google Tag Manager (noscript) --> */}
-      <Header />
-      <JumboTron
-        linkButtonOne="#formulario"
-        linkButtonTwo="#sobre"
-        textButtonOne="fale com especialista"
-        textButtonTwo="saiba mais"
-        corButtonOne="#28265b"
-        corButtonThree="#1F1D47"
-        logo={fusionLogo.src}
-        title="Gestão de fretes para e-commerce e marketplaces."
-        banner={banner.src}
-        text="Aumente a conversão de vendas e reduza custos com uma gestão que permite autonomia para criação de campanhas de fretes e conciliação de pagamentos."
-      />
-      <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
-      <ProductInstitutional
-        id="sobre"
-        title="Tecnologia de Fretes Inovadora: Otimização, Economia e Escalabilidade"
-        text="Uma tecnologia modular desde o cálculo de frete à conciliação, nossa solução para gestão de fretes garante ao gestor das vendas digitais, a melhora de performance, redução de custos, resolvendo os desafios de cada uma das etapas da cadeia de entrega seja no mundo do e-commerce ou do marketplace.        "
-        banner={banner.src}
-        corButtonOne="#28265b"
-        corButtonThree="#1F1D47"
-        linkButtonOne="#e-commerce"
-        linkButtonTwo="#marketplace"
-        textButtonOne="e-commerce"
-        textButtonTwo="marketplace"
-      />
-      <Numbers
-        cor="#28265b"
-        title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
-        number={number}
-        banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-        text=""
-      />
-      <FeaturesComponent
-        id={"e-commerce"}
-        titleSection="Ofereça as melhores opções de frete"
-        text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
-        banner={imageOne.src}
-        content={contentFeaturesTwo}
-        rowReverse={false}
-      />
-      <FeaturesComponent
-        titleSection="Reduza os contatos no SAC com Rastreamento"
-        text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
-        banner={imageTwo.src}
-        content={contentFeatures}
-        rowReverse={true}
-      />
-      <FeaturesComponent
-        titleSection="Agilize a entrega com automatização na Expedição"
-        text="Comunicação 100% integrada via API com o transportador para aviso de coleta de pedidos."
-        banner={imageThree.src}
-        content={contentFeaturesThree}
-        rowReverse={false}
-      />
-      <FeaturesComponent
-        titleSection="Pague somente o acordado com os transportadores"
-        text="Tenha a certeza de que está pagando o correto pelos fretes do seu negócio,, utilize uma solução de conciliação de frete."
-        banner={imageFour.src}
-        content={contentFeaturesFour}
-        rowReverse={true}
-      />
+        {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
+        <Header />
+        <JumboTron
+          linkButtonOne="#formulario"
+          linkButtonTwo="#sobre"
+          textButtonOne="fale com especialista"
+          textButtonTwo="saiba mais"
+          corButtonOne="#28265b"
+          corButtonThree="#1F1D47"
+          logo={fusionLogo.src}
+          title="Gestão de fretes para e-commerce e marketplaces."
+          banner={banner.src}
+          text="Aumente a conversão de vendas e reduza custos com uma gestão que permite autonomia para criação de campanhas de fretes e conciliação de pagamentos."
+        />
+        <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
+        <ProductInstitutional
+          id="sobre"
+          title="Tecnologia de Fretes Inovadora: Otimização, Economia e Escalabilidade"
+          text="Uma tecnologia modular desde o cálculo de frete à conciliação, nossa solução para gestão de fretes garante ao gestor das vendas digitais, a melhora de performance, redução de custos, resolvendo os desafios de cada uma das etapas da cadeia de entrega seja no mundo do e-commerce ou do marketplace.        "
+          banner={banner.src}
+          corButtonOne="#28265b"
+          corButtonThree="#1F1D47"
+          linkButtonOne="#e-commerce"
+          linkButtonTwo="#marketplace"
+          textButtonOne="e-commerce"
+          textButtonTwo="marketplace"
+        />
+        <Numbers
+          cor="#28265b"
+          title="Tecnologia de ponta a ponta para gestão logística da sua venda digital."
+          number={number}
+          banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
+          text=""
+        />
+        <FeaturesComponent
+          id={"e-commerce"}
+          titleSection="Ofereça as melhores opções de frete"
+          text="Tenha uma solução inteligente de cálculo de frete com diversas opções precisas e ágeis de prazo e preços e evite os constantes abandonos de carrinho."
+          banner={imageOne.src}
+          content={contentFeaturesTwo}
+          rowReverse={false}
+        />
+        <FeaturesComponent
+          titleSection="Reduza os contatos no SAC com Rastreamento"
+          text="Ofereça mais visibilidade das etapas e mantenha seus clientes informados sobre o seu tracking com uma tecnologia de rastreamento completa."
+          banner={imageTwo.src}
+          content={contentFeatures}
+          rowReverse={true}
+        />
+        <FeaturesComponent
+          titleSection="Agilize a entrega com automatização na Expedição"
+          text="Comunicação 100% integrada via API com o transportador para aviso de coleta de pedidos."
+          banner={imageThree.src}
+          content={contentFeaturesThree}
+          rowReverse={false}
+        />
+        <FeaturesComponent
+          titleSection="Pague somente o acordado com os transportadores"
+          text="Tenha a certeza de que está pagando o correto pelos fretes do seu negócio,, utilize uma solução de conciliação de frete."
+          banner={imageFour.src}
+          content={contentFeaturesFour}
+          rowReverse={true}
+        />
 
-      <Cta
-        title={
-          "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"
-        }
-        banner={""}
-        button
-        gradient={true}
-      />
+        <Cta
+          title={
+            "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"
+          }
+          banner={""}
+          button
+          gradient={true}
+        />
 
-      <FeaturesComponent
-        id="marketplace"
-        titleSection=""
-        text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
-        banner={imageFive.src}
-        content={contentFeaturesFive}
-        rowReverse={false}
-        imageSobTitle={iconeEnvios}
-      />
-      <FeaturesComponent
-        titleSection="Expanda suas opções de frete          "
-        text="Cálculo de frete do seu marketplace totalmente integrado aos sellers. Através do gateway de fretes ofereça a mesma possibilidade de um cálculo preciso, resposta rápida e redução de custos através de tabelas parametrizáveis."
-        banner={imageSix.src}
-        content={contentFeaturesSix}
-        rowReverse={true}
-      />
+        <FeaturesComponent
+          id="marketplace"
+          titleSection=""
+          text="Controle com inteligência de todas as etapas do frete para o seu negócio e sellers. Desde o cálculo de frete , impressão de etiquetas, planejamento de malha, rastreamento e conciliação de fretes, tudo 100% integrado à sua plataforma."
+          banner={imageFive.src}
+          content={contentFeaturesFive}
+          rowReverse={false}
+          imageSobTitle={iconeEnvios}
+        />
+        <FeaturesComponent
+          titleSection="Expanda suas opções de frete          "
+          text="Cálculo de frete do seu marketplace totalmente integrado aos sellers. Através do gateway de fretes ofereça a mesma possibilidade de um cálculo preciso, resposta rápida e redução de custos através de tabelas parametrizáveis."
+          banner={imageSix.src}
+          content={contentFeaturesSix}
+          rowReverse={true}
+        />
 
-      <Integrations />
+        <Integrations />
 
-      <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
-      <ContactForm nameForm="FormFusion" page="Fusion" content={valuesInput}/>
-      <Footer />
-    </main>
+        <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
+        <ContactForm
+          nameForm="FormFusion"
+          page="Fusion"
+          content={valuesInput}
+        />
+        <Footer />
+      </main>
+    </QueryClientProvider>
   );
 }
