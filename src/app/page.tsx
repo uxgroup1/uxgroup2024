@@ -278,11 +278,7 @@ function gtag_report_conversion(url) {
         <Blog />
         <UxMidia colorText="#fff" content={contentUxMidia} />
         <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
-        <ContactForm
-          nameForm="contactForm"
-          content={valuesInput}
-          page="Home"
-        />
+        <ContactForm nameForm="contactForm" content={valuesInput} page="Home" />
         <Footer />
       </main>
     </QueryClientProvider>
