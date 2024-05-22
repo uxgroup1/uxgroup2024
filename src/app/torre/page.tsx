@@ -56,8 +56,18 @@ const contentFeaturesTwo = [
 
 const valuesInput = [
   {
-    value: "",
+    value: "Melhorar a visibilidade e o controle sobre as operações de transporte",
   },
+  {
+    value: "Garantir a eficiência da entrega (green mile, last mile e first mile- SP)    ",
+  },
+  {
+    value: "Oferecer um atendimento ao cliente mais eficiente e integrado",
+  },
+  {
+    value: "Outros",
+  },
+ 
 ];
 
 const contentTopics = [

@@ -51,7 +51,19 @@ const contentFeatures = [
 
 const valuesInput = [
   {
-    value: "",
+    value: "Melhorar a logística e a experiência do cliente com PUDO ",
+  },
+  {
+    value: "Reduzir custos de frete do meu marketplace",
+  },
+  {
+    value: "Explorar oportunidades de parceria com a UX ",
+  },
+  {
+    value: "Conhecer os benefícios de ser um ponto de retirada e entrega da UX",
+  },
+  {
+    value: "Outros    ",
   },
 ];
 

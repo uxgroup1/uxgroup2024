@@ -57,7 +57,19 @@ const number = [
 
 const valuesInput = [
   {
-    value: "",
+    value: "Melhorar a eficiência na armazenagem e expedição de pedidos",
+  },
+  {
+    value: "Garantir agilidade no envio de pedidos com estoque reduzido próximo a SP",
+  },
+  {
+    value: "Distribuir de forma ágil e organizada os produtos sem estoque (crossdocking)",
+  },
+  {
+    value: "Melhorar a previsão de demandas",
+  },
+  {
+    value: "Outros",
   },
 ];
 

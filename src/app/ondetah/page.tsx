@@ -45,7 +45,19 @@ const number = [
 
 const valuesInput = [
   {
-    value: "",
+    value: "Melhorar a experiência do cliente durante o processo de compra",
+  },
+  {
+    value: "Reduzir os contatos no SAC",
+  },
+  {
+    value: "Diminuir atrasos e problemas na entrega dos pedidos",
+  },
+  {
+    value: "Antecipar e mitigar riscos operacionais",
+  },
+  {
+    value: "Reduzir a pegada de carbono das operações logísticas",
   },
 ];
 
