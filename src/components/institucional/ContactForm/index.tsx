@@ -214,7 +214,7 @@ export default function ContactForm({
                 Qual assunto gostaria de falar?*
               </option>
               {content.map((data, index) => (
-                <option key={index} value={data.value} className="text-white">
+                <option key={index} value={data.value} className="text-black ">
                   {data.value}
                 </option>
               ))}
