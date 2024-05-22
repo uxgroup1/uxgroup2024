@@ -7,16 +7,12 @@ const Header = dynamic(() => import("@/components/header"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
-const FeaturesComponent = dynamic(
-  () => import("@/components/produtos/features")
-);
+import FeaturesComponent from "@/components/produtos/features"
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import banner from "@/assets/trux/tms-transp.png";
-const ProductInstitutional = dynamic(
-  () => import("@/components/produtos/institucional")
-);
+import ProductInstitutional from"@/components/produtos/institucional"
 import imageGestao from "@/assets/ondetah/imagesSections/gestaoFinanceira.png";
 import imageRoteirizacao from "@/assets/trux/roteirizacao.png";
 import atendimento from "@/assets/trux/atendimento.png";
