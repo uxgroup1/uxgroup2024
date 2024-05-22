@@ -6,9 +6,7 @@ const Header = dynamic(() => import("@/components/header"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
-const FeaturesComponent = dynamic(
-  () => import("@/components/produtos/features")
-);
+
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
 import movingImage from "@/assets/torre/icons/moving.svg";
@@ -16,6 +14,9 @@ import natureImage from "@/assets/torre/icons/nature.svg";
 import packgeImage from "@/assets/torre/icons/package.svg";
 import imageArrow from "@/assets/torre/arrow/arrowListComponentes.svg";
 import torreLogo from "@/assets/logos/torre.svg";
+const FeaturesComponent = dynamic(
+  () => import("@/components/produtos/features")
+);
 const ProductInstitutional = dynamic(
   () => import("@/components/produtos/institucional")
 );

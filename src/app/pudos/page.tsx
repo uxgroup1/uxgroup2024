@@ -7,12 +7,7 @@ const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
-const FeaturesComponent = dynamic(
-  () => import("@/components/produtos/features")
-);
-const CarroselVertical = dynamic(
-  () => import("@/components/institucional/carrouselVerticalMain")
-);
+
 const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
 import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
 import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
@@ -26,6 +21,12 @@ import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
 import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
 import pudo from "@/assets/pudo/pudoImages/pudo.png";
 import Script from "next/script";
+const FeaturesComponent = dynamic(
+  () => import("@/components/produtos/features")
+);
+const CarroselVertical = dynamic(
+  () => import("@/components/institucional/carrouselVerticalMain")
+);
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const contentFeatures = [

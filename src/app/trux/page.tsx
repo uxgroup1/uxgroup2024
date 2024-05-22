@@ -4,11 +4,12 @@ import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("@/components/Footer"));
 const Header = dynamic(() => import("@/components/header"));
+const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
 import FeaturesComponent from "@/components/produtos/features"
-const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
+
 import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import banner from "@/assets/trux/tms-transp.png";

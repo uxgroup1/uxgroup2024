@@ -5,22 +5,23 @@ const Header = dynamic(() => import("@/components/header"));
 const ContactForm = dynamic(
   () => import("@/components/institucional/ContactForm")
 );
-const SecondSection = dynamic(
-  () => import("@/components/produtos/SecondSection")
-);
+
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 import imageOndetah from "@/assets/ondetah/ondetah.png";
 import ondetahLogo from "@/assets/logos/ondetah.svg";
 import dynamic from "next/dynamic";
-import ProductInstitutional from "@/components/produtos/institucional";
 import imageOne from "@/assets/ondetah/imagesSections/ondetah-1.png";
 import Numbers from "@/components/produtos/numbers";
 import Script from "next/script";
 import SliderTopics from "@/components/slider";
+import ProductInstitutional from "@/components/produtos/institucional";
 import IntegrationsOndetah from "@/components/produtos/integracoesOndetah";
 import satisfacao from "@/assets/ondetah/imagesSections/pesquisa-de-satisfacao.png";
 import informacoes from "@/assets/ondetah/imagesSections/informacao.png";
 import sac from "@/assets/ondetah/imagesSections/sac.png";
+const SecondSection = dynamic(
+  () => import("@/components/produtos/SecondSection")
+);
 import sustentavel from "@/assets/ondetah/imagesSections/sustentavel.png";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 

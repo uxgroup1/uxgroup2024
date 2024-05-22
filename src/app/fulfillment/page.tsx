@@ -7,9 +7,6 @@ const ContactForm = dynamic(
 );
 const Footer = dynamic(() => import("@/components/Footer"));
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
-const SecondSection = dynamic(
-  () => import("@/components/produtos/SecondSection")
-);
 
 const Cta = dynamic(() => import("@/components/cta"));
 import anvisaImage from "@/assets/logistica/anvisa.png";
@@ -27,6 +24,10 @@ import logoAnvisa from "@/assets/logistica/anvisa-logo.png";
 import bannerInstitucional from "@/assets/logistica/img-ff.png";
 import estoqueImage from "@/assets/logistica/estoque-avancado.gif";
 import Script from "next/script";
+const SecondSection = dynamic(
+  () => import("@/components/produtos/SecondSection")
+);
+
 import Numbers from "@/components/produtos/numbers";
 import FeaturesComponentLog from "@/components/produtos/featuresLog";
 import iconeOne from "@/assets/logistica/icones/gestao.svg";
