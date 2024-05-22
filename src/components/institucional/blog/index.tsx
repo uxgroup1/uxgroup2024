@@ -92,7 +92,7 @@ export function Blog() {
                     </a>
                     <a
                       href={p.link}
-                      className="text-sm hover:bg-white hover:text-black border hover:border-black transition font-medium text-center w-[200px] flex items-center justify-center h-10 rounded-lg bg-black text-white "
+                      className="text-sm hover:bg-white hover:text-black border hover:border-black transition font-medium text-center w-[200px] flex items-center justify-center h-12 rounded-lg bg-black text-white "
                     >
                       ler agora
                     </a>
