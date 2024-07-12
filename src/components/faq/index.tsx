@@ -19,7 +19,7 @@ export default function Faq() {
 
     return (
         <section className="bg-white flex items-center justify-center h-auto lg:h-[80vh] max-w-[1996px] w-full">
-            <div className="flex flex-col gap-5 items-center justify-center w-[90%] lg:px-0 lg:py-0 pb-10 lg:pt-10">
+            <div className="flex flex-col gap-5 items-center justify-center w-full lg:px-0 lg:py-0 pb-10 lg:pt-10">
                 <h1 className="text-black text-center text-5xl lg:w-[85%]">
                     Perguntas <span className='text-[#fbc705]'>frequentes</span> 
                 </h1>
@@ -31,7 +31,7 @@ export default function Faq() {
                             <h2 id={`accordion-open-heading-${index}`}>
                                 <button
                                     type="button"
-                                    className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-black border border-b-0 border-[#EDEDED] shadow-sm  gap-3"
+                                    className="flex items-center justify-between w-full p-5 font-medium text-left text-black border border-b-0 border-[#EDEDED] shadow-sm  gap-3"
                                     onClick={() => toggleAccordion(index)}
                                     aria-expanded={openIndex === index}
                                     aria-controls={`accordion-open-body-${index}`}>
