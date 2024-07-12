@@ -20,8 +20,8 @@ export default function Faq() {
     return (
         <section className="bg-white flex items-center justify-center h-[140vh] lg:h-[80vh] max-w-[1996px] w-full">
             <div className="flex flex-col gap-10 items-center justify-center w-[90%] lg:px-0 lg:py-0 pb-10 lg:pt-10">
-                <h1 className="text-black text-center lg:w-[85%]">
-                    Perguntas frequentes
+                <h1 className="text-black text-center text-5xl lg:w-[85%]">
+                    Perguntas <span className='text-[#fbc705]'>frequentes</span> 
                 </h1>
                 <div className='flex flex-col items-center h-auto lg:h-[60vh] justify-center w-full'>
 
