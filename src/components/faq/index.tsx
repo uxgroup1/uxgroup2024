@@ -17,11 +17,11 @@ export default function Faq() {
 
     return (
         <section className="bg-white flex items-center justify-center h-auto lg:h-[70vh] max-w-[1996px] w-full">
-            <div className="flex flex-col gap-5 items-center justify-center w-full lg:px-0 lg:py-0 pb-10 lg:pt-10">
+            <div className="flex flex-col gap-5 items-center justify-center w-full lg:px-0 lg:py-0 pb-10 lg:pt-5">
                 <h1 className="text-black text-center text-5xl lg:w-[85%]">
                     Perguntas <span className='text-[#fbc705]'>frequentes</span> 
                 </h1>
-                <div className='flex flex-col items-center h-auto lg:h-[60vh] justify-center w-full'>
+                <div className='flex flex-col items-center h-auto lg:h-[50vh] justify-center w-full'>
 
 
                     {faqItems.map((item, index) => (
