@@ -46,6 +46,10 @@ import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
 import { Blog } from "@/components/institucional/blog";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Questionario from "@/components/institucional/questionario";
+import ButtonChat from "@/components/chat";
+import { useState } from "react";
+
 
 const content = [
   {
@@ -156,6 +160,7 @@ const valuesInput = [
 ];
 
 export default function Home() {
+  const [questionario, setQuestinario] = useState(false)
   return (
     <QueryClientProvider client={new QueryClient()}>
       <main>
@@ -246,6 +251,12 @@ function gtag_report_conversion(url) {
         <BannerHome />
         <EcoSistemaUx />
         <ClientsCases />
+        {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
+        {questionario && (
+          <Questionario fechar={async () => setQuestinario(!questionario)} />
+        )} */}
+
+
         <CarroselVertical
           id="gestao"
           title="Tecnologia para gestão da logística."

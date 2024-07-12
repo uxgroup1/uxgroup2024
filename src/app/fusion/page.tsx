@@ -344,7 +344,7 @@ export default function Fusion() {
 
         <Cta
           title={
-            "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados e ai pode usar a mesma imagem dele a home"
+            "Descubra como podemos transformar sua operação, reduzir custos e impulsionar seus resultados."
           }
           banner={""}
           button

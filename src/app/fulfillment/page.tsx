@@ -36,6 +36,7 @@ import iconeThree from "@/assets/logistica/icones/localizacao.svg";
 import iconeFour from "@/assets/logistica/icones/pudos.svg";
 import IconesLog from "@/components/produtos/accordeon/index";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Faq from "@/components/faq";
 
 const number = [
   {
@@ -77,12 +78,11 @@ const valuesInput = [
 const contentFeaturesTwo = [
   {
     title: "Localização estratégica:",
-    text: "CDs distintos para operação de itens leves e pesados localizados na região metropolitana de São Paulo, local de maior volume de vendas do e-commerce brasileiro.",
-    icons: iconeThree.src,
+    text: "CDs distintos para operação de itens leves e pesados, localizados na região metropolitana de São Paulo, local de maior volume de vendas do e-commerce brasileiro.", icons: iconeThree.src,
   },
   {
     title: "CDs homologados: ",
-    text: "Pelos principais marketplaces que possibilita a concentração em um único estoque ou estoque avançado (Curva A).",
+    text: "Pelos principais marketplaces, permitindo a concentração em um único estoque ou em estoque avançado (Curva A).",
     icons: iconeTwo.src,
   },
   {
@@ -92,7 +92,7 @@ const contentFeaturesTwo = [
   },
   {
     title: "Gestão logística: ",
-    text: "Integrada com um time especializado em fulfillment trabalhando lado a lado a uma equipe de transportes para redução de prazo de entrega (Same Day e Next Day Delivery).",
+    text: "Integrada com um time especializado em fulfillment, trabalhando lado a lado a uma equipe de transportes para redução de prazo de entrega (Same Day e Next Day Delivery).",
     icons: iconeOne.src,
   },
 ];
@@ -178,18 +178,17 @@ export default function Logistica() {
         <ProductInstitutional
           id="sobre"
           title="Controle, Armazenagem e Expedição eficiente."
-          text="Todo o processo logístico desde o momento da venda do pedido até a expedição. Combinando tecnologia avançada e expertise em logística, o fulfillment é responsável por garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz que permite que seus clientes recebam seus produtos com precisão, agilidade e segurança."
-          banner={banner.src}
+          text="O Fulfillment abrange todo o processo logístico, desde a venda do pedido até a expedição, integrando tecnologia avançada e expertise em logística. Nosso compromisso é garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz, proporcionando aos clientes recebimento de produtos com precisão, agilidade e segurança." banner={banner.src}
           corButtonOne="#FBC709"
           corButtonThree="#D3A707"
           linkButtonOne="#fulfillment-personalizado"
           linkButtonTwo="#formulario"
           textButtonOne="saiba mais"
-          textButtonTwo="fale com consultor"
+          textButtonTwo="fale conosco"
         />
         <Numbers
           cor="#fbc705"
-          title="Garanta a satisfação do seu cliente com uma gestão logística 100% integrada em todas as etapas."
+          title="Gestão logística 100% integrada em todas as etapas."
           number={number}
           banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
           text=""
@@ -242,8 +241,7 @@ export default function Logistica() {
           flowReverse={true}
           image={wmsImage.src}
           title="Implementação de WMS."
-          text="Com a nossa plataforma de gerenciamento de armazém (WMS), oferecemos uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing."
-        />
+          text="Através de uma plataforma de gerenciamento de armazém (WMS), nossa solução de fulfillment oferece uma gestão eficiente e transparente do estoque. Nosso sistema avançado permite o monitoramento em tempo real, controle de inventário preciso e otimização dos processos de picking e packing." />
         <Cta
           button={false}
           title={"CD homologado Amazon."}
@@ -253,6 +251,7 @@ export default function Logistica() {
           logo={logoAmazon.src}
           banner={""}
         />
+        <Faq/>
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm
           nameForm="FormFulfillment"

@@ -1,0 +1,313 @@
+import Image from "next/image";
+import iconMessage from "@/assets/chat.svg";
+import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { ClientDataQuestionary } from "@/interfaces/questionarioCliente";
+import { useClientDataQuestionary } from "@/hooks/clientQuestionario";
+import axios from "axios";
+import AnswersData from "@/interfaces/answers";
+
+interface AnswerDataInterface {
+    question: string;
+    answer: string;
+}
+
+interface Fechar{
+    fechar : () => {}
+}
+
+export default function Questionario({fechar}: Fechar) {
+    const initialClientData: ClientDataQuestionary = {
+        name: "",
+        phone: "",
+        email: "",
+        nameBusiness: ""
+    };
+
+    const [clientData, setClientData] = useState(initialClientData);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [showNextQuestion, setShowNextQuestion] = useState(false);
+    const [typedQuestion, setTypedQuestion] = useState("");
+    const [inputText, setInputText] = useState(true);
+    const [inputValue, setInputValue] = useState("");
+    const [conversation, setConversation] = useState<{ type: string, text: string }[]>([{ type: "message", text: "" }]);
+    const [messageFinal, setMessageFinal] = useState("");
+    const { mutate, idEmpresa, isPending, isSuccess } = useClientDataQuestionary();
+    const [answeredQuestionsCount, setAnsweredQuestionsCount] = useState(0);
+    const [ off, setOff] = useState(false)
+    const [questionsOne, setQuestionsOne] = useState([
+        {
+            type: "name",
+            question: "Olá, para começarmos a nos conhecer preciso que você informe seu nome.",
+            answer: ""
+        },
+        {
+            type: "outros",
+            question: `Muito prazer, agora para mantermos o contato, poderia nos informar seu telefone com DDD, e-mail e também o nome do seu negocio usando virgula para separar cada informação? `,
+            answer: ""
+        },
+    ]);
+
+
+
+
+    const [resposta, setResposta] = useState<AnswerDataInterface[]>([]);
+    const [respostasAPI, setRespostaAPI] = useState<AnswersData[]>([]);
+    const [buttonAnswer, setButtonAnswer] = useState(false);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+
+
+    const getSolution = async (id: Number) => {
+        const url = `http://localhost:3000/perguntas/${id}`;
+        const response = await axios.get(url);
+        setMessageFinal(response.data.result[0].pergunta);
+
+    };
+    const getQuestions = async (startingPerguntaId: number) => {
+        try {
+            const response = await axios.get(`http://localhost:3000/respostas/${startingPerguntaId}`);
+
+
+            if (response.data.result[0] === "Não foi encontrado nenhum registro no banco de dados.") {
+                console.log("No more questions in the database.");
+                setShowNextQuestion(false);
+                setInputText(false);
+            } else {
+                const newQuestions = response.data.result.map((question: any) => ({
+                    type: "dynamic",
+                    question: question.pergunta,
+                    answer: ""
+                }));
+                setRespostaAPI(response.data.result);
+                setQuestionsOne((prevQuestions) => [...prevQuestions, ...newQuestions]);
+                setShowNextQuestion(true);
+                setInputText(false);
+                setButtonAnswer(false);
+            }
+        } catch (error) {
+            console.error("Erro ao buscar perguntas:", error);
+        }
+    };
+
+
+
+
+
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+    }, [conversation, showNextQuestion]);
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInputValue(e.target.value);
+    };
+
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>, type: string) => {
+        if (e.key === "Enter") {
+            nextQuestion(inputValue);
+            setInputValue("");
+        }
+    };
+
+    const postRespostaEmpresa = (idPergunta: number,
+        resposta: string) => {
+        const url = "http://localhost:3000/empresa-perguntas/";
+        axios
+            .post(url, {
+                id_empresa: idEmpresa,
+                id_pergunta: idPergunta,
+                resposta_usuario: resposta,
+            }).then((response) => {
+                const proximaPerguntaId = response.data;
+                nextQuestion(proximaPerguntaId);
+
+
+                if (proximaPerguntaId) {
+
+
+                    getSolution(proximaPerguntaId);
+
+                    // Ajustar para buscar a próxima pergunta a partir do ID retornado
+                    getQuestions(proximaPerguntaId);
+                    setAnsweredQuestionsCount((count) => count + 1);
+                } else {
+                    console.log(
+                        "Proxima pergunta não fornecida na resposta do servidor."
+                    );
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
+
+    const handleButtonClick = (type: string) => {
+        nextQuestion(inputValue);
+
+
+    };
+
+    const handleButtonClickAnswer = (value: string, idPergunta: number) => {
+        const newConversation = [...conversation, { type: "answer", text: value }];
+        setConversation(newConversation);
+        postRespostaEmpresa(idPergunta, value);
+        nextQuestion(value);
+    };
+
+    const nextQuestion = (answer: string) => {
+        if (answer.length > 0) {
+            const updatedQuestions = [...questionsOne];
+            updatedQuestions[currentQuestion].answer = answer;
+            setQuestionsOne(updatedQuestions);
+
+            const newConversation = [...conversation, { type: "answer", text: answer }];
+            setConversation(newConversation);
+
+            // Atualizar dados do cliente conforme necessário
+            if (currentQuestion === 0) {
+                setClientData((prev) => ({ ...prev, name: answer }));
+            } else if (currentQuestion === 1) {
+                const [phone, email, nameBusiness] = answer.split(",").map(info => info.trim());
+                setClientData((prev) => ({ ...prev, phone, email, nameBusiness }));
+            }
+
+            // Avançar para a próxima pergunta
+            setCurrentQuestion(currentQuestion + 1);
+            setShowNextQuestion(true);
+            setInputText(false);
+            setButtonAnswer(false);
+        } else {
+            console.log("Resposta vazia");
+        }
+    };
+
+    useEffect(() => {
+        if (currentQuestion >= questionsOne.length) {
+            // Se não houver mais perguntas, finalizar o questionário
+            mutate(clientData);
+            console.log("Não há mais perguntas.");
+            return;
+        }
+
+        if (showNextQuestion) {
+            setTypedQuestion("");
+
+            let question = questionsOne[currentQuestion].question; // Pegar a pergunta atual
+            if (currentQuestion > 0) {
+                question = questionsOne[questionsOne.length - 1].question;
+            }
+
+
+            let i = 0;
+
+            const typingInterval = setInterval(() => {
+                if (i < question.length) {
+                    setTypedQuestion((prev) => prev + question.charAt(i));
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                    setConversation((prev) => [
+                        ...prev,
+                        { type: "question", text: question }
+                    ]);
+                    setShowNextQuestion(false);
+                    setInputText(questionsOne[currentQuestion].type !== "dynamic");
+                    setButtonAnswer(questionsOne[currentQuestion].type === "dynamic");
+                }
+            }, 0.3);
+
+            return () => clearInterval(typingInterval);
+        }
+    }, [showNextQuestion, currentQuestion, questionsOne, clientData]);
+
+    useEffect(() => {
+        if (currentQuestion < questionsOne.length) {
+            setShowNextQuestion(true); // Mostra a próxima pergunta
+            setInputText(false); // Desabilita a entrada de texto
+        } else if (currentQuestion === questionsOne.length) {
+            getQuestions(1); // Busca novas perguntas
+        }
+    }, [currentQuestion, questionsOne.length]);
+
+
+
+    return (
+        <div className={`fixed flex items-center overflow-auto justify-center top-0 w-full h-full z-50 bg-[#0000008d] `}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                className="fixed flex rounded-2xl bg-white w-[1100px] h-[750px]"
+            >
+                <div className="flex flex-col justify-between items-center pb-5 w-64 h-full bg-black rounded-s-2xl">
+                    <div className="flex items-center justify-start gap-4 pl-4 bg-[#1E1E1E] rounded-tl-2xl w-full h-14">
+                        <Image className="w-7" src={iconMessage} alt="Icone branco do Questionario" width={100} height={100} />
+                        <h1 className="text-white p-0 capitalize text-sm font-extralight">chat uX group</h1>
+                    </div>
+                    <div className="w-full flex flex-col items-start gap-2 px-5 justify-center">
+                        <h1 className="text-white pb-0 text-sm font-normal">
+                            Deseja sair?
+                        </h1>
+                         <button onClick={() => fechar() } className="border rounded-lg bg-transparent p-2 hover:bg-white hover:text-black transition-all text-base text-white w-full">sair</button>
+                    </div>
+                </div>
+                <div style={{ paddingBottom: "50px" }} className="p-4 pl-10 pr-10 rounded-l-2xl h-full flex overflow-auto flex-col justify-between gap-10 bg-white rounded-e-2xl w-full">
+                    <div ref={scrollRef} className=" overflow-auto pb-10 flex flex-col h-full">
+
+                        {conversation.map((entry, index) => (
+                            <div
+                                key={index}
+                                className={`mt-2 flex justify-start  items-start max-w-full font-medium ${entry.text.length === 0 ? "flex flex-col-reverse items-start justify-start pb-0 text text-left" : "text-left"}  ${entry.type === "question" ? "text-left font-medium" : "text-left bg-[#EDEDED] w-fit font-normal p-2 rounded-md"}`}
+                            >
+                                <p className="flex pb-2 flex-col-reverse">{entry.text.length === 0 ? <span className="pb-0 text-base">Olá UX, tudo bem?</span> : ""}</p>
+                                {entry.type === "question" ? <span className="flex flex-col items-start py-5"> <span className="text-xs">UX Group:</span> {entry.text}</span> : <span className="flex flex-col items-start pr-1 p-0"> <span className="text-xs">você:</span>  {entry.text}</span>}
+
+                            </div>
+                        ))}
+                        {showNextQuestion && (
+                            <div className="mt-2 w-full max-w-full  text-start">
+                                {typedQuestion}
+                            </div>
+                        )}
+                    </div>
+                    <div className={`flex h-2/5 items-center justify-end ${buttonAnswer === false && inputText === false ? "[display:none]" : "flex"}`}>
+                        <p>{buttonAnswer} {inputText}</p>
+                        {buttonAnswer && (
+                            <div className="w-full h-1/4 flex justify-center gap-2 items-end flex-col">
+                                {respostasAPI?.map((data, index) => (
+                                    <button
+                                        key={index}
+                                        className="flex items-center justify-center w-full hover:scale-95 transition-all text-[14px] bg-black rounded-lg p-8 h-10 text-white"
+                                        onClick={() => handleButtonClickAnswer(data.resposta, data.pergunta_id)}
+                                    >
+                                        {data.resposta}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                        {inputText && (
+                            <div className="w-full h-full flex justify-end items-end flex-col">
+                                <input
+                                    className="w-full align-text-top border-gray-400 rounded-xl border h-14 pl-2"
+                                    name=""
+                                    id=""
+                                    placeholder="Digite aqui..."
+                                    value={inputValue}
+                                    onChange={handleInputChange}
+                                    onKeyPress={(e) => handleKeyPress(e, questionsOne[currentQuestion].type)}
+                                />
+                                <button
+                                    onClick={() => handleButtonClick(questionsOne[currentQuestion].type)}
+                                    className="w-52 mt-2 hover:scale-95 h-10 bg-black text-white rounded-lg"
+                                >
+                                    Enviar
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    );
+}

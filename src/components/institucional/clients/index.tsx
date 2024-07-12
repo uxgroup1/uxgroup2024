@@ -38,7 +38,6 @@ const images = [
   logoDuty,
   logoMulti,
   logoDorel,
-  logoCargo,
 ];
 
 export default function ClientsCases() {
