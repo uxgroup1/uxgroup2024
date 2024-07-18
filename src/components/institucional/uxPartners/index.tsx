@@ -1,46 +1,20 @@
 import Image from "next/image";
-import style from "./style.module.scss";
-import imageUxPartners from "@/assets/logos/ux-partners.svg";
-import background from "@/assets/home/bg-ux-partners.png";
+import connect from "@/assets/connect.svg"
 import Link from "next/link";
 
 function UxPartners() {
   return (
     <>
-      <section
-        style={{
-          backgroundImage: `url(${background.src})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        className={style.UxPartners}
-      >
-        <div className={style.Container}>
-          <div className={style.BoxUxPartners}>
-            <div className={style.UX_partners}>
-              <Image
-                className="lg:w-[400px] w-[300px]"
-                src={imageUxPartners}
-                alt="Logo UX Partners"
-                width={100}
-                height={100}
-              />
+      <section className="bg-white lg:h-auto max-w-[1996px] lg:pt-[15%] pt-[0%] xl:pt-[03%] w-full  ">
+        <div className="flex flex-col w-full items-center justify-center">
+          <div className="w-[90%] flex lg:flex-row flex-col h-full">
+            <div className="lg:w-1/2 w-full shadow-md rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl bg-gray-400 h-[400px] lg:h-[610px]">
+
             </div>
-            <div className={style.Content}>
-              <h1>UX Partners e Aceleradora de Startups.</h1>
-              <p className="xl:text-center flex text-justify w-4/5">
-                A UX entende que esse processo de transformação do e-commerce
-                requer a união de todos os agentes envolvidos na missão de
-                fornecer uma boa experiência de compra para o consumidor
-                digital. Para isso, estimulamos parcerias com aqueles que
-                acreditam nesse propósito e investimos em startups que nascem
-                com o desafio de trazer inovação para o setor.
-              </p>
-              <Link className="w-full items-center flex justify-center" href={"#formulario"}>
-                <button className=" w-full md:w-[225px]  hover:font-semibold transition">
-                  fale com a gente
-                </button>
-              </Link>
+            <div className="flex flex-col gap-5 lg:text-left text-center items-center lg:items-start p-12 lg:p-[60px] justify-center w-full lg:w-1/2 border lg:rounded-b-none rounded-b-2xl lg:rounded-r-2xl shadow-md">
+              <Image className="w-60" src={connect} alt="" width={100} height={100} />
+              <p className="lg:w-[95%]">Na UX, acreditamos que para alcançar a transformação que o e-commerce exige em oferecer uma experiência de compra excepcional para o consumidor digital, precisamos criar conexões estratégicas que compartilhem do propósito de gerar valor ao cliente, promovendo uma sinergia que eleve os padrões de qualidade e eficiência através soluções integradas e inovadoras.</p>
+              <button className="w-[200px] h-10 rounded-lg bg-black text-white hover:scale-95 transition"> <Link className="w-full h-full flex items-center justify-center" href={"#formulario"}>saiba mais</Link>  </button>
             </div>
           </div>
         </div>

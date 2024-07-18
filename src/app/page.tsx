@@ -49,6 +49,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Questionario from "@/components/institucional/questionario";
 import ButtonChat from "@/components/chat";
 import { useState } from "react";
+import NewBannerHome from "@/components/institucional/newBannerHome";
+import NewTwoCards from "@/components/TwoCardsHome";
 
 
 const content = [
@@ -248,9 +250,11 @@ function gtag_report_conversion(url) {
         </noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
-        <BannerHome />
+        {/* <BannerHome /> */}
+        <NewBannerHome/>
         <EcoSistemaUx />
         <ClientsCases />
+        <NewTwoCards/>
         {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
         {questionario && (
           <Questionario fechar={async () => setQuestinario(!questionario)} />
