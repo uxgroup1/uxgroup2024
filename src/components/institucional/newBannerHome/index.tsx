@@ -44,7 +44,7 @@ export default function NewBannerHome() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex === 3 ? 0 : prevIndex + 1));
-        }, 4000);
+        }, 5000);
 
 
         return () => clearInterval(interval);
