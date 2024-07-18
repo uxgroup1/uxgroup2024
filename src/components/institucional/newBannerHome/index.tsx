@@ -157,7 +157,7 @@ export default function NewBannerHome() {
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
-                        <h2 className="text-lg text-center font-light">{banners[currentIndex].title}</h2>
+                        <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                             <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> saiba mais</Link>
 
@@ -169,7 +169,7 @@ export default function NewBannerHome() {
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
-                        <h2 className="text-lg text-center font-light">{banners[currentIndex].title}</h2>
+                        <h2 className="text-xl text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                             <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> saiba mais</Link>
 
