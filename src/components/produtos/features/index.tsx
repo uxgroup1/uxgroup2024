@@ -3,6 +3,7 @@ import svg from "../../../assets/faviconBanner/ux-log.svg";
 import Link from "next/link";
 
 interface Content {
+  bold?: string
   title: string;
   icons: string;
 }
@@ -34,14 +35,12 @@ export default function FeaturesComponent({
     <section id={id} className="bg-white flex items-center justify-center  w-full md:px-0 px-5 ">
       <div className="max-w-[1996px] w-full flex items-center justify-center md:justify-center">
         <div
-          className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${
-            rowReverse === true ? "lg:flex-row-reverse md:gap-28  " : "lg:flex"
-          }  lg:items-center`}
+          className={`lg:flex md:flex-row flex flex-col-reverse w-full md:w-[90%] ${rowReverse === true ? "lg:flex-row-reverse md:gap-28  " : "lg:flex"
+            }  lg:items-center`}
         >
           <div
-            className={`w-full md:w-[55%] ${
-              rowReverse === true ? "md:w-[50%]" : ""
-            }  `}
+            className={`w-full md:w-[55%] ${rowReverse === true ? "md:w-[50%]" : ""
+              }  `}
           >
             {" "}
             {imageSobTitle && (
@@ -73,7 +72,7 @@ export default function FeaturesComponent({
                     />
                     <div className="mt-4 w-full  h-full md:mt-0">
                       <p className=" pb-3 md:pb-0 md:w-[80%] font-medium cursor-default  text-black w-full ">
-                        {item.title}
+                       <b>{item.bold}</b>{item.title}
                       </p>
                     </div>
                   </div>
@@ -89,9 +88,8 @@ export default function FeaturesComponent({
             </div>
           </div>
           <div
-            className={`${
-              rowReverse === true ? "md:justify-start" : ""
-            } rounded-2xl flex lg:items-center md:pb-0 pb-10 w-full md:w-1/2 lg:justify-center`}
+            className={`${rowReverse === true ? "md:justify-start" : ""
+              } rounded-2xl flex lg:items-center md:pb-0 pb-10 w-full md:w-1/2 lg:justify-center`}
           >
             <Image
               width={100}

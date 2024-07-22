@@ -136,7 +136,7 @@ export default function NewBannerHome() {
                             banners.map((data) => {
                                 return (
                                     <div className="lg:flex [display:none] w-full transition-all" key={data.index}>
-                                        <Image className={` ${currentIndex === 0 ? "ml-[80px]" : ""} ${currentIndex === data.index ? "flex absolute transition-all opacity-90" : "[display:none]"} ml-5 -mt-5 z-50 w-16 shadow-md rounded-lg  transition-all `} src={currentIndex === data.index ? data.icon : ""} alt="" />
+                                        <Image className={` ${currentIndex === 0 ? "ml-[80px]" : ""} ${currentIndex === data.index ? "flex absolute transition-all opacity-90" : "[display:none]"} ml-5 -mt-5 z-40 w-16 shadow-md rounded-lg  transition-all `} src={currentIndex === data.index ? data.icon : ""} alt="" />
                                         <Image
                                             className={`w-full cursor-pointer ${currentIndex === data.index ? "scale-110 transition-all [box-shadow: 0px 6px 6px 0px rgba(156,156,156,0.44)]" : ""} `}
                                             src={data.banners}
@@ -153,12 +153,12 @@ export default function NewBannerHome() {
                     </div>
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-8 shadow-md w-full lg:w-[90%] h-72 lg:h-64 border border-t rounded-t-2xl `}>
+                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-5 shadow-md w-full lg:w-[90%] h-72 lg:h-64 border border-t rounded-t-2xl `}>
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
-                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
+                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                             <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> saiba mais</Link>
 
                         </button>

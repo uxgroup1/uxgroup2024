@@ -15,6 +15,8 @@ import fusionLogo from "@/assets/logoProdutosAnimados/fusion-animado.gif";
 import fulfillmetlogo from "@/assets/logoProdutosAnimados/fulfillment-animado.gif";
 import ondetahLogo from "@/assets/logoProdutosAnimados/ondetah-animado.gif";
 import pudoLogo from "@/assets/logoProdutosAnimados/pudo-animado.gif";
+import vendasLogo from "@/assets/logos/logo-vendas.png"
+import connectLogo from "@/assets/logos/logo-connect.png"
 import Link from "next/link";
 import Image from "next/image";
 import PedidoOndetah from "../pedidoOndetah";
@@ -73,10 +75,32 @@ const contentLog: contentCard[] = [
     logo: pudoLogo.src,
   },
 ];
+const contentVendas: contentCard[] = [
+  {
+    index: 0,
+    text: "Texto de Vendas",
+    banner: "",
+    link: "/vendas",
+    logo: vendasLogo.src,
+  },
+
+];
+const contentConnect: contentCard[] = [
+  {
+    index: 0,
+    text: "Texto de Connect",
+    banner: bannerFulfillment.src,
+    link: "/connect",
+    logo: connectLogo.src,
+  },
+
+];
 
 export default function Header() {
   const [openMenuGestao, setOpenMenuGestao] = useState(false);
   const [openMenuLog, setOpenMenuLog] = useState(false);
+  const [openMenuVendas, setOpenMenuVendas] = useState(false);
+  const [openMenuConnect, setOpenMenuConnect] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [indexHover, setIndexHover] = useState(0);
   const [openModal, setOpenModal] = useState(false);
@@ -86,16 +110,38 @@ export default function Header() {
     setOpenMenu(!openMenu);
     setOpenMenuLog(false);
     setOpenMenuGestao(false);
+    setOpenMenuConnect(false);
+    setOpenMenuVendas(false);
   };
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
     setOpenMenuLog(false);
     setOpenModal(false);
+    setOpenMenuConnect(false);
+    setOpenMenuVendas(false);
   };
   const handleOpenClickLog = () => {
     setOpenMenuLog(!openMenuLog);
     setOpenMenuGestao(false);
     setOpenModal(false);
+    setOpenMenuConnect(false);
+    setOpenMenuVendas(false);
+  };
+  const handleOpenClickVendas = () => {
+    console.log("aqui");
+
+    setOpenMenuVendas(!openMenuVendas);
+    setOpenMenuGestao(false);
+    setOpenModal(false);
+    setOpenMenuConnect(false);
+    setOpenMenuLog(false);
+  };
+  const handleOpenClickConnect = () => {
+    setOpenMenuConnect(!openMenuConnect);
+    setOpenMenuGestao(false);
+    setOpenModal(false);
+    setOpenMenuLog(false);
+    setOpenMenuVendas(false);
   };
 
   return (
@@ -143,9 +189,8 @@ export default function Header() {
               </button>
               <div
                 id="mega-menu-full-image"
-                className={`items-center justify-between ${
-                  openMenu ? "block" : "hidden"
-                } w-full pl-5 md:flex md:w-auto md:order-1`}
+                className={`items-center justify-between ${openMenu ? "block" : "hidden"
+                  } w-full pl-5 md:flex md:w-auto md:order-1`}
               >
                 <ul className="flex md:items-center md:justify-center flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                   <li>
@@ -167,11 +212,10 @@ export default function Header() {
                     >
                       Gestão
                       <MdKeyboardArrowDown
-                        className={`${
-                          openMenuGestao === true
-                            ? "rotate-180 transition ease-in-out"
-                            : ""
-                        } text-xl`}
+                        className={`${openMenuGestao === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                          } text-xl`}
                       />
                     </Link>
                   </li>
@@ -184,11 +228,42 @@ export default function Header() {
                     >
                       Logística
                       <MdKeyboardArrowDown
-                        className={`${
-                          openMenuLog === true
-                            ? "rotate-180 transition ease-in-out"
-                            : ""
-                        } text-xl`}
+                        className={`${openMenuLog === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                          } text-xl`}
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={""}
+                      onClick={handleOpenClickVendas}
+                      className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                      aria-current="page"
+                    >
+                      Vendas
+                      <MdKeyboardArrowDown
+                        className={`${openMenuVendas === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                          } text-xl`}
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={""}
+                      onClick={handleOpenClickConnect}
+                      className="flex lg:justify-center lg:items-center   hover:transition-all  items-center cursor-pointer justify-between w-24 bg-transparent font-normal py-2  md:w-auto md:hover:bg-transparent md:border-transparent  text-white  md:p-0 "
+                      aria-current="page"
+                    >
+                      Connect
+                      <MdKeyboardArrowDown
+                        className={`${openMenuConnect === true
+                          ? "rotate-180 transition ease-in-out"
+                          : ""
+                          } text-xl`}
                       />
                     </Link>
                   </li>
@@ -276,19 +351,17 @@ export default function Header() {
                           src={contentLog[indexHover].logo}
                           width={100}
                           height={100}
-                          className={`${
-                            indexHover === 1
-                              ? "animated-state-BannerTwo "
-                              : "animated-state-BannerHeader"
-                          } h-16 w-auto flex items-start justify-start pb-5`}
+                          className={`${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } h-16 w-auto flex items-start justify-start pb-5`}
                           alt="Gestão, Logística e Sustentabilidade"
                         />
                         <p
-                          className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${
-                            indexHover === 1
-                              ? "animated-state-BannerTwo "
-                              : "animated-state-BannerHeader"
-                          } animated-state-Banner leading-tight tracking-tight text-white`}
+                          className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } animated-state-Banner leading-tight tracking-tight text-white`}
                         >
                           {contentLog[indexHover].text}
                         </p>
@@ -297,6 +370,168 @@ export default function Header() {
                           className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentLog[indexHover].link}>
+                            conhecer solução
+                          </Link>
+
+                          <svg
+                            className="w-3 h-3 ms-2 rtl:rotate-180"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 10"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M1 5h12m0 0L9 1m4 4L9 9"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {openMenuVendas && (
+              <div
+                id="mega-menu-full-image-dropdown"
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[95%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
+              >
+                <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
+                  <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">
+                    <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                      <h1 className="text-white">Vendas</h1>
+                    </div>
+
+                    <ul className="mb-4 space-y-4 md:mb-0">
+                      <li
+                        onMouseOver={() => setIndexHover(0)}
+                        className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white"
+                      >
+                        <Link
+                          href="/vendas"
+                          className="font-normal text-white text-lg "
+                        >
+                          Vendas
+                        </Link>
+                      </li>
+
+                    </ul>
+                    <div
+                      className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
+                      style={{
+                        transition: "0.1s",
+                        backgroundImage: `url(${contentVendas[indexHover].banner})`,
+                      }}
+                    >
+                      <div className={` w-full h-full bg-[#00000080] p-8`}>
+                        <Image
+                          src={contentVendas[indexHover].logo}
+                          width={100}
+                          height={100}
+                          className={`${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } h-12 w-auto flex items-start justify-start pb-5`}
+                          alt="Gestão, Logística e Sustentabilidade"
+                        />
+                        <p
+                          className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } animated-state-Banner leading-tight tracking-tight text-white`}
+                        >
+                          {contentVendas[indexHover].text}
+                        </p>
+                        <button
+                          type="button"
+                          className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                        >
+                          <Link href={contentVendas[indexHover].link}>
+                            conhecer solução
+                          </Link>
+
+                          <svg
+                            className="w-3 h-3 ms-2 rtl:rotate-180"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 10"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M1 5h12m0 0L9 1m4 4L9 9"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {openMenuConnect && (
+              <div
+                id="mega-menu-full-image-dropdown"
+                className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[95%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
+              >
+                <div className=" flex items-center justify-center w-full py-5 text-sm max-w-[1996px]">
+                  <div className="grid bg-black xl:w-[93%] lg:w-[90%] w-[90%] md:grid-cols-2 md:px-0">
+                    <div className="md:[display:none] pt-5 border-t border-t-white flex w-full items-center justify-center gap-3">
+                      <h1 className="text-white">Connect</h1>
+                    </div>
+
+                    <ul className="mb-4 space-y-4 md:mb-0">
+                      <li
+                        onMouseOver={() => setIndexHover(0)}
+                        className="w-4/5 py-1 transition hover:border-b-[0.5px] hover:border-white"
+                      >
+                        <Link
+                          href="/connect"
+                          className="font-normal text-white text-lg "
+                        >
+                          Connect
+                        </Link>
+                      </li>
+
+                    </ul>
+                    <div
+                      className=" bg-local bg-center bg-no-repeat bg-cover rounded-lg  hover:bg-blend-soft-light "
+                      style={{
+                        transition: "0.1s",
+                        backgroundImage: `url(${contentConnect[indexHover].banner})`,
+                      }}
+                    >
+                      <div className={` w-full h-full bg-[#00000080] p-8`}>
+                        <Image
+                          src={contentConnect[indexHover].logo}
+                          width={100}
+                          height={100}
+                          className={`${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } h-16 w-auto flex items-start justify-start pb-5`}
+                          alt="Gestão, Logística e Sustentabilidade"
+                        />
+                        <p
+                          className={`max-w-3xl text-xl mb-5 font-semibold [letter-spacing:normal] ${indexHover === 1
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } animated-state-Banner leading-tight tracking-tight text-white`}
+                        >
+                          {contentConnect[indexHover].text}
+                        </p>
+                        <button
+                          type="button"
+                          className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
+                        >
+                          <Link href={contentVendas[indexHover].link}>
                             conhecer solução
                           </Link>
 
@@ -379,19 +614,17 @@ export default function Header() {
                           src={contentGestao[indexHover].logo}
                           width={10}
                           height={10}
-                          className={`${
-                            indexHover === 0
-                              ? "animated-state-BannerTwo "
-                              : "animated-state-BannerHeader"
-                          } h-16 w-auto flex items-start justify-start pb-5`}
+                          className={`${indexHover === 0
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } h-16 w-auto flex items-start justify-start pb-5`}
                           alt="Gestão, Logística e Sustentabilidade"
                         />
                         <p
-                          className={`max-w-2xl text-xl mb-5 font-semibold [letter-spacing:normal] ${
-                            indexHover === 0
-                              ? "animated-state-BannerTwo "
-                              : "animated-state-BannerHeader"
-                          } animated-state-Banner leading-tight tracking-tight text-white`}
+                          className={`max-w-2xl text-xl mb-5 font-semibold [letter-spacing:normal] ${indexHover === 0
+                            ? "animated-state-BannerTwo "
+                            : "animated-state-BannerHeader"
+                            } animated-state-Banner leading-tight tracking-tight text-white`}
                         >
                           {contentGestao[indexHover]?.text}
                         </p>

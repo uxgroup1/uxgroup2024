@@ -1,0 +1,85 @@
+.CarrouselProducts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 80px;
+
+  .Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+
+    .BoxCarrouselProducts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      width: 90%;
+      border-radius: 16px;
+      color: #000;
+
+      .Controller {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 16px;
+
+        .ControllerContent {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          width: 100%;
+
+
+          div {
+            width: 100%;
+            font-size: 36px;
+            padding-bottom: 8px;
+          }
+
+          h1 {
+            width: 80%;
+            padding-bottom: 0;
+          }
+          p {
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .CarrouselProducts{
+    padding-top: 50px;
+    .Container{
+      .BoxCarrouselProducts{
+        .Controller{
+          .ControllerContent{
+            div{
+              width: 100%;
+            }
+            h1{
+              line-height: 130%;
+            }
+            p{
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
