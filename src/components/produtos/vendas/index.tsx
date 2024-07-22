@@ -51,9 +51,9 @@ export default function SimplifiqueEcommerce() {
 
                     <div className="w-[90%]">
                         <div className="flex gap-0 flex-col leading-[120%]">
-                            <h1> Venda mais com um e-commerce sob medida.</h1>
+                            <h1 className="text-black"> Venda mais com um e-commerce sob medida.</h1>
                         </div>
-                        <p className="w-full lg:w-3/4">
+                        <p className="w-full text-black lg:w-3/4">
                             Fácil para quem está começando e feito para quem quer ir mais longe, a plataforma one stop shop, oferecida pela UX em
                             conexão com a Unbox, possui todas as ferramentas necessárias para o sucesso do seu e-commerce. Uma loja personalizada
                             de acordo com o perfil e tamanho do seu negócio,
