@@ -59,7 +59,7 @@ export default function SimplifiqueEcommerce() {
                             de acordo com o perfil e tamanho do seu negócio,
                             focada na experiência do cliente com soluções integradas que vão desde a estratégia de marketing até a entrega final:                        </p>
                     </div>
-                    <div className="w-[90%] flex-row gap-4 pb-2 md:[display:flex] [display:none] justify-center md:justify-end">
+                    {/* <div className="w-[90%] flex-row gap-4 pb-2 md:[display:flex] [display:none] justify-center md:justify-end">
                         <div
                             className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#bfbfbf56] cursor-pointer"
                         // onClick={handleScrollLeft}
@@ -82,7 +82,7 @@ export default function SimplifiqueEcommerce() {
                                 height={40}
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 
