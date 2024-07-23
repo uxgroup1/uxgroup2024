@@ -9,7 +9,7 @@ function UxPartners() {
       <section className="bg-white lg:h-auto max-w-[1996px] lg:pt-[15%] pt-[0%] xl:pt-[03%] w-full  ">
         <div className="flex flex-col w-full items-center justify-center">
           <div className="w-[90%] flex lg:flex-row flex-col h-full">
-            <div style={{ backgroundImage: `url(${connectBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="lg:w-1/2 w-full shadow-md rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl bg-gray-400 h-[400px] lg:h-[610px]">
+            <div style={{ backgroundImage: `url(${connectBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="lg:w-1/2 w-full shadow-md rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl bg-gray-400 h-[400px] lg:h-[500px]">
 
             </div>
             <div className="flex flex-col gap-5 lg:text-left text-center items-center lg:items-start p-12 lg:p-[60px] justify-center w-full lg:w-1/2 border lg:rounded-b-none rounded-b-2xl lg:rounded-r-2xl shadow-md">

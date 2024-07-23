@@ -55,7 +55,7 @@ const contentGestao: contentCard[] = [
 const contentLog: contentCard[] = [
   {
     index: 0,
-    text: "Controle, Armazenagem e Entregas Eficientes.",
+    text: "Controle, Armazenagem e Expedição eficiente.",
     banner: bannerFulfillment.src,
     link: "/fulfillment",
     logo: fulfillmetlogo.src,
