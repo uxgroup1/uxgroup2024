@@ -37,7 +37,7 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
 
                 </div>
                 <div className="w-[90%] pt-10 lg:flex-row flex-col  flex items-center justify-center gap-4">
-                    <div style={{ backgroundImage: `url(${vendasBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white bg-gray-300 flex justify-end flex-col gap-5 h-[460px] shadow-md rounded-2xl">
+                    <div style={{ backgroundImage: `url(${vendasBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white bg-gray-300 flex justify-end flex-col gap-5 h-auto lg:h-[460px] shadow-md rounded-2xl">
                         <div className="w-full bg-[#00000065] rounded-2xl h-full flex flex-col p-8 lg:p-16 items-start justify-end gap-5">
                             {iconOne && (
                                 <Image className="w-16 lg:w-20" src={iconOne} alt="" width={100} height={100} />
@@ -53,14 +53,14 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
                                 </p>
                             )}
 
-                            <button className={`w-52 h-10 hover:scale-95 transition bg-[${corButtonOne}] text-white shadow rounded-lg`}>
+                            <button style={{backgroundColor:`${corButtonTwo}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
                                 <Link href={"#formulario"}>
                                     saiba mais
                                 </Link>
                             </button>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `url(${gestaoBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white justify-end bg-gray-300 flex flex-col  gap-5 h-[460px] shadow-md rounded-2xl">
+                    <div style={{ backgroundImage: `url(${gestaoBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white justify-end bg-gray-300 flex flex-col  gap-5 h-auto lg:h-[460px] shadow-md rounded-2xl">
                         <div className="w-full  bg-[#00000065] rounded-2xl h-full flex flex-col p-8 lg:p-16 items-start justify-end gap-5">
 
                             {iconTwo && (
@@ -74,7 +74,7 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
                                 <p  className="text-white">{textTwo}</p>
                             )}
 
-                            <button className={`w-52 h-10 hover:scale-95 transition bg-[${corButtonTwo}] text-white shadow rounded-lg`}>
+                            <button style={{backgroundColor:`${corButtonTwo}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
                                 <Link href={"#formulario"}>
                                     saiba mais
                                 </Link>
