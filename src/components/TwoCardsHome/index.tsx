@@ -24,7 +24,7 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
         <section className="bg-white lg:h-auto max-w-[1996px] lg:pt-[15%] pt-[10%] xl:pt-[03%] w-full  ">
             <div className="flex flex-col w-full items-center justify-center">
                 <div className="w-[90%] gap-4 flex items-center justify-center flex-col" >
-                    <h1 className="lg:text-left text-center">
+                    <h1 className="lg:text-left text-black text-center">
 
                         {title}
                     </h1>
