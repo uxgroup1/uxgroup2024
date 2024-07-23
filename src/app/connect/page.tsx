@@ -18,6 +18,7 @@ import bannerOne from "@/assets/ondetah/analise-preditiva.png"
 import banner from "@/assets/ondetah/clientesOndetah.png"
 import Cta from "@/components/cta";
 import NewTwoCards from "@/components/TwoCardsHome";
+import CardsConnect from "@/components/produtos/cards";
 
 export default function Connect() {
 
@@ -127,7 +128,7 @@ function gtag_report_conversion(url) {
         <JumboTron banner="" trocaBanner bannersTroca={banners} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Estratégia + Diferenciação + Integração" text="Gere uma experiência única para o seu cliente digital" />
         <ProductInstitutional banner={bannerOne.src} corButtonOne="#7DAE59" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo="" title="Seu e-commerce pede conexões que geram mais vendas." text="Com o ecossistema UX Group, as suas vendas digitais se transformam. Aqui, conectamos soluções desde o clique até o cliente buscando oferecer sempre a melhor experiência ao cliente. Utilize nossas soluções de vendas, gestão, logística e esg e garanta mais: visibilidade, personalização e resultados." />
         <Cta title={"Gere uma experiência única para o seu cliente digital"} banner={""} button />
-        <NewTwoCards corButtonOne={"#A900D9"} corButtonTwo={"#A900D9"}  title="Conheça nossas conexões" titleOne="Unbox" textOne="Uma plataforma de vendas one stop shop, onde você encontra todas as ferramentas necessárias para gerenciar seu negócio online em um só lugar. Desde o desenvolvimento do projeto até automação de marketing, a Unbox simplifica a administração das vendas digitais,integra os processos de pagamento, economiza tempo, reduz os custos e melhora os resultados com soluções integradas." titleTwo="Venuxx" textTwo="Com soluções flexíveis e eficientes, adaptando os serviços às necessidades específicas de cada cliente, a Venuxx conecta especialistas em transporte a empresas do segmento B2B garantindo profissionalismo, confiabilidade e inovação. Com uma equipe majoritariamente de mulheres,cada entrega realizada reflete o compromisso com um serviço humanizado e de alta qualidade, agregando um valor único à experiência dos clientes. " />
+        <CardsConnect/>
         <ContactForm nameForm="connect" content={valuesInput} page="connect" />
         <Footer />
 
