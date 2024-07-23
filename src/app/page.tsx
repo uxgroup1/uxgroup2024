@@ -46,8 +46,8 @@ import iconTrux from "@/assets/home/trux.svg";
 import Script from "next/script";
 import { Blog } from "@/components/institucional/blog";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Questionario from "@/components/institucional/questionario";
-import ButtonChat from "@/components/chat";
+import vendas from "@/assets/vendas.svg"
+import gestao from "@/assets/gestao.svg"
 import { useState } from "react";
 import NewBannerHome from "@/components/institucional/newBannerHome";
 import NewTwoCards from "@/components/TwoCardsHome";
@@ -251,10 +251,15 @@ function gtag_report_conversion(url) {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         {/* <BannerHome /> */}
-        <NewBannerHome/>
+        <NewBannerHome />
         <EcoSistemaUx />
         <ClientsCases />
-        <NewTwoCards/>
+        <NewTwoCards
+          title="Tecnologia para vendas digitais"
+          text="Soluções personalizadas para o tamanho e perfil do seu negócio. Nossa plataforma one stop shop e nosso hub de integração oferecem uma experiência completa e integrada, desde o desenvolvimento da loja até a entrega ao cliente."
+          titleOne=" One Stop Shop" titleTwo=" Hub de Integração"
+          iconOne={vendas} iconTwo={gestao}
+          corButtonOne="#A900D9" corButtonTwo="#29265B" />
         {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
         {questionario && (
           <Questionario fechar={async () => setQuestinario(!questionario)} />

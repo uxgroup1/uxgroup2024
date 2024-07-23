@@ -30,11 +30,10 @@ function Cta({
       <section className={style.Cta}>
         <div className={style.Container}>
           <div
-            className={`${style.BoxCta} ${
-              gradient === true && !banner
+            className={`${style.BoxCta} ${gradient === true && !banner
                 ? "bg-gradient-to-l from-[#009881] to-[#29265B]"
                 : "bg-black"
-            }`}
+              }`}
             style={
               banner
                 ? { backgroundImage: `url(${banner})` }
@@ -45,7 +44,10 @@ function Cta({
               <div className={style.Controller}>
                 <div className="flex flex-col">
                   <h1 className="xl:text-[36px] lg:text-xl">{title}</h1>
-                  <p className="lg:w-4/5 w-full">{text}</p>
+                  {text && (
+                    <p className="lg:w-4/5 w-full">{text}</p>
+                  )}
+
                 </div>
                 {logo && (
                   <Image
@@ -61,9 +63,8 @@ function Cta({
                     <button
                       className="hover:font-semibold  text-black bg-white transition  hover:shadow-md"
                       style={{
-                        background: `linear-gradient(to right, ${corButtonOne}, ${
-                          corButtonOne ? corButtonTwo : corButtonOne
-                        })`,
+                        background: `linear-gradient(to right, ${corButtonOne}, ${corButtonOne ? corButtonTwo : corButtonOne
+                          })`,
                       }}
                     >
                       fale com um consultor
