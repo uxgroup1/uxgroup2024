@@ -59,11 +59,10 @@ export default function SliderTopicsVendas() {
             {content.map((_, index) => (
               <button
                 key={index}
-                className={`w-5 h-5 mx-2 rounded-full lg:mx-0 focus:outline-none ${
-                  contentIndex === index
+                className={`w-5 h-5 mx-2 rounded-full lg:mx-0 focus:outline-none ${contentIndex === index
                     ? "bg-gradient-to-r from-[#A900D9] to-[#450071] transition"
                     : "bg-white border transition border-[#A900D9]"
-                }`}
+                  }`}
                 onClick={() => handleButtonClick(index)}
               ></button>
             ))}
