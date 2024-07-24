@@ -54,7 +54,7 @@ export default function SliderTopicsVendas() {
   return (
     <section className="bg-white flex items-center pb-[100px] justify-center w-full max-w-[1996px]">
       <div className="flex flex-col-reverse  md:flex-row w-[90%] justify-center items-center">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-start gap-[10%] w-full">
+        <div className="flex flex-col-reverse md:flex-row  items-center justify-start gap-[10%] w-full">
           <div className="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
             {content.map((_, index) => (
               <button
