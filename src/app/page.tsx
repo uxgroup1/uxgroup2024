@@ -296,7 +296,7 @@ function gtag_report_conversion(url) {
         <LogisticaSustentavel id={"sustentabilidade"} />
         <UxPartners />
         <Blog />
-        <UxMidia colorText="#fff" content={contentUxMidia} />
+        <UxMidia colorText="#000" content={contentUxMidia} />
         <section style={{ paddingTop: "0px", paddingBottom: "30px" }}></section>
         <ContactForm nameForm="contactForm" content={valuesInput} page="Home" />
         <Footer />

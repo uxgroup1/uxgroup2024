@@ -125,7 +125,7 @@ function gtag_report_conversion(url) {
         </noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
-        <JumboTron banner="" trocaBanner bannersTroca={banners} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Estratégia + Diferenciação + Integração" text="Gere uma experiência única para o seu cliente digital" />
+        <JumboTron banner="" trocaBanner={false} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Estratégia + Diferenciação + Integração" text="Gere uma experiência única para o seu cliente digital" />
         <ProductInstitutional banner={bannerOne.src} corButtonOne="#7DAE59" linkButtonOne="" linkButtonTwo="" textButtonOne="" textButtonTwo="" title="Seu e-commerce pede conexões que geram mais vendas." text="Com o ecossistema UX Group, as suas vendas digitais se transformam. Aqui, conectamos soluções desde o clique até o cliente buscando oferecer sempre a melhor experiência ao cliente. Utilize nossas soluções de vendas, gestão, logística e esg e garanta mais: visibilidade, personalização e resultados." />
         <Cta title={"Gere uma experiência única para o seu cliente digital"} banner={""} button />
         <CardsConnect/>

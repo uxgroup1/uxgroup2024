@@ -53,7 +53,7 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
                                 </p>
                             )}
 
-                            <button style={{backgroundColor:`${corButtonTwo}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
+                            <button style={{backgroundColor:`${corButtonOne}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
                                 <Link href={"#formulario"}>
                                     saiba mais
                                 </Link>

@@ -251,7 +251,7 @@ export default function Header() {
                       />
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href={""}
                       onClick={handleOpenClickConnect}
@@ -266,7 +266,7 @@ export default function Header() {
                           } text-xl`}
                       />
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       target="_blank"
@@ -476,7 +476,7 @@ export default function Header() {
                 </div>
               </div>
             )}
-            {openMenuConnect && (
+            {/* {openMenuConnect && (
               <div
                 id="mega-menu-full-image-dropdown"
                 className={`mt-1 bg-black flex items-center justify-center absolute w-full xl:pl-5  pl-0 top-[95%] md:top-16 left-0 border-t-white transition-transform animated-state-header`}
@@ -556,7 +556,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
             {openMenuGestao && (
               <div
                 id="mega-menu-full-image-dropdown"

@@ -8,6 +8,8 @@ import arrowLeft from "@/assets/cta/arrowLeft.svg";
 import arrowRight from "@/assets/cta/arrowRigth.svg";
 import Image from "next/image";
 
+
+
 export default function SimplifiqueEcommerce() {
 
     const content = [
@@ -16,30 +18,35 @@ export default function SimplifiqueEcommerce() {
             text: "Desenvolvemos uma loja virtual sob medida para sua marca de acordo com o perfil do seu negócio e do seu cliente.",
             banner: "",
             link: "/fulfillment",
+            icon: "fklnaslfkn",
         },
         {
             title: "Estabilidade e segurança: infraestrutura robusta para seu negócio:",
             text: "Nossa infraestrutura tecnológica garante que sua loja virtual funcione de forma estável e segura, protegendo os dados da empresa e dos clientes.",
             banner: "",
             link: "/fulfillment",
+            icon: "fklnaslfkn",
         },
         {
             title: "Fluxo de vendas por assinatura 100% integrado ao seu e-commerce: ",
             text: "Facilitamos a venda de produtos por assinatura, integrando essa funcionalidade diretamente ao seu e-commerce para maior comodidade do seu cliente e por consequência maior retenção de clientes.",
             banner: "",
             link: "/fulfillment",
+            icon: "fklnaslfkn",
         },
         {
             title: "Experiência de marca personalizada como flagship digital:",
             text: "Criamos uma experiência de marca única e imersiva, transformando sua loja virtual em um verdadeiro flagship digital que encanta e fideliza seus clientes.",
             banner: "",
             link: "/fulfillment",
+            icon: "fklnaslfkn",
         },
         {
             title: "Meios de pagamento e logística instalados:",
             text: "Integramos os principais meios de pagamento e soluções logísticas, simplificando o processo de compra e garantindo entregas rápidas e seguras.",
             banner: "",
             link: "/fulfillment",
+            icon: "fklnaslfkn",
         },
 
     ];
@@ -89,7 +96,8 @@ export default function SimplifiqueEcommerce() {
 
                 <CarrouselCards
                     // containerRef={containerRef}
-                    colorText="black"
+
+                    colorText="#A900D9"
                     content={content}
                 />
             </section>

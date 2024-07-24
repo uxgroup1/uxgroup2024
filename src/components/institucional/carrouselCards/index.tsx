@@ -1,13 +1,16 @@
 import Link from "next/link";
 import style from "./style.module.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useRef } from "react";
+import testeicon from "@/assets/iconsLog/one.svg"
+import Image from "next/image";
+
 
 interface contentCards {
   title: string;
   text: string;
   banner: string;
   link: string;
+  icon?: string;
 }
 
 interface carrouselCards {
@@ -17,6 +20,7 @@ interface carrouselCards {
 }
 
 function CarrouselCards({ content, colorText, containerRef }: carrouselCards) {
+
 
 
   return (
@@ -34,8 +38,21 @@ function CarrouselCards({ content, colorText, containerRef }: carrouselCards) {
                   key={index}
                   className={` bg-cover ${style.Card}`}
                 >
+
                   <div className={style.content}>
-                    <h2 className={`text-black leading-[30px]`}>
+                    {
+                      data.icon && (
+                        <div className="w-20 relative top-3 mb-5 lg:-top-24 lg:-mb-16 h-20 rounded-2xl shadow-md">
+                          <div style={{background: "linear-gradient(to right, #A900D9, #450071"}} className="w-full h-full p-5 rounded-2xl bg-slate-300 flex items-center justify-center">
+                            <Image className="absolute w-10" src={testeicon} width={100} height={100} alt="" />
+                          </div>
+
+                        </div>
+                      )
+                    }
+
+
+                    <h2 style={{ color: `${colorText}` }} className={`leading-[30px]`}>
                       {data.title}
                     </h2>
                     <p className={`text-black text-sm pt-3 `}>{data.text}</p>
