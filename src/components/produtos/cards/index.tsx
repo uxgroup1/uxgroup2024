@@ -33,7 +33,7 @@ export default function CardsConnect() {
                                 </h1>
                                 <svg
                                     data-accordion-icon
-                                    className={`w-6 h-6 text-lg bg-[#EDEDED] rounded-lg p-1 ${openCardOne === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
+                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardOne === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -74,7 +74,7 @@ export default function CardsConnect() {
                                 </h1>
                                 <svg
                                     data-accordion-icon
-                                    className={`w-6 h-6 text-lg bg-[#EDEDED] rounded-lg p-1 ${openCardTw === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
+                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardTw === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
