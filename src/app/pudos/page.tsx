@@ -163,6 +163,7 @@ export default function Pudos() {
           {/* <!-- End Google Tag Manager (noscript) --> */}
           <Header />
           <JumboTron
+          buttonTwo
             textButtonOne="fale com um especialista"
             textButtonTwo="saiba mais"
             linkButtonOne="#formulario"
@@ -178,6 +179,7 @@ export default function Pudos() {
             style={{ paddingTop: "50px", paddingBottom: "0px" }}
           ></section>
           <ProductInstitutional
+          buttonTwo
             id="sobre"
             title="Entregas mais simples e convenientes.          "
             text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."

@@ -148,6 +148,7 @@ export default function Torre() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
+        buttonTwo
           corButtonOne="#fac30c"
           corButtonTwo="#fe8012"
           textButtonOne="fale com um especialista"
@@ -161,6 +162,7 @@ export default function Torre() {
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+        buttonTwo
           id="sobre"
           title="Otimize e transforme sua operação com Torre de Controle."
           text="Gerenciamento de transportes, entrega sustentável e suporte ao cliente integrado para um operação de entregas eficiente. Soluções inovadoras com tecnologia própria em todas as etapas que otimizam o processo logístico e garantem uma melhor experiência ao cliente."

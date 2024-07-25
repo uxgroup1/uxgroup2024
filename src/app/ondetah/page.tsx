@@ -147,6 +147,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);`}
 
         <Header />
         <JumboTron
+        buttonTwo
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
           linkButtonOne="#formulario"
@@ -160,6 +161,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);`}
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+          buttonTwo
           id="sobre"
           title="Produtividade e sustentabilidade um um único lugar."
           text="Uma solução tecnológica inovadora de rastreamento que permite ao gestor das vendas digitais e de transportes o acompanhamento em tempo real de todas as etapas do processo, podendo atuar de forma inteligente com base em dados e assim,  reduzir custos, melhorar a performance e a satisfação do cliente."
@@ -183,7 +185,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);`}
           corButtonOne="#29265B"
           corButtonTwo="#009580"
           title="Maximize a eficiência logística do seu negócio com nossa análise preditiva."
-          text="Controle absoluto sobre todo o ciclo de entrega dos seus pedidos.Transforme a sua visão logística com um sistema que não só prevê cada detalhe do processo de entrega, mas também oferece insights personalizados para o seu negócio." 
+          text="Controle absoluto sobre todo o ciclo de entrega dos seus pedidos.Transforme a sua visão logística com um sistema que não só prevê cada detalhe do processo de entrega, mas também oferece insights personalizados para o seu negócio."
           image={analisePreditiva.src}
           flowReverse={false}
         />

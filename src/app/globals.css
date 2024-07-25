@@ -110,9 +110,16 @@ p {
 }
 button {
   font-size: 14px;
+  height: 47px !important;
   cursor: pointer;
   background-color: #FFF;
   color: #000;
+}
+
+button:hover{
+  scale: .95;
+  transition: 0.3s !important;
+  font-weight: normal !important;
 }
 
 

@@ -281,6 +281,7 @@ export default function Fusion() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
+        buttonTwo
           linkButtonOne="#formulario"
           linkButtonTwo="#sobre"
           textButtonOne="fale com especialista"
@@ -294,6 +295,7 @@ export default function Fusion() {
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+          buttonTwo
           id="sobre"
           title="Tecnologia de Fretes Inovadora: Otimização, Economia e Escalabilidade"
           text="Uma tecnologia modular desde o cálculo de frete à conciliação, nossa solução para gestão de fretes garante ao gestor das vendas digitais, a melhora de performance, redução de custos, resolvendo os desafios de cada uma das etapas da cadeia de entrega seja no mundo do e-commerce ou do marketplace.        "

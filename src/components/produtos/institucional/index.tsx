@@ -13,6 +13,7 @@ interface Content {
   linkButtonOne: string;
   textButtonTwo: string;
   linkButtonTwo: string;
+  buttonTwo: boolean;
   id?: string;
 }
 
@@ -28,13 +29,13 @@ export default function ProductInstitutional({
   linkButtonOne,
   linkButtonTwo,
   id,
+  buttonTwo
 }: Content) {
   const [hovered, setHovered] = useState(false);
 
   const buttonStyle = {
-    background: `linear-gradient(to right, ${corButtonOne} 0%, ${
-      corButtonTwo ? corButtonTwo : corButtonOne
-    } 100%)`,
+    background: `linear-gradient(to right, ${corButtonOne} 0%, ${corButtonTwo ? corButtonTwo : corButtonOne
+      } 100%)`,
     backgroundSize: "200% 100%",
     transition: " 0.1s ease",
     cursor: "pointer",
@@ -42,9 +43,8 @@ export default function ProductInstitutional({
   };
 
   if (!corButtonTwo && corButtonThree && hovered) {
-    buttonStyle.background = `linear-gradient(to right, ${corButtonOne} 0%, ${
-      corButtonThree ? corButtonThree : corButtonOne
-    } 100%)`;
+    buttonStyle.background = `linear-gradient(to right, ${corButtonOne} 0%, ${corButtonThree ? corButtonThree : corButtonOne
+      } 100%)`;
   }
 
   return (
@@ -85,11 +85,13 @@ export default function ProductInstitutional({
                   </button>
                 </Link>
 
-                <Link href={linkButtonTwo}>
-                  <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-12 rounded-lg text-black hover:font-semibold transition-all">
-                    {textButtonTwo}
-                  </button>
-                </Link>
+                {buttonTwo && (
+                  <Link href={linkButtonTwo}>
+                    <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-12 rounded-lg text-black hover:font-semibold transition-all">
+                      {textButtonTwo}
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>

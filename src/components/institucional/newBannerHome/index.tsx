@@ -58,7 +58,8 @@ export default function NewBannerHome() {
             svgIcon: vendasSvg,
             title: "E-commerce totalmente personalizado do tamanho e perfil do seu negócio.",
             color: `A900D9`,
-            icon: iconVendas
+            icon: iconVendas,
+            link: "#vendas"
 
         },
         {
@@ -67,7 +68,8 @@ export default function NewBannerHome() {
             svgIcon: gestaoSvg,
             title: "Tecnologias inovadoras que simplificam a experiência de compra digital.",
             color: `29265B`,
-            icon: iconGestao
+            icon: iconGestao,
+            link: "#gestao"
 
         },
         {
@@ -76,7 +78,8 @@ export default function NewBannerHome() {
             svgIcon: logisticaSvg,
             title: "Operações logísticas com tecnologia de ponta e processos otimizados.",
             color: `FF7F13`,
-            icon: iconLogistica
+            icon: iconLogistica,
+            link: "#logistica"
 
         },
         {
@@ -85,7 +88,8 @@ export default function NewBannerHome() {
             svgIcon: esgSvg,
             title: "Soluções sustentáveis que reduzem o impacto social e ambiental da sua operação.",
             color: `7DAE59`,
-            icon: iconEsg
+            icon: iconEsg,
+            link: "https://esg.uxgroup.com.br/"
 
         },
     ]
@@ -171,7 +175,7 @@ export default function NewBannerHome() {
                         </div>
                         <h2 className="text-xl text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> saiba mais</Link>
+                            <Link className="flex items-center justify-center w-full h-full" href={banners[currentIndex].link}> conheça nosso produto</Link>
 
                         </button>
                     </motion.div>

@@ -13,7 +13,7 @@ import FeaturesComponent from "@/components/produtos/features"
 import arrowImage from "@/assets/trux/arrow/arrowListComponentesPudo.svg";
 import truxLogo from "@/assets/logos/trux.svg";
 import banner from "@/assets/trux/tms-transp.png";
-import ProductInstitutional from"@/components/produtos/institucional"
+import ProductInstitutional from "@/components/produtos/institucional"
 import imageGestao from "@/assets/ondetah/imagesSections/gestaoFinanceira.png";
 import imageRoteirizacao from "@/assets/trux/roteirizacao.png";
 import atendimento from "@/assets/trux/atendimento.png";
@@ -222,6 +222,7 @@ export default function Trux() {
           {/* <!-- End Google Tag Manager (noscript) --> */}
           <Header />
           <JumboTron
+            buttonTwo
             linkButtonOne="#formulario"
             linkButtonTwo="#sobre"
             textButtonOne="fale com especialista"
@@ -237,6 +238,7 @@ export default function Trux() {
             style={{ paddingTop: "50px", paddingBottom: "0px" }}
           ></section>
           <ProductInstitutional
+            buttonTwo
             id="sobre"
             title="Organize, gerencie e monitore cada etapa do transporte e motoristas."
             text="Uma tecnologia completa com módulos de gestão, financeiro, reversa, roteirizador, averbação, que permitem otimizar rotas, reduzir custos e aumentar a precisão das entregas, como uma visão detalhada de cada um dos processos que envolvem a gestão de transportes. Nosso TMS transportador garante uma cadeia de suprimentos ágil, confiável e totalmente alinhada às demandas do mercado."

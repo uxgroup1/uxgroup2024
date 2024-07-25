@@ -58,7 +58,7 @@ const content = [
     index: 0,
     title: "TMS para Embarcadores",
     contentTitle: "Gestão de fretes para e-commerce e marketplaces.",
-    contentText: "",
+    contentText: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     banner: imageCarroselVerticalOne.src,
     logo: logoFusion.src,
     link: "/fusion",
@@ -69,7 +69,7 @@ const content = [
     index: 2,
     title: "Experiência do Cliente",
     contentTitle: "Gestão e comunicação com o cliente a partir do tracking.",
-    contentText: "",
+    contentText: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     banner: imageCarroselVerticalThree.src,
     logo: logoOndetah.src,
     link: "/ondetah",
@@ -80,7 +80,7 @@ const content = [
     index: 1,
     title: "TMS para Transportadores",
     contentTitle: "Gestão de entregas e de transportadores.",
-    contentText: "",
+    contentText: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     banner: imageCarroselVerticalTwo.src,
     logo: logoTrux.src,
     link: "/trux",
@@ -259,6 +259,8 @@ function gtag_report_conversion(url) {
           text="Soluções personalizadas para o tamanho e perfil do seu negócio. Nossa plataforma one stop shop e nosso hub de integração oferecem uma experiência completa e integrada, desde o desenvolvimento da loja até a entrega ao cliente."
           titleOne=" One Stop Shop" titleTwo=" Hub de Integração"
           iconOne={vendas} iconTwo={gestao}
+          textOne="Lorem Ipsum is simply dummy text of the printing and typesetting"
+          textTwo="Lorem Ipsum is simply dummy text of the printing and typesetting"
           corButtonOne="#A900D9" corButtonTwo="#29265B" />
         {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
         {questionario && (

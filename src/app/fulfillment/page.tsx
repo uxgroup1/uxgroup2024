@@ -163,6 +163,7 @@ export default function Logistica() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
+        buttonTwo
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
           linkButtonOne="#formulario"
@@ -176,6 +177,7 @@ export default function Logistica() {
         />
         <section style={{ paddingTop: "50px", paddingBottom: "0px" }}></section>
         <ProductInstitutional
+          buttonTwo
           id="sobre"
           title="Controle, Armazenagem e Expedição eficiente."
           text="O Fulfillment abrange todo o processo logístico, desde a venda do pedido até a expedição, integrando tecnologia avançada e expertise em logística. Nosso compromisso é garantir um controle de estoque eficiente, uma armazenagem segura e um processo de separação eficaz, proporcionando aos clientes recebimento de produtos com precisão, agilidade e segurança." banner={banner.src}
@@ -251,7 +253,7 @@ export default function Logistica() {
           logo={logoAmazon.src}
           banner={""}
         />
-        <Faq/>
+        <Faq />
         <section style={{ paddingTop: "0px", paddingBottom: "50px" }}></section>
         <ContactForm
           nameForm="FormFulfillment"

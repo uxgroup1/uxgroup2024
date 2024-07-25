@@ -16,6 +16,7 @@ interface Content {
   linkButtonOne: string;
   textButtonTwo: string;
   linkButtonTwo: string;
+  buttonTwo: boolean;
 }
 
 export default function JumboTron({
@@ -32,6 +33,7 @@ export default function JumboTron({
   linkButtonOne,
   textButtonTwo,
   linkButtonTwo,
+  buttonTwo,
 }: Content) {
   const [hovered, setHovered] = useState(false);
   const [currentBanner, setCurrentBanner] = useState(banner);
@@ -98,13 +100,18 @@ export default function JumboTron({
           <div
             className={`flex w-full items-center flex-col gap-0 md:gap-5 transition-transform ${"animated-state-Jumbotron-two"} space-y-4 sm:flex-row sm:justify-center sm:space-y-0`}
           >
-            <Link className="w-[95%] xl:w-[200px] lg:w-[180px]" href={linkButtonOne}>
-              <button
-                className={`w-full xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-12 rounded-lg transition-all hover:font-semibold`}
-              >
-                {textButtonOne}
-              </button>
-            </Link>
+            {
+              buttonTwo && (
+                <Link className="w-[95%] xl:w-[200px] lg:w-[180px]" href={linkButtonOne}>
+                  <button
+                    className={`w-full xl:w-[200px] lg:w-[180px] xl:text-[0.9rem] lg:text-xs h-12 rounded-lg transition-all hover:font-semibold`}
+                  >
+                    {textButtonOne}
+                  </button>
+                </Link>
+              )
+            }
+
 
             <Link className="w-[95%] xl:w-[200px] xl:text-[0.9rem] lg:w-[180px]" href={linkButtonTwo}>
               <button

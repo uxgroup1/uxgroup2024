@@ -13,15 +13,17 @@ interface twoCards {
     titleTwo?: string,
     textOne?: string,
     textTwo?: string,
+    textThree?: string,
+    textFour?: string,
     iconOne?: string,
     iconTwo?: string,
     corButtonOne?: string,
     corButtonTwo?: string
 }
 
-export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo, corButtonOne, corButtonTwo, iconOne, iconTwo, titleOne, titleTwo, textOne, textTwo }: twoCards) {
+export default function NewTwoCards({ title, text, textFour, backgroundOne, backgroundTwo, corButtonOne, textThree, corButtonTwo, iconOne, iconTwo, titleOne, titleTwo, textOne, textTwo }: twoCards) {
     return (
-        <section className="bg-white lg:h-auto max-w-[1996px] lg:pt-[15%] pt-[10%] xl:pt-[03%] w-full  ">
+        <section id="vendas" className="bg-white lg:h-auto max-w-[1996px] lg:pt-[15%] pt-[10%] xl:pt-[03%] w-full  ">
             <div className="flex flex-col w-full items-center justify-center">
                 <div className="w-[90%] gap-4 flex items-center justify-center flex-col" >
                     <h1 className="lg:text-left text-black text-center">
@@ -48,13 +50,16 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
 
                             </h2>
                             {textOne && (
-                                <p className="text-white">
+                                <p className="text-white pb-0">
                                     {textOne}
                                 </p>
                             )}
+                            {textThree && (
+                                <p  className="text-white pb-0">{textThree}</p>
+                            )}
 
-                            <button style={{backgroundColor:`${corButtonOne}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
-                                <Link href={"#formulario"}>
+                            <button style={{backgroundColor:`${corButtonOne}`}} className={`w-52 flex items-center justify-center h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
+                                <Link className="w-full h-full flex items-center justify-center" target="_blank" href={"https://www.unbox.com.br/"}>
                                     saiba mais
                                 </Link>
                             </button>
@@ -71,11 +76,14 @@ export default function NewTwoCards({ title, text, backgroundOne, backgroundTwo,
 
                             </h2>
                             {textTwo && (
-                                <p  className="text-white">{textTwo}</p>
+                                <p  className="text-white pb-0">{textTwo}</p>
+                            )}
+                            {textFour && (
+                                <p  className="text-white pb-0">{textFour}</p>
                             )}
 
-                            <button style={{backgroundColor:`${corButtonTwo}`}} className={`w-52 h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
-                                <Link href={"#formulario"}>
+                            <button style={{backgroundColor:`${corButtonTwo}`}} className={`w-52 flex items-center justify-center h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
+                                <Link className="flex w-full h-full justify-center items-center" href={"#formulario"}>
                                     saiba mais
                                 </Link>
 
