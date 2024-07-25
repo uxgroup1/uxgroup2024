@@ -259,8 +259,8 @@ function gtag_report_conversion(url) {
           text="Soluções personalizadas para o tamanho e perfil do seu negócio. Nossa plataforma one stop shop e nosso hub de integração oferecem uma experiência completa e integrada, desde o desenvolvimento da loja até a entrega ao cliente."
           titleOne=" One Stop Shop" titleTwo=" Hub de Integração"
           iconOne={vendas} iconTwo={gestao}
-          textOne="Lorem Ipsum is simply dummy text of the printing and typesetting"
-          textTwo="Lorem Ipsum is simply dummy text of the printing and typesetting"
+          textOne="A plataforma para quem quer crescer rápido, converter mais e escalar as vendas. Desenvolva a sua loja do seu jeito e do tamanho do seu negócio, com tudo em um só lugar."
+          textTwo="Conecta soluções de tecnologia e logística às principais plataformas do mercado, otimizando a experiência de compra. Com tudo automatizado, você pode focar exclusivamente nas estratégias de vendas."
           corButtonOne="#A900D9" corButtonTwo="#29265B" />
         {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
         {questionario && (

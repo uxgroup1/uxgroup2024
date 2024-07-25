@@ -59,7 +59,7 @@ export default function NewTwoCards({ title, text, textFour, backgroundOne, back
                             )}
 
                             <button style={{backgroundColor:`${corButtonOne}`}} className={`w-52 flex items-center justify-center h-10 hover:scale-95 transition text-white shadow rounded-lg`}>
-                                <Link className="w-full h-full flex items-center justify-center" target="_blank" href={"https://www.unbox.com.br/"}>
+                                <Link className="w-full h-full flex items-center justify-center" target="_blank" href={"https://www.unbox.com.br/growth"}>
                                     saiba mais
                                 </Link>
                             </button>

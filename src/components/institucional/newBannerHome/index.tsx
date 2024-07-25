@@ -56,7 +56,7 @@ export default function NewBannerHome() {
             index: 0,
             banners: vendasBanner.src,
             svgIcon: vendasSvg,
-            title: "E-commerce totalmente personalizado do tamanho e perfil do seu negócio.",
+            title: "Construa um e-commerce personalizado, adaptado ao tamanho e perfil da sua empresa. Com uma solução One Stop Shop e um Hub de Integração que garantem uma experiência única de compra para seus clientes.",
             color: `A900D9`,
             icon: iconVendas,
             link: "#vendas"
@@ -173,7 +173,7 @@ export default function NewBannerHome() {
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
-                        <h2 className="text-xl text-center text-black font-light">{banners[currentIndex].title}</h2>
+                        <h2 className="text-xl text-center w-3/4 text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                             <Link className="flex items-center justify-center w-full h-full" href={banners[currentIndex].link}> conheça nosso produto</Link>
 
