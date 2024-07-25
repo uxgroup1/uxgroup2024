@@ -198,19 +198,19 @@ const contentFeaturesSix = [
 
 const number = [
   {
-    number: "+700",
+    number: "700",
     text: "Transportadores conectados.",
   },
   {
-    number: "+14",
+    number: "14",
     text: "HUBs conectados.",
   },
   {
-    number: "+12",
+    number: "12",
     text: "Marketplaces conectados.",
   },
   {
-    number: "+12",
+    number: "12",
     text: "ERPs conectados.",
   },
 ];

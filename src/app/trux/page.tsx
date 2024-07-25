@@ -145,15 +145,15 @@ const contentFeaturesFour = [
 ];
 const number = [
   {
-    number: "+98%",
+    number: "98%",
     text: "pedidos concluídos com sucesso",
   },
   {
-    number: "+99,9%",
+    number: "99%",
     text: "de disponibilidade do sistema",
   },
   {
-    number: "+96%",
+    number: "96%",
     text: "dos pedidos integrados",
   },
   {
@@ -255,7 +255,7 @@ export default function Trux() {
             number={number}
             cor="#009881"
             banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
-            text="Nossas soluções de TMS embarcador, TMS transportador, WMS, Live Tracking com atendimento via chatbot estão conectadas aos maiores players do mercado, proporcionando performance e eficiência para sua logística."
+            text=""
           />
           <FeaturesComponent
             id="roteirizacao-entregas"

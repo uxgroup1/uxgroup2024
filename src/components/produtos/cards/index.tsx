@@ -4,7 +4,7 @@ import Image from "next/image";
 import unbox from "@/assets/logos/unbox.svg";
 import vennux from "@/assets/logos/venuxx.png";
 import vendasBanner from "@/assets/cards/vendasBannerCard.png";
-import gestaoBanner from "@/assets/cards/gestaoBannerCard.png";
+import gestaoBanner from "@/assets/cards/Venuxx.png";
 
 export default function CardsConnect() {
     const [openCardOne, setOpenCardOne] = useState(false)
@@ -23,17 +23,17 @@ export default function CardsConnect() {
                         >
                             <div className="flex flex-col items-center lg:items-start justify-center gap-2 rounded-t-2xl lg:pl-20 w-full h-full bg-[#00000069]">
                                 <Image width={100} height={100} className="w-2/5 lg:w-1/3 flex justify-start items-center" src={unbox.src} alt="Unbox Logo" />
-                                
+
                             </div>
                         </div>
                         <div className="w-[90%] p-0 py-10 flex flex-col items-center justify-center ">
                             <div onClick={() => { setOpenCardOne(!openCardOne) }} className="w-[90%]  transition pb-2 rounded-2xl flex items-center justify-between">
-                                <h1 className="text-lg w-[90%] font-medium text-black">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                <h1 className="text-xl w-[90%] font-medium text-black">
+                                    A plataforma de e-commerce das marcas que mais crescem.
                                 </h1>
                                 <svg
                                     data-accordion-icon
-                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardOne === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
+                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardOne === true ? " rounded-lg  rotate-180" : ""} text-black shrink-0`}
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -64,17 +64,17 @@ export default function CardsConnect() {
                         >
                             <div className="flex flex-col items-center lg:items-start justify-center gap-2 rounded-t-2xl  lg:pl-20 w-full h-full bg-[#00000069]">
                                 <Image width={100} height={100} className="w-2/5 lg:w-1/3 flex justify-start items-center" src={vennux.src} alt="Unbox Logo" />
-                                
+
                             </div>
                         </div>
                         <div className="w-[90%] p-0 py-10 flex flex-col items-center justify-center ">
-                            <div onClick={() => { setOpenCardTwo(!openCardTw) }} className="w-[90%]  transition pb-2 rounded-2xl flex items-center justify-between">
-                                <h1 className="text-lg w-[90%] font-medium text-black">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                            <div onClick={() => { setOpenCardTwo(!openCardTw) }} className="w-[95%]  transition pb-2 rounded-2xl flex items-center justify-between">
+                                <h1 className="text-xl w-[90%] font-medium text-black">
+                                    Soluções personalizadas que conectam especialistas em transporte.
                                 </h1>
                                 <svg
                                     data-accordion-icon
-                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardTw === true ? "bg-[#EDEDED] rounded-lg shadow-md rotate-180" : ""} text-black shrink-0`}
+                                    className={`w-6 h-6 text-lg  rounded-lg p-1 ${openCardTw === true ? " rounded-lg rotate-180" : ""} text-black shrink-0`}
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -99,7 +99,7 @@ export default function CardsConnect() {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div >
         </section >
