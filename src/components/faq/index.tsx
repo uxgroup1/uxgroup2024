@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import style from "./style.module.scss"
 
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState(null);
@@ -28,8 +29,9 @@ export default function Faq() {
                         <div key={index} className="w-[90%]" id={`accordion-open-${index}`} data-accordion="open">
                             <h2 id={`accordion-open-heading-${index}`}>
                                 <button
+                                    
                                     type="button"
-                                    className={` ${openIndex === index ? "bg-[#ededed]":""} flex items-center justify-between w-full p-5 font-medium text-left text-black border hover:transition hover:bg-[#EDEDED] border-b-0 border-[#EDEDED] shadow-sm  gap-3`}
+                                    className={`${style.button} ${openIndex === index ? "bg-[#ededed]":""} flex items-center justify-between w-full p-5 font-medium text-left text-black border  hover:bg-[#EDEDED] border-b-0 border-[#EDEDED] shadow-sm  gap-3`}
                                     onClick={() => toggleAccordion(index)}
                                     aria-expanded={openIndex === index}
                                     aria-controls={`accordion-open-body-${index}`}>
@@ -55,7 +57,7 @@ export default function Faq() {
                                 id={`accordion-open-body-${index}`}
                                 className={`${openIndex === index ? ' transition-all' : 'hidden'}`}
                                 aria-labelledby={`accordion-open-heading-${index}`}>
-                                <div className="p-5 border border-b-0 border-gray-200">
+                                <div className="p-5 border border-b border-gray-200">
                                     <p className="mb-2 text-black">
                                         {item.answer}
                                     </p>

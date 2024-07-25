@@ -21,13 +21,7 @@ import Link from "next/link";
 
 
 export default function NewBannerHome() {
-
-
-
-
     const [currentIndex, setCurrentIndex] = useState(0)
-
-
     const setIndex = () => {
         setCurrentIndex(currentIndex + 1)
         if (currentIndex === 3) {
@@ -41,14 +35,14 @@ export default function NewBannerHome() {
         }
     }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex(prevIndex => (prevIndex === 3 ? 0 : prevIndex + 1));
-        }, 5000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex(prevIndex => (prevIndex === 3 ? 0 : prevIndex + 1));
+    //     }, 5000);
 
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
 
     const banners = [
@@ -157,7 +151,7 @@ export default function NewBannerHome() {
                     </div>
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-5 shadow-md w-full lg:w-[90%] h-72 lg:h-64 border border-t rounded-t-2xl `}>
+                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-5 shadow-md w-full lg:w-[90%] pb-12 pt-10 h-auto lg:h-64 border border-t rounded-t-2xl `}>
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
