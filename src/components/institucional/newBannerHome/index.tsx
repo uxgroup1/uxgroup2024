@@ -35,14 +35,14 @@ export default function NewBannerHome() {
         }
     }
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentIndex(prevIndex => (prevIndex === 3 ? 0 : prevIndex + 1));
-    //     }, 5000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex(prevIndex => (prevIndex === 3 ? 0 : prevIndex + 1));
+        }, 5000);
 
 
-    //     return () => clearInterval(interval);
-    // }, []);
+        return () => clearInterval(interval);
+    }, []);
 
 
     const banners = [
@@ -50,7 +50,7 @@ export default function NewBannerHome() {
             index: 0,
             banners: vendasBanner.src,
             svgIcon: vendasSvg,
-            title: "Construa um e-commerce personalizado, adaptado ao tamanho e perfil da sua empresa. Com uma solução One Stop Shop e um Hub de Integração que garantem uma experiência única de compra para seus clientes.",
+            title: "Construa um e-commerce personalizado com uma solução One Stop Shop e um Hub de Integração que garantem uma experiência única de compra para seus clientes.",
             color: `A900D9`,
             icon: iconVendas,
             link: "#vendas"
@@ -60,7 +60,7 @@ export default function NewBannerHome() {
             index: 1,
             banners: gestaoBanner.src,
             svgIcon: gestaoSvg,
-            title: "Tecnologias inovadoras que simplificam a experiência de compra digital.",
+            title: "Melhore a sua gestão de fretes e de transportes e simplifique a comunicação com os seus clientes através de tecnologias modulares e informação em  tempo real.",
             color: `29265B`,
             icon: iconGestao,
             link: "#gestao"
@@ -70,7 +70,7 @@ export default function NewBannerHome() {
             index: 2,
             banners: logisticaBanner.src,
             svgIcon: logisticaSvg,
-            title: "Operações logísticas com tecnologia de ponta e processos otimizados.",
+            title: "Soluções de fulfillment, torre de controle e envios personalizadas,  com tecnologia de ponta, que garante uma operação otimizada com rapidez e precisão na entrega do pedido.",
             color: `FF7F13`,
             icon: iconLogistica,
             link: "#logistica"
@@ -80,7 +80,7 @@ export default function NewBannerHome() {
             index: 3,
             banners: esgBanner.src,
             svgIcon: esgSvg,
-            title: "Soluções sustentáveis que reduzem o impacto social e ambiental da sua operação.",
+            title: "Adote soluções como Green Mile, Compensação de Carbono e Last Mile por Mulheres e destaque se como uma empresa comprometida com os impactos socioambientais. ",
             color: `7DAE59`,
             icon: iconEsg,
             link: "https://esg.uxgroup.com.br/"
