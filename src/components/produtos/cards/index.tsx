@@ -52,7 +52,7 @@ export default function CardsConnect() {
                                     Uma plataforma de vendas one stop shop, onde você encontra todas as ferramentas necessárias para gerenciar seu negócio online em um só lugar. Desde o desenvolvimento do projeto até automação de marketing, a Unbox simplifica a administração das vendas digitais,integra os processos de pagamento, economiza tempo, reduz os custos e melhora os resultados com soluções integradas.
                                 </p>
                                 <button className="flex items-center justify-center hover:scale-95 transition bg-[#A900D9] h-12 w-[200px] rounded-lg text-white">
-                                    <Link className="w-full h-full flex items-center justify-center" href={"https://www.unbox.com.br/"}>conheça mais mais</Link>
+                                    <Link className="w-full h-full flex items-center justify-center" href={"https://www.unbox.com.br/"}>conheça mais</Link>
                                 </button>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ export default function CardsConnect() {
 
                                 </p>
                                 <button className="flex items-center justify-center hover:scale-95 transition bg-[#29265B] h-12 w-[200px] rounded-lg text-white">
-                                    <Link className="w-full h-full flex items-center justify-center" href={"https://venuxx.com/"}>conheça mais mais</Link>
+                                    <Link className="w-full h-full flex items-center justify-center" href={"https://venuxx.com/"}>conheça mais</Link>
                                 </button>
                             </div>
                         </div>
