@@ -260,7 +260,7 @@ export default function Trux() {
           <FeaturesComponent
             id="roteirizacao-entregas"
             titleSection="Roteirização de entrega."
-            text="Otimize suas rotas, acelere processos, ganhe mais produtividade."
+            text="Otimize suas rotas, controle suas finanças e acompanhe em tempo real as entregas com o app de motoristas."
             banner={imageRoteirizacao.src}
             content={contentFeatures}
             rowReverse={false}

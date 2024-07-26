@@ -83,7 +83,7 @@ export default function NewBannerHome() {
             title: "Adote soluções como Green Mile, Compensação de Carbono e Last Mile por Mulheres e destaque se como uma empresa comprometida com os impactos socioambientais. ",
             color: `7DAE59`,
             icon: iconEsg,
-            link: "https://esg.uxgroup.com.br/"
+            link: "#sustentabilidade"
 
         },
     ]
