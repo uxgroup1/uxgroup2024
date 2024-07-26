@@ -370,7 +370,7 @@ export default function Header() {
                           className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentLog[indexHover].link}>
-                            conhecer solução
+                            conheça sua solução
                           </Link>
 
                           <svg
@@ -451,7 +451,7 @@ export default function Header() {
                           className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentVendas[indexHover].link}>
-                            conhecer solução
+                            conheça sua solução
                           </Link>
 
                           <svg
@@ -532,7 +532,7 @@ export default function Header() {
                           className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentVendas[indexHover].link}>
-                            conhecer solução
+                            conheça sua solução
                           </Link>
 
                           <svg
@@ -633,7 +633,7 @@ export default function Header() {
                           className="inline-flex items-center px-2.5 py-1.5 text-sm font-normal text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
                         >
                           <Link href={contentGestao[indexHover].link}>
-                            conhecer solução
+                            conheça sua solução
                           </Link>
 
                           <svg

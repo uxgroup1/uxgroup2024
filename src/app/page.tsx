@@ -255,7 +255,7 @@ function gtag_report_conversion(url) {
         <EcoSistemaUx />
         <ClientsCases />
         <NewTwoCards
-          title="Tecnologia para vendas digitais"
+          title="Tecnologia para vendas digitais."
           text="Soluções personalizadas para o tamanho e perfil do seu negócio. Nossa plataforma one stop shop e nosso hub de integração oferecem uma experiência completa e integrada, desde o desenvolvimento da loja até a entrega ao cliente."
           titleOne=" One Stop Shop" titleTwo=" Hub de Integração"
           iconOne={vendas} iconTwo={gestao}

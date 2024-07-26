@@ -169,7 +169,7 @@ export default function NewBannerHome() {
                         </div>
                         <h2 className="text-xl text-center w-3/4 text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full h-full" href={banners[currentIndex].link}> conheça nosso produto</Link>
+                            <Link className="flex items-center justify-center w-full h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
 
                         </button>
                     </motion.div>
