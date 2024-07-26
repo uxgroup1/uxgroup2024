@@ -260,7 +260,7 @@ function gtag_report_conversion(url) {
           titleOne=" One Stop Shop" titleTwo=" Hub de Integração"
           iconOne={vendas} iconTwo={gestao}
           textOne="A plataforma para quem quer crescer rápido, converter mais e escalar as vendas. Desenvolva a sua loja do seu jeito e do tamanho do seu negócio, com tudo em um só lugar."
-          textTwo="Conecta soluções de tecnologia e logística às principais plataformas do mercado, otimizando a experiência de compra. Com tudo automatizado, você pode focar exclusivamente nas estratégias de vendas."
+          textTwo="Soluções de tecnologia e logística conectadas as principais plataformas do mercado. Com tudo automatizado, você foca nas estratégias de vendas e melhora a experiência de compra da sua loja."
           corButtonOne="#A900D9" corButtonTwo="#29265B" />
         {/* <button onClick={() => setQuestinario(!questionario)}><ButtonChat /></button>
         {questionario && (
@@ -279,13 +279,13 @@ function gtag_report_conversion(url) {
           sub="Nossas soluções de tecnologia são próprias, modulares e oferecem flexibilidade, informação e eficiência para a gestão de fretes, gestão de transportes e comunicação com o cliente."
           content={content}
         />
-        <Cta
+        {/* <Cta
           button={true}
           title={
             "Eficiência, Informação e Sustentabilidade: Descubra o futuro da logística com a UX.          "
           }
           banner={ctaOne.src}
-        />
+        /> */}
         <LogisticaComPerformance id={"logistica"} />
 
         <Cta

@@ -22,6 +22,8 @@ const ProductInstitutional = dynamic(
 );
 import sac from "@/assets/sac.png";
 import transporte from "@/assets/transporte.png";
+import vennux from "@/assets/cards/venuxxTorre.png";
+import entregaRapida from "@/assets/cards/entrega-rapida.png";
 import banner from "@/assets/trux/torre.png";
 import Script from "next/script";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -185,13 +187,13 @@ export default function Torre() {
 
         <FeaturesComponent
           id="gestao-transporte"
-          banner={transporte.src}
+          banner={entregaRapida.src}
           rowReverse={true}
           content={contentFeaturesThree}
-          titleSection="Entrega Rápida e Programada para seu Negócio (módulo no perfil do Green mile)"
+          titleSection="Entrega Rápida e Programada para seu Negócio"
           text="Aumente suas conversões e fidelize seus clientes proporcionando uma experiência de compra única com serviços de entrega personalizados. Com opções flexíveis e rápidas, atendemos todas as suas necessidades logísticas, proporcionando uma experiência de compra superior e conveniente para o seu cliente."
         />
-        <SecondSection text="O Ship from Store garante que seus pedidos sejam enviados diretamente das lojas físicas mais próximas, reduzindo o tempo de entrega e aumentando a eficiência. Realizado por um time majoritariamente composto por mulheres, não só melhora a eficiência logística, como combina a excelência operacional, com uma forte responsabilidade social. Ao optar por esse serviço da UX em conexão com a Venuxx, você promove a inclusão feminina no mercado de trabalho e desfruta de uma entrega rápida e confiável." title="Eficiência e Inclusão" flowReverse={false} image={transporte.src} link="#formulario" corButtonOne="#fac30c" corButtonTwo="#fe8012" />
+        <SecondSection text="O Ship from Store garante que seus pedidos sejam enviados diretamente das lojas físicas mais próximas, reduzindo o tempo de entrega e aumentando a eficiência. Realizado por um time majoritariamente composto por mulheres, não só melhora a eficiência logística, como combina a excelência operacional, com uma forte responsabilidade social. Ao optar por esse serviço da UX em conexão com a Venuxx, você promove a inclusão feminina no mercado de trabalho e desfruta de uma entrega rápida e confiável." title="Eficiência e Inclusão" flowReverse={false} image={vennux.src} link="#formulario" corButtonOne="#fac30c" corButtonTwo="#fe8012" />
         <ThreeTopics
           content={contentTopics}
           title="Green Mile."

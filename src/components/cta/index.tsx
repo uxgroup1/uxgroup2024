@@ -42,7 +42,7 @@ function Cta({
           >
             <div className={style.ContainerContent}>
               <div className={style.Controller}>
-                <div className="flex flex-col">
+                <div className="flex  flex-col">
                   <h1 className="xl:text-[36px] lg:text-xl">{title}</h1>
                   {text && (
                     <p className="lg:w-4/5 w-full">{text}</p>

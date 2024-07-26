@@ -20,7 +20,7 @@ import Cta from "@/components/cta";
 import NewTwoCards from "@/components/TwoCardsHome";
 import CardsConnect from "@/components/produtos/cards";
 import bannerConnect from "@/assets/cards/connectBannerCard.png"
-import ctaBanner from "@/assets/cta/Gere-uma-experiencia.jpg"
+import ctaBanner from "@/assets/cta/Gere-uma-experiencia.png"
 
 export default function Connect() {
 
@@ -129,7 +129,7 @@ function gtag_report_conversion(url) {
         <Header />
         <JumboTron buttonTwo={false} banner={bannerConnect.src} trocaBanner={false} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Integrações eficazes, estratégias personalizadas e soluções diferenciadas que geram valor ao seu negócio." text="Gere uma experiência única para o seu cliente digital." />
         <ProductInstitutional buttonTwo={false} banner={bannerConnect.src} corButtonOne="#7DAE59" linkButtonOne="" linkButtonTwo="" textButtonOne="saiba mais" textButtonTwo="" title="Seu e-commerce pede conexões que geram mais vendas." text="Com o ecossistema UX Group, as suas vendas digitais se transformam. Aqui, conectamos soluções desde o clique até o cliente buscando oferecer sempre a melhor experiência ao cliente. Utilize nossas soluções de vendas, gestão, logística e esg e garanta mais: visibilidade, personalização e resultados." />
-        <Cta title={"Gere uma experiência única para o seu cliente digital"} banner={ctaBanner.src} button />
+        <Cta title={"Crie valor para o seu cliente com soluções personalizadas integradas em um único lugar."} banner={ctaBanner.src} button />
         <CardsConnect />
         <ContactForm nameForm="connect" content={valuesInput} page="connect" />
         <Footer />

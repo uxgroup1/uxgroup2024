@@ -88,7 +88,7 @@ export default function CardsConnect() {
                                     />
                                 </svg>
                             </div>
-                            <div className={` ${openCardTw === true ? "flex transition" : "hidden"} h-auto flex-col w-[90%]`}>
+                            <div className={` ${openCardTw === true ? "flex transition" : "hidden"} h-auto flex-col w-[95%]`}>
                                 <p className="text-black font-normal">
                                     Com soluções flexíveis e eficientes, adaptando os serviços às necessidades específicas de cada cliente, a Venuxx conecta especialistas em transporte a empresas do segmento B2B garantindo profissionalismo, confiabilidade e inovação. Com uma equipe majoritariamente de mulheres,cada entrega realizada reflete o compromisso com um serviço humanizado e de alta qualidade, agregando um valor único à experiência dos clientes.
 
