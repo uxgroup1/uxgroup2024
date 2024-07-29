@@ -57,7 +57,7 @@ export default function NewTwoCards({ title, text, textFour, backgroundOne, back
 
 
                                 <p className=" lg:hidden text-base flex w-[200px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
-                                    Powered
+                                    Powered by
                                     <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
                                 </p>
                             </div>
