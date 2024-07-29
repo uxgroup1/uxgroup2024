@@ -98,7 +98,7 @@ export default function NewBannerHome() {
                                 Transformamos a experiência do cliente através da tecnologia.
                             </h1>
                             <p className="text-xl text-black lg:text-left text-center font-light">
-                                Conheça nosso ecossistema de soluções que potencializam as suas vendas digitais.
+                                Potencializam as vendas do seu e-commerce.
                             </p>
                         </div>
                         <div className="w-2/5 flex flex-row gap-4 -mb-16 z-10 pb-2 md:[display:flex]  justify-center md:justify-end">
@@ -152,7 +152,7 @@ export default function NewBannerHome() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-5 shadow-md w-full lg:w-[90%] pb-12 pt-10 h-auto lg:h-64 border border-t rounded-t-2xl `}>
                         <div className="h-10">
-                            <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
+                            <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full ${banners[currentIndex].index === 3 ? "w-[80%]" : ""} `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
