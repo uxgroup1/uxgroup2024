@@ -130,7 +130,7 @@ function gtag_report_conversion(url) {
         </noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
-        <JumboTron buttonTwo={false} banner={bannerConnect.src} trocaBanner={false} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Integrações eficazes, estratégias personalizadas e soluções diferenciadas que geram valor ao seu negócio." text="Gere uma experiência única para o seu cliente digital." />
+        <JumboTron buttonTwo={false} banner={bannerConnect.src} trocaBanner={false} corButtonOne="#7DAE59" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Conecte a sua solução ao nosso ecossistema e crie uma experiência única para o seu cliente digital." text="Saiba como gerar valor para o seu cliente através de estratégias personalizadas." />
         <ProductInstitutional buttonTwo={false} banner={bannerConnect.src} corButtonOne="#7DAE59" linkButtonOne="" linkButtonTwo="" textButtonOne="saiba mais" textButtonTwo="" title="Seu e-commerce pede conexões que geram mais vendas." text="Com o ecossistema UX Group, as suas vendas digitais se transformam. Aqui, conectamos soluções desde o clique até o cliente buscando oferecer sempre a melhor experiência ao cliente. Utilize nossas soluções de vendas, gestão, logística e esg e garanta mais: visibilidade, personalização e resultados." />
         <Cta title={"Crie valor para o seu cliente com soluções personalizadas integradas em um único lugar."} banner={ctaBanner.src} button />
         <CardsConnect />
