@@ -18,7 +18,7 @@ function LogisticaSustentavel({ id }: any) {
                 </div>
                 <p>
                   Nossas soluções abrangem desde o Green Mile com entregas realizadas com motos elétricas,
-                  ship from store e entregas agendadas feita por mulheres,  até avançadas tecnologias pré
+                  ship from store e entregas agendadas feitas por mulheres,  até avançadas tecnologias pré
                   e pós-venda que calculam a emissão e geram a compensação de carbono de cada venda e apps
                   para redução do uso do papel na operação
                 </p>

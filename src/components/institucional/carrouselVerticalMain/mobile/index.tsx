@@ -108,7 +108,7 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
                     {content[contentIndex].contentText}
                   </p>
                   <Link href={`${content[contentIndex].link}`}>
-                    <button className={style.Button}>conheça a solução</button>
+                    <button className={style.Button}>conheça sua solução</button>
                   </Link>
                 </div>
               </div>
