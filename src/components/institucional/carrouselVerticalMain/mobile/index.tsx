@@ -93,7 +93,7 @@ function CarroselVerticalMobile({ content, title, sub }: ContentProduct) {
               className="flex h-[500px] flex-col md:flex-row"
             >
               <div className="w-full h-full bg-[#0000009b] rounded-b-2xl">
-                <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[60px] pt-[60px]">
+                <div className="w-full flex flex-col justify-center h-full px-[50px] pb-[100px] pt-[60px]">
                   <Image
                   className="w-4/5 pb-5"
                     src={`${content[contentIndex].logo}`}
