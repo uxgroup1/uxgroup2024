@@ -17,24 +17,20 @@ function LogisticaSustentavel({ id }: any) {
                   sustentabilidade em cada pedido.
                 </div>
                 <p>
-                  Nossas soluções abrangem desde o Green Mile com entregas
-                  realizadas com motos elétricas até avançadas tecnologias pré e
-                  pós-venda que calculam a emissão e geram a compensação de
-                  carbono de cada venda.
+                  Nossas soluções abrangem desde o Green Mile com entregas realizadas com motos elétricas,
+                  ship from store e entregas agendadas feita por mulheres,  até avançadas tecnologias pré
+                  e pós-venda que calculam a emissão e geram a compensação de carbono de cada venda e apps
+                  para redução do uso do papel na operação
                 </p>
                 <p>
-                  Além disso, o uso da tecnologia em todo o processo logístico
-                  permite não só a eficiência operacional como também a redução
-                  do uso de papel nos CDs. <br />
                   <Link href={"/torre"} style={{ fontWeight: "bold" }}>
-                    Faça parte da mudança: Juntos podemos criar um futuro mais
-                    verde.
+                    Faça parte da mudança: Juntos podemos criar um futuro mais verde. 
                   </Link>
                 </p>
                 <Link className="w-full" target="_blank" href={"/torre"} >
-                <button className="md:w-[170px] w-full hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
-                  saiba mais
-                </button>
+                  <button className="md:w-[170px] w-full hover:border hover:font-semibold hover:border-black text-white bg-black hover:text-black hover:bg-white transition  hover:shadow-md">
+                    saiba mais
+                  </button>
                 </Link>
               </div>
             </div>

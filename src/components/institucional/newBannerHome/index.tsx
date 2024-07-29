@@ -60,7 +60,7 @@ export default function NewBannerHome() {
             index: 1,
             banners: gestaoBanner.src,
             svgIcon: gestaoSvg,
-            title: "Melhore a sua gestão de fretes e de transportes e simplifique a comunicação com os seus clientes através de tecnologias modulares e informação em  tempo real.",
+            title: "Melhore as regras de fretes e a gestão de transportes e simplifique a comunicação com os seus clientes através de tecnologias modulares e informação em  tempo real.",
             color: `29265B`,
             icon: iconGestao,
             link: "#gestao"
@@ -95,8 +95,7 @@ export default function NewBannerHome() {
                     <div className="flex lg:flex-row flex-col items-center pb-10 justify-start w-[90%] h-full">
                         <div className="flex flex-col gap-5 lg:w-3/5 leading-normal">
                             <h1 className=" text-black text-4xl lg:text-left text-center lg:text-5xl">
-                                Transformamos a experiência do cliente
-                                através da tecnologia.
+                                Conheça nosso ecossistema de soluções que potencializam as suas vendas digitais.
                             </h1>
                             <p className="text-xl text-black lg:text-left text-center font-light">
                                 Conheça nosso ecossistema de soluções para vendas digitais.
@@ -157,20 +156,19 @@ export default function NewBannerHome() {
                         </div>
                         <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> saiba mais</Link>
+                            <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> conheça sua solução</Link>
 
                         </button>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0px solid #${banners[currentIndex].color}`, borderBottom: `0.1px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={`   -mt-[01px] flex-col gap-5 items-center [display:none] lg:flex justify-center p-10 shadow-md w-full lg:w-[90%] h-[320px] lg:h-64 border border-t rounded-b-2xl `}>
+                        animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0px solid #${banners[currentIndex].color}`, borderBottom: `0.1px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={`   -mt-[01px] flex-col gap-5 items-center [display:none] lg:flex justify-center p-10 shadow-md w-full lg:w-[90%] h-[350px] lg:h-64 border border-t rounded-b-2xl `}>
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-xl text-center w-3/4 text-black font-light">{banners[currentIndex].title}</h2>
-                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-10`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
-
+                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
+                            <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
                         </button>
                     </motion.div>
                 </div>
