@@ -41,12 +41,18 @@ export default function NewTwoCards({ title, text, textFour, backgroundOne, back
 
                 </div>
                 <div className="w-[90%] pt-10 lg:flex-row flex-col  flex items-center justify-center gap-4">
-                    <div style={{ backgroundImage: `url(${vendasBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white bg-gray-300 flex justify-end flex-col gap-5 h-auto lg:h-[460px] shadow-md rounded-2xl">
+                    <div style={{ backgroundImage: `url(${vendasBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white bg-gray-300 flex justify-end flex-col gap-5 h-auto lg:h-[500px] shadow-md rounded-2xl">
                         <div className="w-full bg-[#00000077] rounded-2xl h-full flex flex-col p-8 lg:p-14 items-start justify-end gap-5">
-                            <p className="absolute text-base lg:flex w-[200px] hidden lg:w-auto gap-2 items-center left-[40%] -mb-[-70.5%] lg:-mb-[-16.5%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
+                            {/* <p className="absolute text-base lg:flex w-[200px] hidden lg:w-auto gap-2 items-center left-[40%] -mb-[-70.5%] lg:-mb-[-16.5%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
                                 Powered
                                 <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
-                            </p>
+                            </p> */}
+                            <div className="w-full hidden lg:flex justify-end">
+                                <p className=" text-base flex w-[200px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
+                                    Powered
+                                    <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
+                                </p>
+                            </div>
                             <div className="w-full lg:hidden flex justify-end">
 
 
@@ -81,7 +87,7 @@ export default function NewTwoCards({ title, text, textFour, backgroundOne, back
                             </button>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `url(${gestaoBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white justify-end bg-gray-300 flex flex-col  gap-5 h-auto lg:h-[460px] shadow-md rounded-2xl">
+                    <div style={{ backgroundImage: `url(${gestaoBanner.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", }} className="w-full lg:w-1/2 text-white justify-end bg-gray-300 flex flex-col  gap-5 h-auto lg:h-[500px] shadow-md rounded-2xl">
                         <div className="w-full  bg-[#0000004c] rounded-2xl h-full flex flex-col p-8 lg:p-14 items-start justify-end gap-5">
 
                             {iconTwo && (
