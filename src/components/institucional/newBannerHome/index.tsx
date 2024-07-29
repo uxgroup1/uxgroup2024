@@ -95,10 +95,10 @@ export default function NewBannerHome() {
                     <div className="flex lg:flex-row flex-col items-center pb-10 justify-start w-[90%] h-full">
                         <div className="flex flex-col gap-5 lg:w-3/5 leading-normal">
                             <h1 className=" text-black text-4xl lg:text-left text-center lg:text-5xl">
-                                Conheça nosso ecossistema de soluções que potencializam as suas vendas digitais.
+                                Transformamos a experiência do cliente através da tecnologia.
                             </h1>
                             <p className="text-xl text-black lg:text-left text-center font-light">
-                                Conheça nosso ecossistema de soluções para vendas digitais.
+                                Conheça nosso ecossistema de soluções que potencializam as suas vendas digitais.
                             </p>
                         </div>
                         <div className="w-2/5 flex flex-row gap-4 -mb-16 z-10 pb-2 md:[display:flex]  justify-center md:justify-end">
