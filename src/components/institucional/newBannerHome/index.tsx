@@ -60,7 +60,7 @@ export default function NewBannerHome() {
             index: 1,
             banners: gestaoBanner.src,
             svgIcon: gestaoSvg,
-            title: "Melhore as regras de fretes e a gestão de transportes e simplifique a comunicação com os seus clientes através de tecnologias modulares e informação em  tempo real.",
+            title: "Crie campanhas de frete e gerencie sua malha de transportes com ferramentas de TMS e CX, com gestão preditiva e em tempo real da sua operação.",
             color: `29265B`,
             icon: iconGestao,
             link: "#gestao"
@@ -70,7 +70,7 @@ export default function NewBannerHome() {
             index: 2,
             banners: logisticaBanner.src,
             svgIcon: logisticaSvg,
-            title: "Soluções de fulfillment, torre de controle e envios personalizadas,  com tecnologia de ponta, que garante uma operação otimizada com rapidez e precisão na entrega do pedido.",
+            title: "Soluções personalizadas de Fulfillment, torre de controle e envios, com tecnologia proprietária, que garante uma operação otimizada com rapidez e precisão na entrega do pedido.",
             color: `FF7F13`,
             icon: iconLogistica,
             link: "#logistica"
@@ -152,7 +152,7 @@ export default function NewBannerHome() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1, transition: { duration: 0.5 } }} style={{ borderTop: `0.1px solid #${banners[currentIndex].color}`, borderBottom: `0px solid #${banners[currentIndex].color}`, borderRight: `0.1px solid #${banners[currentIndex].color}`, borderLeft: `0.1px solid #${banners[currentIndex].color}` }} className={` -mt-[1px] flex-col gap-5 items-center lg:[display:none] flex justify-center p-5 shadow-md w-full lg:w-[90%] pb-12 pt-10 h-auto lg:h-64 border border-t rounded-t-2xl `}>
                         <div className="h-10">
-                            <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full ${banners[currentIndex].index === 3 ? "w-[80%]" : ""} `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
+                            <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full ${banners[currentIndex].index === 3 ? "w-[60%]" : ""} `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
                         <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
