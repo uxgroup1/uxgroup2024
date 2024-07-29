@@ -48,15 +48,13 @@ export default function NewTwoCards({ title, text, textFour, backgroundOne, back
                                 <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
                             </p> */}
                             <div className="w-full hidden lg:flex  lg:justify-end">
-                                <p className=" text-base flex w-[200px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
+                                <p className=" text-base flex w-[230px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
                                     Powered by
                                     <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
                                 </p>
                             </div>
                             <div className="w-full lg:hidden flex justify-start">
-
-
-                                <p className=" lg:hidden text-base flex w-[200px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
+                                <p className=" lg:hidden text-base flex w-[240px] lg:w-auto gap-2 items-center left-[40%] justify-center  rounded-full px-4  text-black lg:left-[38%] p-2 bg-white ">
                                     Powered by
                                     <Image className="w-16 mb-1" src={logoUnbox.src} width={100} height={100} alt="" />
                                 </p>
