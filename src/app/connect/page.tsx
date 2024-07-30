@@ -29,9 +29,6 @@ export default function Connect() {
       value: "Quero fazer parte das conexões da UX",
     },
     {
-      value: "Fazer parte do ecossistema UX",
-    },
-    {
       value: "Quero saber mais",
     },
     {
