@@ -101,7 +101,7 @@ export default function NewBannerHome() {
                                 Potencialize as vendas do seu e-commerce.
                             </p>
                         </div>
-                        <div className="w-2/5 flex flex-row gap-4 -mb-16 z-10 pb-2 md:[display:flex]  justify-center md:justify-end">
+                        <div className="w-2/5 flex flex-row gap-4 -mb-16 z-10 pb-2 md:[display:flex] justify-center md:justify-end">
                             <div
                                 className="w-12 p-[10px] hover:p-[12px] shadow-md transition-all rounded-2xl bg-[#DEDEDE] cursor-pointer"
                                 onClick={() => setIndexMenos()}
@@ -133,9 +133,9 @@ export default function NewBannerHome() {
                             banners.map((data) => {
                                 return (
                                     <div className="lg:flex [display:none] w-full transition-all" key={data.index}>
-                                        <Image className={` ${currentIndex === 0 ? "ml-[80px]" : ""} ${currentIndex === data.index ? "flex absolute transition-all opacity-90" : "[display:none]"} ml-5 -mt-5 z-40 w-16 shadow-md rounded-lg  transition-all `} src={currentIndex === data.index ? data.icon : ""} alt="" />
+                                        <Image className={` ${currentIndex === 0 ? "ml-[80px]" : ""} ${currentIndex === data.index ? "flex absolute transition-all opacity-90" : "[display:none]"} ml-5 -mt-5 w-16 shadow-md z-10 rounded-lg  transition-all `} src={currentIndex === data.index ? data.icon : ""} alt="" />
                                         <Image
-                                            className={`w-full cursor-pointer ${currentIndex === data.index ? "scale-110 transition-all [box-shadow: 0px 6px 6px 0px rgba(156,156,156,0.44)]" : ""} `}
+                                            className={`w-full cursor-pointer ${currentIndex === data.index ? "scale-110 transition-all -z-0 [box-shadow: 0px 6px 6px 0px rgba(156,156,156,0.44)]" : ""} `}
                                             src={data.banners}
                                             alt="Descrição da imagem"
                                             width={100}
