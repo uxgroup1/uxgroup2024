@@ -51,7 +51,6 @@ import gestao from "@/assets/gestao.svg"
 import { useState } from "react";
 import NewBannerHome from "@/components/institucional/newBannerHome";
 import NewTwoCards from "@/components/TwoCardsHome";
-import PoupUp from "@/components/poupUp";
 
 
 const content = [
@@ -253,7 +252,6 @@ function gtag_report_conversion(url) {
         <Header />
         {/* <BannerHome /> */}
         <NewBannerHome />
-        <PoupUp/>
         <EcoSistemaUx />
         <ClientsCases />
         <NewTwoCards
