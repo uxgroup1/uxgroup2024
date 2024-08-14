@@ -25,17 +25,17 @@ export default function ButtonChat() {
 
     return (
         <div
-            onMouseEnter={() => setMessage(true)}
-            onMouseLeave={() => setMessage(false)}
-            className={`lg:w-24 lg:h-24 w-16 h-1 shadow-md  cursor-pointer transition-all bg-black rounded-lg fixed top-[87%] lg:top-[84%] left-[80%] lg:left-[91%]`}
+            // onMouseEnter={() => setMessage(true)}
+            // onMouseLeave={() => setMessage(false)}
+            className={`lg:w-24 lg:h-24 w-16 h-1 shadow-md  cursor-pointer transition-all  rounded-lg fixed top-[87%] lg:top-[84%] left-[80%] lg:left-[91%]`}
         >
             <Image src={icon} alt="" width={100} height={100} />
 
-            {(message || showMessage) && (
+            {/* {(message || showMessage) && (
                 <div className="relative flex items-center justify-center border-[#ededed] py-4 px-4 font-medium text-lg -top-40 shadow-md border-2 left-[-430px] max-w-[500px] w-[450px] bg-white h-[80px] rounded-t-lg rounded-bl-lg">
                     {messages[currentMessage]}
                 </div>
-            )}
+            )} */}
         </div>
     );
 }

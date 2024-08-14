@@ -6,17 +6,18 @@ import { ClientDataQuestionary } from "@/interfaces/questionarioCliente";
 import { useClientDataQuestionary } from "@/hooks/clientQuestionario";
 import axios from "axios";
 import AnswersData from "@/interfaces/answers";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 interface AnswerDataInterface {
     question: string;
     answer: string;
 }
 
-interface Fechar{
-    fechar : () => {}
+interface Fechar {
+    fechar: () => {}
 }
 
-export default function Questionario({fechar}: Fechar) {
+export default function Questionario({ fechar }: Fechar) {
     const initialClientData: ClientDataQuestionary = {
         name: "",
         phone: "",
@@ -237,46 +238,50 @@ export default function Questionario({fechar}: Fechar) {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                className="fixed flex rounded-2xl bg-white w-[1100px] h-[750px]"
+                className="fixed flex lg:flex-row flex-col rounded-2xl bg-white w-[90%] h-[85%] lg:w-[1100px] lg:h-[750px]"
             >
-                <div className="flex flex-col justify-between items-center pb-5 w-64 h-full bg-black rounded-s-2xl">
-                    <div className="flex items-center justify-start gap-4 pl-4 bg-[#1E1E1E] rounded-tl-2xl w-full h-14">
-                        <Image className="w-7" src={iconMessage} alt="Icone branco do Questionario" width={100} height={100} />
-                        <h1 className="text-white p-0 capitalize text-sm font-extralight">chat uX group</h1>
+                <div className="flex flex-col justify-between items-center lg:pb-5 lg:w-64 w-full h-auto lg:h-full bg-black  lg:rounded-s-2xl">
+                    <div className="flex items-center justify-between lg:justify-start gap-4 px-4 lg:pl-4 bg-[#1E1E1E] rounded-t-2xl lg:rounded-tl-2xl w-full h-14">
+                        <div className="flex items-center gap-2">
+                            <Image className="w-7" src={iconMessage} alt="Icone branco do Questionario" width={100} height={100} />
+                            <h1 className="text-white p-0 capitalize text-sm font-extralight">chat uX group</h1>
+                        </div>
+                        <IoCloseCircleOutline onClick={() => fechar()} className="lg:hidden text-white  flex" fontSize={25}/>
+
                     </div>
-                    <div className="w-full flex flex-col items-start gap-2 px-5 justify-center">
+                    <div className="w-full lg:flex hidden flex-col  items-start gap-2 px-5 justify-center">
                         <h1 className="text-white pb-0 text-sm font-normal">
                             Deseja sair?
                         </h1>
-                         <button onClick={() => fechar() } className="border rounded-lg bg-transparent p-2 hover:bg-white hover:text-black transition-all text-base text-white w-full">sair</button>
+                        <button onClick={() => fechar()} className="border rounded-lg bg-transparent p-2 hover:bg-white hover:text-black transition-all text-base text-white w-full">sair</button>
                     </div>
                 </div>
-                <div style={{ paddingBottom: "50px" }} className="p-4 pl-10 pr-10 rounded-l-2xl h-full flex overflow-auto flex-col justify-between gap-10 bg-white rounded-e-2xl w-full">
+                <div style={{ paddingBottom: "50px" }} className=" p-4 lg:pl-10 px-5 lg:pr-10 rounded-l-2xl h-full flex overflow-auto flex-col justify-between gap-10 bg-white rounded-e-2xl w-full">
                     <div ref={scrollRef} className=" overflow-auto pb-10 flex flex-col h-full">
                         {conversation.map((entry, index) => (
                             <div
                                 key={index}
-                                className={`mt-2 flex justify-start  items-start max-w-full font-medium ${entry.text.length === 0 ? "flex flex-col-reverse items-start justify-start pb-0 text text-left" : "text-left"}  ${entry.type === "question" ? "text-left font-medium" : "text-left bg-[#EDEDED] w-fit font-normal p-2 rounded-md"}`}
+                                className={`mt-2 flex justify-start lg:pr-0 items-start max-w-[95%] font-medium ${entry.text.length === 0 ? "flex flex-col-reverse items-start text-black justify-start pb-0 text text-left" : "text-left"}  ${entry.type === "question" ? "text-left font-medium" : "text-left bg-[#ededed] w-fit font-normal p-2 rounded-md"}`}
                             >
-                                <p className="flex pb-2 flex-col-reverse">{entry.text.length === 0 ? <span className="pb-0 text-base">Olá UX, tudo bem?</span> : ""}</p>
-                                {entry.type === "question" ? <span className="flex flex-col items-start py-5"> <span className="text-xs">UX Group:</span> {entry.text}</span> : <span className="flex flex-col items-start pr-1 p-0"> <span className="text-xs">você:</span>  {entry.text}</span>}
+                                <p className="flex text-black pb-2 flex-col-reverse">{entry.text.length === 0 ? <span className="pb-0 text-base">Olá UX, tudo bem?</span> : ""}</p>
+                                {entry.type === "question" ? <span className="flex text-black flex-col items-start py-5"> <span className="text-xs  text-black">UX Group:</span> {entry.text}</span> : <span className="flex text-wrap flex-col text-black items-start pr-1 p-0"> <span className="text-xs text-black">você:</span>  {entry.text}</span>}
 
                             </div>
                         ))}
                         {showNextQuestion && (
-                            <div className="mt-2 w-full max-w-full  text-start">
+                            <div className="mt-2 w-full max-w-full text-black  text-start">
                                 {typedQuestion}
                             </div>
                         )}
                     </div>
                     <div className={`flex h-2/5 items-center justify-end ${buttonAnswer === false && inputText === false ? "[display:none]" : "flex"}`}>
-                        <p>{buttonAnswer} {inputText}</p>
+                        <p className="text-black">{buttonAnswer} {inputText}</p>
                         {buttonAnswer && (
                             <div className="w-full h-1/4 flex justify-center gap-2 items-end flex-col">
                                 {respostasAPI?.map((data, index) => (
                                     <button
                                         key={index}
-                                        className="flex items-center justify-center w-full hover:scale-95 transition-all text-[14px] bg-black rounded-lg p-8 h-10 text-white"
+                                        className="flex items-center justify-center w-full hover:scale-95 transition-all text-[14px] bg-black rounded-lg p-8 h-fit lg:h-10 text-white"
                                         onClick={() => handleButtonClickAnswer(data.resposta, data.pergunta_id)}
                                     >
                                         {data.resposta}
@@ -287,7 +292,7 @@ export default function Questionario({fechar}: Fechar) {
                         {inputText && (
                             <div className="w-full h-full flex justify-end items-end flex-col">
                                 <input
-                                    className="w-full align-text-top border-gray-400 rounded-xl border h-14 pl-2"
+                                    className="w-full align-text-top border-gray-400 rounded-lg border h-14 pl-2"
                                     name=""
                                     id=""
                                     placeholder="Digite aqui..."

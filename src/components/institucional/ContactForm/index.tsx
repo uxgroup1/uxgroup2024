@@ -19,6 +19,8 @@ export default function ContactForm({
     floating_phone: "",
     floating_company: "",
     floating_cargo: "",
+    floating_segmento: "",
+    floating_numeroFuncionarios: "",
     underline_select: "",
     floating_message: "",
     cf_terms: false,
@@ -53,6 +55,8 @@ export default function ContactForm({
         floating_phone: "",
         floating_company: "",
         floating_cargo: "",
+        floating_numeroFuncionarios: "",
+        floating_segmento: "",
         underline_select: "",
         floating_message: "",
         cf_terms: false,
@@ -162,23 +166,143 @@ export default function ContactForm({
             </label>
           </div>
           <div className="relative z-0 w-full mb-5 group">
-            <input
-              type="text"
+            <select
+              name="floating_numeroFuncionarios"
+              id="floating_numeroFuncionarios"
+              className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+              value={formData.floating_numeroFuncionarios}
+              onChange={handleChange}
+              required
+            >
+              <option value="0" className="text-white">
+                Número de funcionários*
+              </option>
+              <option value="1 - 10" className="text-black ">
+                1 - 10
+              </option>
+              <option value="11 - 50" className="text-black ">
+                11 - 50
+              </option>
+              <option value="51 - 200" className="text-black ">
+                51 - 200
+              </option>
+              <option value="201 - 500" className="text-black ">
+                201 - 500
+              </option>
+              <option value="501 - 1.000" className="text-black ">
+                501 - 1.000
+              </option>
+              <option value="1.001 - 5.000" className="text-black ">
+                1.001 - 5.000
+              </option>
+              <option value="5.001 - 10.000" className="text-black ">
+                5.001 - 10.000
+              </option>
+              <option value="Mais de 10.000" className="text-black ">
+                Mais de 10.000
+              </option>
+
+            </select>
+          </div>
+          <div className="relative z-0 w-full mb-5 group">
+            <select
+              name="floating_numeroFuncionarios"
+              id="floating_numeroFuncionarios"
+              className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+              value={formData.floating_segmento}
+              onChange={handleChange}
+              required
+            >
+              <option value="Segmento*" className="text-white">
+                Segmento*
+              </option>
+              <option value="Comércio Varejista" className="text-black ">
+                Comércio Varejista
+              </option>
+              <option value="Comércio Atacadista" className="text-black ">
+                Comércio Atacadista
+              </option>
+              <option value="Transporte de cargas" className="text-black ">
+                Transporte de cargas
+              </option>
+              <option value="Indústria" className="text-black ">
+                Indústria
+              </option>
+              <option value="Serviços" className="text-black ">
+                Serviços
+              </option>
+            </select>
+          </div>
+          <div className="relative z-0 w-full mb-5 group">
+            <select
               name="floating_cargo"
               id="floating_cargo"
-              className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
-              placeholder=" "
+              className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
               value={formData.floating_cargo}
               onChange={handleChange}
               required
-            />
-            <label
-              htmlFor="floating_cargo"
-              className="peer-focus:font-medium absolute text-sm text-[#bfbfbf] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Cargo*
-            </label>
+              <option value="Cargo" className="text-white">
+                Cargo*
+              </option>
+              <option value="Proprietário/ Fundador" className="text-black ">
+                Proprietário/ Fundador
+              </option>
+              <option value="C-Level/ Diretor" className="text-black ">
+                C-Level/ Diretor
+              </option>
+              <option value="Gerente/Coordenador" className="text-black ">
+                Gerente/Coordenador
+              </option>
+              <option value="Especialista" className="text-black ">
+                Especialista
+              </option>
+              <option value="Analista" className="text-black ">
+                Analista
+              </option>
+              <option value="Consultor Externo" className="text-black ">
+                Consultor Externo
+              </option>
+              <option value="Outros" className="text-black ">
+                Outros
+              </option>
+            </select>
           </div>
+          <div className="relative flex-col gap-2 z-0 w-full mb-5 group">
+            <div className="pb-2">
+              <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
+            </div>
+
+
+            <input  className="mr-2 mt-2" type="checkbox" id="vehicle1" name="vehicle1" value="Plataforma de e-commerce" />
+            <label htmlFor="underline_select">Plataforma de e-commerce</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="vehicle2" name="vehicle2" value="Logística para e-commerce: Fulfillment" />
+            <label htmlFor="underline_select">Logística para e-commerce: Fulfillment</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="vehicle3" name="vehicle3" value="TMS Embarcador" />
+            <label htmlFor="underline_select">TMS Embarcador</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="vehicle4" name="vehicle4" value="TMS Transportador" />
+            <label htmlFor="underline_select">TMS Transportador</label>
+            <br />
+
+            <input className="mr-2" type="checkbox" id="vehicle5" name="vehicle5" value="Gestão de pedidos, comunicação e rastreio" />
+            <label htmlFor="underline_select">Gestão de pedidos, comunicação e rastreio</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="vehicle6" name="vehicle6" value="Torre de controle em tempo real e envios" />
+            <label htmlFor="underline_select">Torre de controle em tempo real e envios</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="vehicle7" name="vehicle7" value="PUDO: Retirada e Coleta de Mercadorias " />
+            <label htmlFor="underline_select">PUDO: Retirada e Coleta de Mercadorias</label>
+            <br />
+          </div>
+
           {inputAlternative?.map((data) => (
             <div key={data.id} className="relative z-0 w-full mb-5 group">
               <input
@@ -198,7 +322,7 @@ export default function ContactForm({
               </label>
             </div>
           ))}
-          <div className="relative z-0 w-full mb-5 group">
+          {/* <div className="relative z-0 w-full mb-5 group">
             <label htmlFor="underline_select" className="sr-only text-white">
               Underline select
             </label>
@@ -219,9 +343,9 @@ export default function ContactForm({
                 </option>
               ))}
             </select>
-          </div>
+          </div> */}
           <div className="grid md:grid-cols-1 md:gap-6">
-            <div className="relative z-0 w-full mb-5 group">
+            {/* <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
                 name="floating_message"
@@ -238,7 +362,7 @@ export default function ContactForm({
               >
                 Mensagem
               </label>
-            </div>
+            </div> */}
             <input
               type="hidden"
               id="referencia"

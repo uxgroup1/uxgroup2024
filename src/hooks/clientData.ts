@@ -23,6 +23,8 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
                 personal_phone: clientData.floating_phone,
                 job_title: clientData.floating_cargo,
                 company_name: clientData.floating_company,
+                custom_field_numberFuncionario: clientData.floating_numeroFuncionarios,
+                custom_field_segmento: clientData.floating_segmento,
                 cf_subject: clientData.underline_select,
                 cf_message: clientData.floating_message,
                 cf_pageName: clientData.page_name

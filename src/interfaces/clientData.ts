@@ -5,6 +5,8 @@ export interface ClientData {
     floating_phone: string
     floating_company: string;
     floating_cargo: string;
+    floating_segmento: string;
+    floating_numeroFuncionarios: string;
     underline_select: string;
     floating_message: string;
     page_name: string;
