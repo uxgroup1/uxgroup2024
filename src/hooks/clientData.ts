@@ -34,6 +34,9 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
 
     const response = await axios.request<ClientData>(options);
 
+    console.log(response.data);
+    
+
 
     return response;
 }

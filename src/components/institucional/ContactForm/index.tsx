@@ -206,8 +206,8 @@ export default function ContactForm({
           </div>
           <div className="relative z-0 w-full mb-5 group">
             <select
-              name="floating_numeroFuncionarios"
-              id="floating_numeroFuncionarios"
+              name="floating_segmento"
+              id="floating_segmento"
               className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
               value={formData.floating_segmento}
               onChange={handleChange}
@@ -274,32 +274,32 @@ export default function ContactForm({
             </div>
 
 
-            <input  className="mr-2 mt-2" type="checkbox" id="vehicle1" name="vehicle1" value="Plataforma de e-commerce" />
-            <label htmlFor="underline_select">Plataforma de e-commerce</label>
+            <input  className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Plataforma de e-commerce" />
+            <label htmlFor="Quero falar sobre">Plataforma de e-commerce</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="vehicle2" name="vehicle2" value="Logística para e-commerce: Fulfillment" />
-            <label htmlFor="underline_select">Logística para e-commerce: Fulfillment</label>
+            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Logística para e-commerce: Fulfillment" />
+            <label htmlFor="Quero falar sobre">Logística para e-commerce: Fulfillment</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="vehicle3" name="vehicle3" value="TMS Embarcador" />
-            <label htmlFor="underline_select">TMS Embarcador</label>
+            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="TMS Embarcador" />
+            <label htmlFor="Quero falar sobre">TMS Embarcador</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="vehicle4" name="vehicle4" value="TMS Transportador" />
-            <label htmlFor="underline_select">TMS Transportador</label>
+            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="TMS Transportador" />
+            <label htmlFor="Quero falar sobre">TMS Transportador</label>
             <br />
 
-            <input className="mr-2" type="checkbox" id="vehicle5" name="vehicle5" value="Gestão de pedidos, comunicação e rastreio" />
-            <label htmlFor="underline_select">Gestão de pedidos, comunicação e rastreio</label>
+            <input className="mr-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Gestão de pedidos, comunicação e rastreio" />
+            <label htmlFor="Quero falar sobre">CX: Comunicação, gestão de pedidos e rastreio</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="vehicle6" name="vehicle6" value="Torre de controle em tempo real e envios" />
-            <label htmlFor="underline_select">Torre de controle em tempo real e envios</label>
+            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Torre de controle em tempo real e envios" />
+            <label htmlFor="Quero falar sobre">Torre de controle em tempo real e envios</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="vehicle7" name="vehicle7" value="PUDO: Retirada e Coleta de Mercadorias " />
-            <label htmlFor="underline_select">PUDO: Retirada e Coleta de Mercadorias</label>
+            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="PUDO: Retirada e Coleta de Mercadorias " />
+            <label htmlFor="Quero falar sobre">PUDO: Retirada e Coleta de Mercadorias</label>
             <br />
           </div>
 
