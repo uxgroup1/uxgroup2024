@@ -34,7 +34,6 @@ export default function Questionario({fechar}: Fechar) {
     const [messageFinal, setMessageFinal] = useState("");
     const { mutate, idEmpresa, isPending, isSuccess } = useClientDataQuestionary();
     const [answeredQuestionsCount, setAnsweredQuestionsCount] = useState(0);
-    const [ off, setOff] = useState(false)
     const [questionsOne, setQuestionsOne] = useState([
         {
             type: "name",
@@ -254,7 +253,6 @@ export default function Questionario({fechar}: Fechar) {
                 </div>
                 <div style={{ paddingBottom: "50px" }} className="p-4 pl-10 pr-10 rounded-l-2xl h-full flex overflow-auto flex-col justify-between gap-10 bg-white rounded-e-2xl w-full">
                     <div ref={scrollRef} className=" overflow-auto pb-10 flex flex-col h-full">
-
                         {conversation.map((entry, index) => (
                             <div
                                 key={index}

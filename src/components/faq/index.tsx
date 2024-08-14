@@ -12,6 +12,8 @@ export default function Faq() {
         { question: "O que é Fulfillment?", answer: "Fulfillment refere-se ao processo de gerenciar e executar todas as etapas da cadeia logística, desde o recebimento dos produtos até a entrega final aos clientes." },
         { question: "Quais serviços uma empresa de Fulfillment oferece?", answer: "Normalmente, os serviços incluem recebimento de mercadorias, armazenagem, gestão de estoque, picking (seleção de produtos), packing (embalagem), expedição de pedidos e logística reversa." },
         { question: "Como uma empresa de Fulfillment pode beneficiar meu negócio?", answer: "Ela pode reduzir custos operacionais, melhorar os prazos de entrega, permitir maior foco no core business da empresa, além de oferecer escalabilidade para atender aumentos sazonais ou de demanda." },
+        { question: "Como a UX pode ajudar a reduzir custos de frete?", answer: "A UX otimiza rotas de entrega e utiliza estratégias eficientes de gestão logística para reduzir custos de frete." },
+        { question: "A UX oferece soluções de Fulfillment Same Day e Next Day Delivery?", answer: "Sim, a UX trabalha com entrega rápida para atender às expectativas dos consumidores por prazos de entrega reduzidos." },
         { question: "Como posso começar a utilizar os serviços de Fulfillment da UX?", answer: "Entre em contato conosco para uma consulta personalizada. Estamos preparados para oferecer uma proposta sob medida que atenda às suas necessidades de logística." },
 
     ];

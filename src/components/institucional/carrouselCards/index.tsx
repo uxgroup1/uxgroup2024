@@ -59,7 +59,7 @@ function CarrouselCards({ content, colorText, containerRef }: carrouselCards) {
                     <button className={`text-black `}>
                       <Link
                         target="_blank"
-                        className="flex hover:border-b transition border-transparent hover:border-black items-center gap-2"
+                        className="flex font-medium hover:scale-95 hover:border-b transition border-transparent hover:border-black items-center gap-2"
                         href={data.link}
                       >
                         saiba mais <FaArrowRightLong className="text-lg" />

@@ -51,6 +51,8 @@ import gestao from "@/assets/gestao.svg"
 import { useState } from "react";
 import NewBannerHome from "@/components/institucional/newBannerHome";
 import NewTwoCards from "@/components/TwoCardsHome";
+import ButtonChat from "@/components/chat";
+import Questionario from "@/components/institucional/questionario";
 
 
 const content = [

@@ -53,7 +53,8 @@ export default function NewBannerHome() {
             title: "Construa um e-commerce personalizado com uma solução One Stop Shop e um Hub de Integração que garantem uma experiência única de compra para seus clientes.",
             color: `A900D9`,
             icon: iconVendas,
-            link: "#vendas"
+            link: "#vendas",
+            linkTwo: "#formulario"
 
         },
         {
@@ -63,7 +64,8 @@ export default function NewBannerHome() {
             title: "Crie campanhas de frete e gerencie sua malha de transportes com ferramentas de TMS e CX, com gestão preditiva e em tempo real da sua operação.",
             color: `29265B`,
             icon: iconGestao,
-            link: "#gestao"
+            link: "#gestao",
+            linkTwo: "#formulario"
 
         },
         {
@@ -73,7 +75,8 @@ export default function NewBannerHome() {
             title: "Soluções personalizadas de Fulfillment, torre de controle e envios, com tecnologia proprietária, que garante uma operação otimizada com rapidez e precisão na entrega do pedido.",
             color: `FF7F13`,
             icon: iconLogistica,
-            link: "#logistica"
+            link: "#logistica",
+            linkTwo: "#formulario"
 
         },
         {
@@ -83,7 +86,8 @@ export default function NewBannerHome() {
             title: "Adote soluções como Green Mile, Compensação de Carbono e Last Mile por Mulheres e destaque se como uma empresa comprometida com os impactos socioambientais. ",
             color: `7DAE59`,
             icon: iconEsg,
-            link: "#sustentabilidade"
+            link: "#sustentabilidade",
+            linkTwo: "#formulario"
 
         },
     ]
@@ -155,10 +159,14 @@ export default function NewBannerHome() {
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`${banners[currentIndex].index === 3 ? "lg:w-full w-full " : "w-full"} `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
-                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full h-full" href={"#formulario"}> conheça sua solução</Link>
-
-                        </button>
+                        <div className="flex flex-col items-center justify-center gap-5">
+                            <button className={`w-[240px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
+                            </button>
+                            <button className={`w-[240px] flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> fale com um especialista</Link>
+                            </button>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -167,9 +175,15 @@ export default function NewBannerHome() {
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
                         <h2 className="text-xl text-center w-3/4 text-black font-light">{banners[currentIndex].title}</h2>
-                        <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
-                            <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
-                        </button>
+                        <div className="flex items-center justify-center gap-5">
+                            <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
+                            </button>
+                            <button className={`w-[240px] flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> fale com um especialista</Link>
+                            </button>
+                        </div>
+
                     </motion.div>
                 </div>
             </div>

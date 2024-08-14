@@ -171,7 +171,7 @@ export default function Logistica() {
           corButtonOne="#fbc705"
           corButtonThree="#D3A707"
           logo={fulfillmet.src}
-          title=" Expertise em operações B2C, B2B e D2C para armazenagem, picking e packing."
+          title="Empresa de fulfillment especializada em operações B2C, B2B e D2C para armazenagem, picking e packing."
           text="Aumente as vendas, reduza prazos de entregas e custos de frete para fidelização de clientes com uma solução de Fulfillment escalável e personalizada."
           banner={banner.src}
         />
