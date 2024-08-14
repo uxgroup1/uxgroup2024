@@ -164,7 +164,7 @@ export default function NewBannerHome() {
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
                             </button>
                             <button className={`w-[240px] flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
-                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> fale com um especialista</Link>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].linkTwo}> fale com um especialista</Link>
                             </button>
                         </div>
                     </motion.div>
@@ -180,7 +180,7 @@ export default function NewBannerHome() {
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
                             </button>
                             <button className={`w-[240px] flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
-                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> fale com um especialista</Link>
+                                <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].linkTwo}> fale com um especialista</Link>
                             </button>
                         </div>
 
