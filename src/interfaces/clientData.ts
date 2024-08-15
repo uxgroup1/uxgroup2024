@@ -7,7 +7,7 @@ export interface ClientData {
     floating_cargo: string;
     floating_segmento: string;
     floating_numeroFuncionarios: string;
-    underline_select: string;
+    floating_querofalarSobre: string;
     floating_message: string;
     page_name: string;
 }

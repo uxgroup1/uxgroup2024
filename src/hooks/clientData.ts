@@ -6,6 +6,8 @@ import axios from "axios";
 const API_URL = 'https://api.rd.services/platform/conversions?api_key=uMNBxrWUgccjMwMfkzYxIcPFAgEJexMYZTqf';
 
 const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientData>> => {
+    
+    console.log(clientData)
     const options = {
         method: 'POST',
         url: API_URL,
@@ -25,18 +27,15 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
                 company_name: clientData.floating_company,
                 custom_field_numberFuncionario: clientData.floating_numeroFuncionarios,
                 custom_field_segmento: clientData.floating_segmento,
-                cf_subject: clientData.underline_select,
+                cf_subject: clientData.floating_querofalarSobre,
                 cf_message: clientData.floating_message,
                 cf_pageName: clientData.page_name
             }
         }
     };
 
+    console.log(options.data.payload);
     const response = await axios.request<ClientData>(options);
-
-    console.log(response.data);
-    
-
 
     return response;
 }
@@ -45,6 +44,9 @@ export function useClientData() {
     const mutation = useMutation<AxiosResponse<ClientData>, Error, ClientData>({
         mutationFn: fetchData
     });
+
+   
+    
 
     return {
         mutate: mutation.mutate,

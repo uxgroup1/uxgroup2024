@@ -21,7 +21,7 @@ export default function ContactForm({
     floating_cargo: "",
     floating_segmento: "",
     floating_numeroFuncionarios: "",
-    underline_select: "",
+    floating_querofalarSobre: "",
     floating_message: "",
     cf_terms: false,
     conversion_identifier: nameForm,
@@ -57,7 +57,7 @@ export default function ContactForm({
         floating_cargo: "",
         floating_numeroFuncionarios: "",
         floating_segmento: "",
-        underline_select: "",
+        floating_querofalarSobre: "",
         floating_message: "",
         cf_terms: false,
         conversion_identifier: nameForm,
@@ -66,11 +66,16 @@ export default function ContactForm({
     }
   }, [isSuccess]);
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("");
 
     mutate(formData);
   };
+
+
+
   return (
     <>
       <Script
@@ -273,33 +278,32 @@ export default function ContactForm({
               <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
             </div>
 
-
-            <input  className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Plataforma de e-commerce" />
-            <label htmlFor="Quero falar sobre">Plataforma de e-commerce</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Plataforma de e-commerce" />
+            <label htmlFor="floating_querofalarSobre">Plataforma de e-commerce</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Logística para e-commerce: Fulfillment" />
-            <label htmlFor="Quero falar sobre">Logística para e-commerce: Fulfillment</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Logística para e-commerce: Fulfillment" />
+            <label htmlFor="floating_querofalarSobre">Logística para e-commerce: Fulfillment</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="TMS Embarcador" />
-            <label htmlFor="Quero falar sobre">TMS Embarcador</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="TMS Embarcador" />
+            <label htmlFor="floating_querofalarSobre">TMS Embarcador</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="TMS Transportador" />
-            <label htmlFor="Quero falar sobre">TMS Transportador</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="TMS Transportador" />
+            <label htmlFor="floating_querofalarSobre">TMS Transportador</label>
             <br />
 
-            <input className="mr-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Gestão de pedidos, comunicação e rastreio" />
-            <label htmlFor="Quero falar sobre">CX: Comunicação, gestão de pedidos e rastreio</label>
+            <input className="mr-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Gestão de pedidos, comunicação e rastreio" />
+            <label htmlFor="floating_querofalarSobre">CX: Comunicação, gestão de pedidos e rastreio</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="Torre de controle em tempo real e envios" />
-            <label htmlFor="Quero falar sobre">Torre de controle em tempo real e envios</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Torre de controle em tempo real e envios" />
+            <label htmlFor="floating_querofalarSobre">Torre de controle em tempo real e envios</label>
             <br />
 
-            <input className="mr-2 mt-2" type="checkbox" id="Quero falar sobre" name="Quero falar sobre" value="PUDO: Retirada e Coleta de Mercadorias " />
-            <label htmlFor="Quero falar sobre">PUDO: Retirada e Coleta de Mercadorias</label>
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="PUDO: Retirada e Coleta de Mercadorias " />
+            <label htmlFor="floating_querofalarSobre">PUDO: Retirada e Coleta de Mercadorias</label>
             <br />
           </div>
 
