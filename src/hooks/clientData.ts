@@ -29,7 +29,8 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
                 custom_field_segmento: clientData.floating_segmento,
                 cf_subject: clientData.floating_querofalarSobre,
                 cf_message: clientData.floating_message,
-                cf_pageName: clientData.page_name
+                cf_pageName: clientData.page_name,
+                cf_terms: clientData.floating_terms
             }
         }
     };

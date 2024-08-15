@@ -23,7 +23,7 @@ export default function ContactForm({
     floating_numeroFuncionarios: "",
     floating_querofalarSobre: "",
     floating_message: "",
-    cf_terms: false,
+    floating_terms: "",
     conversion_identifier: nameForm,
     page_name: page,
   });
@@ -59,7 +59,7 @@ export default function ContactForm({
         floating_segmento: "",
         floating_querofalarSobre: "",
         floating_message: "",
-        cf_terms: false,
+        floating_terms: "",
         conversion_identifier: nameForm,
         page_name: page,
       });
@@ -279,31 +279,31 @@ export default function ContactForm({
             </div>
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Plataforma de e-commerce" />
-            <label htmlFor="floating_querofalarSobre">Plataforma de e-commerce</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">Plataforma de e-commerce</label>
             <br />
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Logística para e-commerce: Fulfillment" />
-            <label htmlFor="floating_querofalarSobre">Logística para e-commerce: Fulfillment</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">Logística para e-commerce: Fulfillment</label>
             <br />
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="TMS Embarcador" />
-            <label htmlFor="floating_querofalarSobre">TMS Embarcador</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">TMS Embarcador</label>
             <br />
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="TMS Transportador" />
-            <label htmlFor="floating_querofalarSobre">TMS Transportador</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">TMS Transportador</label>
             <br />
 
             <input className="mr-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Gestão de pedidos, comunicação e rastreio" />
-            <label htmlFor="floating_querofalarSobre">CX: Comunicação, gestão de pedidos e rastreio</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">CX: Comunicação, gestão de pedidos e rastreio</label>
             <br />
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="Torre de controle em tempo real e envios" />
-            <label htmlFor="floating_querofalarSobre">Torre de controle em tempo real e envios</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">Torre de controle em tempo real e envios</label>
             <br />
 
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre" name="floating_querofalarSobre" value="PUDO: Retirada e Coleta de Mercadorias " />
-            <label htmlFor="floating_querofalarSobre">PUDO: Retirada e Coleta de Mercadorias</label>
+            <label className="text-white" htmlFor="floating_querofalarSobre">PUDO: Retirada e Coleta de Mercadorias</label>
             <br />
           </div>
 
@@ -375,10 +375,10 @@ export default function ContactForm({
             />
             <div className="flex items-center pb-10">
               <input
-                id="cf_terms"
-                name="cf_terms"
+                id="floating_terms"
+                name="floating_terms"
                 type="checkbox"
-                checked={formData.cf_terms}
+                value={" Eu concordo em receber comunicações."}
                 onChange={handleChange}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />

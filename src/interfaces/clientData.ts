@@ -10,6 +10,7 @@ export interface ClientData {
     floating_querofalarSobre: string;
     floating_message: string;
     page_name: string;
+    floating_terms: string;
 }
 
 export interface ClientDataResponse{
