@@ -273,7 +273,7 @@ export default function ContactForm({
               </option>
             </select>
           </div>
-          <div className="relative flex-col gap-2 z-0 w-full mb-5 group">
+          <div className="relative p-3 lg:p-5 border flex-col gap-2 z-0 w-full mb-5 group">
             <div className="pb-2">
               <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
             </div>

@@ -43,7 +43,7 @@ export default function Vendas() {
     },
   ];
 
-  const number = [ 
+  const number = [
     {
       number: "12+",
       text: "marketplaces.",
@@ -120,16 +120,18 @@ function gtag_report_conversion(url) {
         ></Script>
 
         {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+
         <Script>
-          {` (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2580853,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-        </Script>
+          {`(function(h,o,t,j,a,r){
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+          h._hjSettings={hjid:5097455,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  `}</Script>
+
 
         {/* <!-- Google Tag Manager --> */}
         <Script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -151,9 +153,9 @@ function gtag_report_conversion(url) {
         <Header />
         {/* <JumboTron banner="" corButtonOne="#A900D9" linkButtonOne="" textButtonOne="falar com um especialista" textButtonTwo="saiba mais" linkButtonTwo="" title="Transforme suas vendas digitais soluções de vendas completas" text="Seu e-commerce do seu jeito, pronto para maximizar suas vendas e melhorar a experiência do cliente." />
         <ProductInstitutional textButtonOne="saiba mais" textButtonTwo="fale conosco" linkButtonOne="" linkButtonTwo="" corButtonOne="#A900D9" banner={banner.src} title="Simplifique e potencialize sua operação de e-commerce" text="Uma loja online que ofereça uma excelente experiência ao cliente não só atrai mais visitantes, como também fideliza e aumenta as conversões. Na UX oferecemos soluções completas independente do tamanho do seu negócio, com uma plataforma one stop shop e um hub de integração , nossas soluções são 100% integradas à logística e tecnologia de ponta, garantindo um fluxo perfeito desde o clique até a entrega ao cliente." /> */}
-        <SimplifiqueEcommerce/>
-        <Cta banner={""} title={"Crie uma experiência de compra única de alta qualidade para aumentar a fidelidade dos clientes."}  button={true}/>
-        <SecondSection  title="Operações automatizadas que maximizam resultados" flowReverse={false} corButtonOne="#A900D9" link="" image={banner.src} text="Um hub de integração que conecta soluções de tecnologia e logística às principais plataformas do mercado, otimizando a experiência de compra e melhorando a jornada do pedido. Com tudo automatizado, você pode focar exclusivamente nas estratégias de vendas, sabendo que todas as operações estão funcionando perfeitamente."/>
+        <SimplifiqueEcommerce />
+        <Cta banner={""} title={"Crie uma experiência de compra única de alta qualidade para aumentar a fidelidade dos clientes."} button={true} />
+        <SecondSection title="Operações automatizadas que maximizam resultados" flowReverse={false} corButtonOne="#A900D9" link="" image={banner.src} text="Um hub de integração que conecta soluções de tecnologia e logística às principais plataformas do mercado, otimizando a experiência de compra e melhorando a jornada do pedido. Com tudo automatizado, você pode focar exclusivamente nas estratégias de vendas, sabendo que todas as operações estão funcionando perfeitamente." />
         <Numbers
           cor="#A900D9"
           title="Garanta redução de custos no seu pós-venda com uma solução completa focada na experiência do cliente."
@@ -161,7 +163,7 @@ function gtag_report_conversion(url) {
           banner="https://uxsolutions.com.br/wp-content/uploads/2023/07/universo-uxs-2.gif"
           text=""
         />
-        <SliderTopicsVendas/>
+        <SliderTopicsVendas />
         <ContactForm nameForm="connect" content={valuesInput} page="connect" />
         <Footer />
 
