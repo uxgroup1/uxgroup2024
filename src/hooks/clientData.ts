@@ -6,7 +6,7 @@ import axios from "axios";
 const API_URL = 'https://api.rd.services/platform/conversions?api_key=uMNBxrWUgccjMwMfkzYxIcPFAgEJexMYZTqf';
 
 const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientData>> => {
-    
+
     console.log(clientData)
     const options = {
         method: 'POST',
@@ -30,7 +30,10 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
                 cf_subject: clientData.floating_querofalarSobre,
                 cf_message: clientData.floating_message,
                 cf_pageName: clientData.page_name,
-                cf_terms: clientData.floating_terms
+                cf_terms: clientData.floating_terms,
+                "custom_fields": {
+                    "uuid_do_campo_personalizado": "valor_do_campo"
+                }
             }
         }
     };
@@ -46,8 +49,8 @@ export function useClientData() {
         mutationFn: fetchData
     });
 
-   
-    
+
+
 
     return {
         mutate: mutation.mutate,

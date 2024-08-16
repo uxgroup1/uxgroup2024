@@ -78,11 +78,11 @@ export default function ContactForm({
 
   return (
     <>
-      <Script
+      {/* <Script
         type="text/javascript"
         async
         src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
-      ></Script>
+      ></Script> */}
       <section id="formulario" className="bg-black pt-[100px] w-full">
         <div className="w-full md:w-full text-white flex text-center items-center justify-center flex-col">
           <h1 className="w-[90%] md:w-full text-center">
