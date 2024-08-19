@@ -343,6 +343,16 @@ export default function ContactForm({
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre7" name="floating_querofalarSobre" value="PUDO: Retirada e Coleta de Mercadorias" onChange={handleChange} />
             <label className="text-white" htmlFor="floating_querofalarSobre7">PUDO: Retirada e Coleta de Mercadorias</label>
             <br />
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre7" name="floating_querofalarSobre" value="Parcerias" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre8">Parcerias</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre8" name="floating_querofalarSobre" value="Quero trabalhar na UX Group!" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre8">Quero trabalhar na UX Group!</label>
+            <br />
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre9" name="floating_querofalarSobre" value="Outros" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre9">Outros</label>
+            <br />
           </div>
 
           {inputAlternative?.map((data) => (
