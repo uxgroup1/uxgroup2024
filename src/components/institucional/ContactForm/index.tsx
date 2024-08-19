@@ -37,10 +37,17 @@ export default function ContactForm({
   ) => {
     const { name, value, type, checked } = e.target as HTMLInputElement;
   
-    // Verifica se o campo é um checkbox
     if (type === 'checkbox') {
       setFormData(prevFormData => {
-        // Garantia de tipo para `name` como uma chave de `ClientData`
+        // Se for o checkbox dos termos, definir o valor conforme o estado `checked`
+        if (name === 'floating_terms') {
+          return {
+            ...prevFormData,
+            [name]: checked ? value : "",
+          };
+        }
+  
+        // Verifica se o campo é um checkbox para múltiplas seleções
         const currentSelections = prevFormData[name as keyof ClientData] ? prevFormData[name as keyof ClientData].split(',') : [];
         const updatedSelections = checked
           ? [...currentSelections, value].filter((item, index, self) => self.indexOf(item) === index)
@@ -58,6 +65,7 @@ export default function ContactForm({
       });
     }
   };
+  
 
   useEffect(() => {
     if (isSuccess) {
@@ -86,7 +94,7 @@ export default function ContactForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     mutate(formData);
   };
 
@@ -290,38 +298,38 @@ export default function ContactForm({
             </select>
           </div>
           <div className="relative p-3 lg:p-5 border flex-col gap-2 z-0 w-full mb-5 group">
-          <div className="pb-2">
-            <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
+            <div className="pb-2">
+              <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
+            </div>
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre1" name="floating_querofalarSobre" value="Plataforma de e-commerce" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre1">Plataforma de e-commerce</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre2" name="floating_querofalarSobre" value="Logística para e-commerce: Fulfillment" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre2">Logística para e-commerce: Fulfillment</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre3" name="floating_querofalarSobre" value="TMS Embarcador" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre3">TMS Embarcador</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre4" name="floating_querofalarSobre" value="TMS Transportador" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre4">TMS Transportador</label>
+            <br />
+
+            <input className="mr-2" type="checkbox" id="floating_querofalarSobre5" name="floating_querofalarSobre" value="Gestão de pedidos, comunicação e rastreio" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre5">CX: Comunicação, gestão de pedidos e rastreio</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre6" name="floating_querofalarSobre" value="Torre de controle em tempo real e envios" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre6">Torre de controle em tempo real e envios</label>
+            <br />
+
+            <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre7" name="floating_querofalarSobre" value="PUDO: Retirada e Coleta de Mercadorias" onChange={handleChange} />
+            <label className="text-white" htmlFor="floating_querofalarSobre7">PUDO: Retirada e Coleta de Mercadorias</label>
+            <br />
           </div>
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre1" name="floating_querofalarSobre" value="Plataforma de e-commerce" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre1">Plataforma de e-commerce</label>
-          <br />
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre2" name="floating_querofalarSobre" value="Logística para e-commerce: Fulfillment" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre2">Logística para e-commerce: Fulfillment</label>
-          <br />
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre3" name="floating_querofalarSobre" value="TMS Embarcador" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre3">TMS Embarcador</label>
-          <br />
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre4" name="floating_querofalarSobre" value="TMS Transportador" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre4">TMS Transportador</label>
-          <br />
-
-          <input className="mr-2" type="checkbox" id="floating_querofalarSobre5" name="floating_querofalarSobre" value="Gestão de pedidos, comunicação e rastreio" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre5">CX: Comunicação, gestão de pedidos e rastreio</label>
-          <br />
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre6" name="floating_querofalarSobre" value="Torre de controle em tempo real e envios" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre6">Torre de controle em tempo real e envios</label>
-          <br />
-
-          <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre7" name="floating_querofalarSobre" value="PUDO: Retirada e Coleta de Mercadorias" onChange={handleChange} />
-          <label className="text-white" htmlFor="floating_querofalarSobre7">PUDO: Retirada e Coleta de Mercadorias</label>
-          <br />
-        </div>
 
           {inputAlternative?.map((data) => (
             <div key={data.id} className="relative z-0 w-full mb-5 group">
@@ -394,7 +402,7 @@ export default function ContactForm({
                 id="floating_terms"
                 name="floating_terms"
                 type="checkbox"
-                value={" Eu concordo em receber comunicações."}
+                value={"Eu concordo em receber comunicações."}
                 onChange={handleChange}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
