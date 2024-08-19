@@ -97,9 +97,9 @@ function gtag_report_conversion(url) {
           src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
         ></Script>
 
-       {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+        {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
 
-       <Script>
+        <Script>
           {`(function(h,o,t,j,a,r){
             h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
           h._hjSettings={hjid:5097455,hjsv:6};

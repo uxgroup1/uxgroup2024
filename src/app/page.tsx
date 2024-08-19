@@ -224,7 +224,7 @@ function gtag_report_conversion(url) {
         ></Script>
 
         {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
-
+        
         <Script>
           {`(function(h,o,t,j,a,r){
             h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };

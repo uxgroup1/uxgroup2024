@@ -25,23 +25,26 @@ const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientDa
                 personal_phone: clientData.floating_phone,
                 job_title: clientData.floating_cargo,
                 company_name: clientData.floating_company,
-                custom_field_numberFuncionario: clientData.floating_numeroFuncionarios,
-                custom_field_segmento: clientData.floating_segmento,
+                cf_numero_de_funcionarios: clientData.floating_numeroFuncionarios,
+                cf_atividade_da_empresa: clientData.floating_segmento,
                 cf_subject: clientData.floating_querofalarSobre,
-                cf_message: clientData.floating_message,
-                cf_pageName: clientData.page_name,
-                cf_terms: clientData.floating_terms,
-                "custom_fields": {
-                    "uuid_do_campo_personalizado": "valor_do_campo"
-                }
+                cf_querofalarsobre: clientData.floating_querofalarSobre,
+                cf_message: "Novo Contato",
+                cf_referencia: clientData.page_name,
+                cf_termos: clientData.floating_terms
             }
         }
     };
 
-    console.log(options.data.payload);
-    const response = await axios.request<ClientData>(options);
+    try {
+        const response = await axios.request<ClientData>(options);
+        return response;
+    } catch (error: any) {
+        console.error('Erro na requisição:', error.response?.data || error.message);
+        throw error;
+    }
 
-    return response;
+
 }
 
 export function useClientData() {

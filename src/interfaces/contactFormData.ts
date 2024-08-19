@@ -1,8 +1,11 @@
+import { ReactNode } from "react";
+
 export interface contactFormSubject{
     value: string;
 }
 
 export interface contactFormInputAlternative{
+    label: ReactNode;
     htmlFor: string;
     id: string;
     type: string;
