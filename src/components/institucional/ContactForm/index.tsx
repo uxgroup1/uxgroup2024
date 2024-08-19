@@ -36,7 +36,7 @@ export default function ContactForm({
     >
   ) => {
     const { name, value, type, checked } = e.target as HTMLInputElement;
-  
+
     if (type === 'checkbox') {
       setFormData(prevFormData => {
         // Se for o checkbox dos termos, definir o valor conforme o estado `checked`
@@ -46,13 +46,13 @@ export default function ContactForm({
             [name]: checked ? value : "",
           };
         }
-  
+
         // Verifica se o campo é um checkbox para múltiplas seleções
         const currentSelections = prevFormData[name as keyof ClientData] ? prevFormData[name as keyof ClientData].split(',') : [];
         const updatedSelections = checked
           ? [...currentSelections, value].filter((item, index, self) => self.indexOf(item) === index)
           : currentSelections.filter(item => item !== value);
-  
+
         return {
           ...prevFormData,
           [name as keyof ClientData]: updatedSelections.join(','),
@@ -65,7 +65,7 @@ export default function ContactForm({
       });
     }
   };
-  
+
 
   useEffect(() => {
     if (isSuccess) {
@@ -95,8 +95,22 @@ export default function ContactForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Verifique se o checkbox de termos está marcado
+    if (!formData.floating_terms) {
+      alert("Você precisa aceitar os termos para enviar o formulário.");
+      return;
+    }
+
+    // Verifique se o campo 'querofalarSobre' não está vazio
+    if (formData.floating_querofalarSobre === "") {
+      alert("Você precisa selecionar pelo menos um item no campo 'Quero falar sobre'.");
+      return;
+    }
+
+    // Se todas as validações forem passadas, envie os dados do formulário
     mutate(formData);
   };
+
 
 
 
@@ -402,7 +416,7 @@ export default function ContactForm({
                 id="floating_terms"
                 name="floating_terms"
                 type="checkbox"
-                value={"Eu concordo em receber comunicações."}
+                value="Eu concordo em receber comunicações."
                 onChange={handleChange}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
@@ -436,9 +450,10 @@ export default function ContactForm({
           )}
           <button
             type="submit"
-            className="text-white md:w-full hover:font-semibold w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center"
+            className={`text-white md:w-full hover:font-semibold w-full bg-transparent border border-white transition-all hover:bg-white focus:ring-4 focus:outline-none hover:text-black focus:ring-white font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center ${(!formData.floating_terms || formData.floating_querofalarSobre === "") ? "opacity-50 cursor-not-allowed" : ""}`}
+            disabled={!formData.floating_terms || formData.floating_querofalarSobre === ""}
           >
-            enviar contato
+            Enviar contato
           </button>
         </form>
       </section>
