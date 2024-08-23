@@ -103,7 +103,7 @@ export default function Header() {
   const [openMenuConnect, setOpenMenuConnect] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [indexHover, setIndexHover] = useState(0);
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
 
   const handleOpenClick = () => {
@@ -117,26 +117,26 @@ export default function Header() {
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
     setOpenMenuLog(false);
-    setOpenModal(false);
+    // setOpenModal(false);
     setOpenMenuConnect(false);
     setOpenMenuVendas(false);
   };
   const handleOpenClickLog = () => {
     setOpenMenuLog(!openMenuLog);
     setOpenMenuGestao(false);
-    setOpenModal(false);
+    // setOpenModal(!openMenuLog); 
     setOpenMenuConnect(false);
     setOpenMenuVendas(false);
   };
   
-  useEffect(() => {
-    if(openMenuGestao || openMenuLog){
-      setOpenModal(false);
+  // useEffect(() => {
+  //   if(openMenuGestao || openMenuLog){
+  //     setOpenModal(false);
 
-    }else{
-      setOpenModal(true);
-    }
-  })
+  //   }else{
+  //     setOpenModal(true);
+  //   }
+  // })
 
   return (
     <>
@@ -281,7 +281,7 @@ export default function Header() {
                       Blog
                     </Link>
                   </li>
-                  <li className="w-[200px]">
+                  <li className={`  $ w-full lg:w-[200px]`}>
 
                     {openModal && (
                       <PedidoOndetah />

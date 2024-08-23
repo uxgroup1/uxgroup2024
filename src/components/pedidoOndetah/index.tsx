@@ -19,10 +19,10 @@ export default function PedidoOndetah() {
   const [messageError, setMessageError] = useState("");
   const [linkUrl, setLinkUrl] = useState("");
 
-  console.log(modalOpen);
+  console.log(codigoTransport);
 
 
-  const [clicked, setClicked] = useState("");
+  const [clicked, setClicked] = useState();
 
   const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
     let result: string;
@@ -48,9 +48,9 @@ export default function PedidoOndetah() {
     setCodigoPedido(event.target.value);
   };
 
-  const handleCodigoTransport = (codigo: string) => {
-    setCodigoTransport(codigo);
-    setClicked(codigo);
+  const handleCodigoTransport = (codigo: {codigo: string, index: any}) => {
+    setCodigoTransport(codigo.codigo);
+    setClicked(codigo.index);
   };
 
   const handleOpenClick = () => {
@@ -178,9 +178,9 @@ export default function PedidoOndetah() {
                     {content.map((content, index) => {
                       return (
                         <div
-                          onClick={() => handleCodigoTransport(content.codigo)}
+                          onClick={() => handleCodigoTransport(content)}
                           key={index}
-                          className={`hover:shadow-md hover:scale-90 transition border-[1px] border-[#0000000f]  rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl rounded-md" : ""}  md:w-[100px] w-[70px]`}
+                          className={`hover:shadow-md hover:scale-90 transition border-[1px] border-[#0000000f]  rounded-lg ${clicked === content.index ? "border-1 shadow-xl rounded-md" : ""}  md:w-[100px] w-[70px]`}
                         >
                           <Image
                             className={` rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md" : ""} focus:p-4 transition-all`}
