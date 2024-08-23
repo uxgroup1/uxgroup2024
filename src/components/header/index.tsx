@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logoUx from "../../assets/ux-branco.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ondetahBanner from "@/assets/ondetah/ondetah.png";
@@ -112,6 +112,7 @@ export default function Header() {
     setOpenMenuGestao(false);
     setOpenMenuConnect(false);
     setOpenMenuVendas(false);
+    setOpenModal(true)
   };
   const handleOpenClickGestao = () => {
     setOpenMenuGestao(!openMenuGestao);
@@ -127,22 +128,15 @@ export default function Header() {
     setOpenMenuConnect(false);
     setOpenMenuVendas(false);
   };
-  const handleOpenClickVendas = () => {
-    console.log("aqui");
+  
+  useEffect(() => {
+    if(openMenuGestao || openMenuLog){
+      setOpenModal(false);
 
-    setOpenMenuVendas(!openMenuVendas);
-    setOpenMenuGestao(false);
-    setOpenModal(false);
-    setOpenMenuConnect(false);
-    setOpenMenuLog(false);
-  };
-  const handleOpenClickConnect = () => {
-    setOpenMenuConnect(!openMenuConnect);
-    setOpenMenuGestao(false);
-    setOpenModal(false);
-    setOpenMenuLog(false);
-    setOpenMenuVendas(false);
-  };
+    }else{
+      setOpenModal(true);
+    }
+  })
 
   return (
     <>
@@ -286,6 +280,14 @@ export default function Header() {
                     >
                       Blog
                     </Link>
+                  </li>
+                  <li className="w-[200px]">
+
+                    {openModal && (
+                      <PedidoOndetah />
+                    )}
+
+
                   </li>
                   {/* <li className="w-full md:w-[200px]">
                     <PedidoOndetah />

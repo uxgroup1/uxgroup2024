@@ -1,16 +1,14 @@
 import { useState } from "react";
-import bannerOndetah from "@/assets/modalOndetah/bannerModal.png";
 import { IoClose } from "react-icons/io5";
 import carrefour from "@/assets/logosOndetah/carrefour.png";
-import whirpoll from "@/assets/logosOndetah/whirpoll.png";
 import dafiti from "@/assets/logosOndetah/dafiti.png";
 import curta from "@/assets/logosOndetah/curta.png";
 import dorel from "@/assets/logosOndetah/dorel.png";
-import scolados from "@/assets/logosOndetah/scolados.png";
-import multi from "@/assets/logosOndetah/multimoveis.png";
-import veste from "@/assets/logosOndetah/veste.png";
 import acioly from "@/assets/logosOndetah/acciloly01.png";
-import uxd from "@/assets/ux-branco.svg";
+import consul from "@/assets/logosOndetah/consul.png";
+import brastemp from "@/assets/logosOndetah/brastemp.png";
+import compraCerta from "@/assets/logosOndetah/compra-certa.png";
+import kitchenaid from "@/assets/logosOndetah/kitchenaid.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +18,10 @@ export default function PedidoOndetah() {
   const [codigoTransport, setCodigoTransport] = useState("");
   const [messageError, setMessageError] = useState("");
   const [linkUrl, setLinkUrl] = useState("");
-  
+
+  console.log(modalOpen);
+
+
   const [clicked, setClicked] = useState("");
 
   const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
@@ -61,56 +62,58 @@ export default function PedidoOndetah() {
   };
 
   const content = [
-    { 
-      index:0,
+    {
+      index: 0,
       image: carrefour.src,
       codigo: "CRF",
     },
-    { 
-      index:1,
-      image: whirpoll.src,
-      codigo: "WHP",
-    },
+
     {
-      index:2,
-      image: dafiti.src,
-      codigo: "DF",
-    },
-    {
-      index:3,
-      image: curta.src,
-      codigo: "CTA",
-    },
-    {
-      index:4,
-      image: dorel.src,
-      codigo: "DL",
-    },
-    {
-      index:5,
-      image: scolados.src,
-      codigo: "scolados",
-    },
-    {
-      index:6,
-      image: multi.src,
-      codigo: "mv",
-    },
-    {
-      index:7,
-      image: veste.src,
-      codigo: "VESTE",
-    },
-    {
-      index:8,
+      index: 8,
       image: acioly.src,
       codigo: "AGM",
     },
     {
-      index:9,
-      image: uxd.src,
-      codigo: "uxd",
+      index: 2,
+      image: dafiti.src,
+      codigo: "DF",
     },
+    {
+      index: 3,
+      image: curta.src,
+      codigo: "CTA",
+    },
+    {
+      index: 4,
+      image: dorel.src,
+      codigo: "DL",
+    },
+    {
+      index: 5,
+      image: consul.src,
+      codigo: "WHP",
+    },
+    {
+      index: 6,
+      image: brastemp.src,
+      codigo: "WHP",
+    },
+    {
+      index: 6,
+      image: compraCerta.src,
+      codigo: "WHP",
+    },
+    {
+      index: 1,
+      image: kitchenaid.src,
+      codigo: "WHP",
+    },
+
+    // {
+    //   index:9,
+    //   image: uxd.src,
+    //   codigo: "uxd",
+    // },
   ];
 
   return (
@@ -119,26 +122,26 @@ export default function PedidoOndetah() {
         onClick={() => handleOpenClick()}
         data-modal-target="static-modal"
         data-modal-toggle="static-modal"
-        className="block w-[95%] md:mt-0 mt-3  text-white   bg-gradient-to-r to-[#009581] from-[#29265B] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        className="block w-[95%] md:mt-0 mt-3  text-black   bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
         type="button"
       >
-        localiar meu pedido
+        Localiar meu pedido
       </button>
 
       {modalOpen && (
         <div
           id="static-modal"
           data-modal-backdrop="static"
-          aria-hidden="true"
-          className={`absolute bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh]  top-0`}
+          aria-hidden="true" style={{ zIndex: 100 }}
+          className={`fixed bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh]  top-0`}
         >
-          <div className="flex absolute md:top-1/4 top-10 items-center justify-center md:w-[700px] w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
+          <div className="flex absolute md:top-1/4 top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[700px] md:h-[650px] transition-all">
             <div className="p-10 flex items-center w-full justify-center flex-col">
               <div className="flex items-center justify-center w-full flex-col">
-                <div className="w-full flex justify-end items-end">
+                <div className="w-full pb-10 flex justify-end items-end">
                   <IoClose
                     onClick={() => handleClose()}
-                    className="text-black text-xl hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
+                    className="text-black text-2xl hover:rotate-180 hover:text-[#ff0000] hover:bg-[#dedede] rounded-lg transition-all"
                   />
                 </div>
                 <h1 className="md:text-4xl md:pl-0 pl-[10px] leading-normal md:text-left flex justify-center items-center w-full text-[19px] text-[#29235c]">
@@ -177,10 +180,10 @@ export default function PedidoOndetah() {
                         <div
                           onClick={() => handleCodigoTransport(content.codigo)}
                           key={index}
-                          className={`hover:shadow-md border-[1px] border-[#0000000f] transition-all rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl rounded-md":""}  md:w-[100px] w-[70px]`}
+                          className={`hover:shadow-md hover:scale-90 transition border-[1px] border-[#0000000f]  rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl rounded-md" : ""}  md:w-[100px] w-[70px]`}
                         >
                           <Image
-                            className={` rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md":""} focus:p-4 transition-all`}
+                            className={` rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md" : ""} focus:p-4 transition-all`}
                             src={content.image}
                             quality={100}
                             priority

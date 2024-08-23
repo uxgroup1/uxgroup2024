@@ -6,6 +6,8 @@ import { ClientDataQuestionary, ClientDataQuestionaryResponse } from "@/interfac
 const API_URL = 'http://localhost:3000/empresa/post';
 
 const fetchData = async (clientData: ClientDataQuestionary): Promise<AxiosResponse<ClientDataQuestionaryResponse>> => {
+    let response: any;
+
     const options = {
         method: 'POST',
         url: API_URL,
@@ -21,14 +23,21 @@ const fetchData = async (clientData: ClientDataQuestionary): Promise<AxiosRespon
         }
     }
 
-    const response = await axios.request<ClientDataQuestionaryResponse>(options);
-    console.log(response.data);
-    
+    if (clientData.email.length <= 3) {
+        console.log("Error aqui")
+    } else {
+        response = await axios.request<ClientDataQuestionaryResponse>(options);
+        console.log(response.data);
 
-    const idEmpresa = localStorage.setItem('idEmpresa', String(response.data.data.idEmpresa));
-    console.log(idEmpresa, "aquiiiiii");
 
-    return response;
+        const idEmpresa = localStorage.setItem('idEmpresa', String(response.data.data.idEmpresa));
+        console.log(idEmpresa, "aquiiiiii");
+        return response;
+    }
+
+    return response
+
+
 
 }
 export function useClientDataQuestionary() {

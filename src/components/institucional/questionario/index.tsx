@@ -139,6 +139,8 @@ export default function Questionario({ fechar }: Fechar) {
                 }
             })
             .catch((err) => {
+                console.log("aqui");
+
                 console.log(err);
             });
     }
@@ -185,7 +187,7 @@ export default function Questionario({ fechar }: Fechar) {
 
     useEffect(() => {
         if (currentQuestion >= questionsOne.length) {
-            // Se não houver mais perguntas, finalizar o questionário
+            
             mutate(clientData);
             console.log("Não há mais perguntas.");
             return;
@@ -193,7 +195,6 @@ export default function Questionario({ fechar }: Fechar) {
 
         if (showNextQuestion) {
             setTypedQuestion("");
-
             let question = questionsOne[currentQuestion].question; // Pegar a pergunta atual
             if (currentQuestion > 0) {
                 question = questionsOne[questionsOne.length - 1].question;
@@ -204,8 +205,11 @@ export default function Questionario({ fechar }: Fechar) {
 
             const typingInterval = setInterval(() => {
                 if (i < question.length) {
+
                     setTypedQuestion((prev) => prev + question.charAt(i));
                     i++;
+
+
                 } else {
                     clearInterval(typingInterval);
                     setConversation((prev) => [
@@ -246,7 +250,7 @@ export default function Questionario({ fechar }: Fechar) {
                             <Image className="w-7" src={iconMessage} alt="Icone branco do Questionario" width={100} height={100} />
                             <h1 className="text-white p-0 capitalize text-sm font-extralight">chat uX group</h1>
                         </div>
-                        <IoCloseCircleOutline onClick={() => fechar()} className="lg:hidden text-white  flex" fontSize={25}/>
+                        <IoCloseCircleOutline onClick={() => fechar()} className="lg:hidden text-white  flex" fontSize={25} />
 
                     </div>
                     <div className="w-full lg:flex hidden flex-col  items-start gap-2 px-5 justify-center">
@@ -261,7 +265,7 @@ export default function Questionario({ fechar }: Fechar) {
                         {conversation.map((entry, index) => (
                             <div
                                 key={index}
-                                className={`mt-2 flex justify-start lg:pr-0 items-start max-w-[95%] font-medium ${entry.text.length === 0 ? "flex flex-col-reverse items-start text-black justify-start pb-0 text text-left" : "text-left"}  ${entry.type === "question" ? "text-left font-medium" : "text-left bg-[#ededed] w-fit font-normal p-2 rounded-md"}`}
+                                className={`mt-2 flex justify-start  items-start max-w-[95%] font-medium ${entry.text.length === 0 ? "flex flex-col-reverse items-start text-black justify-start pb-0 text text-left" : "text-left"}  ${entry.type === "question" ? "text-left font-medium" : "text-left bg-[#ededed] pr-2 w-fit font-normal p-2 rounded-md"}`}
                             >
                                 <p className="flex text-black pb-2 flex-col-reverse">{entry.text.length === 0 ? <span className="pb-0 text-base">Olá UX, tudo bem?</span> : ""}</p>
                                 {entry.type === "question" ? <span className="flex text-black flex-col items-start py-5"> <span className="text-xs  text-black">UX Group:</span> {entry.text}</span> : <span className="flex text-wrap flex-col text-black items-start pr-1 p-0"> <span className="text-xs text-black">você:</span>  {entry.text}</span>}

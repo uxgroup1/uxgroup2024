@@ -27,7 +27,7 @@ export default function ButtonChat() {
         <div
             // onMouseEnter={() => setMessage(true)}
             // onMouseLeave={() => setMessage(false)}
-            className={`lg:w-24 lg:h-24 w-16 h-1 shadow-md  cursor-pointer transition-all  rounded-lg fixed top-[87%] lg:top-[84%] left-[80%] lg:left-[91%]`}
+            className={`lg:w-24 hover:scale-95 transition lg:h-24 w-16 h-1 shadow-md   rounded-lg fixed top-[87%] lg:top-[84%] left-[80%] lg:left-[91%]`}
         >
             <Image src={icon} alt="" width={100} height={100} />
 
