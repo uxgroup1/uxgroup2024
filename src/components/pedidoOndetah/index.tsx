@@ -99,7 +99,7 @@ export default function PedidoOndetah() {
       codigo: "WHP",
     },
     {
-      index: 6,
+      index: 7,
       image: compraCerta.src,
       codigo: "WHP",
     },
