@@ -27,7 +27,7 @@ export default function PedidoOndetah() {
   const handleSetLink = (codigoTransport: string, codigoPedido: string) => {
     let result: string;
     let boolean = false;
-    if (codigoPedido === undefined || codigoPedido.length <= 5) {
+    if (codigoPedido === undefined || codigoPedido.length <= 2) {
       result = "Por favor informe um número de pedido válido.";
       setMessageError(result);
     } else if (codigoTransport === undefined || codigoTransport === "") {

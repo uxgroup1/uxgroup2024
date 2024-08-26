@@ -291,7 +291,7 @@ function gtag_report_conversion(url) {
           }
           banner={ctaOne.src}
         /> */}
-        <PedidoOndetah/>
+        {/* <PedidoOndetah/> */}
         <LogisticaComPerformance id={"logistica"} />
 
         <Cta

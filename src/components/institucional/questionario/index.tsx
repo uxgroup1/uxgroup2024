@@ -7,6 +7,8 @@ import { useClientDataQuestionary } from "@/hooks/clientQuestionario";
 import axios from "axios";
 import AnswersData from "@/interfaces/answers";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { FaClosedCaptioning, FaRegCheckCircle, FaWindowClose } from "react-icons/fa";
+import { FaRegCircleStop } from "react-icons/fa6";
 
 interface AnswerDataInterface {
     question: string;
@@ -33,7 +35,9 @@ export default function Questionario({ fechar }: Fechar) {
     const [inputValue, setInputValue] = useState("");
     const [conversation, setConversation] = useState<{ type: string, text: string }[]>([{ type: "message", text: "" }]);
     const [messageFinal, setMessageFinal] = useState("");
+    const [insucess, setInsucess] = useState(false);
     const { mutate, idEmpresa, isPending, isSuccess } = useClientDataQuestionary();
+    
     const [answeredQuestionsCount, setAnsweredQuestionsCount] = useState(0);
     const [questionsOne, setQuestionsOne] = useState([
         {
@@ -113,6 +117,8 @@ export default function Questionario({ fechar }: Fechar) {
 
     const postRespostaEmpresa = (idPergunta: number,
         resposta: string) => {
+
+
         const url = "http://localhost:3000/empresa-perguntas/";
         axios
             .post(url, {
@@ -155,11 +161,17 @@ export default function Questionario({ fechar }: Fechar) {
         const newConversation = [...conversation, { type: "answer", text: value }];
         setConversation(newConversation);
         postRespostaEmpresa(idPergunta, value);
+        console.log(value);
+
         nextQuestion(value);
     };
 
     const nextQuestion = (answer: string) => {
+        // console.log("169"answer);
+
         if (answer.length > 0) {
+            console.log(answer);
+
             const updatedQuestions = [...questionsOne];
             updatedQuestions[currentQuestion].answer = answer;
             setQuestionsOne(updatedQuestions);
@@ -170,24 +182,53 @@ export default function Questionario({ fechar }: Fechar) {
             // Atualizar dados do cliente conforme necessário
             if (currentQuestion === 0) {
                 setClientData((prev) => ({ ...prev, name: answer }));
+
             } else if (currentQuestion === 1) {
                 const [phone, email, nameBusiness] = answer.split(",").map(info => info.trim());
-                setClientData((prev) => ({ ...prev, phone, email, nameBusiness }));
-            }
+                if (phone.length < 9 || phone === ""|| email.length < 10 || email === "" || nameBusiness.length < 1 || nameBusiness === "") {
+                    setInsucess(true)
+                    // setCurrentQuestion(0);
+                    console.log("aqui 190");
+                    
+                } else {
+                    console.log("teste 193")
+                    setClientData((prev) => ({ ...prev, phone, email, nameBusiness }));
 
-            // Avançar para a próxima pergunta
-            setCurrentQuestion(currentQuestion + 1);
+
+                }
+
+            }
+            if(currentQuestion === 0 || currentQuestion === 1){
+                setCurrentQuestion(currentQuestion + 1);
+            }
+            
             setShowNextQuestion(true);
             setInputText(false);
             setButtonAnswer(false);
+            setInsucess(false);
+
         } else {
-            console.log("Resposta vazia");
+
+            currentQuestion >= 2 ? setInsucess(false) : setInsucess(true);
+            // setInsucess(true)
         }
     };
 
     useEffect(() => {
+        if (insucess) {
+            setTimeout(() => {
+                setInsucess(false)
+            }, 5000);
+        } else {
+            setInsucess(false)
+        }
+    })
+
+
+
+    useEffect(() => {
         if (currentQuestion >= questionsOne.length) {
-            
+
             mutate(clientData);
             console.log("Não há mais perguntas.");
             return;
@@ -230,7 +271,7 @@ export default function Questionario({ fechar }: Fechar) {
         if (currentQuestion < questionsOne.length) {
             setShowNextQuestion(true); // Mostra a próxima pergunta
             setInputText(false); // Desabilita a entrada de texto
-        } else if (currentQuestion === questionsOne.length) {
+        } else if (currentQuestion === questionsOne.length) {            
             getQuestions(1); // Busca novas perguntas
         }
     }, [currentQuestion, questionsOne.length]);
@@ -296,7 +337,7 @@ export default function Questionario({ fechar }: Fechar) {
                         {inputText && (
                             <div className="w-full h-full flex justify-end items-end flex-col">
                                 <input
-                                    className="w-full align-text-top border-gray-400 rounded-lg border h-14 pl-2"
+                                    className="w-full align-text-top border-gray-400 bg-white text-black rounded-lg border h-14 pl-2"
                                     name=""
                                     id=""
                                     placeholder="Digite aqui..."
@@ -311,6 +352,25 @@ export default function Questionario({ fechar }: Fechar) {
                                     Enviar
                                 </button>
                             </div>
+                        )}
+                        {insucess && (
+                            <motion.div
+                                initial={{ left: -400, opacity: 0 }}
+                                animate={{
+                                    left: 100,
+                                    opacity: 100,
+                                    transition: { duration: 0.5 },
+                                }}
+                                id="toast-simple"
+                                className="fixed bottom-[80%] left-20  flex items-center w-full max-w-sm p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow "
+                                role="alert"
+                            >
+                                <FaWindowClose className="w-9 text-4xl text-[#CB1919] " />
+                                <div className="ps-4 text-sm text-black font-normal">
+                                    <h1 className="text-base ">Ocorreu um erro.</h1>
+                                    Para prosseguir é preciso que preencha as informações.
+                                </div>
+                            </motion.div>
                         )}
                     </div>
                 </div>
