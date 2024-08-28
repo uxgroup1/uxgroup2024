@@ -267,7 +267,7 @@ export default function PedidoOndetah() {
                   </form>
 
                   {messageError && (
-                    <p className="text-red-500 md:text-lg text-sm pb-0 pt-4">
+                    <p className="text-red-500 md:text-lg w-[95%] text-sm pb-0 pt-4">
                       {messageError}
                     </p>
                   )}
