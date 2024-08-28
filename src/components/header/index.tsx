@@ -140,7 +140,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="bg-black fixed flex items-center   justify-center z-50  top-0 w-full px-1 md:px-4 border-gray-200">
+      <nav className="bg-black fixed flex items-center   justify-center z-40  top-0 w-full px-1 md:px-4 border-gray-200">
         <div className="flex items-center justify-center w-full max-w-[1996px] h-full">
           <div className="xl:w-[94%]  lg:w-[95%] w-[97%] flex items-center justify-center">
             <div className="flex w-full flex-wrap  justify-between items-center mx-auto  py-5">

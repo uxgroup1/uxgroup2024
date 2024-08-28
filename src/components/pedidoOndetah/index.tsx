@@ -176,7 +176,8 @@ export default function PedidoOndetah() {
           id="static-modal"
           data-modal-backdrop="static"
           aria-hidden="true" style={{ zIndex: 100 }}
-          className={`fixed bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh]  top-0`}
+        
+          className={`fixed z-50 bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh] top-[15%] lg:top-0`}
         >
 
           <div className="flex absolute md:top-1/4 top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[500px] md:h-[500px] transition-all">
@@ -201,7 +202,7 @@ export default function PedidoOndetah() {
                   animate={{ translateX: 0, opacity: 100 }}
                   transition={{ duration: 0.4 }} className=" flex items-center justify-center w-full h-full">
                   <div className="w-full h-full gap-10 flex flex-col items-center justify-center">
-                    <div className="flex w-full pl-[15px]  items-center justify-start">
+                    <div className="flex w-full lg:pl-[15px]  items-center justify-start">
                       <Image className="w-16" src={icone} alt="" width={100} height={100} />
                       <h3 className="md:text-[25px] md:pl-0 pl-[10px] leading-normal md:text-center flex justify-center items-center w-full text-[19px] text-[#29235c]">
                         Selecione a loja onde realizou a compra:
