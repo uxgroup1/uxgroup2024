@@ -218,7 +218,7 @@ export default function PedidoOndetah() {
                             className={`hover:shadow-md shadow-lg  hover:scale-90 transition border-[1px] border-[#0000000f]  rounded-lg ${clicked === content.index ? "border-1 shadow-xl rounded-md" : ""}  md:w-[110px] w-[70px]`}
                           >
                             <Image
-                              className={` rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md" : ""} focus:p-4 transition-all`}
+                              className={` w-full rounded-lg ${clicked === content.codigo ? "border-1 shadow-xl p-1 rounded-md" : ""} focus:p-4 transition-all`}
                               src={content.image}
                               quality={100}
                               priority
