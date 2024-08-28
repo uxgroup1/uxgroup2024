@@ -27,8 +27,11 @@ export default function PedidoOndetah() {
   const [primeiraEtapa, setPrimeiraEtapa] = useState(true);
   const [segundaEtapa, setSegundaEtapa] = useState(false);
   const [voltar, setVoltar] = useState(false);
+  const [currentIndex, setCurrentIndez] = useState(0);
 
 
+  
+  
 
   const [clicked, setClicked] = useState();
 
@@ -57,10 +60,13 @@ export default function PedidoOndetah() {
   };
 
   const handleCodigoTransport = (codigo: { codigo: string, index: any }) => {
+    console.log(codigo.index);
+    
     setCodigoTransport(codigo.codigo);
     setClicked(codigo.index);
     setSegundaEtapa(true);
     setPrimeiraEtapa(false)
+    setCurrentIndez(codigo.index);
     // primeiraEtapa ? setSegundaEtapa(false) : setSegundaEtapa(true);
   };
 
@@ -88,7 +94,7 @@ export default function PedidoOndetah() {
     },
 
     {
-      index: 8,
+      index: 1,
       image: acioly.src,
       codigo: "AGM",
     },
@@ -108,27 +114,27 @@ export default function PedidoOndetah() {
       codigo: "DL",
     },
     {
-      index: 8,
+      index: 5,
       image: whp.src,
       codigo: "WHP",
     },
     {
-      index: 5,
+      index: 6,
       image: consul.src,
       codigo: "WHP",
     },
     {
-      index: 6,
+      index: 7,
       image: brastemp.src,
       codigo: "WHP",
     },
     {
-      index: 7,
+      index: 8,
       image: compraCerta.src,
       codigo: "WHP",
     },
     {
-      index: 1,
+      index: 9,
       image: kitchenaid.src,
       codigo: "WHP",
     },
@@ -235,7 +241,7 @@ export default function PedidoOndetah() {
                   className=" flex flex-col items-center justify-center w-full h-full">
                   <div className="flex items-center justify-center w-full flex-col">
                     <div className="flex w-[95%] items-center justify-start">
-                      <Image className="w-16" src={icone} alt="" width={100} height={100} />
+                      <Image className="w-20 shadow-md rounded-lg" src={content[currentIndex].image} alt="" width={100} height={100} />
                       <h3 className="md:text-[28px] md:pl-4  pl-[10px] leading-normal md:text-left flex justify-start items-center w-full  text-[#29235c]">
                         Digite o código do seu pedido:
                       </h3>
