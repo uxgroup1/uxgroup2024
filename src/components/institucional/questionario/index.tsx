@@ -7,8 +7,7 @@ import { useClientDataQuestionary } from "@/hooks/clientQuestionario";
 import axios from "axios";
 import AnswersData from "@/interfaces/answers";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { FaClosedCaptioning, FaRegCheckCircle, FaWindowClose } from "react-icons/fa";
-import { FaRegCircleStop } from "react-icons/fa6";
+import { FaWindowClose } from "react-icons/fa";
 
 interface AnswerDataInterface {
     question: string;
@@ -37,7 +36,8 @@ export default function Questionario({ fechar }: Fechar) {
     const [messageFinal, setMessageFinal] = useState("");
     const [insucess, setInsucess] = useState(false);
     const { mutate, idEmpresa, isPending, isSuccess } = useClientDataQuestionary();
-    
+    console.log(messageFinal);
+
     const [answeredQuestionsCount, setAnsweredQuestionsCount] = useState(0);
     const [questionsOne, setQuestionsOne] = useState([
         {
@@ -52,31 +52,38 @@ export default function Questionario({ fechar }: Fechar) {
         },
     ]);
 
-
-
-
     const [resposta, setResposta] = useState<AnswerDataInterface[]>([]);
     const [respostasAPI, setRespostaAPI] = useState<AnswersData[]>([]);
     const [buttonAnswer, setButtonAnswer] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
 
+    // Função para validar e-mail
+    const validateEmail = (email: string): boolean => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
 
+    // Função para validar telefone
+    const validatePhone = (phone: string): boolean => {
+        const phoneRegex = /^\d{10,11}$/; // Ajuste conforme o formato esperado
+        return phoneRegex.test(phone);
+    };
 
     const getSolution = async (id: Number) => {
-        const url = `http://localhost:3000/perguntas/${id}`;
+        const url = `https://backend-questionarioux.onrender.com/perguntas/${id}`;
         const response = await axios.get(url);
-        setMessageFinal(response.data.result[0].pergunta);
-
     };
+
     const getQuestions = async (startingPerguntaId: number) => {
         try {
-            const response = await axios.get(`http://localhost:3000/respostas/${startingPerguntaId}`);
+            const response = await axios.get(`https://backend-questionarioux.onrender.com/respostas/${startingPerguntaId}`);
 
-
-            if (response.data.result[0] === "Não foi encontrado nenhum registro no banco de dados.") {
-                console.log("No more questions in the database.");
+            if (!response.data.result || response.data.result[0] === "Não foi encontrado nenhum registro no banco de dados.") {
+                setMessageFinal("aquii acabou");
                 setShowNextQuestion(false);
                 setInputText(false);
+                setButtonAnswer(false);
+                setTypedQuestion("");
             } else {
                 const newQuestions = response.data.result.map((question: any) => ({
                     type: "dynamic",
@@ -93,10 +100,6 @@ export default function Questionario({ fechar }: Fechar) {
             console.error("Erro ao buscar perguntas:", error);
         }
     };
-
-
-
-
 
     useEffect(() => {
         if (scrollRef.current) {
@@ -115,63 +118,43 @@ export default function Questionario({ fechar }: Fechar) {
         }
     };
 
-    const postRespostaEmpresa = (idPergunta: number,
-        resposta: string) => {
-
-
-        const url = "http://localhost:3000/empresa-perguntas/";
+    const postRespostaEmpresa = (idPergunta: number, resposta: string) => {
+        const url = "https://backend-questionarioux.onrender.com/empresa-perguntas/";
         axios
             .post(url, {
                 id_empresa: idEmpresa,
                 id_pergunta: idPergunta,
                 resposta_usuario: resposta,
-            }).then((response) => {
+            })
+            .then((response) => {
                 const proximaPerguntaId = response.data;
                 nextQuestion(proximaPerguntaId);
 
-
                 if (proximaPerguntaId) {
-
-
                     getSolution(proximaPerguntaId);
-
-                    // Ajustar para buscar a próxima pergunta a partir do ID retornado
                     getQuestions(proximaPerguntaId);
                     setAnsweredQuestionsCount((count) => count + 1);
                 } else {
-                    console.log(
-                        "Proxima pergunta não fornecida na resposta do servidor."
-                    );
+                    setMessageFinal("acabou");
                 }
             })
             .catch((err) => {
-                console.log("aqui");
-
-                console.log(err);
+                console.log("Erro ao enviar resposta:", err);
             });
-    }
+    };
 
     const handleButtonClick = (type: string) => {
         nextQuestion(inputValue);
-
-
     };
 
     const handleButtonClickAnswer = (value: string, idPergunta: number) => {
         const newConversation = [...conversation, { type: "answer", text: value }];
         setConversation(newConversation);
         postRespostaEmpresa(idPergunta, value);
-        console.log(value);
-
-        nextQuestion(value);
     };
 
     const nextQuestion = (answer: string) => {
-        // console.log("169"answer);
-
         if (answer.length > 0) {
-            console.log(answer);
-
             const updatedQuestions = [...questionsOne];
             updatedQuestions[currentQuestion].answer = answer;
             setQuestionsOne(updatedQuestions);
@@ -182,53 +165,55 @@ export default function Questionario({ fechar }: Fechar) {
             // Atualizar dados do cliente conforme necessário
             if (currentQuestion === 0) {
                 setClientData((prev) => ({ ...prev, name: answer }));
-
             } else if (currentQuestion === 1) {
                 const [phone, email, nameBusiness] = answer.split(",").map(info => info.trim());
-                if (phone.length < 9 || phone === ""|| email.length < 10 || email === "" || nameBusiness.length < 1 || nameBusiness === "") {
-                    setInsucess(true)
-                    // setCurrentQuestion(0);
-                    console.log("aqui 190");
-                    
+
+                // Verificar se telefone, email e nome da empresa estão corretos
+                if (!validatePhone(phone) || !validateEmail(email) || nameBusiness.length < 1) {
+                    setInsucess(true);
+                    console.log("Erro nas informações fornecidas.");
+
+                    // Adicionar mensagem de erro e repetir a pergunta
+                    setConversation((prev) => [
+                        ...prev,
+                        { type: "question", text: "Por favor, insira corretamente o telefone com DDD, e-mail e o nome da sua empresa separados por vírgula." }
+                    ]);
+
+                    // Não avançar para a próxima pergunta
+                    setInputValue(""); // Limpar campo de entrada
+                    setInputText(true); // Continuar mostrando o campo de entrada
+                    return; // Sair da função sem mudar a pergunta
                 } else {
-                    console.log("teste 193")
+                    // Dados válidos, atualiza o estado
                     setClientData((prev) => ({ ...prev, phone, email, nameBusiness }));
-
-
                 }
-
             }
-            if(currentQuestion === 0 || currentQuestion === 1){
+
+            // Avançar para a próxima pergunta
+            if (currentQuestion === 0 || currentQuestion === 1) {
                 setCurrentQuestion(currentQuestion + 1);
             }
-            
+
             setShowNextQuestion(true);
             setInputText(false);
             setButtonAnswer(false);
             setInsucess(false);
-
         } else {
-
             currentQuestion >= 2 ? setInsucess(false) : setInsucess(true);
-            // setInsucess(true)
         }
     };
+
 
     useEffect(() => {
         if (insucess) {
             setTimeout(() => {
-                setInsucess(false)
+                setInsucess(false);
             }, 5000);
-        } else {
-            setInsucess(false)
         }
-    })
-
-
+    }, [insucess]);
 
     useEffect(() => {
         if (currentQuestion >= questionsOne.length) {
-
             mutate(clientData);
             console.log("Não há mais perguntas.");
             return;
@@ -236,21 +221,17 @@ export default function Questionario({ fechar }: Fechar) {
 
         if (showNextQuestion) {
             setTypedQuestion("");
-            let question = questionsOne[currentQuestion].question; // Pegar a pergunta atual
+            let question = questionsOne[currentQuestion].question;
+
             if (currentQuestion > 0) {
                 question = questionsOne[questionsOne.length - 1].question;
             }
 
-
             let i = 0;
-
             const typingInterval = setInterval(() => {
                 if (i < question.length) {
-
                     setTypedQuestion((prev) => prev + question.charAt(i));
                     i++;
-
-
                 } else {
                     clearInterval(typingInterval);
                     setConversation((prev) => [
@@ -261,7 +242,7 @@ export default function Questionario({ fechar }: Fechar) {
                     setInputText(questionsOne[currentQuestion].type !== "dynamic");
                     setButtonAnswer(questionsOne[currentQuestion].type === "dynamic");
                 }
-            }, 0.3);
+            }, 10);
 
             return () => clearInterval(typingInterval);
         }
@@ -269,10 +250,10 @@ export default function Questionario({ fechar }: Fechar) {
 
     useEffect(() => {
         if (currentQuestion < questionsOne.length) {
-            setShowNextQuestion(true); // Mostra a próxima pergunta
-            setInputText(false); // Desabilita a entrada de texto
-        } else if (currentQuestion === questionsOne.length) {            
-            getQuestions(1); // Busca novas perguntas
+            setShowNextQuestion(true);
+            setInputText(false);
+        } else if (currentQuestion === questionsOne.length) {
+            getQuestions(1);
         }
     }, [currentQuestion, questionsOne.length]);
 
@@ -334,6 +315,13 @@ export default function Questionario({ fechar }: Fechar) {
                                 ))}
                             </div>
                         )}
+                        {
+                            messageFinal && (
+                                <p>
+                                    {messageFinal}
+                                </p>
+                            )
+                        }
                         {inputText && (
                             <div className="w-full h-full flex justify-end items-end flex-col">
                                 <input

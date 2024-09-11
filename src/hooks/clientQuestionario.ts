@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { ClientDataQuestionary, ClientDataQuestionaryResponse } from "@/interfaces/questionarioCliente";
 
-const API_URL = 'http://localhost:3000/empresa/post';
+const API_URL = 'https://backend-questionarioux.onrender.com/empresa/post';
 
 const fetchData = async (clientData: ClientDataQuestionary): Promise<AxiosResponse<ClientDataQuestionaryResponse>> => {
     let response: any;

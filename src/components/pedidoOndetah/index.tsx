@@ -30,8 +30,8 @@ export default function PedidoOndetah() {
   const [currentIndex, setCurrentIndez] = useState(0);
 
 
-  
-  
+
+
 
   const [clicked, setClicked] = useState();
 
@@ -61,7 +61,7 @@ export default function PedidoOndetah() {
 
   const handleCodigoTransport = (codigo: { codigo: string, index: any }) => {
     console.log(codigo.index);
-    
+
     setCodigoTransport(codigo.codigo);
     setClicked(codigo.index);
     setSegundaEtapa(true);
@@ -92,22 +92,24 @@ export default function PedidoOndetah() {
       image: carrefour.src,
       codigo: "CRF",
     },
-
     {
       index: 1,
-      image: acioly.src,
-      codigo: "AGM",
-    },
-    {
-      index: 2,
       image: dafiti.src,
       codigo: "DF",
     },
     {
-      index: 3,
+      index: 2,
       image: curta.src,
       codigo: "CTA",
     },
+
+    {
+      index: 3,
+      image: acioly.src,
+      codigo: "AGM",
+    },
+
+
     {
       index: 4,
       image: dorel.src,
@@ -115,7 +117,7 @@ export default function PedidoOndetah() {
     },
     {
       index: 5,
-      image: whp.src,
+      image: brastemp.src,
       codigo: "WHP",
     },
     {
@@ -125,7 +127,7 @@ export default function PedidoOndetah() {
     },
     {
       index: 7,
-      image: brastemp.src,
+      image: kitchenaid.src,
       codigo: "WHP",
     },
     {
@@ -135,9 +137,13 @@ export default function PedidoOndetah() {
     },
     {
       index: 9,
-      image: kitchenaid.src,
+      image: whp.src,
       codigo: "WHP",
     },
+
+
+
+
 
     // {
     //   index:9,
@@ -149,9 +155,9 @@ export default function PedidoOndetah() {
   useEffect(() => {
     segundaEtapa ? setVoltar(true) : setVoltar(false);
 
-    if(codigoPedido.length > 0){
+    if (codigoPedido.length > 0) {
       setMessageError("");
-    } 
+    }
   })
 
 
@@ -176,7 +182,7 @@ export default function PedidoOndetah() {
           id="static-modal"
           data-modal-backdrop="static"
           aria-hidden="true" style={{ zIndex: 100 }}
-        
+
           className={`fixed z-50 bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh] top-[15%] lg:top-0`}
         >
 
