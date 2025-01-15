@@ -268,9 +268,7 @@ function gtag_report_conversion(url) {
           textTwo="Soluções de tecnologia e logística da UX conectadas às principais plataformas do mercado. Saiba como conectar estratégias personalizadas ao seu e-commerce."
           corButtonOne="#A900D9" corButtonTwo="#29265B" />
         <div className="" onClick={() => setQuestinario(!questionario)}><ButtonChat /></div>
-        {questionario && (
-          <Questionario fechar={async () => setQuestinario(!questionario)} />
-        )}
+        
 
 
         <CarroselVertical
