@@ -123,9 +123,9 @@ export default function NewBannerHome() {
 
                 </div>
                 <div className="flex h-full items-center justify-center w-full lg:flex-col flex-col-reverse">
-                    <div className="flex w-full h-full">
+                    <div className="flex  w-full h-full">
                         <Image
-                            className={`w-full lg:[display:none] -mt-10 cursor-pointer rounded-t-2xl ${currentIndex === banners[currentIndex].index ? "transition-all [box-shadow: 0px 6px 6px 0px rgba(156,156,156,0.44)]" : ""} `}
+                            className={`w-full lg:[display:none] -mt-14 cursor-pointer rounded-t-2xl ${currentIndex === banners[currentIndex].index ? "transition-all [box-shadow: 0px 6px 6px 0px rgba(156,156,156,0.44)]" : ""} `}
                             src={banners[currentIndex].banners}
                             alt="Descrição da imagem"
                             width={100}
@@ -163,7 +163,7 @@ export default function NewBannerHome() {
                             <button className={`w-[260px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
                             </button>
-                            <button className={`w-[260px] flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
+                            <button className={`w-[260px] mb-12 flex items-center justify-center hover:scale-95 transition  rounded-lg shadow-md h-12 text-black hover:font-medium font-medium p-2`} style={{  border: `1px solid #${banners[currentIndex].color}` ,backgroundColor: `transparent` }}>
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].linkTwo}> fale com um especialista</Link>
                             </button>
                         </div>

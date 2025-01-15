@@ -52,7 +52,7 @@ import { useState } from "react";
 import NewBannerHome from "@/components/institucional/newBannerHome";
 import NewTwoCards from "@/components/TwoCardsHome";
 import ButtonChat from "@/components/chat";
-import Questionario from "@/components/institucional/questionario";
+
 import PedidoOndetah from "@/components/pedidoOndetah";
 
 
@@ -165,7 +165,7 @@ const valuesInput = [
 ];
 
 export default function Home() {
-  const [questionario, setQuestinario] = useState(false)
+
 
   return (
     <QueryClientProvider client={new QueryClient()}>
@@ -267,7 +267,7 @@ function gtag_report_conversion(url) {
           textOne="A plataforma para quem quer crescer rápido, converter mais e escalar as vendas. Desenvolva a sua loja do seu jeito e do tamanho do seu negócio, com tudo em um só lugar."
           textTwo="Soluções de tecnologia e logística da UX conectadas às principais plataformas do mercado. Saiba como conectar estratégias personalizadas ao seu e-commerce."
           corButtonOne="#A900D9" corButtonTwo="#29265B" />
-        <div className="" onClick={() => setQuestinario(!questionario)}><ButtonChat /></div>
+        
         
 
 

@@ -34,7 +34,6 @@ const images = [
   logoCurta,
   logoVested,
   logoLemon,
-  logoGinger,
   logoDuty,
   logoMulti,
   logoDorel,
