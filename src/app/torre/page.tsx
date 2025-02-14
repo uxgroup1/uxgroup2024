@@ -77,7 +77,7 @@ const contentFeaturesThree = [
 
 const valuesInput = [
   {
-    value: "Soluções  para otimizar minha operação.",
+    value: "Soluções  para otimizar minha operação",
   },
   {
     value: "Fulfillment",
