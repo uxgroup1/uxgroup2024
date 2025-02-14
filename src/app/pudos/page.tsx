@@ -52,19 +52,19 @@ const contentFeatures = [
 
 const valuesInput = [
   {
-    value: "Melhorar a logística e a experiência do cliente com PUDO ",
+    value: "Conhecer soluções em operação PUDO para minha empresa",
   },
   {
-    value: "Reduzir custos de frete do meu marketplace",
+    value: "Quero cadastrar minha empresa como PUDO",
   },
   {
-    value: "Explorar oportunidades de parceria com a UX ",
+    value: "Projetos especiais",
   },
   {
-    value: "Conhecer os benefícios de ser um ponto de retirada e entrega da UX",
+    value: "Parcerias",
   },
   {
-    value: "Outros    ",
+    value: "Quero trabalhar com vocês",
   },
 ];
 
@@ -132,10 +132,10 @@ export default function Pudos() {
             src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/139aadf5-b7d4-4ce5-b117-ddb828aef384-loader.js"
           ></Script>
 
-         {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
+          {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
 
-        <Script>
-          {`(function(h,o,t,j,a,r){
+          <Script>
+            {`(function(h,o,t,j,a,r){
             h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
           h._hjSettings={hjid:5097455,hjsv:6};
           a=o.getElementsByTagName('head')[0];
@@ -165,7 +165,7 @@ export default function Pudos() {
           {/* <!-- End Google Tag Manager (noscript) --> */}
           <Header />
           <JumboTron
-          buttonTwo
+            buttonTwo
             textButtonOne="fale com um especialista"
             textButtonTwo="saiba mais"
             linkButtonOne="#formulario"
@@ -181,7 +181,7 @@ export default function Pudos() {
             style={{ paddingTop: "50px", paddingBottom: "0px" }}
           ></section>
           <ProductInstitutional
-          buttonTwo
+            buttonTwo
             id="sobre"
             title="Entregas mais simples e convenientes.          "
             text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
@@ -193,22 +193,24 @@ export default function Pudos() {
             textButtonOne="saiba mais"
             textButtonTwo="agende uma reunião"
           />
-          <ThreeTopics
-            content={contentTopics}
-            title="Para Proprietários de Lojas Físicas."
-            text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
-          />
           <CarroselVertical
             id="para-marketplaces"
             title="Para Marketplaces."
             text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
             content={content}
           />
+
           <FeaturesComponent
             rowReverse={false}
             titleSection="Benefícios de escolher o PUDO da UX."
             content={contentFeatures}
             banner={pudo.src}
+          />
+
+          <ThreeTopics
+            content={contentTopics}
+            title="Para Proprietários de Lojas Físicas."
+            text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
           />
           <section
             style={{ paddingTop: "0px", paddingBottom: "50px" }}

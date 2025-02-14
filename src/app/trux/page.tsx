@@ -164,19 +164,16 @@ const number = [
 
 const valuesInput = [
   {
-    value: "Melhorar a eficiência na gestão de entregas e motoristas",
+    value: "Funcionalidades",
   },
   {
-    value: "Reduzir o tempo e custo das entregas",
+    value: "Planos e preços",
   },
   {
-    value: "Controlar custos operacionais de maneira eficaz",
+    value: "Parceria",
   },
   {
-    value: "Assegurar a correta documentação das cargas",
-  },
-  {
-    value: "Outros",
+    value: "Quero trabalhar com vocês",
   },
 ];
 

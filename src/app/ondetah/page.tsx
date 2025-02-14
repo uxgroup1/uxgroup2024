@@ -47,19 +47,19 @@ const number = [
 
 const valuesInput = [
   {
-    value: "Melhorar a experiência do cliente durante o processo de compra",
+    value: "Funcionalidades",
   },
   {
-    value: "Reduzir os contatos no SAC",
+    value: "Planos e preços",
   },
   {
-    value: "Diminuir atrasos e problemas na entrega dos pedidos",
+    value: "Parceria",
   },
   {
-    value: "Antecipar e mitigar riscos operacionais",
+    value: "Quero trabalhar com vocês",
   },
   {
-    value: "Reduzir a pegada de carbono das operações logísticas",
+    value: "Preciso de ajuda com meu pedido",
   },
 ];
 

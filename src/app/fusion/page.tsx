@@ -217,26 +217,16 @@ const number = [
 
 const valuesInput = [
   {
-    value: "Comparar diferentes opções de transporte",
+    value: "Funcionalidades",
   },
   {
-    value:
-      "Oferecer as melhores opções de preço e prazo para meus clientes    ",
+    value: "Planos e preços",
   },
   {
-    value: " Garantir a precisão na separação e envio de produtos    ",
+    value: "Parceria",
   },
   {
-    value: "Monitorar o status das entregas em tempo real",
-  },
-  {
-    value: "Reduzir divergências financeiras relacionadas ao frete",
-  },
-  {
-    value: "Gerenciar o frete e envios de diferentes sellers",
-  },
-  {
-    value: "Outros",
+    value: "Quero trabalhar com vocês",
   },
 ];
 

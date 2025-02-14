@@ -25,6 +25,7 @@ export default function ContactForm({
     floating_querofalarSobre: "",
     floating_message: "",
     floating_terms: "",
+
     conversion_identifier: nameForm,
     page_name: page,
   });
@@ -311,7 +312,7 @@ export default function ContactForm({
               </option>
             </select>
           </div>
-          <div className="relative p-3 lg:p-5 border flex-col gap-2 z-0 w-full mb-5 group">
+          {/* <div className="relative p-3 lg:p-5 border flex-col gap-2 z-0 w-full mb-5 group">
             <div className="pb-2">
               <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
             </div>
@@ -353,7 +354,7 @@ export default function ContactForm({
             <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre9" name="floating_querofalarSobre" value="Outros" onChange={handleChange} />
             <label className="text-white" htmlFor="floating_querofalarSobre9">Outros</label>
             <br />
-          </div>
+          </div> */}
 
           {inputAlternative?.map((data) => (
             <div key={data.id} className="relative z-0 w-full mb-5 group">
@@ -374,28 +375,23 @@ export default function ContactForm({
               </label>
             </div>
           ))}
-          {/* <div className="relative z-0 w-full mb-5 group">
+          <div className="relative z-0 w-full mb-5 group">
             <label htmlFor="underline_select" className="sr-only text-white">
               Underline select
             </label>
-            <select
-              name="underline_select"
-              id="underline_select"
-              className="block py-2.5 px-0 w-full text-sm text-[#bfbfbf] bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-              value={formData.underline_select}
-              onChange={handleChange}
-              required
-            >
-              <option value="0" className="text-white">
-                Qual assunto gostaria de falar?*
-              </option>
-              {content.map((data, index) => (
-                <option key={index} value={data.value} className="text-black ">
-                  {data.value}
-                </option>
-              ))}
-            </select>
-          </div> */}
+            <div className="relative p-3 lg:p-5 border flex-col gap-2 z-0 w-full mb-5 group">
+              <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
+              <div className="pb-2">
+                {content.map((data, index) => (
+                  <>
+                    <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre1" name="floating_querofalarSobre" value={data.value} onChange={handleChange} />
+                    <label className="text-white" key={index} htmlFor="floating_querofalarSobre1">{data.value}</label>
+                    <br />
+                  </>                  
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="grid md:grid-cols-1 md:gap-6">
             {/* <div className="relative z-0 w-full mb-5 group">
               <input

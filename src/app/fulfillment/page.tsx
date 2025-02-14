@@ -59,19 +59,25 @@ const number = [
 
 const valuesInput = [
   {
-    value: "Melhorar a eficiência na armazenagem e expedição de pedidos",
+    value: "Soluções  para otimizar minha operação.",
   },
   {
-    value: "Garantir agilidade no envio de pedidos com estoque reduzido próximo a SP",
+    value: "Fulfillment",
   },
   {
-    value: "Distribuir de forma ágil e organizada os produtos sem estoque (crossdocking)",
+    value: "Transporte",
   },
   {
-    value: "Melhorar a previsão de demandas",
+    value: "Consultoria Estratégica",
   },
   {
-    value: "Outros",
+    value: "Projetos especiais",
+  },
+  {
+    value: "Parcerias",
+  },
+  {
+    value: "Quero trabalhar com vocês",
   },
 ];
 

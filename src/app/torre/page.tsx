@@ -77,18 +77,26 @@ const contentFeaturesThree = [
 
 const valuesInput = [
   {
-    value: "Melhorar a visibilidade e o controle sobre as operações de transporte",
+    value: "Soluções  para otimizar minha operação.",
   },
   {
-    value: "Garantir a eficiência da entrega (green mile, last mile e first mile- SP)    ",
+    value: "Fulfillment",
   },
   {
-    value: "Oferecer um atendimento ao cliente mais eficiente e integrado",
+    value: "Transporte",
   },
   {
-    value: "Outros",
+    value: "Consultoria Estratégica",
   },
-
+  {
+    value: "Projetos especiais",
+  },
+  {
+    value: "Parcerias",
+  },
+  {
+    value: "Quero trabalhar com vocês",
+  },
 ];
 
 const contentTopics = [
