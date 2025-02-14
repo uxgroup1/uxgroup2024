@@ -157,11 +157,11 @@ const contentUxMidia = [
 ];
 
 const valuesInput = [
-  { value: "Quero conhecer todo o ecossistema UX." },
-  { value: "Quero conhecer as tecnologias para operação." },
-  { value: "Quero conhecer os serviços logísticos." },
-  { value: "Quero que meu negócio seja parte do ecossistema." },
-  { value: "Quero trabalhar na UX." },
+  { value: "Quero conhecer todo o ecossistema UX" },
+  { value: "Quero conhecer as tecnologias para operação" },
+  { value: "Quero conhecer os serviços logísticos" },
+  { value: "Quero que meu negócio seja parte do ecossistema" },
+  { value: "Quero trabalhar na UX" },
 ];
 
 export default function Home() {
@@ -227,14 +227,14 @@ function gtag_report_conversion(url) {
         {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
         
         <Script>
-          {`(function(h,o,t,j,a,r){
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-          h._hjSettings={hjid:5097455,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          {` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5174280,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');');
   `}</Script>
 
         {/* <!-- Google Tag Manager --> */}
