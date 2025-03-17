@@ -4,7 +4,9 @@ import { useState } from "react";
 
 interface Content {
   title: string;
+  subTitle?: string
   text: string;
+  textTwo?: string;
   banner: string;
   corButtonOne: string;
   corButtonTwo?: string;
@@ -20,7 +22,9 @@ interface Content {
 export default function ProductInstitutional({
   title,
   text,
+  subTitle,
   banner,
+  textTwo,
   corButtonOne,
   corButtonTwo,
   corButtonThree,
@@ -72,6 +76,14 @@ export default function ProductInstitutional({
               </h1>
 
               <p className="lg:w-4/5 w-full  text-black">{text}</p>
+
+              {subTitle && (
+                <p style={{color:corButtonOne}} className="font-semibold text-xl" >{subTitle}</p>                
+              )}
+
+              {textTwo && (
+                <p className="lg:w-4/5 w-full lg:-mt-5 text-black">{textTwo}</p>
+              )}
 
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link href={linkButtonOne}>
