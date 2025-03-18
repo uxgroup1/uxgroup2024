@@ -32,11 +32,11 @@ export default function ParaLojasFisicasPudo() {
             <section className="bg-white w-full">
                 <div
                     style={{ boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px" }}
-                    className="md:w-[90%] gap-10 bg-white md:rounded-2xl px-5 p-10 md:p-20 flex items-center flex-col justify-center -mt-48 mx-auto"
+                    className="lg:w-[90%] gap-10 bg-white rounded-2xl px-8 p-12 md:p-20 flex items-center flex-col justify-center -mt-64 lg:-mt-48 mx-auto"
                 >
-                    <div className="w-full flex items-center gap-5 justify-start">
+                    <div className="w-full flex lg:flex-row flex-col lg:items-center gap-5 justify-start">
                         <BsShopWindow fontSize={45} color="#FF7F13" />
-                        <h1 className="text-center text-3xl text-black pt-3 ">Para lojas físicas</h1>
+                        <h1 className="lg:text-center text-3xl text-black lg:pt-3 ">Para lojas físicas</h1>
                     </div>
 
                     <div className="flex items-center justify-center gap-8 ">
