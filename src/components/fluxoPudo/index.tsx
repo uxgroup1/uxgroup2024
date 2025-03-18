@@ -66,9 +66,9 @@ export default function FluxoPudo() {
                     <h1 className="text-black">
                         Retire e Devolva com Facilidade:
                     </h1>
-                    <div className="flex w-full text-[#ff7f12] gap-2 ">
+                    <div className="flex w-full  text-[#ff7f12] gap-2 ">
                         <BsArrowRightSquareFill fontSize={30} color="#ff7f12" />
-                        <p className="mt-[2px] p-0 font-bold">Retirada pelo Cliente</p>
+                        <p className="mt-[2px] text-xl p-0 font-bold">Retirada pelo Cliente</p>
                     </div>
                     <div
                         className="lg:w-full lg:min-w-full min-w-[390px] w-full flex-row flex pb-10 justify-between mt-5 lg:mt-10  lg:h-auto lg:overflow-x-auto overflow-hidden lg:overflow-hidden overflow-x-auto"
@@ -96,7 +96,7 @@ export default function FluxoPudo() {
                     <div className="flex w-full mt-5 lg:justify-end text-[#ff7f12] gap-2 ">
                         <BsArrowRightSquareFill className="flex lg:hidden" fontSize={30} color="#ff7f12" />
 
-                        <p className="mt-[2px] p-0 font-bold">Devolução de Produto</p>
+                        <p className="mt-[2px] text-xl p-0 font-bold">Devolução de Produto</p>
                         <BsArrowLeftSquareFill className="lg:flex hidden" fontSize={30} color="#ff7f12" />
                     </div>
                     <div
