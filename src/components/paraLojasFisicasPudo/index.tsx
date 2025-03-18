@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { BsShopWindow } from "react-icons/bs";
 import { IoMdTrendingUp } from "react-icons/io";
-import { MdDomain, MdOutlineAttachMoney } from "react-icons/md";
+import { MdOutlineAttachMoney } from "react-icons/md";
 import { AiOutlineTrophy } from "react-icons/ai";
 
 
@@ -32,7 +31,7 @@ export default function ParaLojasFisicasPudo() {
             <section className="bg-white w-full">
                 <div
                     style={{ boxShadow: "rgba(0, 0, 0, 0.3) 2px 4px 12px 0px" }}
-                    className="lg:w-[90%] gap-10 bg-white rounded-2xl px-8 p-12 md:p-20 flex items-center flex-col justify-center -mt-64 lg:-mt-48 mx-auto"
+                    className="lg:w-[90%] gap-10 bg-white rounded-2xl px-8 p-12 md:p-20 flex items-center flex-col justify-center -mt-64 lg:-mt-56 mx-auto"
                 >
                     <div className="w-full flex lg:flex-row flex-col lg:items-center gap-5 justify-start">
                         <BsShopWindow fontSize={45} color="#FF7F13" />

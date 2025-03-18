@@ -20,6 +20,7 @@ import SecondSection from "@/components/produtos/SecondSection";
 import FluxoPudo from "@/components/fluxoPudo";
 import ParaMarketPlacesPudo from "@/components/ParaMarketPlacesPudo";
 import ParaLojasFisicasPudo from "@/components/paraLojasFisicasPudo";
+import JornadaPudo from "@/components/jornadaPudo";
 
 
 
@@ -143,6 +144,7 @@ export default function Pudos() {
           <FluxoPudo />
           <ParaMarketPlacesPudo />
           <ParaLojasFisicasPudo/>
+          <JornadaPudo/>
           <section
             style={{ paddingTop: "0px", paddingBottom: "50px" }}
           ></section>
