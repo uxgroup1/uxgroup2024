@@ -8,47 +8,21 @@ const ContactForm = dynamic(
 );
 const JumboTron = dynamic(() => import("@/components/produtos/jumbotron"));
 
-const ThreeTopics = dynamic(() => import("@/components/produtos/threeTopics"));
-import imageMonetizationTopics from "@/assets/pudo/monetization.svg";
-import imageStoreFrontTopics from "@/assets/pudo/storefront.svg";
-import arrowList from "@/assets/pudo/arrow/arrowListComponentesPudo.svg";
+import boxPudo from "@/assets/pudo/box-pudo.svg"
+import mapaPudo from "@/assets/pudo/mapaPudo.png"
 import pudoLogo from "@/assets/logos/pudos.svg";
-import pudoEmoji from "@/assets/pudo/emoji.svg";
 import ProductInstitutional from "@/components/produtos/institucional";
 import banner from "@/assets/pudo/pudoImages/banner-pudo.png";
-import confiabilidade from "@/assets/pudo/pudoImages/confiabilidade.png";
-import custo from "@/assets/pudo/pudoImages/reduzaCusto.png";
-import satisfacao from "@/assets/pudo/pudoImages/satisfacaoo.png";
 import pudo from "@/assets/pudo/pudoImages/pudo.png";
 import Script from "next/script";
-const FeaturesComponent = dynamic(
-  () => import("@/components/produtos/features")
-);
-const CarroselVertical = dynamic(
-  () => import("@/components/institucional/carrouselVerticalMain")
-);
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import SecondSection from "@/components/produtos/SecondSection";
+import FluxoPudo from "@/components/fluxoPudo";
+import ParaMarketPlacesPudo from "@/components/ParaMarketPlacesPudo";
+import ParaLojasFisicasPudo from "@/components/paraLojasFisicasPudo";
+import JornadaPudo from "@/components/jornadaPudo";
 
-const contentFeatures = [
-  {
-    title: "Tecnologia integrada à operação.",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Ao agrupar várias entregas em um único ponto de retirada, você reduz as despesas de transporte e logística.",
-    icons: arrowList,
-  },
-  {
-    title: "Operação mais limpa com menos etapas no processo de entrega.",
-    icons: arrowList,
-  },
-  {
-    title:
-      "Melhoria da experiência do cliente com mais controle e agilidade no processo de entrega.",
-    icons: arrowList,
-  },
-];
+
 
 const valuesInput = [
   {
@@ -68,58 +42,7 @@ const valuesInput = [
   },
 ];
 
-const content = [
-  {
-    index: 0,
-    title: "Satisfação do Cliente",
-    contentTitle: "Aumente a Satisfação do Cliente",
-    contentText:
-      "Com os pontos de pick-up and drop-off, você acelera o processo de entrega, reduzindo as etapas para que a mercadoria chegue para o seu cliente.",
-    banner: satisfacao.src,
-    link: "#formulario",
-    textButton: "saiba mais",
-  },
-  {
-    index: 1,
-    title: "Reduza Custos de Entrega",
-    contentTitle: "Reduza Custos de Entrega",
-    contentText:
-      "Com o PUDO, você pode reduzir os custos de entrega, com menos paradas para o motoristas, você tem uma economia significativa em despesas de transporte e logística.",
 
-    banner: custo.src,
-    link: "#formulario",
-    textButton: "saiba mais",
-  },
-  {
-    index: 2,
-    title: "Confiabilidade da Entrega",
-    contentTitle: "Aumente a Confiabilidade da Entrega",
-    contentText:
-      "Ao utilizar uma rede confiável de pontos de coleta, você pode garantir aos sellers que realizem o processo de expedição de forma rápida e segura, melhorando a reputação da sua marca.",
-
-    banner: confiabilidade.src,
-    link: "#formulario",
-    textButton: "saiba mais",
-  },
-];
-
-const contentTopics = [
-  {
-    icon: imageMonetizationTopics,
-    title: "Aumente o tráfego na loja",
-    text: "Ao se tornar um PUDO, você pode aumentar o número de visitantes e atrair novos clientes que podem acabar comprando em sua loja.",
-  },
-  {
-    icon: imageStoreFrontTopics,
-    title: "Nova fonte de renda",
-    text: "Se você possui espaços ociosos na sua loja, você pode rentabilizar em até 5 mil reais, tornando um PUDO.",
-  },
-  {
-    icon: pudoEmoji,
-    title: "Fortalecimento de marca: ",
-    text: "você fortalece laços com grandes marcas criando confiabilidade para os seus clientes e a possibilidade de propostas comerciais futuras.",
-  },
-];
 
 export default function Pudos() {
   return (
@@ -135,15 +58,14 @@ export default function Pudos() {
           {/* <!-- Hotjar Tracking Code for https://uxgroup.com.br/ --> */}
 
           <Script>
-            {` (function(h,o,t,j,a,r){
+            {`(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:5174280,hjsv:6};
         a=o.getElementsByTagName('head')[0];
         r=o.createElement('script');r.async=1;
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  `}</Script>
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}</Script>
 
 
           {/* <!-- Google Tag Manager --> */}
@@ -166,15 +88,15 @@ export default function Pudos() {
           <Header />
           <JumboTron
             buttonTwo
-            textButtonOne="fale com um especialista"
-            textButtonTwo="saiba mais"
+            textButtonOne="saiba mais"
+            textButtonTwo="falar com um especialista"
             linkButtonOne="#formulario"
             linkButtonTwo="#sobre"
-            corButtonOne="#ff7f12"
-            corButtonThree="#CA620A"
+            corButtonOne="#CA620A"
+            corButtonThree="#ff7f12"
             logo={pudoLogo.src}
-            title="Pontos de coleta e entrega para operações first e last mile."
-            text="Retire ou envie pacotes em qualquer ponto PUDO em SP. Sem filas e  sem complicações."
+            title="Quer uma logística inteligente e escalável?"
+            text="Conheça o PUDO, com eles, seus consumidores escolhem quando e onde retirar seu pedido, em pontos estratégicos, otimizando os processos, reduzindo falhas e gerando uma maior satisfação do cliente."
             banner={banner.src}
           />
           <section
@@ -183,8 +105,10 @@ export default function Pudos() {
           <ProductInstitutional
             buttonTwo
             id="sobre"
-            title="Entregas mais simples e convenientes.          "
-            text="Possuímos pontos de postagem e coletas ou PUDO(Pick-up Drop-of)para sellers que operam em marketplaces. São mais de 140 pontos estrategicamente espalhados em toda grande São Paulo, para maior proximidade do vendedor online ao canal de venda, reduzindo prazos e custos logísticos."
+            title="O que é um PUDO?"
+            subTitle="Por que escolher o PUDO?"
+            textTwo="Ao optar por um modelo de entrega com PUDO, sua empresa ganha eficiência logística, reduz custos e melhora a experiência do cliente."
+            text="O modelo logístico PUDO (Pick-Up Drop-Off) permite que consumidores e vendedores usem pontos estratégicos para retirada e devolução de encomendas. Isso reduz custos, otimiza rotas e oferece mais flexibilidade ao cliente."
             banner={banner.src}
             corButtonOne="#ff7f12"
             corButtonThree="#CA620A"
@@ -193,25 +117,34 @@ export default function Pudos() {
             textButtonOne="saiba mais"
             textButtonTwo="agende uma reunião"
           />
-          <CarroselVertical
-            id="para-marketplaces"
-            title="Para Marketplaces."
-            text="Se você é um gestor de vendas digitais, o serviço PUDO pode ser a solução ideal para melhorar a experiência do cliente e otimizar suas operações de logística. Aqui estão alguns benefícios de usar o PUDO em seu negócio."
-            content={content}
+
+
+          <SecondSection
+            title="A melhor solução para sua logística!"
+            text="A UX Group transforma sua logística com o PUDO (Pick Up and Drop Off), uma solução ágil, sustentável e eficiente para entregas. Nossa ampla rede de pontos de retirada, estrategicamente distribuída, garante mais conveniência e acessibilidade para seus clientes, reduzindo distâncias e otimizando o processo logístico."
+            textTwo="Com o PUDO da UX Group, você otimiza suas rotas, reduz impactos ambientais, melhora a experiência do consumidor e amplia sua capacidade logística com escalabilidade inteligente."
+            flowReverse={false}
+            corButtonOne="#ff7f12"
+            textTwoSemiBold
+            image={pudo.src}
           />
 
-          <FeaturesComponent
-            rowReverse={false}
-            titleSection="Benefícios de escolher o PUDO da UX."
-            content={contentFeatures}
-            banner={pudo.src}
+          <SecondSection
+            title="Mais de 290 Pontos PUDO em Todo o Brasil!"
+            text="A UX Group possui atualmente 296 pontos PUDO espalhados pelo Brasil, garantindo praticidade e conveniência para você. Confira a distribuição por estado:"
+            textTwo="Estamos sempre em busca de expandir nossa rede. Se tem interesse em se tornar um ponto de coleta ou contratar um PUDO, clique no botão e faça parte da nossa rede de conveniência!"
+            textTwoSemiBold
+            corButtonOne="#ff7f12"
+            flowReverse
+            textButton="agendar uma reunião"
+            image={mapaPudo.src}
+            imagemSobTitulo={boxPudo}
+            dimensaoImagem="90%"
           />
-
-          <ThreeTopics
-            content={contentTopics}
-            title="Para Proprietários de Lojas Físicas."
-            text="Se você possui uma loja física, o serviço PUDO pode ser uma oportunidade para atrair mais clientes e aumentar a sua renda. Veja como o PUDO pode beneficiar o seu negócio."
-          />
+          <FluxoPudo />
+          <ParaMarketPlacesPudo />
+          <ParaLojasFisicasPudo/>
+          <JornadaPudo/>
           <section
             style={{ paddingTop: "0px", paddingBottom: "50px" }}
           ></section>

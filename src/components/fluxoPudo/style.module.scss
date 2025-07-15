@@ -1,0 +1,31 @@
+.LogisticaSustentavel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    
+    .Container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 1996px;
+        height: 100%;
+
+        .BoxLogisticaSustentavel {
+            display: flex;
+            height: 100%;
+            max-width: 1996px;
+            width: 90%;
+            border-radius: 16px;
+            color: #000;
+
+            .Controller {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+}
