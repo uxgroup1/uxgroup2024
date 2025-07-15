@@ -7,19 +7,18 @@ import logoWhirpol from "@/assets/home/imageClients/whirpool-8.png";
 import logoVia from "@/assets/home/imageClients/Via-8.png";
 import logoVested from "@/assets/home/imageClients/veste-8.png";
 import logoShopee from "@/assets/home/imageClients/Shopee-8.png";
-import logoSalon from "@/assets/home/imageClients/salon-8.png";
 import logoPetlove from "@/assets/home/imageClients/Petlove-8.png";
-import logoMulti from "@/assets/home/imageClients/multi-8.png";
-import logoLemon from "@/assets/home/imageClients/lemon.png";
 import logoKabum from "@/assets/home/imageClients/kabum-8.png";
-import logoDorel from "@/assets/home/imageClients/dorel-8.png";
 import logoDafiti from "@/assets/home/imageClients/dafiti-8.png";
 import logoCurta from "@/assets/home/imageClients/curta-8.png";
 import logoCarrefour from "@/assets/home/imageClients/Carrefour-8.png";
-import logoCargo from "@/assets/home/imageClients/cargo-8.png";
 import logoHer from "@/assets/home/imageClients/ah-8.png";
-import logoGinger from "@/assets/home/imageClients/ginger-8.png";
 import logoDuty from "@/assets/home/imageClients/duty-8.png";
+import logoVivara from "@/assets/home/imageClients/vivara.png";
+import logoDengo from "@/assets/home/imageClients/dengo.png";
+import logoMaryKay from "@/assets/home/imageClients/mary-kay.png";
+import logoVivo from "@/assets/home/imageClients/vivo.png"; 
+import logoTotalExpress from "@/assets/home/imageClients/total-express.png";
 
 const images = [
   logoWhirpol,
@@ -27,17 +26,17 @@ const images = [
   logoPetlove,
   logoShopee,
   logoCarrefour,
-  logoDafiti,
+  logoDafiti, 
   logoKabum,
   logoHer,
-  logoSalon,
   logoCurta,
   logoVested,
-  logoLemon,
   logoDuty,
-  logoMulti,
-  logoDorel,
-];
+  logoVivara,
+  logoMaryKay,
+  logoVivo,
+  logoTotalExpress,
+  logoDengo];
 
 export default function ClientsCases() {
   const containerRef = useRef<HTMLDivElement>(null);

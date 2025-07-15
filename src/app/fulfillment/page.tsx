@@ -171,7 +171,7 @@ export default function Logistica() {
         {/* <!-- End Google Tag Manager (noscript) --> */}
         <Header />
         <JumboTron
-        buttonTwo
+          buttonTwo
           textButtonOne="fale com um especialista"
           textButtonTwo="saiba mais"
           linkButtonOne="#formulario"
