@@ -51,7 +51,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   zoom: 0.93;
   scroll-behavior: smooth;
 

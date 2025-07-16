@@ -7,12 +7,23 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import { TiFlashOutline } from "react-icons/ti";
 import { GrMapLocation } from "react-icons/gr";
+import { useEffect, useState } from "react";
+import FormularioQueroSerUmPudo from "../produtos/formularioQueroSerUmPudo";
 
 
 
 
 
 export default function JornadaPudo() {
+
+    const [formularioQueroSerPudo, setFormularioQueroSerPudo] = useState(false);
+
+
+    const viewFormularioQueroSerUmPudo = () => {
+        setFormularioQueroSerPudo(true);
+        console.log(formularioQueroSerPudo);
+
+    }
 
     const titulos = [
         {
@@ -114,7 +125,11 @@ export default function JornadaPudo() {
                             <p className="text-black font-light">
                                 Compare os benefícios de empresas que adotam o PUDO em relação às que ainda operam sem esse modelo e descubra como essa solução pode transformar sua logística.
                             </p>
-                            <button className="h-10 w-[200px] bg-[#FF7F13] rounded-lg shadow text-white">agendar uma reunião</button>
+                            <button className="h-10 w-[300px] bg-[#FF7F13] rounded-lg shadow text-white">agendar uma reunião</button>
+                            <button onClick={() => viewFormularioQueroSerUmPudo()} className="h-10 w-[300px] text-[#FF7F13] bg-transparent border-[#FF7F13] border rounded-lg shadow">quero ser um PUDO</button>
+                            {formularioQueroSerPudo && (
+                                <FormularioQueroSerUmPudo onClose={() => setFormularioQueroSerPudo(false)} />
+                            )}
                         </div>
                         <div className="lg:w-1/4 w-[200px] flex gap-5 flex-col h-auto">
                             {titulos.map((t => (
@@ -156,6 +171,9 @@ export default function JornadaPudo() {
                     </div>
                 </div>
             </div>
+
         </section>
+
+
     )
 }
