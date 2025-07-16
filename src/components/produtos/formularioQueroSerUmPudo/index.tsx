@@ -127,14 +127,15 @@ export default function FormularioQueroSerUmPudo({ onClose }: Props) {
         try {
             // Limpa hidden inputs anteriores
             if (formRef.current) {
-                const formElements = Array.from(formRef.current.elements).filter(el =>
-                    el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement
-                ).map(el => ({
-                    name: el.name,
-                    value: (el as HTMLInputElement).value,
-                }));
+                const formElements = Array.from(formRef.current.elements)
+                    .filter((el): el is HTMLInputElement | HTMLTextAreaElement =>
+                        el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement
+                    )
+                    .map(el => ({
+                        name: el.name,
+                        value: el.value,
+                    }));
 
-                console.log("Campos do form para envio:", formElements);
             }
 
             // Upload arquivos para ImgBB e cria hidden inputs com URLs
