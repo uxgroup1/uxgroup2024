@@ -13,8 +13,8 @@ interface Content {
   corButtonThree?: string;
   textButtonOne: string;
   linkButtonOne: string;
-  textButtonTwo: string;
-  linkButtonTwo: string;
+  textButtonTwo?: string;
+  linkButtonTwo?: string;
   buttonTwo: boolean;
   id?: string;
 }
@@ -98,7 +98,7 @@ export default function ProductInstitutional({
                 </Link>
 
                 {buttonTwo && (
-                  <Link href={linkButtonTwo}>
+                  <Link href={linkButtonTwo ? linkButtonTwo : ""}>
                     <button className="xl:w-[170px] lg:w-[150px] xl:text-[0.9rem] lg:text-xs border w-full h-12 rounded-lg text-black hover:font-semibold transition-all">
                       {textButtonTwo}
                     </button>

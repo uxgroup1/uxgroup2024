@@ -20,8 +20,8 @@ export default function ParaLojasFisicasPudo() {
             icon: MdOutlineAttachMoney
         },
         {
-            title: "Aumento de Tráfego:",
-            text: "Mais pessoas visitando sua loja para coletar ou entregar produtos.",
+            title: "Reconhecimento de Marca:",
+            text: "Sua loja passa a ser vista como um ponto de referência no bairro, aumentando a visibilidade e fortalecendo sua presença local.",
             icon: AiOutlineTrophy
         },
     ]

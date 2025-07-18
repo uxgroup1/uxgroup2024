@@ -136,7 +136,7 @@ export default function FluxoPudo() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className={`flex ${index === 3 ? "hidden" : ""} scale-150 w-8 mt-[120px] lg:mt-[150px] relative text-[#ff7f12] gap-2`}>
+                                <div className={`flex ${index === 3 ? "hidden" : ""} scale-150 w-8 mt-[120px] lg:mt-[230px] relative text-[#ff7f12] gap-2`}>
                                     <BsArrowRightSquareFill fontSize={100} color="#ff7f12" />
                                 </div>
                             </>
@@ -168,7 +168,7 @@ export default function FluxoPudo() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className={`flex ${index === 3 ? "hidden" : "lg:flex hidden"}  scale-150 w-8 mt-[120px] lg:mt-[150px] relative text-[#ff7f12] gap-2 `}>
+                                <div className={`flex ${index === 3 ? "hidden" : "lg:flex hidden"}  scale-150 w-8 mt-[120px] lg:mt-[230px] relative text-[#ff7f12] gap-2 `}>
                                     <BsArrowLeftSquareFill fontSize={100} color="#ff7f12" />
                                 </div>
                                 <div className={`flex ${index === 3 ? "hidden" : "lg:hidden flex"} scale-150 w-8 mt-[120px] lg:mt-[110px] relative text-[#ff7f12] gap-2`}>

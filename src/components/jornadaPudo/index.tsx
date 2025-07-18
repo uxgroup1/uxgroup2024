@@ -88,7 +88,7 @@ export default function JornadaPudo() {
 
 
     return (
-        <section className="w-full bg-cover flex items-center justify-center bg-center bg-no-repeat bg-white h-auto pt-[70px] pb-[100px] ">
+        <section id="quero-ser-um-pudo" className="w-full bg-cover flex items-center justify-center bg-center bg-no-repeat bg-white h-auto pt-[70px] pb-[100px] ">
             <div className="w-[90%] lg:w-full max-w-[90%] gap-5 lg:gap-10 h-auto flex lg:flex-row flex-col-reverse items-center justify-between">
                 <div className="w-full flex flex-col h-auto gap-3 overflow-auto">
                     <div className="w-full mb-20 lg:hidden flex items-start gap-3 flex-col h-auto">
@@ -125,8 +125,8 @@ export default function JornadaPudo() {
                             <p className="text-black font-light">
                                 Compare os benefícios de empresas que adotam o PUDO em relação às que ainda operam sem esse modelo e descubra como essa solução pode transformar sua logística.
                             </p>
-                            <button className="h-10 w-[300px] bg-[#FF7F13] rounded-lg shadow text-white">agendar uma reunião</button>
-                            <button onClick={() => viewFormularioQueroSerUmPudo()} className="h-10 w-[300px] text-[#FF7F13] bg-transparent border-[#FF7F13] border rounded-lg shadow">quero ser um PUDO</button>
+                            <button onClick={() => viewFormularioQueroSerUmPudo()} className="h-12 w-[300px] text-white bg-[#FF7F13] rounded-lg shadow">quero ser um PUDO</button>
+
                             {formularioQueroSerPudo && (
                                 <FormularioQueroSerUmPudo onClose={() => setFormularioQueroSerPudo(false)} />
                             )}

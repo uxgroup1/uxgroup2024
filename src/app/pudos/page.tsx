@@ -103,7 +103,7 @@ export default function Pudos() {
             style={{ paddingTop: "50px", paddingBottom: "0px" }}
           ></section>
           <ProductInstitutional
-            buttonTwo
+            buttonTwo={false}
             id="sobre"
             title="O que é um PUDO?"
             subTitle="Por que escolher o PUDO?"
@@ -112,10 +112,8 @@ export default function Pudos() {
             banner={banner.src}
             corButtonOne="#ff7f12"
             corButtonThree="#CA620A"
-            linkButtonOne="#para-marketplaces"
-            linkButtonTwo="https://calendly.com/natielen-campos/ux-group-voce"
+            linkButtonOne="#quero-ser-um-pudo"
             textButtonOne="saiba mais"
-            textButtonTwo="agende uma reunião"
           />
 
 
@@ -126,18 +124,20 @@ export default function Pudos() {
             flowReverse={false}
             corButtonOne="#ff7f12"
             textTwoSemiBold
+            link="#quero-ser-um-pudo"
             image={pudo.src}
           />
 
           <SecondSection
-            title="Mais de 290 Pontos PUDO em Todo o Brasil!"
-            text="A UX Group possui atualmente 296 pontos PUDO espalhados pelo Brasil, garantindo praticidade e conveniência para você. Confira a distribuição por estado:"
+            title="Mais de 350 Pontos PUDO em Todo o Brasil!"
+            text="A UX Group possui atualmente mais de 350 pontos PUDO espalhados pelo Brasil, garantindo praticidade e conveniência para você. Confira a distribuição por estado:"
             textTwo="Estamos sempre em busca de expandir nossa rede. Se tem interesse em se tornar um ponto de coleta ou contratar um PUDO, clique no botão e faça parte da nossa rede de conveniência!"
             textTwoSemiBold
             corButtonOne="#ff7f12"
             flowReverse
-            textButton="agendar uma reunião"
+            textButton="saiba mais"
             image={mapaPudo.src}
+            link="#quero-ser-um-pudo"
             imagemSobTitulo={boxPudo}
             dimensaoImagem="90%"
           />
