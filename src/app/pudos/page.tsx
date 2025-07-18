@@ -22,8 +22,6 @@ import ParaMarketPlacesPudo from "@/components/ParaMarketPlacesPudo";
 import ParaLojasFisicasPudo from "@/components/paraLojasFisicasPudo";
 import JornadaPudo from "@/components/jornadaPudo";
 
-
-
 const valuesInput = [
   {
     value: "Conhecer soluções em operação PUDO para minha empresa",
@@ -41,8 +39,6 @@ const valuesInput = [
     value: "Quero trabalhar com vocês",
   },
 ];
-
-
 
 export default function Pudos() {
   return (
@@ -90,8 +86,8 @@ export default function Pudos() {
             buttonTwo
             textButtonOne="saiba mais"
             textButtonTwo="falar com um especialista"
-            linkButtonOne="#formulario"
-            linkButtonTwo="#sobre"
+            linkButtonOne="#quero-ser-um-pudo"
+            linkButtonTwo="#formulario"
             corButtonOne="#CA620A"
             corButtonThree="#ff7f12"
             logo={pudoLogo.src}

@@ -28,6 +28,9 @@ export default function FormularioQueroSerUmPudo({ onClose }: Props) {
         page_name: "PUDO",
     });
 
+    const [message, setMessage] = useState(false);
+    let messageAlert = "";
+
     const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
 
@@ -80,15 +83,16 @@ export default function FormularioQueroSerUmPudo({ onClose }: Props) {
         debugger
 
         // Substitua os valores abaixo pelos seus dados do EmailJS
-        const serviceID = "service_g5abkym";
-        const templateID = "template_zbfv62j";
-        const publicKey = "HCRbP_WY4XzmI-Cw_";
+        const serviceID = "service_642l3yo";
+        const templateID = "template_cdq4ads";
+        const publicKey = "-jkQAbJnc97ioENOS";
 
         emailjs
             .sendForm(serviceID, templateID, formRef.current, publicKey)
             .then(
                 (result) => {
-                    alert("Formulário enviado com sucesso!");
+                    setMessage(true);
+                  
                     // Limpar formulário e arquivos
                     setFormData({
                         floating_first_name: "",
@@ -164,7 +168,7 @@ export default function FormularioQueroSerUmPudo({ onClose }: Props) {
             sendEmail();
         } catch (error) {
             console.error("Erro ao enviar arquivos:", error);
-            alert("Erro ao enviar os arquivos. Tente novamente.");
+            alert("Erro ao enviar os arquivos. Por favor, tente novamente.");
         }
     };
 
@@ -502,7 +506,11 @@ export default function FormularioQueroSerUmPudo({ onClose }: Props) {
                             )}
 
                         </div>
-
+                            {message && (
+                                <p className="text-white text-base">
+                                    Recebemos sua inscrição e os documentos enviados — e estamos muito felizes com seu interesse em se tornar um ponto de retirada da nossa rede!
+                                </p>
+                            )}
                         <button
                             type="submit"
                             className=" bg-[#FF7F13] rounded-lg w-full items-center text-white justify-center "
