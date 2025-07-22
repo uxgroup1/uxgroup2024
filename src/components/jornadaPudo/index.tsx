@@ -20,6 +20,7 @@ export default function JornadaPudo() {
 
 
     const viewFormularioQueroSerUmPudo = () => {
+        
         setFormularioQueroSerPudo(true);
         console.log(formularioQueroSerPudo);
 
@@ -99,8 +100,11 @@ export default function JornadaPudo() {
                         <p className="text-black font-light">
                             Compare os benefícios de empresas que adotam o PUDO em relação às que ainda operam sem esse modelo e descubra como essa solução pode transformar sua logística.
                         </p>
-                        <button className="h-10 w-full bg-[#FF7F13] rounded-lg shadow text-white">agendar uma reunião</button>
+                        <button onClick={() => viewFormularioQueroSerUmPudo()} className="h-12 w-full text-white bg-[#FF7F13] rounded-lg shadow">quero ser um PUDO</button>
                     </div>
+                    {formularioQueroSerPudo && (
+                                <FormularioQueroSerUmPudo onClose={() => setFormularioQueroSerPudo(false)} />
+                            )}
                     <div className="lg:w-full w-[875px] justify-end gap-5 mb-5 h-auto flex">
                         <div className="h-20 lg:w-1/4 lg:flex hidden w-[300px] rounded-lg bg-[#f3f4f600]">
 
