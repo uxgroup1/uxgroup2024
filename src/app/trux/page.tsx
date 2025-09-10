@@ -259,14 +259,14 @@ export default function Trux() {
             id="roteirizacao-entregas"
             titleSection="Roteirização de entrega."
             text="Otimize suas rotas, controle suas finanças e acompanhe em tempo real as entregas com o app de motoristas."
-            banner={imageRoteirizacao.src}
+            banner={imageRoteirizacao.src.trim()}
             content={contentFeatures}
             rowReverse={false}
           />
           <FeaturesComponent
             titleSection="Gestão financeira."
             text="Tenha o controle total das suas finanças e automatize processos."
-            banner={imageGestao.src}
+            banner={imageGestao.src.trim()}
             content={contentFeaturesTwo}
             rowReverse={true}
           />
@@ -280,7 +280,7 @@ export default function Trux() {
           <FeaturesComponent
             titleSection="Dashboards."
             text="Uma visão completa em tempo real, com dados parametrizáveis de acordo com a necessidade do seu negócio."
-            banner={dash.src}
+            banner={dash.src.trim()}
             content={contentFeaturesFive}
             rowReverse={true}
           />
