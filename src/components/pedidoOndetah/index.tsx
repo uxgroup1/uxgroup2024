@@ -11,6 +11,13 @@ import brastemp from "@/assets/logosOndetah/brastemp.png";
 import compraCerta from "@/assets/logosOndetah/compra-certa.png";
 import kitchenaid from "@/assets/logosOndetah/kitchenaid.png";
 import whp from "@/assets/logosOndetah/whp.png";
+import sunrise from "@/assets/logosOndetah/sunrize.png"
+import zasm from "@/assets/logosOndetah/zasm.png"
+import card from "@/assets/logosOndetah/grupo-card.png"
+import badia from "@/assets/logosOndetah/badia.png"
+import broks from "@/assets/logosOndetah/brooks.png"
+import enifler from "@/assets/logosOndetah/enifler.png"
+
 import icone from "@/assets/iconeOndetahLocalizarPedido.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -140,6 +147,36 @@ export default function PedidoOndetah() {
       image: whp.src,
       codigo: "WHP",
     },
+    {
+      index: 10,
+      image: badia.src,
+      codigo: "uxd",
+    },
+    {
+      index: 11,
+      image: sunrise.src,
+      codigo: "uxd",
+    },
+    {
+      index: 12,
+      image: zasm.src,
+      codigo: "uxd",
+    },
+    {
+      index: 13,
+      image: card.src,
+      codigo: "GCD",
+    },
+    {
+      index: 14,
+      image: broks.src,
+      codigo: "uxd",
+    },
+    {
+      index: 15,
+      image: enifler.src,
+      codigo: "uxd",
+    },
 
 
 
@@ -186,7 +223,7 @@ export default function PedidoOndetah() {
           className={`fixed z-50 bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh] top-[15%] lg:top-0`}
         >
 
-          <div className="flex absolute md:top-1/4 top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[500px] md:h-[500px] transition-all">
+          <div className="flex absolute md:top-[13%] top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[680px] md:h-[680px] transition-all">
             <div className="p-10 h-full flex items-center w-full justify-center flex-col">
               <div className={`w-full   flex ${voltar ? "justify-between" : "justify-end pt-[10px]"}  items-center`}>
                 {voltar && (
@@ -215,7 +252,7 @@ export default function PedidoOndetah() {
                       </h3>
                     </div>
 
-                    <div className="w-full md:flex md:items-center md:justify-center gap-3 grid md:pt-2 pt-3 grid-cols-4 md:flex-wrap">
+                    <div className="w-full md:flex md:items-center md:justify-start gap-3 grid md:pt-2 pt-3 grid-cols-4 md:flex-wrap">
                       {content.map((content, index) => {
                         return (
                           <div

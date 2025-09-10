@@ -1,8 +1,9 @@
 import { useClientData } from "@/hooks/clientData";
 import { contactFormData } from "@/interfaces/contactFormData";
 import { QueryClientProvider } from "@tanstack/react-query";
+import React from "react";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect, useState,  } from "react";
 import { motion } from "framer-motion";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { ClientData } from "@/interfaces/clientData";
@@ -356,8 +357,8 @@ export default function ContactForm({
             <br />
           </div> */}
 
-          {inputAlternative?.map((data) => (
-            <div key={data.id} className="relative z-0 w-full mb-5 group">
+          {inputAlternative?.map((data,index) => (
+            <div key={data.id+index} className="relative z-0 w-full mb-5 group">
               <input
                 type={data.type}
                 name={data.name}
@@ -383,11 +384,11 @@ export default function ContactForm({
               <label className="text-sm text-[#bfbfbf]" htmlFor="title">Quero falar sobre*</label>
               <div className="pb-2">
                 {content.map((data, index) => (
-                  <>
+                  <React.Fragment key={data.value+index}>
                     <input className="mr-2 mt-2" type="checkbox" id="floating_querofalarSobre1" name="floating_querofalarSobre" value={data.value} onChange={handleChange} />
                     <label className="text-white" key={index} htmlFor="floating_querofalarSobre1">{data.value}</label>
                     <br />
-                  </>                  
+                  </React.Fragment>                  
                 ))}
               </div>
             </div>
