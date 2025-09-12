@@ -210,7 +210,7 @@ export default function PedidoOndetah() {
           className={`fixed z-50 bg-[#00000093] transition-all flex items-center justify-center w-full left-0 h-[120vh] top-[15%] lg:top-0`}
         >
 
-          <div className="flex absolute md:top-[13%] top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[680px] md:h-[680px] transition-all">
+          <div className="flex absolute md:top-[13%] top-10 items-center justify-center md:w-[700px]  w-[400px] bg-white rounded-2xl h-[630px] md:h-[630px] transition-all">
             <div className="p-10 h-full flex items-center w-full justify-center flex-col">
               <div className={`w-full   flex ${voltar ? "justify-between" : "justify-end pt-[10px]"}  items-center`}>
                 {voltar && (
