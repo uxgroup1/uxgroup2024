@@ -158,7 +158,7 @@ export default function NewBannerHome() {
                         <div className="flex items-center justify-center h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`${banners[currentIndex].index === 3 ? "lg:w-full w-full " : "w-full"} `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
-                        <h2 className="text-lg text-center text-black font-light">{banners[currentIndex].title}</h2>
+                        <h2 className="text-lg text-center text-black font-normal">{banners[currentIndex].title}</h2>
                         <div className="flex flex-col items-center justify-center gap-5">
                             <button className={`w-[260px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
@@ -174,7 +174,7 @@ export default function NewBannerHome() {
                         <div className="h-10">
                             <Image style={{ borderTopRightRadius: `${currentIndex === banners[currentIndex].index ? "10px" : "rounded-3xl"}` }} className={`w-full `} src={banners[currentIndex].svgIcon} alt="" width={100} height={100} />
                         </div>
-                        <h2 className="text-xl text-center w-3/4 text-black font-light">{banners[currentIndex].title}</h2>
+                        <h2 className="text-xl text-center w-3/4 text-black font-normal">{banners[currentIndex].title}</h2>
                         <div className="flex items-center justify-center gap-5">
                             <button className={`w-[200px] flex items-center justify-center hover:scale-95 transition text-white font-medium rounded-lg shadow-md h-12 p-2`} style={{ backgroundColor: `#${banners[currentIndex].color}` }}>
                                 <Link className="flex items-center justify-center w-full p-2 h-full" href={banners[currentIndex].link}> conheça sua solução</Link>
