@@ -4,7 +4,6 @@ import style from "./style.module.scss";
 import carrefour from "@/assets/logosOndetah/carrefour.png";
 import dafiti from "@/assets/logosOndetah/dafiti.png";
 import curta from "@/assets/logosOndetah/curta.png";
-import dorel from "@/assets/logosOndetah/dorel.png";
 import acioly from "@/assets/logosOndetah/acciloly01.png";
 import consul from "@/assets/logosOndetah/consul.png";
 import brastemp from "@/assets/logosOndetah/brastemp.png";
@@ -101,79 +100,67 @@ export default function PedidoOndetah() {
     },
     {
       index: 1,
-      image: dafiti.src,
-      codigo: "DF",
-    },
-    {
-      index: 2,
       image: curta.src,
       codigo: "CTA",
     },
 
     {
-      index: 3,
+      index: 2,
       image: acioly.src,
       codigo: "AGM",
     },
-
-
     {
-      index: 4,
-      image: dorel.src,
-      codigo: "DL",
-    },
-    {
-      index: 5,
+      index: 3,
       image: brastemp.src,
       codigo: "WHP",
     },
     {
-      index: 6,
+      index: 4,
       image: consul.src,
       codigo: "WHP",
     },
     {
-      index: 7,
+      index: 5,
       image: kitchenaid.src,
       codigo: "WHP",
     },
     {
-      index: 8,
+      index: 6,
       image: compraCerta.src,
       codigo: "WHP",
     },
     {
-      index: 9,
+      index: 7,
       image: whp.src,
       codigo: "WHP",
     },
     {
-      index: 10,
+      index: 8,
       image: badia.src,
       codigo: "uxd",
     },
     {
-      index: 11,
+      index: 9,
       image: sunrise.src,
       codigo: "uxd",
     },
     {
-      index: 12,
+      index: 10,
       image: zasm.src,
       codigo: "uxd",
     },
     {
-      index: 13,
+      index: 11,
       image: card.src,
       codigo: "GCD",
     },
     {
-      index: 14,
+      index: 12,
       image: broks.src,
       codigo: "uxd",
     },
     {
-      index: 15,
+      index: 13,
       image: enifler.src,
       codigo: "uxd",
     },
