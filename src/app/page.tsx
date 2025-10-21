@@ -170,6 +170,7 @@ export default function Home() {
   return (
     <QueryClientProvider client={new QueryClient()}>
       <main>
+        <script type="text/javascript" src="https://app.secureprivacy.ai/script/68f690037c0cfdac8092a42a.js"></script>
         <Script>
           {`function gtag_report_conversion(url) {
             var callback = function () {

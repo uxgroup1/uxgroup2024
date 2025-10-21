@@ -1,64 +1,22 @@
-import { AxiosResponse } from "axios";
-import { ClientData } from "@/interfaces/clientData";
+// src/hooks/clientData.ts
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 
-const API_URL = 'https://api.rd.services/platform/conversions?api_key=uMNBxrWUgccjMwMfkzYxIcPFAgEJexMYZTqf';
+const endpoint = "https://uxgroup-brevo-api.vercel.app/api/brevo/lead";
 
-const fetchData = async (clientData: ClientData): Promise<AxiosResponse<ClientData>> => {
-
-    console.log(clientData)
-    const options = {
-        method: 'POST',
-        url: API_URL,
-        headers: {
-            accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-        data: {
-            event_type: 'CONVERSION',
-            event_family: 'CDP',
-            payload: {
-                conversion_identifier: clientData.conversion_identifier,
-                name: clientData.floating_first_name,
-                email: clientData.floating_email,
-                personal_phone: clientData.floating_phone,
-                job_title: clientData.floating_cargo,
-                company_name: clientData.floating_company,
-                cf_numero_de_funcionarios: clientData.floating_numeroFuncionarios,
-                cf_atividade_da_empresa: clientData.floating_segmento,
-                cf_subject: clientData.floating_querofalarSobre,
-                cf_querofalarsobre: clientData.floating_querofalarSobre,
-                cf_message: "Novo Contato",
-                cf_referencia: clientData.page_name,
-                cf_termos: clientData.floating_terms
-            }
-        }
-    };
-
-    try {
-        const response = await axios.request<ClientData>(options);
-        return response;
-    } catch (error: any) {
-        console.error('Erro na requisição:', error.response?.data || error.message);
-        throw error;
-    }
-
-
-}
 
 export function useClientData() {
-    const mutation = useMutation<AxiosResponse<ClientData>, Error, ClientData>({
-        mutationFn: fetchData
-    });
-
-
-
-
-    return {
-        mutate: mutation.mutate,
-        contentData: mutation.data?.data,
-        isPending: mutation.isPending,
-        isSuccess: mutation.isSuccess
-    };
+  return useMutation({
+    mutationFn: async (payload: any) => {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const err = await res.text().catch(() => "");
+        throw new Error(err || "Falha ao enviar lead");
+      }
+      return res.json().catch(() => ({}));
+    },
+  });
 }
