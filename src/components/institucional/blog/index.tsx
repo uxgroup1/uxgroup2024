@@ -32,6 +32,8 @@ export function Blog() {
       .catch(console.error);
   }, []);
 
+  
+
   return (
     <section className={style.container}>
       <div className="w-[92%]">
