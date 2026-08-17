@@ -9,7 +9,7 @@ import logoVested from "@/assets/home/imageClients/veste-8.png";
 import logoShopee from "@/assets/home/imageClients/Shopee-8.png";
 import logoPetlove from "@/assets/home/imageClients/Petlove-8.png";
 import logoKabum from "@/assets/home/imageClients/kabum-8.png";
-import logoDafiti from "@/assets/home/imageClients/dafiti-8.png";
+
 import logoCurta from "@/assets/home/imageClients/curta-8.png";
 import logoCarrefour from "@/assets/home/imageClients/Carrefour-8.png";
 import logoHer from "@/assets/home/imageClients/ah-8.png";
@@ -26,7 +26,7 @@ const images = [
   logoPetlove,
   logoShopee,
   logoCarrefour,
-  logoDafiti, 
+ 
   logoKabum,
   logoHer,
   logoCurta,
